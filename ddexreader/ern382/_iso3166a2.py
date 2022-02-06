@@ -1,7 +1,7 @@
 # ./_iso3166a2.py
 # -*- coding: utf-8 -*-
 # PyXB bindings for NM:94b35e5fa167f1cbc52c4ef67dd51e6e4ae4e5fc
-# Generated 2015-07-06 09:45:08.298167 by PyXB version 1.2.4 using Python 2.7.6.final.0
+# Generated 2022-02-05 12:56:42.374840 by PyXB version 1.2.6 using Python 3.9.6.final.0
 # Namespace http://ddex.net/xml/20120404/iso3166a2 [xmlns:iso3166a2]
 
 from __future__ import unicode_literals
@@ -13,15 +13,18 @@ import pyxb.utils.utility
 import pyxb.utils.domutils
 import sys
 import pyxb.utils.six as _six
-
 # Unique identifier for bindings created at the same time
-_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:a29ac908-23c3-11e5-b0e6-080027960975')
+_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:f55e9d1a-86ac-11ec-b13b-acde48001122')
 
 # Version of PyXB used to generate the bindings
-_PyXBVersion = '1.2.4'
+_PyXBVersion = '1.2.6'
 # Generated bindings are not compatible across PyXB versions
 if pyxb.__version__ != _PyXBVersion:
     raise pyxb.PyXBVersionError(_PyXBVersion)
+
+# A holder for module-level binding classes so we can access them from
+# inside class definitions where property names may conflict.
+_module_typeBindings = pyxb.utils.utility.Object()
 
 # Import bindings for namespaces imported into schema
 import pyxb.binding.datatypes
@@ -330,3 +333,4 @@ TerritoryCode.WF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='W
 TerritoryCode.EH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='EH', tag='EH')
 TerritoryCode._InitializeFacetMap(TerritoryCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TerritoryCode', TerritoryCode)
+_module_typeBindings.TerritoryCode = TerritoryCode

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ern:NewReleaseMessage xmlns:iso3166a2="http://ddex.net/xml/20121219/iso3166a2"
- xmlns:ddexC="http://ddex.net/xml/20121219/ddexC"
- xmlns:iso639a2="http://ddex.net/xml/20121219/iso639a2"
- xmlns:ddex="http://ddex.net/xml/20121219/ddex"
- xmlns:ern="http://ddex.net/xml/ern/351"
- xmlns:iso4217a="http://ddex.net/xml/20121219/iso4217a"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://ddex.net/xml/ern/351 http://ddex.net/xml/ern/351/release-notification.xsd" MessageSchemaVersionId="ern/351" BusinessProfileVersionId="t0fOG.rwWvrnkO7fvs6bHIJis-" ReleaseProfileVersionId="zctP-5UB3"
-     LanguageAndScriptCode="es_MX">
+<ern:NewReleaseMessage
+        xmlns:ern="http://ddex.net/xml/ern/351"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://ddex.net/xml/ern/351 http://ddex.net/xml/ern/351/release-notification.xsd"
+        MessageSchemaVersionId="ern/351" BusinessProfileVersionId="t0fOG.rwWvrnkO7fvs6bHIJis-"
+        ReleaseProfileVersionId="zctP-5UB3"
+        LanguageAndScriptCode="es_MX">
     <MessageHeader LanguageAndScriptCode="es_MX">
         <MessageThreadId>KqM</MessageThreadId>
         <MessageId>y</MessageId>

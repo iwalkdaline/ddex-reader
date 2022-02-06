@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ern:NewReleaseMessage xmlns:ddexC="http://ddex.net/xml/20120719/ddexC"
- xmlns:ern="http://ddex.net/xml/ern/35"
- xmlns:iso3166a2="http://ddex.net/xml/20120719/iso3166a2"
- xmlns:ddex="http://ddex.net/xml/20120719/ddex"
- xmlns:iso4217a="http://ddex.net/xml/20120719/iso4217a"
- xmlns:iso639a2="http://ddex.net/xml/20120719/iso639a2"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://ddex.net/xml/ern/35 http://ddex.net/xml/ern/35/release-notification.xsd" MessageSchemaVersionId="ern/35" BusinessProfileVersionId="_eG89WlwJbJdjs1EQfD" ReleaseProfileVersionId="Me5tvy12OiS.ZsUd9w-RsdrHxUUSU"
-     LanguageAndScriptCode="en_US">
+<ern:NewReleaseMessage
+        xmlns:ern="http://ddex.net/xml/ern/35"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://ddex.net/xml/ern/35 http://ddex.net/xml/ern/35/release-notification.xsd"
+        MessageSchemaVersionId="ern/35" BusinessProfileVersionId="_eG89WlwJbJdjs1EQfD"
+        ReleaseProfileVersionId="Me5tvy12OiS.ZsUd9w-RsdrHxUUSU"
+        LanguageAndScriptCode="en_US">
     <MessageHeader LanguageAndScriptCode="en_US">
         <MessageThreadId>Goo</MessageThreadId>
         <MessageId>jt.dvT.c5Xx9TwGejqX1</MessageId>

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/341"
- xmlns:ddexC="http://ddex.net/xml/20120404/ddexC"
- xmlns:ddex="http://ddex.net/xml/20120404/ddex"
- xmlns:iso639a2="http://ddex.net/xml/20120404/iso639a2"
- xmlns:iso3166a2="http://ddex.net/xml/20120404/iso3166a2"
- xmlns:iso4217a="http://ddex.net/xml/20120404/iso4217a"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://ddex.net/xml/ern/341 http://ddex.net/xml/ern/341/release-notification.xsd" MessageSchemaVersionId="ern/341" BusinessProfileVersionId="wTYG4zxI_T5NyG5w" ReleaseProfileVersionId="d0CZd7x2eOAVxVTFX"
-     LanguageAndScriptCode="es_MX">
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://ddex.net/xml/ern/341 http://ddex.net/xml/ern/341/release-notification.xsd"
+                       MessageSchemaVersionId="ern/341" BusinessProfileVersionId="wTYG4zxI_T5NyG5w"
+                       ReleaseProfileVersionId="d0CZd7x2eOAVxVTFX"
+                       LanguageAndScriptCode="es_MX">
     <MessageHeader LanguageAndScriptCode="es_MX">
         <MessageThreadId>Qy8o0</MessageThreadId>
         <MessageId>i</MessageId>

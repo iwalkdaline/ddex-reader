@@ -1,13 +1,10 @@
 <?xml version="1.0"?>
-<ern:NewReleaseMessage xmlns:iso3166a2="http://ddex.net/xml/20120214/iso3166a2"
- xmlns:ern="http://ddex.net/xml/ern/34"
- xmlns:ddexC="http://ddex.net/xml/20120214/ddexC"
- xmlns:ddex="http://ddex.net/xml/20120214/ddex"
- xmlns:iso639a2="http://ddex.net/xml/20120214/iso639a2"
- xmlns:iso4217a="http://ddex.net/xml/20120214/iso4217a"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://ddex.net/xml/ern/34 http://ddex.net/xml/ern/34/release-notification.xsd" MessageSchemaVersionId="ern/34" BusinessProfileVersionId="aBTYaX7_mIZ" ReleaseProfileVersionId="uAwJeqnGaJ"
-     LanguageAndScriptCode="es_MX">
+<ern:NewReleaseMessage
+        xmlns:ern="http://ddex.net/xml/ern/34"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://ddex.net/xml/ern/34 http://ddex.net/xml/ern/34/release-notification.xsd"
+        MessageSchemaVersionId="ern/34" BusinessProfileVersionId="aBTYaX7_mIZ" ReleaseProfileVersionId="uAwJeqnGaJ"
+        LanguageAndScriptCode="es_MX">
     <MessageHeader LanguageAndScriptCode="en_US">
         <MessageThreadId>TPV2i</MessageThreadId>
         <MessageId>x</MessageId>

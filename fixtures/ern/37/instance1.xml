@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/37"
- xmlns:avs="http://ddex.net/xml/avs/avs"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://ddex.net/xml/ern/37 http://ddex.net/xml/ern/37/release-notification.xsd" MessageSchemaVersionId="ern/37" BusinessProfileVersionId="Eaz" ReleaseProfileVersionId="EyOHF2Ma-HRq6tsoOguuUga"
-     LanguageAndScriptCode="en_US">
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://ddex.net/xml/ern/37 http://ddex.net/xml/ern/37/release-notification.xsd"
+                       MessageSchemaVersionId="ern/37" BusinessProfileVersionId="Eaz"
+                       ReleaseProfileVersionId="EyOHF2Ma-HRq6tsoOguuUga"
+                       LanguageAndScriptCode="en_US">
     <MessageHeader LanguageAndScriptCode="en_US">
         <MessageThreadId>ICpL2gsJqYHjJVB.xE_K_8qQHfGTUd</MessageThreadId>
         <MessageId>fT30kBNfCGHX</MessageId>

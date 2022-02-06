@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/37" xmlns:avs="http://ddex.net/xml/avs/avs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddex.net/xml/ern/37 http://ddex.net/xml/ern/37/release-notification.xsd" MessageSchemaVersionId="ern/37" BusinessProfileVersionId="REzxqcdda0qjTa501" ReleaseProfileVersionId="zVpjAn7B" LanguageAndScriptCode="en_US">
+<ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/37" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://ddex.net/xml/ern/37 http://ddex.net/xml/ern/37/release-notification.xsd"
+                       MessageSchemaVersionId="ern/37" BusinessProfileVersionId="REzxqcdda0qjTa501"
+                       ReleaseProfileVersionId="zVpjAn7B" LanguageAndScriptCode="en_US">
     <MessageHeader LanguageAndScriptCode="es_MX">
         <MessageThreadId>KkP</MessageThreadId>
         <MessageId>qcAnzXOuy</MessageId>

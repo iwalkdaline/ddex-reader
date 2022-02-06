@@ -1,7 +1,7 @@
 # ./_avs.py
 # -*- coding: utf-8 -*-
 # PyXB bindings for NM:7160bdf2eec8b2464ee2e1193e7abcc5a3221f95
-# Generated 2015-07-06 15:58:03.784491 by PyXB version 1.2.4 using Python 2.7.6.final.0
+# Generated 2022-02-05 12:56:42.375151 by PyXB version 1.2.6 using Python 3.9.6.final.0
 # Namespace http://ddex.net/xml/avs/avs [xmlns:avs]
 
 from __future__ import unicode_literals
@@ -13,15 +13,18 @@ import pyxb.utils.utility
 import pyxb.utils.domutils
 import sys
 import pyxb.utils.six as _six
-
 # Unique identifier for bindings created at the same time
-_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:b747fe78-23f7-11e5-9249-080027960975')
+_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:f55e9d1a-86ac-11ec-b13b-acde48001122')
 
 # Version of PyXB used to generate the bindings
-_PyXBVersion = '1.2.4'
+_PyXBVersion = '1.2.6'
 # Generated bindings are not compatible across PyXB versions
 if pyxb.__version__ != _PyXBVersion:
     raise pyxb.PyXBVersionError(_PyXBVersion)
+
+# A holder for module-level binding classes so we can access them from
+# inside class definitions where property names may conflict.
+_module_typeBindings = pyxb.utils.utility.Object()
 
 # Import bindings for namespaces imported into schema
 import pyxb.binding.datatypes
@@ -79,13 +82,14 @@ class AccessLimitation (pyxb.binding.datatypes.string, pyxb.binding.basis.enumer
     """A Type of limitation on the access of a site."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AccessLimitation')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 13, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 13, 3)
     _Documentation = 'A Type of limitation on the access of a site.'
 AccessLimitation._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AccessLimitation, enum_prefix=None)
 AccessLimitation.NoLimitation = AccessLimitation._CF_enumeration.addEnumeration(unicode_value='NoLimitation', tag='NoLimitation')
 AccessLimitation.PrivateAccessOnly = AccessLimitation._CF_enumeration.addEnumeration(unicode_value='PrivateAccessOnly', tag='PrivateAccessOnly')
 AccessLimitation._InitializeFacetMap(AccessLimitation._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'AccessLimitation', AccessLimitation)
+_module_typeBindings.AccessLimitation = AccessLimitation
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}AdministratingRecordCompanyRole
 class AdministratingRecordCompanyRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -93,7 +97,7 @@ class AdministratingRecordCompanyRole (pyxb.binding.datatypes.string, pyxb.bindi
     """A role played by a Party responsible for administering Rights in a Resource or a Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AdministratingRecordCompanyRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 30, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 30, 3)
     _Documentation = 'A role played by a Party responsible for administering Rights in a Resource or a Release.'
 AdministratingRecordCompanyRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AdministratingRecordCompanyRole, enum_prefix=None)
 AdministratingRecordCompanyRole.DesignatedDsrMessageRecipient = AdministratingRecordCompanyRole._CF_enumeration.addEnumeration(unicode_value='DesignatedDsrMessageRecipient', tag='DesignatedDsrMessageRecipient')
@@ -103,6 +107,554 @@ AdministratingRecordCompanyRole.Unknown = AdministratingRecordCompanyRole._CF_en
 AdministratingRecordCompanyRole.UserDefined = AdministratingRecordCompanyRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 AdministratingRecordCompanyRole._InitializeFacetMap(AdministratingRecordCompanyRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'AdministratingRecordCompanyRole', AdministratingRecordCompanyRole)
+_module_typeBindings.AdministratingRecordCompanyRole = AdministratingRecordCompanyRole
+
+# Atomic simple type: {http://ddex.net/xml/avs/avs}AllTerritoryCode
+class AllTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
+
+    """A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide. It also includes deprecated ISO codes defined in ISO 3166-3."""
+
+    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AllTerritoryCode')
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 62, 3)
+    _Documentation = 'A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide. It also includes deprecated ISO codes defined in ISO 3166-3.'
+AllTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AllTerritoryCode, enum_prefix=None)
+AllTerritoryCode.AD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AD', tag='AD')
+AllTerritoryCode.AE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AE', tag='AE')
+AllTerritoryCode.AF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AF', tag='AF')
+AllTerritoryCode.AG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AG', tag='AG')
+AllTerritoryCode.AI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AI', tag='AI')
+AllTerritoryCode.AL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AL', tag='AL')
+AllTerritoryCode.AM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AM', tag='AM')
+AllTerritoryCode.AN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AN', tag='AN')
+AllTerritoryCode.AO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AO', tag='AO')
+AllTerritoryCode.AQ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AQ', tag='AQ')
+AllTerritoryCode.AR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AR', tag='AR')
+AllTerritoryCode.AS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AS', tag='AS')
+AllTerritoryCode.AT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AT', tag='AT')
+AllTerritoryCode.AU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AU', tag='AU')
+AllTerritoryCode.AW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AW', tag='AW')
+AllTerritoryCode.AX = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AX', tag='AX')
+AllTerritoryCode.AZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AZ', tag='AZ')
+AllTerritoryCode.BA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BA', tag='BA')
+AllTerritoryCode.BB = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BB', tag='BB')
+AllTerritoryCode.BD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BD', tag='BD')
+AllTerritoryCode.BE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BE', tag='BE')
+AllTerritoryCode.BF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BF', tag='BF')
+AllTerritoryCode.BG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BG', tag='BG')
+AllTerritoryCode.BH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BH', tag='BH')
+AllTerritoryCode.BI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BI', tag='BI')
+AllTerritoryCode.BJ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BJ', tag='BJ')
+AllTerritoryCode.BL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BL', tag='BL')
+AllTerritoryCode.BM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BM', tag='BM')
+AllTerritoryCode.BN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BN', tag='BN')
+AllTerritoryCode.BO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BO', tag='BO')
+AllTerritoryCode.BQ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BQ', tag='BQ')
+AllTerritoryCode.BR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BR', tag='BR')
+AllTerritoryCode.BS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BS', tag='BS')
+AllTerritoryCode.BT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BT', tag='BT')
+AllTerritoryCode.BV = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BV', tag='BV')
+AllTerritoryCode.BW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BW', tag='BW')
+AllTerritoryCode.BY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BY', tag='BY')
+AllTerritoryCode.BZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BZ', tag='BZ')
+AllTerritoryCode.CA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CA', tag='CA')
+AllTerritoryCode.CC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CC', tag='CC')
+AllTerritoryCode.CD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CD', tag='CD')
+AllTerritoryCode.CF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CF', tag='CF')
+AllTerritoryCode.CG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CG', tag='CG')
+AllTerritoryCode.CH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CH', tag='CH')
+AllTerritoryCode.CI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CI', tag='CI')
+AllTerritoryCode.CK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CK', tag='CK')
+AllTerritoryCode.CL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CL', tag='CL')
+AllTerritoryCode.CM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CM', tag='CM')
+AllTerritoryCode.CN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CN', tag='CN')
+AllTerritoryCode.CO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CO', tag='CO')
+AllTerritoryCode.CR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CR', tag='CR')
+AllTerritoryCode.CS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CS', tag='CS')
+AllTerritoryCode.CU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CU', tag='CU')
+AllTerritoryCode.CV = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CV', tag='CV')
+AllTerritoryCode.CW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CW', tag='CW')
+AllTerritoryCode.CX = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CX', tag='CX')
+AllTerritoryCode.CY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CY', tag='CY')
+AllTerritoryCode.CZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CZ', tag='CZ')
+AllTerritoryCode.DE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DE', tag='DE')
+AllTerritoryCode.DJ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DJ', tag='DJ')
+AllTerritoryCode.DK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DK', tag='DK')
+AllTerritoryCode.DM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DM', tag='DM')
+AllTerritoryCode.DO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DO', tag='DO')
+AllTerritoryCode.DZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DZ', tag='DZ')
+AllTerritoryCode.EC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EC', tag='EC')
+AllTerritoryCode.EE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EE', tag='EE')
+AllTerritoryCode.EG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EG', tag='EG')
+AllTerritoryCode.EH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EH', tag='EH')
+AllTerritoryCode.ER = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ER', tag='ER')
+AllTerritoryCode.ES = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES', tag='ES')
+AllTerritoryCode.ES_CE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CE', tag='ES_CE')
+AllTerritoryCode.ES_CN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CN', tag='ES_CN')
+AllTerritoryCode.ES_ML = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-ML', tag='ES_ML')
+AllTerritoryCode.ET = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ET', tag='ET')
+AllTerritoryCode.FI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FI', tag='FI')
+AllTerritoryCode.FJ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FJ', tag='FJ')
+AllTerritoryCode.FK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FK', tag='FK')
+AllTerritoryCode.FM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FM', tag='FM')
+AllTerritoryCode.FO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FO', tag='FO')
+AllTerritoryCode.FR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FR', tag='FR')
+AllTerritoryCode.GA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GA', tag='GA')
+AllTerritoryCode.GB = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GB', tag='GB')
+AllTerritoryCode.GD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GD', tag='GD')
+AllTerritoryCode.GE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GE', tag='GE')
+AllTerritoryCode.GF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GF', tag='GF')
+AllTerritoryCode.GG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GG', tag='GG')
+AllTerritoryCode.GH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GH', tag='GH')
+AllTerritoryCode.GI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GI', tag='GI')
+AllTerritoryCode.GL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GL', tag='GL')
+AllTerritoryCode.GM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GM', tag='GM')
+AllTerritoryCode.GN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GN', tag='GN')
+AllTerritoryCode.GP = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GP', tag='GP')
+AllTerritoryCode.GQ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GQ', tag='GQ')
+AllTerritoryCode.GR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GR', tag='GR')
+AllTerritoryCode.GS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GS', tag='GS')
+AllTerritoryCode.GT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GT', tag='GT')
+AllTerritoryCode.GU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GU', tag='GU')
+AllTerritoryCode.GW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GW', tag='GW')
+AllTerritoryCode.GY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GY', tag='GY')
+AllTerritoryCode.HK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HK', tag='HK')
+AllTerritoryCode.HM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HM', tag='HM')
+AllTerritoryCode.HN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HN', tag='HN')
+AllTerritoryCode.HR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HR', tag='HR')
+AllTerritoryCode.HT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HT', tag='HT')
+AllTerritoryCode.HU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HU', tag='HU')
+AllTerritoryCode.ID = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ID', tag='ID')
+AllTerritoryCode.IE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IE', tag='IE')
+AllTerritoryCode.IL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IL', tag='IL')
+AllTerritoryCode.IM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IM', tag='IM')
+AllTerritoryCode.IN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IN', tag='IN')
+AllTerritoryCode.IO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IO', tag='IO')
+AllTerritoryCode.IQ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IQ', tag='IQ')
+AllTerritoryCode.IR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IR', tag='IR')
+AllTerritoryCode.IS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IS', tag='IS')
+AllTerritoryCode.IT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IT', tag='IT')
+AllTerritoryCode.JE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JE', tag='JE')
+AllTerritoryCode.JM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JM', tag='JM')
+AllTerritoryCode.JO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JO', tag='JO')
+AllTerritoryCode.JP = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JP', tag='JP')
+AllTerritoryCode.KE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KE', tag='KE')
+AllTerritoryCode.KG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KG', tag='KG')
+AllTerritoryCode.KH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KH', tag='KH')
+AllTerritoryCode.KI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KI', tag='KI')
+AllTerritoryCode.KM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KM', tag='KM')
+AllTerritoryCode.KN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KN', tag='KN')
+AllTerritoryCode.KP = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KP', tag='KP')
+AllTerritoryCode.KR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KR', tag='KR')
+AllTerritoryCode.KW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KW', tag='KW')
+AllTerritoryCode.KY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KY', tag='KY')
+AllTerritoryCode.KZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KZ', tag='KZ')
+AllTerritoryCode.LA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LA', tag='LA')
+AllTerritoryCode.LB = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LB', tag='LB')
+AllTerritoryCode.LC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LC', tag='LC')
+AllTerritoryCode.LI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LI', tag='LI')
+AllTerritoryCode.LK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LK', tag='LK')
+AllTerritoryCode.LR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LR', tag='LR')
+AllTerritoryCode.LS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LS', tag='LS')
+AllTerritoryCode.LT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LT', tag='LT')
+AllTerritoryCode.LU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LU', tag='LU')
+AllTerritoryCode.LV = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LV', tag='LV')
+AllTerritoryCode.LY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LY', tag='LY')
+AllTerritoryCode.MA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MA', tag='MA')
+AllTerritoryCode.MC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MC', tag='MC')
+AllTerritoryCode.MD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MD', tag='MD')
+AllTerritoryCode.ME = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ME', tag='ME')
+AllTerritoryCode.MF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MF', tag='MF')
+AllTerritoryCode.MG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MG', tag='MG')
+AllTerritoryCode.MH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MH', tag='MH')
+AllTerritoryCode.MK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MK', tag='MK')
+AllTerritoryCode.ML = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ML', tag='ML')
+AllTerritoryCode.MM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MM', tag='MM')
+AllTerritoryCode.MN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MN', tag='MN')
+AllTerritoryCode.MO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MO', tag='MO')
+AllTerritoryCode.MP = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MP', tag='MP')
+AllTerritoryCode.MQ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MQ', tag='MQ')
+AllTerritoryCode.MR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MR', tag='MR')
+AllTerritoryCode.MS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MS', tag='MS')
+AllTerritoryCode.MT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MT', tag='MT')
+AllTerritoryCode.MU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MU', tag='MU')
+AllTerritoryCode.MV = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MV', tag='MV')
+AllTerritoryCode.MW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MW', tag='MW')
+AllTerritoryCode.MX = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MX', tag='MX')
+AllTerritoryCode.MY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MY', tag='MY')
+AllTerritoryCode.MZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MZ', tag='MZ')
+AllTerritoryCode.NA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NA', tag='NA')
+AllTerritoryCode.NC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NC', tag='NC')
+AllTerritoryCode.NE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NE', tag='NE')
+AllTerritoryCode.NF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NF', tag='NF')
+AllTerritoryCode.NG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NG', tag='NG')
+AllTerritoryCode.NI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NI', tag='NI')
+AllTerritoryCode.NL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NL', tag='NL')
+AllTerritoryCode.NO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NO', tag='NO')
+AllTerritoryCode.NP = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NP', tag='NP')
+AllTerritoryCode.NR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NR', tag='NR')
+AllTerritoryCode.NU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NU', tag='NU')
+AllTerritoryCode.NZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NZ', tag='NZ')
+AllTerritoryCode.OM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='OM', tag='OM')
+AllTerritoryCode.PA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PA', tag='PA')
+AllTerritoryCode.PE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PE', tag='PE')
+AllTerritoryCode.PF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PF', tag='PF')
+AllTerritoryCode.PG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PG', tag='PG')
+AllTerritoryCode.PH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PH', tag='PH')
+AllTerritoryCode.PK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PK', tag='PK')
+AllTerritoryCode.PL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PL', tag='PL')
+AllTerritoryCode.PM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PM', tag='PM')
+AllTerritoryCode.PN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PN', tag='PN')
+AllTerritoryCode.PR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PR', tag='PR')
+AllTerritoryCode.PS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PS', tag='PS')
+AllTerritoryCode.PT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PT', tag='PT')
+AllTerritoryCode.PW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PW', tag='PW')
+AllTerritoryCode.PY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PY', tag='PY')
+AllTerritoryCode.QA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='QA', tag='QA')
+AllTerritoryCode.RE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RE', tag='RE')
+AllTerritoryCode.RO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RO', tag='RO')
+AllTerritoryCode.RS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RS', tag='RS')
+AllTerritoryCode.RU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RU', tag='RU')
+AllTerritoryCode.RW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RW', tag='RW')
+AllTerritoryCode.SA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SA', tag='SA')
+AllTerritoryCode.SB = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SB', tag='SB')
+AllTerritoryCode.SC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SC', tag='SC')
+AllTerritoryCode.SD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SD', tag='SD')
+AllTerritoryCode.SE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SE', tag='SE')
+AllTerritoryCode.SG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SG', tag='SG')
+AllTerritoryCode.SH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SH', tag='SH')
+AllTerritoryCode.SI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SI', tag='SI')
+AllTerritoryCode.SJ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SJ', tag='SJ')
+AllTerritoryCode.SK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SK', tag='SK')
+AllTerritoryCode.SL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SL', tag='SL')
+AllTerritoryCode.SM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SM', tag='SM')
+AllTerritoryCode.SN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SN', tag='SN')
+AllTerritoryCode.SO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SO', tag='SO')
+AllTerritoryCode.SR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SR', tag='SR')
+AllTerritoryCode.SS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SS', tag='SS')
+AllTerritoryCode.ST = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ST', tag='ST')
+AllTerritoryCode.SV = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SV', tag='SV')
+AllTerritoryCode.SX = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SX', tag='SX')
+AllTerritoryCode.SY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SY', tag='SY')
+AllTerritoryCode.SZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SZ', tag='SZ')
+AllTerritoryCode.TC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TC', tag='TC')
+AllTerritoryCode.TD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TD', tag='TD')
+AllTerritoryCode.TF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TF', tag='TF')
+AllTerritoryCode.TG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TG', tag='TG')
+AllTerritoryCode.TH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TH', tag='TH')
+AllTerritoryCode.TJ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TJ', tag='TJ')
+AllTerritoryCode.TK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TK', tag='TK')
+AllTerritoryCode.TL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TL', tag='TL')
+AllTerritoryCode.TM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TM', tag='TM')
+AllTerritoryCode.TN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TN', tag='TN')
+AllTerritoryCode.TO = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TO', tag='TO')
+AllTerritoryCode.TR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TR', tag='TR')
+AllTerritoryCode.TT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TT', tag='TT')
+AllTerritoryCode.TV = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TV', tag='TV')
+AllTerritoryCode.TW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TW', tag='TW')
+AllTerritoryCode.TZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TZ', tag='TZ')
+AllTerritoryCode.UA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UA', tag='UA')
+AllTerritoryCode.UG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UG', tag='UG')
+AllTerritoryCode.UM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UM', tag='UM')
+AllTerritoryCode.US = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='US', tag='US')
+AllTerritoryCode.UY = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UY', tag='UY')
+AllTerritoryCode.UZ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UZ', tag='UZ')
+AllTerritoryCode.VA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VA', tag='VA')
+AllTerritoryCode.VC = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VC', tag='VC')
+AllTerritoryCode.VE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VE', tag='VE')
+AllTerritoryCode.VG = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VG', tag='VG')
+AllTerritoryCode.VI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VI', tag='VI')
+AllTerritoryCode.VN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VN', tag='VN')
+AllTerritoryCode.VU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VU', tag='VU')
+AllTerritoryCode.WF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='WF', tag='WF')
+AllTerritoryCode.WS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='WS', tag='WS')
+AllTerritoryCode.YE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='YE', tag='YE')
+AllTerritoryCode.YT = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='YT', tag='YT')
+AllTerritoryCode.ZA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZA', tag='ZA')
+AllTerritoryCode.ZM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZM', tag='ZM')
+AllTerritoryCode.ZW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZW', tag='ZW')
+AllTerritoryCode.n4 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='4', tag='n4')
+AllTerritoryCode.n8 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='8', tag='n8')
+AllTerritoryCode.n12 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='12', tag='n12')
+AllTerritoryCode.n20 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='20', tag='n20')
+AllTerritoryCode.n24 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='24', tag='n24')
+AllTerritoryCode.n28 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='28', tag='n28')
+AllTerritoryCode.n31 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='31', tag='n31')
+AllTerritoryCode.n32 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='32', tag='n32')
+AllTerritoryCode.n36 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='36', tag='n36')
+AllTerritoryCode.n40 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='40', tag='n40')
+AllTerritoryCode.n44 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='44', tag='n44')
+AllTerritoryCode.n48 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='48', tag='n48')
+AllTerritoryCode.n50 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='50', tag='n50')
+AllTerritoryCode.n51 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='51', tag='n51')
+AllTerritoryCode.n52 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='52', tag='n52')
+AllTerritoryCode.n56 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='56', tag='n56')
+AllTerritoryCode.n64 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='64', tag='n64')
+AllTerritoryCode.n68 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='68', tag='n68')
+AllTerritoryCode.n70 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='70', tag='n70')
+AllTerritoryCode.n72 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='72', tag='n72')
+AllTerritoryCode.n76 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='76', tag='n76')
+AllTerritoryCode.n84 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='84', tag='n84')
+AllTerritoryCode.n90 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='90', tag='n90')
+AllTerritoryCode.n96 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='96', tag='n96')
+AllTerritoryCode.n100 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='100', tag='n100')
+AllTerritoryCode.n104 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='104', tag='n104')
+AllTerritoryCode.n108 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='108', tag='n108')
+AllTerritoryCode.n112 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='112', tag='n112')
+AllTerritoryCode.n116 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='116', tag='n116')
+AllTerritoryCode.n120 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='120', tag='n120')
+AllTerritoryCode.n124 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='124', tag='n124')
+AllTerritoryCode.n132 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='132', tag='n132')
+AllTerritoryCode.n140 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='140', tag='n140')
+AllTerritoryCode.n144 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='144', tag='n144')
+AllTerritoryCode.n148 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='148', tag='n148')
+AllTerritoryCode.n152 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='152', tag='n152')
+AllTerritoryCode.n156 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='156', tag='n156')
+AllTerritoryCode.n158 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='158', tag='n158')
+AllTerritoryCode.n170 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='170', tag='n170')
+AllTerritoryCode.n174 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='174', tag='n174')
+AllTerritoryCode.n178 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='178', tag='n178')
+AllTerritoryCode.n180 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='180', tag='n180')
+AllTerritoryCode.n188 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='188', tag='n188')
+AllTerritoryCode.n191 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='191', tag='n191')
+AllTerritoryCode.n192 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='192', tag='n192')
+AllTerritoryCode.n196 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='196', tag='n196')
+AllTerritoryCode.n200 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='200', tag='n200')
+AllTerritoryCode.n203 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='203', tag='n203')
+AllTerritoryCode.n204 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='204', tag='n204')
+AllTerritoryCode.n208 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='208', tag='n208')
+AllTerritoryCode.n212 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='212', tag='n212')
+AllTerritoryCode.n214 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='214', tag='n214')
+AllTerritoryCode.n218 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='218', tag='n218')
+AllTerritoryCode.n222 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='222', tag='n222')
+AllTerritoryCode.n226 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='226', tag='n226')
+AllTerritoryCode.n230 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='230', tag='n230')
+AllTerritoryCode.n231 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='231', tag='n231')
+AllTerritoryCode.n232 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='232', tag='n232')
+AllTerritoryCode.n233 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='233', tag='n233')
+AllTerritoryCode.n242 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='242', tag='n242')
+AllTerritoryCode.n246 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='246', tag='n246')
+AllTerritoryCode.n250 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='250', tag='n250')
+AllTerritoryCode.n258 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='258', tag='n258')
+AllTerritoryCode.n262 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='262', tag='n262')
+AllTerritoryCode.n266 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='266', tag='n266')
+AllTerritoryCode.n268 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='268', tag='n268')
+AllTerritoryCode.n270 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='270', tag='n270')
+AllTerritoryCode.n276 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='276', tag='n276')
+AllTerritoryCode.n278 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='278', tag='n278')
+AllTerritoryCode.n280 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='280', tag='n280')
+AllTerritoryCode.n288 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='288', tag='n288')
+AllTerritoryCode.n296 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='296', tag='n296')
+AllTerritoryCode.n300 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='300', tag='n300')
+AllTerritoryCode.n308 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='308', tag='n308')
+AllTerritoryCode.n320 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='320', tag='n320')
+AllTerritoryCode.n324 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='324', tag='n324')
+AllTerritoryCode.n328 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='328', tag='n328')
+AllTerritoryCode.n332 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='332', tag='n332')
+AllTerritoryCode.n336 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='336', tag='n336')
+AllTerritoryCode.n340 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='340', tag='n340')
+AllTerritoryCode.n344 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='344', tag='n344')
+AllTerritoryCode.n348 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='348', tag='n348')
+AllTerritoryCode.n352 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='352', tag='n352')
+AllTerritoryCode.n356 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='356', tag='n356')
+AllTerritoryCode.n360 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='360', tag='n360')
+AllTerritoryCode.n364 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='364', tag='n364')
+AllTerritoryCode.n368 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='368', tag='n368')
+AllTerritoryCode.n372 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='372', tag='n372')
+AllTerritoryCode.n376 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='376', tag='n376')
+AllTerritoryCode.n380 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='380', tag='n380')
+AllTerritoryCode.n384 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='384', tag='n384')
+AllTerritoryCode.n388 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='388', tag='n388')
+AllTerritoryCode.n392 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='392', tag='n392')
+AllTerritoryCode.n398 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='398', tag='n398')
+AllTerritoryCode.n400 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='400', tag='n400')
+AllTerritoryCode.n404 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='404', tag='n404')
+AllTerritoryCode.n408 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='408', tag='n408')
+AllTerritoryCode.n410 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='410', tag='n410')
+AllTerritoryCode.n414 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='414', tag='n414')
+AllTerritoryCode.n417 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='417', tag='n417')
+AllTerritoryCode.n418 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='418', tag='n418')
+AllTerritoryCode.n422 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='422', tag='n422')
+AllTerritoryCode.n426 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='426', tag='n426')
+AllTerritoryCode.n428 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='428', tag='n428')
+AllTerritoryCode.n430 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='430', tag='n430')
+AllTerritoryCode.n434 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='434', tag='n434')
+AllTerritoryCode.n438 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='438', tag='n438')
+AllTerritoryCode.n440 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='440', tag='n440')
+AllTerritoryCode.n442 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='442', tag='n442')
+AllTerritoryCode.n450 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='450', tag='n450')
+AllTerritoryCode.n454 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='454', tag='n454')
+AllTerritoryCode.n458 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='458', tag='n458')
+AllTerritoryCode.n462 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='462', tag='n462')
+AllTerritoryCode.n466 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='466', tag='n466')
+AllTerritoryCode.n470 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='470', tag='n470')
+AllTerritoryCode.n478 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='478', tag='n478')
+AllTerritoryCode.n480 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='480', tag='n480')
+AllTerritoryCode.n484 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='484', tag='n484')
+AllTerritoryCode.n492 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='492', tag='n492')
+AllTerritoryCode.n496 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='496', tag='n496')
+AllTerritoryCode.n498 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='498', tag='n498')
+AllTerritoryCode.n499 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='499', tag='n499')
+AllTerritoryCode.n504 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='504', tag='n504')
+AllTerritoryCode.n508 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='508', tag='n508')
+AllTerritoryCode.n512 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='512', tag='n512')
+AllTerritoryCode.n516 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='516', tag='n516')
+AllTerritoryCode.n520 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='520', tag='n520')
+AllTerritoryCode.n524 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='524', tag='n524')
+AllTerritoryCode.n528 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='528', tag='n528')
+AllTerritoryCode.n540 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='540', tag='n540')
+AllTerritoryCode.n548 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='548', tag='n548')
+AllTerritoryCode.n554 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='554', tag='n554')
+AllTerritoryCode.n558 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='558', tag='n558')
+AllTerritoryCode.n562 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='562', tag='n562')
+AllTerritoryCode.n566 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='566', tag='n566')
+AllTerritoryCode.n578 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='578', tag='n578')
+AllTerritoryCode.n583 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='583', tag='n583')
+AllTerritoryCode.n584 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='584', tag='n584')
+AllTerritoryCode.n585 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='585', tag='n585')
+AllTerritoryCode.n586 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='586', tag='n586')
+AllTerritoryCode.n591 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='591', tag='n591')
+AllTerritoryCode.n598 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='598', tag='n598')
+AllTerritoryCode.n600 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='600', tag='n600')
+AllTerritoryCode.n604 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='604', tag='n604')
+AllTerritoryCode.n608 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='608', tag='n608')
+AllTerritoryCode.n616 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='616', tag='n616')
+AllTerritoryCode.n620 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='620', tag='n620')
+AllTerritoryCode.n624 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='624', tag='n624')
+AllTerritoryCode.n626 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='626', tag='n626')
+AllTerritoryCode.n630 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='630', tag='n630')
+AllTerritoryCode.n634 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='634', tag='n634')
+AllTerritoryCode.n642 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='642', tag='n642')
+AllTerritoryCode.n643 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='643', tag='n643')
+AllTerritoryCode.n646 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='646', tag='n646')
+AllTerritoryCode.n659 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='659', tag='n659')
+AllTerritoryCode.n662 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='662', tag='n662')
+AllTerritoryCode.n670 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='670', tag='n670')
+AllTerritoryCode.n674 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='674', tag='n674')
+AllTerritoryCode.n678 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='678', tag='n678')
+AllTerritoryCode.n682 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='682', tag='n682')
+AllTerritoryCode.n686 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='686', tag='n686')
+AllTerritoryCode.n688 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='688', tag='n688')
+AllTerritoryCode.n690 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='690', tag='n690')
+AllTerritoryCode.n694 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='694', tag='n694')
+AllTerritoryCode.n702 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='702', tag='n702')
+AllTerritoryCode.n703 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='703', tag='n703')
+AllTerritoryCode.n704 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='704', tag='n704')
+AllTerritoryCode.n705 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='705', tag='n705')
+AllTerritoryCode.n706 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='706', tag='n706')
+AllTerritoryCode.n710 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='710', tag='n710')
+AllTerritoryCode.n716 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='716', tag='n716')
+AllTerritoryCode.n720 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='720', tag='n720')
+AllTerritoryCode.n724 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='724', tag='n724')
+AllTerritoryCode.n728 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='728', tag='n728')
+AllTerritoryCode.n729 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='729', tag='n729')
+AllTerritoryCode.n732 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='732', tag='n732')
+AllTerritoryCode.n736 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='736', tag='n736')
+AllTerritoryCode.n740 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='740', tag='n740')
+AllTerritoryCode.n748 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='748', tag='n748')
+AllTerritoryCode.n752 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='752', tag='n752')
+AllTerritoryCode.n756 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='756', tag='n756')
+AllTerritoryCode.n760 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='760', tag='n760')
+AllTerritoryCode.n762 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='762', tag='n762')
+AllTerritoryCode.n764 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='764', tag='n764')
+AllTerritoryCode.n768 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='768', tag='n768')
+AllTerritoryCode.n776 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='776', tag='n776')
+AllTerritoryCode.n780 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='780', tag='n780')
+AllTerritoryCode.n784 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='784', tag='n784')
+AllTerritoryCode.n788 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='788', tag='n788')
+AllTerritoryCode.n792 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='792', tag='n792')
+AllTerritoryCode.n795 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='795', tag='n795')
+AllTerritoryCode.n798 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='798', tag='n798')
+AllTerritoryCode.n800 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='800', tag='n800')
+AllTerritoryCode.n804 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='804', tag='n804')
+AllTerritoryCode.n807 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='807', tag='n807')
+AllTerritoryCode.n810 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='810', tag='n810')
+AllTerritoryCode.n818 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='818', tag='n818')
+AllTerritoryCode.n826 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='826', tag='n826')
+AllTerritoryCode.n834 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='834', tag='n834')
+AllTerritoryCode.n840 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='840', tag='n840')
+AllTerritoryCode.n854 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='854', tag='n854')
+AllTerritoryCode.n858 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='858', tag='n858')
+AllTerritoryCode.n860 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='860', tag='n860')
+AllTerritoryCode.n862 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='862', tag='n862')
+AllTerritoryCode.n882 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='882', tag='n882')
+AllTerritoryCode.n886 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='886', tag='n886')
+AllTerritoryCode.n887 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='887', tag='n887')
+AllTerritoryCode.n890 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='890', tag='n890')
+AllTerritoryCode.n891 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='891', tag='n891')
+AllTerritoryCode.n894 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='894', tag='n894')
+AllTerritoryCode.n2100 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2100', tag='n2100')
+AllTerritoryCode.n2101 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2101', tag='n2101')
+AllTerritoryCode.n2102 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2102', tag='n2102')
+AllTerritoryCode.n2103 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2103', tag='n2103')
+AllTerritoryCode.n2104 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2104', tag='n2104')
+AllTerritoryCode.n2105 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2105', tag='n2105')
+AllTerritoryCode.n2106 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2106', tag='n2106')
+AllTerritoryCode.n2107 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2107', tag='n2107')
+AllTerritoryCode.n2108 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2108', tag='n2108')
+AllTerritoryCode.n2109 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2109', tag='n2109')
+AllTerritoryCode.n2110 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2110', tag='n2110')
+AllTerritoryCode.n2111 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2111', tag='n2111')
+AllTerritoryCode.n2112 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2112', tag='n2112')
+AllTerritoryCode.n2113 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2113', tag='n2113')
+AllTerritoryCode.n2114 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2114', tag='n2114')
+AllTerritoryCode.n2115 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2115', tag='n2115')
+AllTerritoryCode.n2116 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2116', tag='n2116')
+AllTerritoryCode.n2117 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2117', tag='n2117')
+AllTerritoryCode.n2118 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2118', tag='n2118')
+AllTerritoryCode.n2119 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2119', tag='n2119')
+AllTerritoryCode.n2120 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2120', tag='n2120')
+AllTerritoryCode.n2121 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2121', tag='n2121')
+AllTerritoryCode.n2122 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2122', tag='n2122')
+AllTerritoryCode.n2123 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2123', tag='n2123')
+AllTerritoryCode.n2124 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2124', tag='n2124')
+AllTerritoryCode.n2125 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2125', tag='n2125')
+AllTerritoryCode.n2126 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2126', tag='n2126')
+AllTerritoryCode.n2127 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2127', tag='n2127')
+AllTerritoryCode.n2128 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2128', tag='n2128')
+AllTerritoryCode.n2129 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2129', tag='n2129')
+AllTerritoryCode.n2130 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2130', tag='n2130')
+AllTerritoryCode.n2131 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2131', tag='n2131')
+AllTerritoryCode.n2132 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2132', tag='n2132')
+AllTerritoryCode.n2133 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2133', tag='n2133')
+AllTerritoryCode.n2134 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2134', tag='n2134')
+AllTerritoryCode.n2136 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2136', tag='n2136')
+AllTerritoryCode.XK = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='XK', tag='XK')
+AllTerritoryCode.Worldwide = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='Worldwide', tag='Worldwide')
+AllTerritoryCode.AIDJ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AIDJ', tag='AIDJ')
+AllTerritoryCode.ANHH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ANHH', tag='ANHH')
+AllTerritoryCode.BQAQ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BQAQ', tag='BQAQ')
+AllTerritoryCode.BUMM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BUMM', tag='BUMM')
+AllTerritoryCode.BYAA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BYAA', tag='BYAA')
+AllTerritoryCode.CSHH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CSHH', tag='CSHH')
+AllTerritoryCode.CSXX = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CSXX', tag='CSXX')
+AllTerritoryCode.CTKI = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CTKI', tag='CTKI')
+AllTerritoryCode.DDDE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DDDE', tag='DDDE')
+AllTerritoryCode.DYBJ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DYBJ', tag='DYBJ')
+AllTerritoryCode.FQHH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FQHH', tag='FQHH')
+AllTerritoryCode.FXFR = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FXFR', tag='FXFR')
+AllTerritoryCode.GEHH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GEHH', tag='GEHH')
+AllTerritoryCode.HVBF = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HVBF', tag='HVBF')
+AllTerritoryCode.JTUM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JTUM', tag='JTUM')
+AllTerritoryCode.MIUM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MIUM', tag='MIUM')
+AllTerritoryCode.NHVU = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NHVU', tag='NHVU')
+AllTerritoryCode.NQAQ = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NQAQ', tag='NQAQ')
+AllTerritoryCode.NTHH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NTHH', tag='NTHH')
+AllTerritoryCode.PCHH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PCHH', tag='PCHH')
+AllTerritoryCode.PUUM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PUUM', tag='PUUM')
+AllTerritoryCode.PZPA = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PZPA', tag='PZPA')
+AllTerritoryCode.RHZW = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RHZW', tag='RHZW')
+AllTerritoryCode.SKIN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SKIN', tag='SKIN')
+AllTerritoryCode.SUHH = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SUHH', tag='SUHH')
+AllTerritoryCode.TPTL = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TPTL', tag='TPTL')
+AllTerritoryCode.VDVN = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VDVN', tag='VDVN')
+AllTerritoryCode.WKUM = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='WKUM', tag='WKUM')
+AllTerritoryCode.YDYE = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='YDYE', tag='YDYE')
+AllTerritoryCode.YUCS = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='YUCS', tag='YUCS')
+AllTerritoryCode.ZRCD = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZRCD', tag='ZRCD')
+AllTerritoryCode.n446 = AllTerritoryCode._CF_enumeration.addEnumeration(unicode_value='446', tag='n446')
+AllTerritoryCode._InitializeFacetMap(AllTerritoryCode._CF_enumeration)
+Namespace.addCategoryObject('typeBinding', 'AllTerritoryCode', AllTerritoryCode)
+_module_typeBindings.AllTerritoryCode = AllTerritoryCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ArtistRole
 class ArtistRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -110,7 +662,7 @@ class ArtistRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
     """A role of a principal Contributor in relation to a Performance or a Fixation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ArtistRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 68, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 2739, 3)
     _Documentation = 'A role of a principal Contributor in relation to a Performance or a Fixation.'
 ArtistRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ArtistRole, enum_prefix=None)
 ArtistRole.Actor = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Actor', tag='Actor')
@@ -160,8 +712,20 @@ ArtistRole.SubArranger = ArtistRole._CF_enumeration.addEnumeration(unicode_value
 ArtistRole.Translator = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Translator', tag='Translator')
 ArtistRole.Unknown = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 ArtistRole.UserDefined = ArtistRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+ArtistRole.ArtCopyist = ArtistRole._CF_enumeration.addEnumeration(unicode_value='ArtCopyist', tag='ArtCopyist')
+ArtistRole.Calligrapher = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Calligrapher', tag='Calligrapher')
+ArtistRole.Cartographer = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Cartographer', tag='Cartographer')
+ArtistRole.ComputerProgrammer = ArtistRole._CF_enumeration.addEnumeration(unicode_value='ComputerProgrammer', tag='ComputerProgrammer')
+ArtistRole.Delineator = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Delineator', tag='Delineator')
+ArtistRole.Draughtsman = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Draughtsman', tag='Draughtsman')
+ArtistRole.Facsimilist = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Facsimilist', tag='Facsimilist')
+ArtistRole.Illustrator = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Illustrator', tag='Illustrator')
+ArtistRole.MusicCopyist = ArtistRole._CF_enumeration.addEnumeration(unicode_value='MusicCopyist', tag='MusicCopyist')
+ArtistRole.NotSpecified = ArtistRole._CF_enumeration.addEnumeration(unicode_value='NotSpecified', tag='NotSpecified')
+ArtistRole.TypeDesigner = ArtistRole._CF_enumeration.addEnumeration(unicode_value='TypeDesigner', tag='TypeDesigner')
 ArtistRole._InitializeFacetMap(ArtistRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ArtistRole', ArtistRole)
+_module_typeBindings.ArtistRole = ArtistRole
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}AudioCodecType
 class AudioCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -169,7 +733,7 @@ class AudioCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of AudioCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AudioCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 310, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3036, 3)
     _Documentation = 'A Type of AudioCodec.'
 AudioCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AudioCodecType, enum_prefix=None)
 AudioCodecType.AAC = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='AAC', tag='AAC')
@@ -190,8 +754,13 @@ AudioCodecType.Unknown = AudioCodecType._CF_enumeration.addEnumeration(unicode_v
 AudioCodecType.UserDefined = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 AudioCodecType.Vorbis = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='Vorbis', tag='Vorbis')
 AudioCodecType.WMA = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='WMA', tag='WMA')
+AudioCodecType.AMR = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='AMR', tag='AMR')
+AudioCodecType.Atmos = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='Atmos', tag='Atmos')
+AudioCodecType.MP = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='MP', tag='MP')
+AudioCodecType.MQA = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='MQA', tag='MQA')
 AudioCodecType._InitializeFacetMap(AudioCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'AudioCodecType', AudioCodecType)
+_module_typeBindings.AudioCodecType = AudioCodecType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}BinaryDataType
 class BinaryDataType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -199,13 +768,14 @@ class BinaryDataType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A format of a Fingerprint."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'BinaryDataType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 407, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3153, 3)
     _Documentation = 'A format of a Fingerprint.'
 BinaryDataType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=BinaryDataType, enum_prefix=None)
 BinaryDataType.Binary64 = BinaryDataType._CF_enumeration.addEnumeration(unicode_value='Binary64', tag='Binary64')
 BinaryDataType.HexBinary = BinaryDataType._CF_enumeration.addEnumeration(unicode_value='HexBinary', tag='HexBinary')
 BinaryDataType._InitializeFacetMap(BinaryDataType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'BinaryDataType', BinaryDataType)
+_module_typeBindings.BinaryDataType = BinaryDataType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}BusinessContributorRole
 class BusinessContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -213,7 +783,7 @@ class BusinessContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis
     """A business-related role played by a Contributor in relation to a MusicalWork."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'BusinessContributorRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 424, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3170, 3)
     _Documentation = 'A business-related role played by a Contributor in relation to a MusicalWork.'
 BusinessContributorRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=BusinessContributorRole, enum_prefix=None)
 BusinessContributorRole.Contributor = BusinessContributorRole._CF_enumeration.addEnumeration(unicode_value='Contributor', tag='Contributor')
@@ -225,6 +795,7 @@ BusinessContributorRole.Unknown = BusinessContributorRole._CF_enumeration.addEnu
 BusinessContributorRole.UserDefined = BusinessContributorRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 BusinessContributorRole._InitializeFacetMap(BusinessContributorRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'BusinessContributorRole', BusinessContributorRole)
+_module_typeBindings.BusinessContributorRole = BusinessContributorRole
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CalculationType
 class CalculationType (pyxb.binding.datatypes.string):
@@ -232,10 +803,11 @@ class CalculationType (pyxb.binding.datatypes.string):
     """A Type of Calculation used to determine an actual Amount paid."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CalculationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 466, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3212, 3)
     _Documentation = 'A Type of Calculation used to determine an actual Amount paid.'
 CalculationType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'CalculationType', CalculationType)
+_module_typeBindings.CalculationType = CalculationType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CarrierType
 class CarrierType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -243,7 +815,7 @@ class CarrierType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration
     """A Type of Carrier used for a Fixation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CarrierType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 472, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3218, 3)
     _Documentation = 'A Type of Carrier used for a Fixation.'
 CarrierType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CarrierType, enum_prefix=None)
 CarrierType.n12InchDiscoSingleRemix = CarrierType._CF_enumeration.addEnumeration(unicode_value='12InchDiscoSingleRemix', tag='n12InchDiscoSingleRemix')
@@ -355,8 +927,12 @@ CarrierType.VhsNTSC = CarrierType._CF_enumeration.addEnumeration(unicode_value='
 CarrierType.VhsPAL = CarrierType._CF_enumeration.addEnumeration(unicode_value='VhsPAL', tag='VhsPAL')
 CarrierType.VhsPlusCdLp = CarrierType._CF_enumeration.addEnumeration(unicode_value='VhsPlusCdLp', tag='VhsPlusCdLp')
 CarrierType.VhsSECAM = CarrierType._CF_enumeration.addEnumeration(unicode_value='VhsSECAM', tag='VhsSECAM')
+CarrierType.FileSystem = CarrierType._CF_enumeration.addEnumeration(unicode_value='FileSystem', tag='FileSystem')
+CarrierType.MemoryDevice = CarrierType._CF_enumeration.addEnumeration(unicode_value='MemoryDevice', tag='MemoryDevice')
+CarrierType.OnlineSystem = CarrierType._CF_enumeration.addEnumeration(unicode_value='OnlineSystem', tag='OnlineSystem')
 CarrierType._InitializeFacetMap(CarrierType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CarrierType', CarrierType)
+_module_typeBindings.CarrierType = CarrierType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CdProtectionType
 class CdProtectionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -364,7 +940,7 @@ class CdProtectionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumer
     """A Type of CD protection."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CdProtectionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1024, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3785, 3)
     _Documentation = 'A Type of CD protection.'
 CdProtectionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CdProtectionType, enum_prefix=None)
 CdProtectionType.CDS100 = CdProtectionType._CF_enumeration.addEnumeration(unicode_value='CDS100', tag='CDS100')
@@ -377,6 +953,7 @@ CdProtectionType.Unknown = CdProtectionType._CF_enumeration.addEnumeration(unico
 CdProtectionType.UserDefined = CdProtectionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CdProtectionType._InitializeFacetMap(CdProtectionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CdProtectionType', CdProtectionType)
+_module_typeBindings.CdProtectionType = CdProtectionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CharacterType
 class CharacterType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -384,7 +961,7 @@ class CharacterType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A Type of a Character."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CharacterType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1071, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3832, 3)
     _Documentation = 'A Type of a Character.'
 CharacterType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CharacterType, enum_prefix=None)
 CharacterType.MainCharacter = CharacterType._CF_enumeration.addEnumeration(unicode_value='MainCharacter', tag='MainCharacter')
@@ -392,6 +969,7 @@ CharacterType.OtherCharacter = CharacterType._CF_enumeration.addEnumeration(unic
 CharacterType.SupportingCharacter = CharacterType._CF_enumeration.addEnumeration(unicode_value='SupportingCharacter', tag='SupportingCharacter')
 CharacterType._InitializeFacetMap(CharacterType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CharacterType', CharacterType)
+_module_typeBindings.CharacterType = CharacterType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CodingType
 class CodingType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -399,13 +977,14 @@ class CodingType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
     """A Type of coding used to encode a Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CodingType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1093, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3854, 3)
     _Documentation = 'A Type of coding used to encode a Resource.'
 CodingType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CodingType, enum_prefix=None)
 CodingType.Lossless = CodingType._CF_enumeration.addEnumeration(unicode_value='Lossless', tag='Lossless')
 CodingType.Lossy = CodingType._CF_enumeration.addEnumeration(unicode_value='Lossy', tag='Lossy')
 CodingType._InitializeFacetMap(CodingType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CodingType', CodingType)
+_module_typeBindings.CodingType = CodingType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CollectionType
 class CollectionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -413,7 +992,7 @@ class CollectionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of Collection."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CollectionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1110, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3871, 3)
     _Documentation = 'A Type of Collection.'
 CollectionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CollectionType, enum_prefix=None)
 CollectionType.AudioChapter = CollectionType._CF_enumeration.addEnumeration(unicode_value='AudioChapter', tag='AudioChapter')
@@ -426,6 +1005,7 @@ CollectionType.Series = CollectionType._CF_enumeration.addEnumeration(unicode_va
 CollectionType.VideoChapter = CollectionType._CF_enumeration.addEnumeration(unicode_value='VideoChapter', tag='VideoChapter')
 CollectionType._InitializeFacetMap(CollectionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CollectionType', CollectionType)
+_module_typeBindings.CollectionType = CollectionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CommercialModelType
 class CommercialModelType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -433,7 +1013,7 @@ class CommercialModelType (pyxb.binding.datatypes.string, pyxb.binding.basis.enu
     """A Type of CommercialModel (e.g. SubscriptionModel and PayAsYouGoModel). The CommercialModelType indicates how a Consumer pays for a Service or Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CommercialModelType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1157, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3918, 3)
     _Documentation = 'A Type of CommercialModel (e.g. SubscriptionModel and PayAsYouGoModel). The CommercialModelType indicates how a Consumer pays for a Service or Release.'
 CommercialModelType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CommercialModelType, enum_prefix=None)
 CommercialModelType.AdvertisementSupportedModel = CommercialModelType._CF_enumeration.addEnumeration(unicode_value='AdvertisementSupportedModel', tag='AdvertisementSupportedModel')
@@ -448,6 +1028,7 @@ CommercialModelType.Unknown = CommercialModelType._CF_enumeration.addEnumeration
 CommercialModelType.UserDefined = CommercialModelType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CommercialModelType._InitializeFacetMap(CommercialModelType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CommercialModelType', CommercialModelType)
+_module_typeBindings.CommercialModelType = CommercialModelType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CompilationType
 class CompilationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -455,7 +1036,7 @@ class CompilationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A Type of Compilation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CompilationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1214, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3975, 3)
     _Documentation = 'A Type of Compilation.'
 CompilationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CompilationType, enum_prefix=None)
 CompilationType.InternalCompilation = CompilationType._CF_enumeration.addEnumeration(unicode_value='InternalCompilation', tag='InternalCompilation')
@@ -463,6 +1044,7 @@ CompilationType.NonInternalCompilation = CompilationType._CF_enumeration.addEnum
 CompilationType.NotCompiled = CompilationType._CF_enumeration.addEnumeration(unicode_value='NotCompiled', tag='NotCompiled')
 CompilationType._InitializeFacetMap(CompilationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CompilationType', CompilationType)
+_module_typeBindings.CompilationType = CompilationType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ContainerFormat
 class ContainerFormat (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -470,7 +1052,7 @@ class ContainerFormat (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A Type of container according to its FileFormat."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ContainerFormat')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1236, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 3997, 3)
     _Documentation = 'A Type of container according to its FileFormat.'
 ContainerFormat._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ContainerFormat, enum_prefix=None)
 ContainerFormat.AIFF = ContainerFormat._CF_enumeration.addEnumeration(unicode_value='AIFF', tag='AIFF')
@@ -484,6 +1066,7 @@ ContainerFormat.UserDefined = ContainerFormat._CF_enumeration.addEnumeration(uni
 ContainerFormat.WAV = ContainerFormat._CF_enumeration.addEnumeration(unicode_value='WAV', tag='WAV')
 ContainerFormat._InitializeFacetMap(ContainerFormat._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ContainerFormat', ContainerFormat)
+_module_typeBindings.ContainerFormat = ContainerFormat
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CreationType
 class CreationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -491,7 +1074,7 @@ class CreationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeratio
     """A Type of Creation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CreationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1288, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 4049, 3)
     _Documentation = 'A Type of Creation.'
 CreationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CreationType, enum_prefix=None)
 CreationType.MusicalWork = CreationType._CF_enumeration.addEnumeration(unicode_value='MusicalWork', tag='MusicalWork')
@@ -499,6 +1082,7 @@ CreationType.Release = CreationType._CF_enumeration.addEnumeration(unicode_value
 CreationType.Resource = CreationType._CF_enumeration.addEnumeration(unicode_value='Resource', tag='Resource')
 CreationType._InitializeFacetMap(CreationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CreationType', CreationType)
+_module_typeBindings.CreationType = CreationType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CreativeContributorRole
 class CreativeContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -506,7 +1090,7 @@ class CreativeContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis
     """A creative role played by a Contributor in relation to a MusicalWork."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CreativeContributorRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1310, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 4071, 3)
     _Documentation = 'A creative role played by a Contributor in relation to a MusicalWork.'
 CreativeContributorRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CreativeContributorRole, enum_prefix=None)
 CreativeContributorRole.Adapter = CreativeContributorRole._CF_enumeration.addEnumeration(unicode_value='Adapter', tag='Adapter')
@@ -523,6 +1107,7 @@ CreativeContributorRole.SubLyricist = CreativeContributorRole._CF_enumeration.ad
 CreativeContributorRole.Translator = CreativeContributorRole._CF_enumeration.addEnumeration(unicode_value='Translator', tag='Translator')
 CreativeContributorRole._InitializeFacetMap(CreativeContributorRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CreativeContributorRole', CreativeContributorRole)
+_module_typeBindings.CreativeContributorRole = CreativeContributorRole
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CueOrigin
 class CueOrigin (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -530,7 +1115,7 @@ class CueOrigin (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of Cue according to its origin."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CueOrigin')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1377, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 4138, 3)
     _Documentation = 'A Type of Cue according to its origin.'
 CueOrigin._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CueOrigin, enum_prefix=None)
 CueOrigin.LibraryMusic = CueOrigin._CF_enumeration.addEnumeration(unicode_value='LibraryMusic', tag='LibraryMusic')
@@ -540,6 +1125,7 @@ CueOrigin.Unknown = CueOrigin._CF_enumeration.addEnumeration(unicode_value='Unkn
 CueOrigin.UserDefined = CueOrigin._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CueOrigin._InitializeFacetMap(CueOrigin._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CueOrigin', CueOrigin)
+_module_typeBindings.CueOrigin = CueOrigin
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CueSheetType
 class CueSheetType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -547,7 +1133,7 @@ class CueSheetType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeratio
     """A Type of CueSheet."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CueSheetType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1409, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 4170, 3)
     _Documentation = 'A Type of CueSheet.'
 CueSheetType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CueSheetType, enum_prefix=None)
 CueSheetType.AverageCueSheet = CueSheetType._CF_enumeration.addEnumeration(unicode_value='AverageCueSheet', tag='AverageCueSheet')
@@ -557,6 +1143,7 @@ CueSheetType.SummarisedCueSheet = CueSheetType._CF_enumeration.addEnumeration(un
 CueSheetType.SurrogateCueSheet = CueSheetType._CF_enumeration.addEnumeration(unicode_value='SurrogateCueSheet', tag='SurrogateCueSheet')
 CueSheetType._InitializeFacetMap(CueSheetType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CueSheetType', CueSheetType)
+_module_typeBindings.CueSheetType = CueSheetType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}CueUseType
 class CueUseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -564,7 +1151,7 @@ class CueUseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
     """A Type of use of a Cue."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CueUseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1441, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 4202, 3)
     _Documentation = 'A Type of use of a Cue.'
 CueUseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CueUseType, enum_prefix=None)
 CueUseType.AudioLogo = CueUseType._CF_enumeration.addEnumeration(unicode_value='AudioLogo', tag='AudioLogo')
@@ -579,6 +1166,711 @@ CueUseType.Theme = CueUseType._CF_enumeration.addEnumeration(unicode_value='Them
 CueUseType.UserDefined = CueUseType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CueUseType._InitializeFacetMap(CueUseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CueUseType', CueUseType)
+_module_typeBindings.CueUseType = CueUseType
+
+# Atomic simple type: {http://ddex.net/xml/avs/avs}CurrencyCode
+class CurrencyCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
+
+    """A code representing a Currency."""
+
+    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CurrencyCode')
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 4259, 3)
+    _Documentation = 'A code representing a Currency.'
+CurrencyCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CurrencyCode, enum_prefix=None)
+CurrencyCode.AED = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='AED', tag='AED')
+CurrencyCode.AFN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='AFN', tag='AFN')
+CurrencyCode.ALL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ALL', tag='ALL')
+CurrencyCode.AMD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='AMD', tag='AMD')
+CurrencyCode.ANG = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ANG', tag='ANG')
+CurrencyCode.AOA = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='AOA', tag='AOA')
+CurrencyCode.ARS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ARS', tag='ARS')
+CurrencyCode.AUD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='AUD', tag='AUD')
+CurrencyCode.AWG = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='AWG', tag='AWG')
+CurrencyCode.AZN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='AZN', tag='AZN')
+CurrencyCode.BAM = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BAM', tag='BAM')
+CurrencyCode.BBD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BBD', tag='BBD')
+CurrencyCode.BDT = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BDT', tag='BDT')
+CurrencyCode.BGN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BGN', tag='BGN')
+CurrencyCode.BHD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BHD', tag='BHD')
+CurrencyCode.BIF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BIF', tag='BIF')
+CurrencyCode.BMD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BMD', tag='BMD')
+CurrencyCode.BND = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BND', tag='BND')
+CurrencyCode.BOB = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BOB', tag='BOB')
+CurrencyCode.BOV = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BOV', tag='BOV')
+CurrencyCode.BRL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BRL', tag='BRL')
+CurrencyCode.BSD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BSD', tag='BSD')
+CurrencyCode.BTN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BTN', tag='BTN')
+CurrencyCode.BWP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BWP', tag='BWP')
+CurrencyCode.BYR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BYR', tag='BYR')
+CurrencyCode.BZD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='BZD', tag='BZD')
+CurrencyCode.CAD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CAD', tag='CAD')
+CurrencyCode.CDF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CDF', tag='CDF')
+CurrencyCode.CHF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CHF', tag='CHF')
+CurrencyCode.CLF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CLF', tag='CLF')
+CurrencyCode.CLP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CLP', tag='CLP')
+CurrencyCode.CNY = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CNY', tag='CNY')
+CurrencyCode.COP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='COP', tag='COP')
+CurrencyCode.COU = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='COU', tag='COU')
+CurrencyCode.CRC = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CRC', tag='CRC')
+CurrencyCode.CUC = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CUC', tag='CUC')
+CurrencyCode.CUP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CUP', tag='CUP')
+CurrencyCode.CVE = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CVE', tag='CVE')
+CurrencyCode.CZK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CZK', tag='CZK')
+CurrencyCode.DJF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='DJF', tag='DJF')
+CurrencyCode.DKK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='DKK', tag='DKK')
+CurrencyCode.DOP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='DOP', tag='DOP')
+CurrencyCode.DZD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='DZD', tag='DZD')
+CurrencyCode.EGP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='EGP', tag='EGP')
+CurrencyCode.ERN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ERN', tag='ERN')
+CurrencyCode.ETB = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ETB', tag='ETB')
+CurrencyCode.EUR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='EUR', tag='EUR')
+CurrencyCode.FJD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='FJD', tag='FJD')
+CurrencyCode.FKP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='FKP', tag='FKP')
+CurrencyCode.GBP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GBP', tag='GBP')
+CurrencyCode.GEL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GEL', tag='GEL')
+CurrencyCode.GHS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GHS', tag='GHS')
+CurrencyCode.GIP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GIP', tag='GIP')
+CurrencyCode.GMD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GMD', tag='GMD')
+CurrencyCode.GNF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GNF', tag='GNF')
+CurrencyCode.GTQ = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GTQ', tag='GTQ')
+CurrencyCode.GYD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='GYD', tag='GYD')
+CurrencyCode.HKD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='HKD', tag='HKD')
+CurrencyCode.HNL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='HNL', tag='HNL')
+CurrencyCode.HRK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='HRK', tag='HRK')
+CurrencyCode.HTG = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='HTG', tag='HTG')
+CurrencyCode.HUF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='HUF', tag='HUF')
+CurrencyCode.IDR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='IDR', tag='IDR')
+CurrencyCode.ILS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ILS', tag='ILS')
+CurrencyCode.INR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='INR', tag='INR')
+CurrencyCode.IQD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='IQD', tag='IQD')
+CurrencyCode.IRR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='IRR', tag='IRR')
+CurrencyCode.ISK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ISK', tag='ISK')
+CurrencyCode.JMD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='JMD', tag='JMD')
+CurrencyCode.JOD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='JOD', tag='JOD')
+CurrencyCode.JPY = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='JPY', tag='JPY')
+CurrencyCode.KES = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KES', tag='KES')
+CurrencyCode.KGS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KGS', tag='KGS')
+CurrencyCode.KHR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KHR', tag='KHR')
+CurrencyCode.KMF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KMF', tag='KMF')
+CurrencyCode.KPW = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KPW', tag='KPW')
+CurrencyCode.KRW = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KRW', tag='KRW')
+CurrencyCode.KWD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KWD', tag='KWD')
+CurrencyCode.KYD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KYD', tag='KYD')
+CurrencyCode.KZT = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='KZT', tag='KZT')
+CurrencyCode.LAK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LAK', tag='LAK')
+CurrencyCode.LBP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LBP', tag='LBP')
+CurrencyCode.LKR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LKR', tag='LKR')
+CurrencyCode.LRD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LRD', tag='LRD')
+CurrencyCode.LSL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LSL', tag='LSL')
+CurrencyCode.LTL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LTL', tag='LTL')
+CurrencyCode.LVL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LVL', tag='LVL')
+CurrencyCode.LYD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='LYD', tag='LYD')
+CurrencyCode.MAD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MAD', tag='MAD')
+CurrencyCode.MDL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MDL', tag='MDL')
+CurrencyCode.MGA = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MGA', tag='MGA')
+CurrencyCode.MKD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MKD', tag='MKD')
+CurrencyCode.MMK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MMK', tag='MMK')
+CurrencyCode.MNT = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MNT', tag='MNT')
+CurrencyCode.MOP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MOP', tag='MOP')
+CurrencyCode.MRO = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MRO', tag='MRO')
+CurrencyCode.MUR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MUR', tag='MUR')
+CurrencyCode.MVR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MVR', tag='MVR')
+CurrencyCode.MWK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MWK', tag='MWK')
+CurrencyCode.MXN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MXN', tag='MXN')
+CurrencyCode.MXV = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MXV', tag='MXV')
+CurrencyCode.MYR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MYR', tag='MYR')
+CurrencyCode.MZM = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MZM', tag='MZM')
+CurrencyCode.NAD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='NAD', tag='NAD')
+CurrencyCode.NGN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='NGN', tag='NGN')
+CurrencyCode.NIO = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='NIO', tag='NIO')
+CurrencyCode.NOK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='NOK', tag='NOK')
+CurrencyCode.NPR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='NPR', tag='NPR')
+CurrencyCode.NZD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='NZD', tag='NZD')
+CurrencyCode.OMR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='OMR', tag='OMR')
+CurrencyCode.PAB = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='PAB', tag='PAB')
+CurrencyCode.PEN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='PEN', tag='PEN')
+CurrencyCode.PGK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='PGK', tag='PGK')
+CurrencyCode.PHP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='PHP', tag='PHP')
+CurrencyCode.PKR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='PKR', tag='PKR')
+CurrencyCode.PLN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='PLN', tag='PLN')
+CurrencyCode.PYG = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='PYG', tag='PYG')
+CurrencyCode.QAR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='QAR', tag='QAR')
+CurrencyCode.RON = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='RON', tag='RON')
+CurrencyCode.RSD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='RSD', tag='RSD')
+CurrencyCode.RUB = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='RUB', tag='RUB')
+CurrencyCode.RWF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='RWF', tag='RWF')
+CurrencyCode.SAR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SAR', tag='SAR')
+CurrencyCode.SBD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SBD', tag='SBD')
+CurrencyCode.SCR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SCR', tag='SCR')
+CurrencyCode.SDG = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SDG', tag='SDG')
+CurrencyCode.SEK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SEK', tag='SEK')
+CurrencyCode.SGD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SGD', tag='SGD')
+CurrencyCode.SHP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SHP', tag='SHP')
+CurrencyCode.SLL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SLL', tag='SLL')
+CurrencyCode.SOS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SOS', tag='SOS')
+CurrencyCode.SRD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SRD', tag='SRD')
+CurrencyCode.STD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='STD', tag='STD')
+CurrencyCode.SVC = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SVC', tag='SVC')
+CurrencyCode.SYP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SYP', tag='SYP')
+CurrencyCode.SZL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SZL', tag='SZL')
+CurrencyCode.THB = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='THB', tag='THB')
+CurrencyCode.TJS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TJS', tag='TJS')
+CurrencyCode.TMT = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TMT', tag='TMT')
+CurrencyCode.TND = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TND', tag='TND')
+CurrencyCode.TOP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TOP', tag='TOP')
+CurrencyCode.TRY = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TRY', tag='TRY')
+CurrencyCode.TTD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TTD', tag='TTD')
+CurrencyCode.TWD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TWD', tag='TWD')
+CurrencyCode.TZS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='TZS', tag='TZS')
+CurrencyCode.UAH = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='UAH', tag='UAH')
+CurrencyCode.UGX = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='UGX', tag='UGX')
+CurrencyCode.USD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='USD', tag='USD')
+CurrencyCode.UYI = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='UYI', tag='UYI')
+CurrencyCode.UYU = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='UYU', tag='UYU')
+CurrencyCode.UZS = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='UZS', tag='UZS')
+CurrencyCode.VEF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='VEF', tag='VEF')
+CurrencyCode.VND = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='VND', tag='VND')
+CurrencyCode.VUV = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='VUV', tag='VUV')
+CurrencyCode.WST = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='WST', tag='WST')
+CurrencyCode.XAF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='XAF', tag='XAF')
+CurrencyCode.XCD = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='XCD', tag='XCD')
+CurrencyCode.XOF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='XOF', tag='XOF')
+CurrencyCode.XPF = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='XPF', tag='XPF')
+CurrencyCode.YER = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='YER', tag='YER')
+CurrencyCode.ZAR = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZAR', tag='ZAR')
+CurrencyCode.ZMK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZMK', tag='ZMK')
+CurrencyCode.ZWL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZWL', tag='ZWL')
+CurrencyCode.CYP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='CYP', tag='CYP')
+CurrencyCode.EEK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='EEK', tag='EEK')
+CurrencyCode.MTL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MTL', tag='MTL')
+CurrencyCode.ROL = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ROL', tag='ROL')
+CurrencyCode.SIT = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SIT', tag='SIT')
+CurrencyCode.SKK = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SKK', tag='SKK')
+CurrencyCode.MRU = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MRU', tag='MRU')
+CurrencyCode.MZN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='MZN', tag='MZN')
+CurrencyCode.SSP = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='SSP', tag='SSP')
+CurrencyCode.STN = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='STN', tag='STN')
+CurrencyCode.VES = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='VES', tag='VES')
+CurrencyCode.ZMW = CurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZMW', tag='ZMW')
+CurrencyCode._InitializeFacetMap(CurrencyCode._CF_enumeration)
+Namespace.addCategoryObject('typeBinding', 'CurrencyCode', CurrencyCode)
+_module_typeBindings.CurrencyCode = CurrencyCode
+
+# Atomic simple type: {http://ddex.net/xml/avs/avs}CurrentTerritoryCode
+class CurrentTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
+
+    """A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide."""
+
+    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CurrentTerritoryCode')
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 5141, 3)
+    _Documentation = 'A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide.'
+CurrentTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CurrentTerritoryCode, enum_prefix=None)
+CurrentTerritoryCode.AD = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AD', tag='AD')
+CurrentTerritoryCode.AE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AE', tag='AE')
+CurrentTerritoryCode.AF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AF', tag='AF')
+CurrentTerritoryCode.AG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AG', tag='AG')
+CurrentTerritoryCode.AI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AI', tag='AI')
+CurrentTerritoryCode.AL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AL', tag='AL')
+CurrentTerritoryCode.AM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AM', tag='AM')
+CurrentTerritoryCode.AN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AN', tag='AN')
+CurrentTerritoryCode.AO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AO', tag='AO')
+CurrentTerritoryCode.AQ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AQ', tag='AQ')
+CurrentTerritoryCode.AR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AR', tag='AR')
+CurrentTerritoryCode.AS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AS', tag='AS')
+CurrentTerritoryCode.AT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AT', tag='AT')
+CurrentTerritoryCode.AU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AU', tag='AU')
+CurrentTerritoryCode.AW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AW', tag='AW')
+CurrentTerritoryCode.AX = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AX', tag='AX')
+CurrentTerritoryCode.AZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AZ', tag='AZ')
+CurrentTerritoryCode.BA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BA', tag='BA')
+CurrentTerritoryCode.BB = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BB', tag='BB')
+CurrentTerritoryCode.BD = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BD', tag='BD')
+CurrentTerritoryCode.BE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BE', tag='BE')
+CurrentTerritoryCode.BF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BF', tag='BF')
+CurrentTerritoryCode.BG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BG', tag='BG')
+CurrentTerritoryCode.BH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BH', tag='BH')
+CurrentTerritoryCode.BI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BI', tag='BI')
+CurrentTerritoryCode.BJ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BJ', tag='BJ')
+CurrentTerritoryCode.BL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BL', tag='BL')
+CurrentTerritoryCode.BM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BM', tag='BM')
+CurrentTerritoryCode.BN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BN', tag='BN')
+CurrentTerritoryCode.BO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BO', tag='BO')
+CurrentTerritoryCode.BQ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BQ', tag='BQ')
+CurrentTerritoryCode.BR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BR', tag='BR')
+CurrentTerritoryCode.BS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BS', tag='BS')
+CurrentTerritoryCode.BT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BT', tag='BT')
+CurrentTerritoryCode.BV = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BV', tag='BV')
+CurrentTerritoryCode.BW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BW', tag='BW')
+CurrentTerritoryCode.BY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BY', tag='BY')
+CurrentTerritoryCode.BZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='BZ', tag='BZ')
+CurrentTerritoryCode.CA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CA', tag='CA')
+CurrentTerritoryCode.CC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CC', tag='CC')
+CurrentTerritoryCode.CD = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CD', tag='CD')
+CurrentTerritoryCode.CF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CF', tag='CF')
+CurrentTerritoryCode.CG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CG', tag='CG')
+CurrentTerritoryCode.CH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CH', tag='CH')
+CurrentTerritoryCode.CI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CI', tag='CI')
+CurrentTerritoryCode.CK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CK', tag='CK')
+CurrentTerritoryCode.CL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CL', tag='CL')
+CurrentTerritoryCode.CM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CM', tag='CM')
+CurrentTerritoryCode.CN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CN', tag='CN')
+CurrentTerritoryCode.CO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CO', tag='CO')
+CurrentTerritoryCode.CR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CR', tag='CR')
+CurrentTerritoryCode.CS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CS', tag='CS')
+CurrentTerritoryCode.CU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CU', tag='CU')
+CurrentTerritoryCode.CV = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CV', tag='CV')
+CurrentTerritoryCode.CW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CW', tag='CW')
+CurrentTerritoryCode.CX = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CX', tag='CX')
+CurrentTerritoryCode.CY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CY', tag='CY')
+CurrentTerritoryCode.CZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='CZ', tag='CZ')
+CurrentTerritoryCode.DE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DE', tag='DE')
+CurrentTerritoryCode.DJ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DJ', tag='DJ')
+CurrentTerritoryCode.DK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DK', tag='DK')
+CurrentTerritoryCode.DM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DM', tag='DM')
+CurrentTerritoryCode.DO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DO', tag='DO')
+CurrentTerritoryCode.DZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='DZ', tag='DZ')
+CurrentTerritoryCode.EC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EC', tag='EC')
+CurrentTerritoryCode.EE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EE', tag='EE')
+CurrentTerritoryCode.EG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EG', tag='EG')
+CurrentTerritoryCode.EH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EH', tag='EH')
+CurrentTerritoryCode.ER = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ER', tag='ER')
+CurrentTerritoryCode.ES = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES', tag='ES')
+CurrentTerritoryCode.ES_CE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CE', tag='ES_CE')
+CurrentTerritoryCode.ES_CN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CN', tag='ES_CN')
+CurrentTerritoryCode.ES_ML = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-ML', tag='ES_ML')
+CurrentTerritoryCode.ET = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ET', tag='ET')
+CurrentTerritoryCode.FI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FI', tag='FI')
+CurrentTerritoryCode.FJ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FJ', tag='FJ')
+CurrentTerritoryCode.FK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FK', tag='FK')
+CurrentTerritoryCode.FM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FM', tag='FM')
+CurrentTerritoryCode.FO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FO', tag='FO')
+CurrentTerritoryCode.FR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FR', tag='FR')
+CurrentTerritoryCode.GA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GA', tag='GA')
+CurrentTerritoryCode.GB = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GB', tag='GB')
+CurrentTerritoryCode.GD = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GD', tag='GD')
+CurrentTerritoryCode.GE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GE', tag='GE')
+CurrentTerritoryCode.GF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GF', tag='GF')
+CurrentTerritoryCode.GG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GG', tag='GG')
+CurrentTerritoryCode.GH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GH', tag='GH')
+CurrentTerritoryCode.GI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GI', tag='GI')
+CurrentTerritoryCode.GL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GL', tag='GL')
+CurrentTerritoryCode.GM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GM', tag='GM')
+CurrentTerritoryCode.GN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GN', tag='GN')
+CurrentTerritoryCode.GP = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GP', tag='GP')
+CurrentTerritoryCode.GQ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GQ', tag='GQ')
+CurrentTerritoryCode.GR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GR', tag='GR')
+CurrentTerritoryCode.GS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GS', tag='GS')
+CurrentTerritoryCode.GT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GT', tag='GT')
+CurrentTerritoryCode.GU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GU', tag='GU')
+CurrentTerritoryCode.GW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GW', tag='GW')
+CurrentTerritoryCode.GY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='GY', tag='GY')
+CurrentTerritoryCode.HK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HK', tag='HK')
+CurrentTerritoryCode.HM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HM', tag='HM')
+CurrentTerritoryCode.HN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HN', tag='HN')
+CurrentTerritoryCode.HR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HR', tag='HR')
+CurrentTerritoryCode.HT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HT', tag='HT')
+CurrentTerritoryCode.HU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='HU', tag='HU')
+CurrentTerritoryCode.ID = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ID', tag='ID')
+CurrentTerritoryCode.IE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IE', tag='IE')
+CurrentTerritoryCode.IL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IL', tag='IL')
+CurrentTerritoryCode.IM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IM', tag='IM')
+CurrentTerritoryCode.IN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IN', tag='IN')
+CurrentTerritoryCode.IO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IO', tag='IO')
+CurrentTerritoryCode.IQ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IQ', tag='IQ')
+CurrentTerritoryCode.IR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IR', tag='IR')
+CurrentTerritoryCode.IS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IS', tag='IS')
+CurrentTerritoryCode.IT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='IT', tag='IT')
+CurrentTerritoryCode.JE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JE', tag='JE')
+CurrentTerritoryCode.JM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JM', tag='JM')
+CurrentTerritoryCode.JO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JO', tag='JO')
+CurrentTerritoryCode.JP = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='JP', tag='JP')
+CurrentTerritoryCode.KE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KE', tag='KE')
+CurrentTerritoryCode.KG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KG', tag='KG')
+CurrentTerritoryCode.KH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KH', tag='KH')
+CurrentTerritoryCode.KI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KI', tag='KI')
+CurrentTerritoryCode.KM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KM', tag='KM')
+CurrentTerritoryCode.KN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KN', tag='KN')
+CurrentTerritoryCode.KP = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KP', tag='KP')
+CurrentTerritoryCode.KR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KR', tag='KR')
+CurrentTerritoryCode.KW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KW', tag='KW')
+CurrentTerritoryCode.KY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KY', tag='KY')
+CurrentTerritoryCode.KZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='KZ', tag='KZ')
+CurrentTerritoryCode.LA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LA', tag='LA')
+CurrentTerritoryCode.LB = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LB', tag='LB')
+CurrentTerritoryCode.LC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LC', tag='LC')
+CurrentTerritoryCode.LI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LI', tag='LI')
+CurrentTerritoryCode.LK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LK', tag='LK')
+CurrentTerritoryCode.LR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LR', tag='LR')
+CurrentTerritoryCode.LS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LS', tag='LS')
+CurrentTerritoryCode.LT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LT', tag='LT')
+CurrentTerritoryCode.LU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LU', tag='LU')
+CurrentTerritoryCode.LV = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LV', tag='LV')
+CurrentTerritoryCode.LY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='LY', tag='LY')
+CurrentTerritoryCode.MA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MA', tag='MA')
+CurrentTerritoryCode.MC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MC', tag='MC')
+CurrentTerritoryCode.MD = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MD', tag='MD')
+CurrentTerritoryCode.ME = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ME', tag='ME')
+CurrentTerritoryCode.MF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MF', tag='MF')
+CurrentTerritoryCode.MG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MG', tag='MG')
+CurrentTerritoryCode.MH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MH', tag='MH')
+CurrentTerritoryCode.MK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MK', tag='MK')
+CurrentTerritoryCode.ML = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ML', tag='ML')
+CurrentTerritoryCode.MM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MM', tag='MM')
+CurrentTerritoryCode.MN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MN', tag='MN')
+CurrentTerritoryCode.MO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MO', tag='MO')
+CurrentTerritoryCode.MP = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MP', tag='MP')
+CurrentTerritoryCode.MQ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MQ', tag='MQ')
+CurrentTerritoryCode.MR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MR', tag='MR')
+CurrentTerritoryCode.MS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MS', tag='MS')
+CurrentTerritoryCode.MT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MT', tag='MT')
+CurrentTerritoryCode.MU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MU', tag='MU')
+CurrentTerritoryCode.MV = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MV', tag='MV')
+CurrentTerritoryCode.MW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MW', tag='MW')
+CurrentTerritoryCode.MX = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MX', tag='MX')
+CurrentTerritoryCode.MY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MY', tag='MY')
+CurrentTerritoryCode.MZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='MZ', tag='MZ')
+CurrentTerritoryCode.NA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NA', tag='NA')
+CurrentTerritoryCode.NC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NC', tag='NC')
+CurrentTerritoryCode.NE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NE', tag='NE')
+CurrentTerritoryCode.NF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NF', tag='NF')
+CurrentTerritoryCode.NG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NG', tag='NG')
+CurrentTerritoryCode.NI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NI', tag='NI')
+CurrentTerritoryCode.NL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NL', tag='NL')
+CurrentTerritoryCode.NO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NO', tag='NO')
+CurrentTerritoryCode.NP = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NP', tag='NP')
+CurrentTerritoryCode.NR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NR', tag='NR')
+CurrentTerritoryCode.NU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NU', tag='NU')
+CurrentTerritoryCode.NZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='NZ', tag='NZ')
+CurrentTerritoryCode.OM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='OM', tag='OM')
+CurrentTerritoryCode.PA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PA', tag='PA')
+CurrentTerritoryCode.PE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PE', tag='PE')
+CurrentTerritoryCode.PF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PF', tag='PF')
+CurrentTerritoryCode.PG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PG', tag='PG')
+CurrentTerritoryCode.PH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PH', tag='PH')
+CurrentTerritoryCode.PK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PK', tag='PK')
+CurrentTerritoryCode.PL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PL', tag='PL')
+CurrentTerritoryCode.PM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PM', tag='PM')
+CurrentTerritoryCode.PN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PN', tag='PN')
+CurrentTerritoryCode.PR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PR', tag='PR')
+CurrentTerritoryCode.PS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PS', tag='PS')
+CurrentTerritoryCode.PT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PT', tag='PT')
+CurrentTerritoryCode.PW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PW', tag='PW')
+CurrentTerritoryCode.PY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='PY', tag='PY')
+CurrentTerritoryCode.QA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='QA', tag='QA')
+CurrentTerritoryCode.RE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RE', tag='RE')
+CurrentTerritoryCode.RO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RO', tag='RO')
+CurrentTerritoryCode.RS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RS', tag='RS')
+CurrentTerritoryCode.RU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RU', tag='RU')
+CurrentTerritoryCode.RW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='RW', tag='RW')
+CurrentTerritoryCode.SA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SA', tag='SA')
+CurrentTerritoryCode.SB = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SB', tag='SB')
+CurrentTerritoryCode.SC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SC', tag='SC')
+CurrentTerritoryCode.SD = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SD', tag='SD')
+CurrentTerritoryCode.SE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SE', tag='SE')
+CurrentTerritoryCode.SG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SG', tag='SG')
+CurrentTerritoryCode.SH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SH', tag='SH')
+CurrentTerritoryCode.SI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SI', tag='SI')
+CurrentTerritoryCode.SJ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SJ', tag='SJ')
+CurrentTerritoryCode.SK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SK', tag='SK')
+CurrentTerritoryCode.SL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SL', tag='SL')
+CurrentTerritoryCode.SM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SM', tag='SM')
+CurrentTerritoryCode.SN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SN', tag='SN')
+CurrentTerritoryCode.SO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SO', tag='SO')
+CurrentTerritoryCode.SR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SR', tag='SR')
+CurrentTerritoryCode.SS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SS', tag='SS')
+CurrentTerritoryCode.ST = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ST', tag='ST')
+CurrentTerritoryCode.SV = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SV', tag='SV')
+CurrentTerritoryCode.SX = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SX', tag='SX')
+CurrentTerritoryCode.SY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SY', tag='SY')
+CurrentTerritoryCode.SZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='SZ', tag='SZ')
+CurrentTerritoryCode.TC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TC', tag='TC')
+CurrentTerritoryCode.TD = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TD', tag='TD')
+CurrentTerritoryCode.TF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TF', tag='TF')
+CurrentTerritoryCode.TG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TG', tag='TG')
+CurrentTerritoryCode.TH = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TH', tag='TH')
+CurrentTerritoryCode.TJ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TJ', tag='TJ')
+CurrentTerritoryCode.TK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TK', tag='TK')
+CurrentTerritoryCode.TL = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TL', tag='TL')
+CurrentTerritoryCode.TM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TM', tag='TM')
+CurrentTerritoryCode.TN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TN', tag='TN')
+CurrentTerritoryCode.TO = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TO', tag='TO')
+CurrentTerritoryCode.TR = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TR', tag='TR')
+CurrentTerritoryCode.TT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TT', tag='TT')
+CurrentTerritoryCode.TV = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TV', tag='TV')
+CurrentTerritoryCode.TW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TW', tag='TW')
+CurrentTerritoryCode.TZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='TZ', tag='TZ')
+CurrentTerritoryCode.UA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UA', tag='UA')
+CurrentTerritoryCode.UG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UG', tag='UG')
+CurrentTerritoryCode.UM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UM', tag='UM')
+CurrentTerritoryCode.US = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='US', tag='US')
+CurrentTerritoryCode.UY = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UY', tag='UY')
+CurrentTerritoryCode.UZ = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='UZ', tag='UZ')
+CurrentTerritoryCode.VA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VA', tag='VA')
+CurrentTerritoryCode.VC = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VC', tag='VC')
+CurrentTerritoryCode.VE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VE', tag='VE')
+CurrentTerritoryCode.VG = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VG', tag='VG')
+CurrentTerritoryCode.VI = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VI', tag='VI')
+CurrentTerritoryCode.VN = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VN', tag='VN')
+CurrentTerritoryCode.VU = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='VU', tag='VU')
+CurrentTerritoryCode.WF = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='WF', tag='WF')
+CurrentTerritoryCode.WS = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='WS', tag='WS')
+CurrentTerritoryCode.YE = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='YE', tag='YE')
+CurrentTerritoryCode.YT = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='YT', tag='YT')
+CurrentTerritoryCode.ZA = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZA', tag='ZA')
+CurrentTerritoryCode.ZM = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZM', tag='ZM')
+CurrentTerritoryCode.ZW = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZW', tag='ZW')
+CurrentTerritoryCode.n4 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='4', tag='n4')
+CurrentTerritoryCode.n8 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='8', tag='n8')
+CurrentTerritoryCode.n12 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='12', tag='n12')
+CurrentTerritoryCode.n20 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='20', tag='n20')
+CurrentTerritoryCode.n24 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='24', tag='n24')
+CurrentTerritoryCode.n28 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='28', tag='n28')
+CurrentTerritoryCode.n31 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='31', tag='n31')
+CurrentTerritoryCode.n32 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='32', tag='n32')
+CurrentTerritoryCode.n36 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='36', tag='n36')
+CurrentTerritoryCode.n40 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='40', tag='n40')
+CurrentTerritoryCode.n44 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='44', tag='n44')
+CurrentTerritoryCode.n48 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='48', tag='n48')
+CurrentTerritoryCode.n50 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='50', tag='n50')
+CurrentTerritoryCode.n51 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='51', tag='n51')
+CurrentTerritoryCode.n52 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='52', tag='n52')
+CurrentTerritoryCode.n56 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='56', tag='n56')
+CurrentTerritoryCode.n64 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='64', tag='n64')
+CurrentTerritoryCode.n68 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='68', tag='n68')
+CurrentTerritoryCode.n70 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='70', tag='n70')
+CurrentTerritoryCode.n72 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='72', tag='n72')
+CurrentTerritoryCode.n76 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='76', tag='n76')
+CurrentTerritoryCode.n84 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='84', tag='n84')
+CurrentTerritoryCode.n90 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='90', tag='n90')
+CurrentTerritoryCode.n96 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='96', tag='n96')
+CurrentTerritoryCode.n100 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='100', tag='n100')
+CurrentTerritoryCode.n104 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='104', tag='n104')
+CurrentTerritoryCode.n108 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='108', tag='n108')
+CurrentTerritoryCode.n112 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='112', tag='n112')
+CurrentTerritoryCode.n116 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='116', tag='n116')
+CurrentTerritoryCode.n120 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='120', tag='n120')
+CurrentTerritoryCode.n124 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='124', tag='n124')
+CurrentTerritoryCode.n132 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='132', tag='n132')
+CurrentTerritoryCode.n140 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='140', tag='n140')
+CurrentTerritoryCode.n144 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='144', tag='n144')
+CurrentTerritoryCode.n148 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='148', tag='n148')
+CurrentTerritoryCode.n152 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='152', tag='n152')
+CurrentTerritoryCode.n156 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='156', tag='n156')
+CurrentTerritoryCode.n158 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='158', tag='n158')
+CurrentTerritoryCode.n170 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='170', tag='n170')
+CurrentTerritoryCode.n174 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='174', tag='n174')
+CurrentTerritoryCode.n178 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='178', tag='n178')
+CurrentTerritoryCode.n180 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='180', tag='n180')
+CurrentTerritoryCode.n188 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='188', tag='n188')
+CurrentTerritoryCode.n191 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='191', tag='n191')
+CurrentTerritoryCode.n192 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='192', tag='n192')
+CurrentTerritoryCode.n196 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='196', tag='n196')
+CurrentTerritoryCode.n200 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='200', tag='n200')
+CurrentTerritoryCode.n203 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='203', tag='n203')
+CurrentTerritoryCode.n204 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='204', tag='n204')
+CurrentTerritoryCode.n208 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='208', tag='n208')
+CurrentTerritoryCode.n212 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='212', tag='n212')
+CurrentTerritoryCode.n214 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='214', tag='n214')
+CurrentTerritoryCode.n218 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='218', tag='n218')
+CurrentTerritoryCode.n222 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='222', tag='n222')
+CurrentTerritoryCode.n226 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='226', tag='n226')
+CurrentTerritoryCode.n230 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='230', tag='n230')
+CurrentTerritoryCode.n231 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='231', tag='n231')
+CurrentTerritoryCode.n232 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='232', tag='n232')
+CurrentTerritoryCode.n233 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='233', tag='n233')
+CurrentTerritoryCode.n242 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='242', tag='n242')
+CurrentTerritoryCode.n246 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='246', tag='n246')
+CurrentTerritoryCode.n250 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='250', tag='n250')
+CurrentTerritoryCode.n258 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='258', tag='n258')
+CurrentTerritoryCode.n262 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='262', tag='n262')
+CurrentTerritoryCode.n266 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='266', tag='n266')
+CurrentTerritoryCode.n268 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='268', tag='n268')
+CurrentTerritoryCode.n270 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='270', tag='n270')
+CurrentTerritoryCode.n276 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='276', tag='n276')
+CurrentTerritoryCode.n278 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='278', tag='n278')
+CurrentTerritoryCode.n280 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='280', tag='n280')
+CurrentTerritoryCode.n288 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='288', tag='n288')
+CurrentTerritoryCode.n296 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='296', tag='n296')
+CurrentTerritoryCode.n300 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='300', tag='n300')
+CurrentTerritoryCode.n308 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='308', tag='n308')
+CurrentTerritoryCode.n320 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='320', tag='n320')
+CurrentTerritoryCode.n324 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='324', tag='n324')
+CurrentTerritoryCode.n328 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='328', tag='n328')
+CurrentTerritoryCode.n332 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='332', tag='n332')
+CurrentTerritoryCode.n336 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='336', tag='n336')
+CurrentTerritoryCode.n340 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='340', tag='n340')
+CurrentTerritoryCode.n344 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='344', tag='n344')
+CurrentTerritoryCode.n348 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='348', tag='n348')
+CurrentTerritoryCode.n352 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='352', tag='n352')
+CurrentTerritoryCode.n356 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='356', tag='n356')
+CurrentTerritoryCode.n360 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='360', tag='n360')
+CurrentTerritoryCode.n364 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='364', tag='n364')
+CurrentTerritoryCode.n368 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='368', tag='n368')
+CurrentTerritoryCode.n372 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='372', tag='n372')
+CurrentTerritoryCode.n376 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='376', tag='n376')
+CurrentTerritoryCode.n380 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='380', tag='n380')
+CurrentTerritoryCode.n384 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='384', tag='n384')
+CurrentTerritoryCode.n388 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='388', tag='n388')
+CurrentTerritoryCode.n392 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='392', tag='n392')
+CurrentTerritoryCode.n398 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='398', tag='n398')
+CurrentTerritoryCode.n400 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='400', tag='n400')
+CurrentTerritoryCode.n404 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='404', tag='n404')
+CurrentTerritoryCode.n408 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='408', tag='n408')
+CurrentTerritoryCode.n410 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='410', tag='n410')
+CurrentTerritoryCode.n414 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='414', tag='n414')
+CurrentTerritoryCode.n417 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='417', tag='n417')
+CurrentTerritoryCode.n418 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='418', tag='n418')
+CurrentTerritoryCode.n422 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='422', tag='n422')
+CurrentTerritoryCode.n426 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='426', tag='n426')
+CurrentTerritoryCode.n428 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='428', tag='n428')
+CurrentTerritoryCode.n430 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='430', tag='n430')
+CurrentTerritoryCode.n434 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='434', tag='n434')
+CurrentTerritoryCode.n438 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='438', tag='n438')
+CurrentTerritoryCode.n440 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='440', tag='n440')
+CurrentTerritoryCode.n442 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='442', tag='n442')
+CurrentTerritoryCode.n450 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='450', tag='n450')
+CurrentTerritoryCode.n454 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='454', tag='n454')
+CurrentTerritoryCode.n458 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='458', tag='n458')
+CurrentTerritoryCode.n462 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='462', tag='n462')
+CurrentTerritoryCode.n466 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='466', tag='n466')
+CurrentTerritoryCode.n470 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='470', tag='n470')
+CurrentTerritoryCode.n478 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='478', tag='n478')
+CurrentTerritoryCode.n480 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='480', tag='n480')
+CurrentTerritoryCode.n484 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='484', tag='n484')
+CurrentTerritoryCode.n492 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='492', tag='n492')
+CurrentTerritoryCode.n496 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='496', tag='n496')
+CurrentTerritoryCode.n498 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='498', tag='n498')
+CurrentTerritoryCode.n499 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='499', tag='n499')
+CurrentTerritoryCode.n504 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='504', tag='n504')
+CurrentTerritoryCode.n508 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='508', tag='n508')
+CurrentTerritoryCode.n512 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='512', tag='n512')
+CurrentTerritoryCode.n516 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='516', tag='n516')
+CurrentTerritoryCode.n520 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='520', tag='n520')
+CurrentTerritoryCode.n524 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='524', tag='n524')
+CurrentTerritoryCode.n528 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='528', tag='n528')
+CurrentTerritoryCode.n540 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='540', tag='n540')
+CurrentTerritoryCode.n548 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='548', tag='n548')
+CurrentTerritoryCode.n554 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='554', tag='n554')
+CurrentTerritoryCode.n558 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='558', tag='n558')
+CurrentTerritoryCode.n562 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='562', tag='n562')
+CurrentTerritoryCode.n566 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='566', tag='n566')
+CurrentTerritoryCode.n578 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='578', tag='n578')
+CurrentTerritoryCode.n583 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='583', tag='n583')
+CurrentTerritoryCode.n584 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='584', tag='n584')
+CurrentTerritoryCode.n585 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='585', tag='n585')
+CurrentTerritoryCode.n586 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='586', tag='n586')
+CurrentTerritoryCode.n591 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='591', tag='n591')
+CurrentTerritoryCode.n598 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='598', tag='n598')
+CurrentTerritoryCode.n600 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='600', tag='n600')
+CurrentTerritoryCode.n604 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='604', tag='n604')
+CurrentTerritoryCode.n608 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='608', tag='n608')
+CurrentTerritoryCode.n616 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='616', tag='n616')
+CurrentTerritoryCode.n620 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='620', tag='n620')
+CurrentTerritoryCode.n624 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='624', tag='n624')
+CurrentTerritoryCode.n626 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='626', tag='n626')
+CurrentTerritoryCode.n630 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='630', tag='n630')
+CurrentTerritoryCode.n634 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='634', tag='n634')
+CurrentTerritoryCode.n642 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='642', tag='n642')
+CurrentTerritoryCode.n643 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='643', tag='n643')
+CurrentTerritoryCode.n646 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='646', tag='n646')
+CurrentTerritoryCode.n659 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='659', tag='n659')
+CurrentTerritoryCode.n662 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='662', tag='n662')
+CurrentTerritoryCode.n670 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='670', tag='n670')
+CurrentTerritoryCode.n674 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='674', tag='n674')
+CurrentTerritoryCode.n678 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='678', tag='n678')
+CurrentTerritoryCode.n682 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='682', tag='n682')
+CurrentTerritoryCode.n686 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='686', tag='n686')
+CurrentTerritoryCode.n688 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='688', tag='n688')
+CurrentTerritoryCode.n690 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='690', tag='n690')
+CurrentTerritoryCode.n694 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='694', tag='n694')
+CurrentTerritoryCode.n702 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='702', tag='n702')
+CurrentTerritoryCode.n703 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='703', tag='n703')
+CurrentTerritoryCode.n704 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='704', tag='n704')
+CurrentTerritoryCode.n705 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='705', tag='n705')
+CurrentTerritoryCode.n706 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='706', tag='n706')
+CurrentTerritoryCode.n710 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='710', tag='n710')
+CurrentTerritoryCode.n716 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='716', tag='n716')
+CurrentTerritoryCode.n720 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='720', tag='n720')
+CurrentTerritoryCode.n724 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='724', tag='n724')
+CurrentTerritoryCode.n728 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='728', tag='n728')
+CurrentTerritoryCode.n729 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='729', tag='n729')
+CurrentTerritoryCode.n732 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='732', tag='n732')
+CurrentTerritoryCode.n736 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='736', tag='n736')
+CurrentTerritoryCode.n740 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='740', tag='n740')
+CurrentTerritoryCode.n748 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='748', tag='n748')
+CurrentTerritoryCode.n752 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='752', tag='n752')
+CurrentTerritoryCode.n756 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='756', tag='n756')
+CurrentTerritoryCode.n760 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='760', tag='n760')
+CurrentTerritoryCode.n762 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='762', tag='n762')
+CurrentTerritoryCode.n764 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='764', tag='n764')
+CurrentTerritoryCode.n768 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='768', tag='n768')
+CurrentTerritoryCode.n776 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='776', tag='n776')
+CurrentTerritoryCode.n780 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='780', tag='n780')
+CurrentTerritoryCode.n784 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='784', tag='n784')
+CurrentTerritoryCode.n788 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='788', tag='n788')
+CurrentTerritoryCode.n792 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='792', tag='n792')
+CurrentTerritoryCode.n795 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='795', tag='n795')
+CurrentTerritoryCode.n798 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='798', tag='n798')
+CurrentTerritoryCode.n800 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='800', tag='n800')
+CurrentTerritoryCode.n804 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='804', tag='n804')
+CurrentTerritoryCode.n807 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='807', tag='n807')
+CurrentTerritoryCode.n810 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='810', tag='n810')
+CurrentTerritoryCode.n818 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='818', tag='n818')
+CurrentTerritoryCode.n826 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='826', tag='n826')
+CurrentTerritoryCode.n834 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='834', tag='n834')
+CurrentTerritoryCode.n840 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='840', tag='n840')
+CurrentTerritoryCode.n854 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='854', tag='n854')
+CurrentTerritoryCode.n858 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='858', tag='n858')
+CurrentTerritoryCode.n860 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='860', tag='n860')
+CurrentTerritoryCode.n862 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='862', tag='n862')
+CurrentTerritoryCode.n882 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='882', tag='n882')
+CurrentTerritoryCode.n886 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='886', tag='n886')
+CurrentTerritoryCode.n887 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='887', tag='n887')
+CurrentTerritoryCode.n890 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='890', tag='n890')
+CurrentTerritoryCode.n891 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='891', tag='n891')
+CurrentTerritoryCode.n894 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='894', tag='n894')
+CurrentTerritoryCode.n2100 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2100', tag='n2100')
+CurrentTerritoryCode.n2101 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2101', tag='n2101')
+CurrentTerritoryCode.n2102 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2102', tag='n2102')
+CurrentTerritoryCode.n2103 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2103', tag='n2103')
+CurrentTerritoryCode.n2104 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2104', tag='n2104')
+CurrentTerritoryCode.n2105 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2105', tag='n2105')
+CurrentTerritoryCode.n2106 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2106', tag='n2106')
+CurrentTerritoryCode.n2107 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2107', tag='n2107')
+CurrentTerritoryCode.n2108 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2108', tag='n2108')
+CurrentTerritoryCode.n2109 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2109', tag='n2109')
+CurrentTerritoryCode.n2110 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2110', tag='n2110')
+CurrentTerritoryCode.n2111 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2111', tag='n2111')
+CurrentTerritoryCode.n2112 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2112', tag='n2112')
+CurrentTerritoryCode.n2113 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2113', tag='n2113')
+CurrentTerritoryCode.n2114 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2114', tag='n2114')
+CurrentTerritoryCode.n2115 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2115', tag='n2115')
+CurrentTerritoryCode.n2116 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2116', tag='n2116')
+CurrentTerritoryCode.n2117 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2117', tag='n2117')
+CurrentTerritoryCode.n2118 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2118', tag='n2118')
+CurrentTerritoryCode.n2119 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2119', tag='n2119')
+CurrentTerritoryCode.n2120 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2120', tag='n2120')
+CurrentTerritoryCode.n2121 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2121', tag='n2121')
+CurrentTerritoryCode.n2122 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2122', tag='n2122')
+CurrentTerritoryCode.n2123 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2123', tag='n2123')
+CurrentTerritoryCode.n2124 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2124', tag='n2124')
+CurrentTerritoryCode.n2125 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2125', tag='n2125')
+CurrentTerritoryCode.n2126 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2126', tag='n2126')
+CurrentTerritoryCode.n2127 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2127', tag='n2127')
+CurrentTerritoryCode.n2128 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2128', tag='n2128')
+CurrentTerritoryCode.n2129 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2129', tag='n2129')
+CurrentTerritoryCode.n2130 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2130', tag='n2130')
+CurrentTerritoryCode.n2131 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2131', tag='n2131')
+CurrentTerritoryCode.n2132 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2132', tag='n2132')
+CurrentTerritoryCode.n2133 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2133', tag='n2133')
+CurrentTerritoryCode.n2134 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2134', tag='n2134')
+CurrentTerritoryCode.n2136 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2136', tag='n2136')
+CurrentTerritoryCode.XK = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='XK', tag='XK')
+CurrentTerritoryCode.Worldwide = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='Worldwide', tag='Worldwide')
+CurrentTerritoryCode.n446 = CurrentTerritoryCode._CF_enumeration.addEnumeration(unicode_value='446', tag='n446')
+CurrentTerritoryCode._InitializeFacetMap(CurrentTerritoryCode._CF_enumeration)
+Namespace.addCategoryObject('typeBinding', 'CurrentTerritoryCode', CurrentTerritoryCode)
+_module_typeBindings.CurrentTerritoryCode = CurrentTerritoryCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DataMismatchResponseType
 class DataMismatchResponseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -586,7 +1878,7 @@ class DataMismatchResponseType (pyxb.binding.datatypes.string, pyxb.binding.basi
     """A Type of action that is a response to a DataMismatch."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DataMismatchResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1510, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7663, 3)
     _Documentation = 'A Type of action that is a response to a DataMismatch.'
 DataMismatchResponseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DataMismatchResponseType, enum_prefix=None)
 DataMismatchResponseType.AdditionalInformationOnly = DataMismatchResponseType._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -597,6 +1889,7 @@ DataMismatchResponseType.NoReaction = DataMismatchResponseType._CF_enumeration.a
 DataMismatchResponseType.UserDefined = DataMismatchResponseType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 DataMismatchResponseType._InitializeFacetMap(DataMismatchResponseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DataMismatchResponseType', DataMismatchResponseType)
+_module_typeBindings.DataMismatchResponseType = DataMismatchResponseType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DataMismatchStatus
 class DataMismatchStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -604,7 +1897,7 @@ class DataMismatchStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enum
     """A Status of a DataMismatch."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DataMismatchStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1547, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7700, 3)
     _Documentation = 'A Status of a DataMismatch.'
 DataMismatchStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DataMismatchStatus, enum_prefix=None)
 DataMismatchStatus.AdditionalInformationOnly = DataMismatchStatus._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -614,6 +1907,7 @@ DataMismatchStatus.NotCorrected = DataMismatchStatus._CF_enumeration.addEnumerat
 DataMismatchStatus.UserDefined = DataMismatchStatus._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 DataMismatchStatus._InitializeFacetMap(DataMismatchStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DataMismatchStatus', DataMismatchStatus)
+_module_typeBindings.DataMismatchStatus = DataMismatchStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DataMismatchType
 class DataMismatchType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -621,7 +1915,7 @@ class DataMismatchType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumer
     """A Type of DataMismatch."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DataMismatchType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1579, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7732, 3)
     _Documentation = 'A Type of DataMismatch.'
 DataMismatchType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DataMismatchType, enum_prefix=None)
 DataMismatchType.AdditionalInformationOnly = DataMismatchType._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -647,6 +1941,7 @@ DataMismatchType.XmlFormatError = DataMismatchType._CF_enumeration.addEnumeratio
 DataMismatchType.XmlRangeError = DataMismatchType._CF_enumeration.addEnumeration(unicode_value='XmlRangeError', tag='XmlRangeError')
 DataMismatchType._InitializeFacetMap(DataMismatchType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DataMismatchType', DataMismatchType)
+_module_typeBindings.DataMismatchType = DataMismatchType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DdexTerritoryCode
 class DdexTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -654,12 +1949,14 @@ class DdexTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A TerritoryId which is not a TerritoryId according to the ISO 3166-1 standard or the TIS standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DdexTerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1691, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7844, 3)
     _Documentation = 'A TerritoryId which is not a TerritoryId according to the ISO 3166-1 standard or the TIS standard.'
 DdexTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DdexTerritoryCode, enum_prefix=None)
+DdexTerritoryCode.XK = DdexTerritoryCode._CF_enumeration.addEnumeration(unicode_value='XK', tag='XK')
 DdexTerritoryCode.Worldwide = DdexTerritoryCode._CF_enumeration.addEnumeration(unicode_value='Worldwide', tag='Worldwide')
 DdexTerritoryCode._InitializeFacetMap(DdexTerritoryCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DdexTerritoryCode', DdexTerritoryCode)
+_module_typeBindings.DdexTerritoryCode = DdexTerritoryCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DeductionRateType
 class DeductionRateType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -667,7 +1964,7 @@ class DeductionRateType (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A Type of DeductionRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeductionRateType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1703, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7861, 3)
     _Documentation = 'A Type of DeductionRate.'
 DeductionRateType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeductionRateType, enum_prefix=None)
 DeductionRateType.PennyRate = DeductionRateType._CF_enumeration.addEnumeration(unicode_value='PennyRate', tag='PennyRate')
@@ -675,6 +1972,7 @@ DeductionRateType.PercentageRate = DeductionRateType._CF_enumeration.addEnumerat
 DeductionRateType.UserDefined = DeductionRateType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 DeductionRateType._InitializeFacetMap(DeductionRateType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeductionRateType', DeductionRateType)
+_module_typeBindings.DeductionRateType = DeductionRateType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DeliveryActionType
 class DeliveryActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -682,7 +1980,7 @@ class DeliveryActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enum
     """A Type of action requested for deliveries."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeliveryActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1725, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7883, 3)
     _Documentation = 'A Type of action requested for deliveries.'
 DeliveryActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeliveryActionType, enum_prefix=None)
 DeliveryActionType.ChangeDeliveryLimits = DeliveryActionType._CF_enumeration.addEnumeration(unicode_value='ChangeDeliveryLimits', tag='ChangeDeliveryLimits')
@@ -691,6 +1989,7 @@ DeliveryActionType.RestartDeliveryWithPreviousLimits = DeliveryActionType._CF_en
 DeliveryActionType.StopDelivery = DeliveryActionType._CF_enumeration.addEnumeration(unicode_value='StopDelivery', tag='StopDelivery')
 DeliveryActionType._InitializeFacetMap(DeliveryActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeliveryActionType', DeliveryActionType)
+_module_typeBindings.DeliveryActionType = DeliveryActionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DeliveryMessageType
 class DeliveryMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -698,7 +1997,7 @@ class DeliveryMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enu
     """A Type of delivery Message."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeliveryMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1752, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7910, 3)
     _Documentation = 'A Type of delivery Message.'
 DeliveryMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeliveryMessageType, enum_prefix=None)
 DeliveryMessageType.NewReleaseMessage = DeliveryMessageType._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessage', tag='NewReleaseMessage')
@@ -706,6 +2005,7 @@ DeliveryMessageType.NonDdexMessage = DeliveryMessageType._CF_enumeration.addEnum
 DeliveryMessageType.Unknown = DeliveryMessageType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 DeliveryMessageType._InitializeFacetMap(DeliveryMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeliveryMessageType', DeliveryMessageType)
+_module_typeBindings.DeliveryMessageType = DeliveryMessageType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DeprecatedCurrencyCode
 class DeprecatedCurrencyCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -713,7 +2013,7 @@ class DeprecatedCurrencyCode (pyxb.binding.datatypes.string, pyxb.binding.basis.
     """A CurrencyCode which is not valid anymore."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeprecatedCurrencyCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1774, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7932, 3)
     _Documentation = 'A CurrencyCode which is not valid anymore.'
 DeprecatedCurrencyCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeprecatedCurrencyCode, enum_prefix=None)
 DeprecatedCurrencyCode.CYP = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='CYP', tag='CYP')
@@ -722,8 +2022,14 @@ DeprecatedCurrencyCode.MTL = DeprecatedCurrencyCode._CF_enumeration.addEnumerati
 DeprecatedCurrencyCode.ROL = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='ROL', tag='ROL')
 DeprecatedCurrencyCode.SIT = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='SIT', tag='SIT')
 DeprecatedCurrencyCode.SKK = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='SKK', tag='SKK')
+DeprecatedCurrencyCode.LTL = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='LTL', tag='LTL')
+DeprecatedCurrencyCode.LVL = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='LVL', tag='LVL')
+DeprecatedCurrencyCode.MRO = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='MRO', tag='MRO')
+DeprecatedCurrencyCode.STD = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='STD', tag='STD')
+DeprecatedCurrencyCode.VEF = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='VEF', tag='VEF')
 DeprecatedCurrencyCode._InitializeFacetMap(DeprecatedCurrencyCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeprecatedCurrencyCode', DeprecatedCurrencyCode)
+_module_typeBindings.DeprecatedCurrencyCode = DeprecatedCurrencyCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DeprecatedIsoTerritoryCode
 class DeprecatedIsoTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -731,7 +2037,7 @@ class DeprecatedIsoTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.ba
     """An ISO 3166-3 four-letter code representing a Territory, which is a replacement for a deprecated ISO 3166-1 code."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeprecatedIsoTerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1811, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 7994, 3)
     _Documentation = 'An ISO 3166-3 four-letter code representing a Territory, which is a replacement for a deprecated ISO 3166-1 code.'
 DeprecatedIsoTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeprecatedIsoTerritoryCode, enum_prefix=None)
 DeprecatedIsoTerritoryCode.AIDJ = DeprecatedIsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AIDJ', tag='AIDJ')
@@ -767,6 +2073,7 @@ DeprecatedIsoTerritoryCode.YUCS = DeprecatedIsoTerritoryCode._CF_enumeration.add
 DeprecatedIsoTerritoryCode.ZRCD = DeprecatedIsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZRCD', tag='ZRCD')
 DeprecatedIsoTerritoryCode._InitializeFacetMap(DeprecatedIsoTerritoryCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeprecatedIsoTerritoryCode', DeprecatedIsoTerritoryCode)
+_module_typeBindings.DeprecatedIsoTerritoryCode = DeprecatedIsoTerritoryCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DigitizationMode
 class DigitizationMode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -774,7 +2081,7 @@ class DigitizationMode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumer
     """A Digitization mode of a Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DigitizationMode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1973, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8156, 3)
     _Documentation = 'A Digitization mode of a Resource.'
 DigitizationMode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DigitizationMode, enum_prefix=None)
 DigitizationMode.AAD = DigitizationMode._CF_enumeration.addEnumeration(unicode_value='AAD', tag='AAD')
@@ -783,6 +2090,7 @@ DigitizationMode.DDD = DigitizationMode._CF_enumeration.addEnumeration(unicode_v
 DigitizationMode.Unknown = DigitizationMode._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 DigitizationMode._InitializeFacetMap(DigitizationMode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DigitizationMode', DigitizationMode)
+_module_typeBindings.DigitizationMode = DigitizationMode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DisputeReason
 class DisputeReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -790,7 +2098,7 @@ class DisputeReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A Type of reason for a Dispute."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DisputeReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2000, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8183, 3)
     _Documentation = 'A Type of reason for a Dispute.'
 DisputeReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DisputeReason, enum_prefix=None)
 DisputeReason.MissingInformation = DisputeReason._CF_enumeration.addEnumeration(unicode_value='MissingInformation', tag='MissingInformation')
@@ -799,6 +2107,7 @@ DisputeReason.MoreResearchNeeded = DisputeReason._CF_enumeration.addEnumeration(
 DisputeReason.UserDefined = DisputeReason._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 DisputeReason._InitializeFacetMap(DisputeReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DisputeReason', DisputeReason)
+_module_typeBindings.DisputeReason = DisputeReason
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DistributionChannelType
 class DistributionChannelType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -806,7 +2115,7 @@ class DistributionChannelType (pyxb.binding.datatypes.string, pyxb.binding.basis
     """A Type of DistributionChannel used to disseminate a Service or Release to a Consumer."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DistributionChannelType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2027, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8210, 3)
     _Documentation = 'A Type of DistributionChannel used to disseminate a Service or Release to a Consumer.'
 DistributionChannelType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DistributionChannelType, enum_prefix=None)
 DistributionChannelType.AsPerContract = DistributionChannelType._CF_enumeration.addEnumeration(unicode_value='AsPerContract', tag='AsPerContract')
@@ -827,6 +2136,7 @@ DistributionChannelType.UserDefined = DistributionChannelType._CF_enumeration.ad
 DistributionChannelType.Webcast = DistributionChannelType._CF_enumeration.addEnumeration(unicode_value='Webcast', tag='Webcast')
 DistributionChannelType._InitializeFacetMap(DistributionChannelType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DistributionChannelType', DistributionChannelType)
+_module_typeBindings.DistributionChannelType = DistributionChannelType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DpidStatus
 class DpidStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -834,7 +2144,7 @@ class DpidStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
     """A Status of a DdexPartyId."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DpidStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2114, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8297, 3)
     _Documentation = 'A Status of a DdexPartyId.'
 DpidStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DpidStatus, enum_prefix=None)
 DpidStatus.Active = DpidStatus._CF_enumeration.addEnumeration(unicode_value='Active', tag='Active')
@@ -842,6 +2152,7 @@ DpidStatus.Deleted = DpidStatus._CF_enumeration.addEnumeration(unicode_value='De
 DpidStatus.Replaced = DpidStatus._CF_enumeration.addEnumeration(unicode_value='Replaced', tag='Replaced')
 DpidStatus._InitializeFacetMap(DpidStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DpidStatus', DpidStatus)
+_module_typeBindings.DpidStatus = DpidStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DrmEnforcementType
 class DrmEnforcementType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -849,13 +2160,14 @@ class DrmEnforcementType (pyxb.binding.datatypes.string, pyxb.binding.basis.enum
     """A Type of DRM enforcement."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DrmEnforcementType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2136, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8319, 3)
     _Documentation = 'A Type of DRM enforcement.'
 DrmEnforcementType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DrmEnforcementType, enum_prefix=None)
 DrmEnforcementType.DrmEnforced = DrmEnforcementType._CF_enumeration.addEnumeration(unicode_value='DrmEnforced', tag='DrmEnforced')
 DrmEnforcementType.NotDrmEnforced = DrmEnforcementType._CF_enumeration.addEnumeration(unicode_value='NotDrmEnforced', tag='NotDrmEnforced')
 DrmEnforcementType._InitializeFacetMap(DrmEnforcementType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DrmEnforcementType', DrmEnforcementType)
+_module_typeBindings.DrmEnforcementType = DrmEnforcementType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DrmPlatformType
 class DrmPlatformType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -863,7 +2175,7 @@ class DrmPlatformType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A Type of DrmPlatform."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DrmPlatformType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2153, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8336, 3)
     _Documentation = 'A Type of DrmPlatform.'
 DrmPlatformType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DrmPlatformType, enum_prefix=None)
 DrmPlatformType.n3Day = DrmPlatformType._CF_enumeration.addEnumeration(unicode_value='3Day', tag='n3Day')
@@ -874,6 +2186,7 @@ DrmPlatformType.UserDefined = DrmPlatformType._CF_enumeration.addEnumeration(uni
 DrmPlatformType.WindowsMediaDRM = DrmPlatformType._CF_enumeration.addEnumeration(unicode_value='WindowsMediaDRM', tag='WindowsMediaDRM')
 DrmPlatformType._InitializeFacetMap(DrmPlatformType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DrmPlatformType', DrmPlatformType)
+_module_typeBindings.DrmPlatformType = DrmPlatformType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}DsrMessageType
 class DsrMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -881,13 +2194,14 @@ class DsrMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of Message in the Sales Reporting Message Suite Standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DsrMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2190, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8373, 3)
     _Documentation = 'A Type of Message in the Sales Reporting Message Suite Standard.'
 DsrMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DsrMessageType, enum_prefix=None)
 DsrMessageType.SalesReportToRecordCompanyMessage = DsrMessageType._CF_enumeration.addEnumeration(unicode_value='SalesReportToRecordCompanyMessage', tag='SalesReportToRecordCompanyMessage')
 DsrMessageType.SalesReportToSocietyMessage = DsrMessageType._CF_enumeration.addEnumeration(unicode_value='SalesReportToSocietyMessage', tag='SalesReportToSocietyMessage')
 DsrMessageType._InitializeFacetMap(DsrMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DsrMessageType', DsrMessageType)
+_module_typeBindings.DsrMessageType = DsrMessageType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}EquipmentType
 class EquipmentType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -895,7 +2209,7 @@ class EquipmentType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A Type of Equipment."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'EquipmentType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2207, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8390, 3)
     _Documentation = 'A Type of Equipment.'
 EquipmentType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=EquipmentType, enum_prefix=None)
 EquipmentType.Computer = EquipmentType._CF_enumeration.addEnumeration(unicode_value='Computer', tag='Computer')
@@ -904,8 +2218,10 @@ EquipmentType.Recorder = EquipmentType._CF_enumeration.addEnumeration(unicode_va
 EquipmentType.SignalProcessor = EquipmentType._CF_enumeration.addEnumeration(unicode_value='SignalProcessor', tag='SignalProcessor')
 EquipmentType.Software = EquipmentType._CF_enumeration.addEnumeration(unicode_value='Software', tag='Software')
 EquipmentType.Loudspeaker = EquipmentType._CF_enumeration.addEnumeration(unicode_value='Loudspeaker', tag='Loudspeaker')
+EquipmentType.MusicalInstrument = EquipmentType._CF_enumeration.addEnumeration(unicode_value='MusicalInstrument', tag='MusicalInstrument')
 EquipmentType._InitializeFacetMap(EquipmentType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'EquipmentType', EquipmentType)
+_module_typeBindings.EquipmentType = EquipmentType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ErnMessageType
 class ErnMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -913,12 +2229,13 @@ class ErnMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of Message in the Release Notification Message Suite Standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ErnMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2244, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8432, 3)
     _Documentation = 'A Type of Message in the Release Notification Message Suite Standard.'
 ErnMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ErnMessageType, enum_prefix=None)
 ErnMessageType.NewReleaseMessage = ErnMessageType._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessage', tag='NewReleaseMessage')
 ErnMessageType._InitializeFacetMap(ErnMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ErnMessageType', ErnMessageType)
+_module_typeBindings.ErnMessageType = ErnMessageType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ErncFileStatus
 class ErncFileStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -926,7 +2243,7 @@ class ErncFileStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Status of a File in terms of its validity in the Release Delivery Choreography Standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ErncFileStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2256, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8444, 3)
     _Documentation = 'A Status of a File in terms of its validity in the Release Delivery Choreography Standard.'
 ErncFileStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ErncFileStatus, enum_prefix=None)
 ErncFileStatus.ArtistRoleUnknown = ErncFileStatus._CF_enumeration.addEnumeration(unicode_value='ArtistRoleUnknown', tag='ArtistRoleUnknown')
@@ -952,6 +2269,7 @@ ErncFileStatus.UnsupportedUsage = ErncFileStatus._CF_enumeration.addEnumeration(
 ErncFileStatus.UserDefined = ErncFileStatus._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ErncFileStatus._InitializeFacetMap(ErncFileStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ErncFileStatus', ErncFileStatus)
+_module_typeBindings.ErncFileStatus = ErncFileStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ErncProposedActionType
 class ErncProposedActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -959,14 +2277,17 @@ class ErncProposedActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.
     """A Type of action that is proposed."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ErncProposedActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2368, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8556, 3)
     _Documentation = 'A Type of action that is proposed.'
 ErncProposedActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ErncProposedActionType, enum_prefix=None)
 ErncProposedActionType.ResendXmlOnly = ErncProposedActionType._CF_enumeration.addEnumeration(unicode_value='ResendXmlOnly', tag='ResendXmlOnly')
 ErncProposedActionType.ResendXmlAndResources = ErncProposedActionType._CF_enumeration.addEnumeration(unicode_value='ResendXmlAndResources', tag='ResendXmlAndResources')
 ErncProposedActionType.UserDefined = ErncProposedActionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+ErncProposedActionType.DoNotResendAffectedResource = ErncProposedActionType._CF_enumeration.addEnumeration(unicode_value='DoNotResendAffectedResource', tag='DoNotResendAffectedResource')
+ErncProposedActionType.DoNotResendRelease = ErncProposedActionType._CF_enumeration.addEnumeration(unicode_value='DoNotResendRelease', tag='DoNotResendRelease')
 ErncProposedActionType._InitializeFacetMap(ErncProposedActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ErncProposedActionType', ErncProposedActionType)
+_module_typeBindings.ErncProposedActionType = ErncProposedActionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ExpressionType
 class ExpressionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -974,13 +2295,14 @@ class ExpressionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of expression indicating how it should be perceived."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ExpressionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2390, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8588, 3)
     _Documentation = 'A Type of expression indicating how it should be perceived.'
 ExpressionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ExpressionType, enum_prefix=None)
 ExpressionType.Informative = ExpressionType._CF_enumeration.addEnumeration(unicode_value='Informative', tag='Informative')
 ExpressionType.Instructive = ExpressionType._CF_enumeration.addEnumeration(unicode_value='Instructive', tag='Instructive')
 ExpressionType._InitializeFacetMap(ExpressionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ExpressionType', ExpressionType)
+_module_typeBindings.ExpressionType = ExpressionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ExternallyLinkedResourceType
 class ExternallyLinkedResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -988,7 +2310,7 @@ class ExternallyLinkedResourceType (pyxb.binding.datatypes.string, pyxb.binding.
     """A Type of Resource pointed to by an ExternalLink."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ExternallyLinkedResourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2407, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8605, 3)
     _Documentation = 'A Type of Resource pointed to by an ExternalLink.'
 ExternallyLinkedResourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ExternallyLinkedResourceType, enum_prefix=None)
 ExternallyLinkedResourceType.AdditionalMetadata = ExternallyLinkedResourceType._CF_enumeration.addEnumeration(unicode_value='AdditionalMetadata', tag='AdditionalMetadata')
@@ -1000,6 +2322,7 @@ ExternallyLinkedResourceType.Unknown = ExternallyLinkedResourceType._CF_enumerat
 ExternallyLinkedResourceType.UserDefined = ExternallyLinkedResourceType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ExternallyLinkedResourceType._InitializeFacetMap(ExternallyLinkedResourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ExternallyLinkedResourceType', ExternallyLinkedResourceType)
+_module_typeBindings.ExternallyLinkedResourceType = ExternallyLinkedResourceType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}FileStatus
 class FileStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1007,7 +2330,7 @@ class FileStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
     """A Status of a File in terms of its validity."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'FileStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2449, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8647, 3)
     _Documentation = 'A Status of a File in terms of its validity.'
 FileStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=FileStatus, enum_prefix=None)
 FileStatus.FileMissing = FileStatus._CF_enumeration.addEnumeration(unicode_value='FileMissing', tag='FileMissing')
@@ -1016,6 +2339,7 @@ FileStatus.HashSumWrong = FileStatus._CF_enumeration.addEnumeration(unicode_valu
 FileStatus.SignatureWrong = FileStatus._CF_enumeration.addEnumeration(unicode_value='SignatureWrong', tag='SignatureWrong')
 FileStatus._InitializeFacetMap(FileStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'FileStatus', FileStatus)
+_module_typeBindings.FileStatus = FileStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}FingerprintAlgorithmType
 class FingerprintAlgorithmType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1023,12 +2347,13 @@ class FingerprintAlgorithmType (pyxb.binding.datatypes.string, pyxb.binding.basi
     """A Type of Fingerprint algorithm."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'FingerprintAlgorithmType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2476, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8674, 3)
     _Documentation = 'A Type of Fingerprint algorithm.'
 FingerprintAlgorithmType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=FingerprintAlgorithmType, enum_prefix=None)
 FingerprintAlgorithmType.UserDefined = FingerprintAlgorithmType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 FingerprintAlgorithmType._InitializeFacetMap(FingerprintAlgorithmType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'FingerprintAlgorithmType', FingerprintAlgorithmType)
+_module_typeBindings.FingerprintAlgorithmType = FingerprintAlgorithmType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}GoverningAgreementType
 class GoverningAgreementType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1036,12 +2361,14 @@ class GoverningAgreementType (pyxb.binding.datatypes.string, pyxb.binding.basis.
     """A Type of governing agreement."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'GoverningAgreementType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2488, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8686, 3)
     _Documentation = 'A Type of governing agreement.'
 GoverningAgreementType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=GoverningAgreementType, enum_prefix=None)
 GoverningAgreementType.UserDefined = GoverningAgreementType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+GoverningAgreementType.SessionMusicUnionAgreement = GoverningAgreementType._CF_enumeration.addEnumeration(unicode_value='SessionMusicUnionAgreement', tag='SessionMusicUnionAgreement')
 GoverningAgreementType._InitializeFacetMap(GoverningAgreementType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'GoverningAgreementType', GoverningAgreementType)
+_module_typeBindings.GoverningAgreementType = GoverningAgreementType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}HashSumAlgorithmType
 class HashSumAlgorithmType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1049,7 +2376,7 @@ class HashSumAlgorithmType (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A Type of HashSumAlgorithm."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'HashSumAlgorithmType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2500, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8703, 3)
     _Documentation = 'A Type of HashSumAlgorithm.'
 HashSumAlgorithmType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=HashSumAlgorithmType, enum_prefix=None)
 HashSumAlgorithmType.MD4 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='MD4', tag='MD4')
@@ -1057,8 +2384,20 @@ HashSumAlgorithmType.MD5 = HashSumAlgorithmType._CF_enumeration.addEnumeration(u
 HashSumAlgorithmType.SHA = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA', tag='SHA')
 HashSumAlgorithmType.SHA1 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA1', tag='SHA1')
 HashSumAlgorithmType.UserDefined = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+HashSumAlgorithmType.CRC32 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='CRC32', tag='CRC32')
+HashSumAlgorithmType.MD2 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='MD2', tag='MD2')
+HashSumAlgorithmType.MD4MLNET = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='MD4(MLNET)', tag='MD4MLNET')
+HashSumAlgorithmType.MDC2 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='MDC2', tag='MDC2')
+HashSumAlgorithmType.RMD160 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='RMD160', tag='RMD160')
+HashSumAlgorithmType.SHA2 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA2', tag='SHA2')
+HashSumAlgorithmType.SHA_224 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA-224', tag='SHA_224')
+HashSumAlgorithmType.SHA_256 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA-256', tag='SHA_256')
+HashSumAlgorithmType.SHA3 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA3', tag='SHA3')
+HashSumAlgorithmType.SHA_384 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA-384', tag='SHA_384')
+HashSumAlgorithmType.SHA_512 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='SHA-512', tag='SHA_512')
 HashSumAlgorithmType._InitializeFacetMap(HashSumAlgorithmType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'HashSumAlgorithmType', HashSumAlgorithmType)
+_module_typeBindings.HashSumAlgorithmType = HashSumAlgorithmType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ImageCodecType
 class ImageCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1066,7 +2405,7 @@ class ImageCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of ImageCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ImageCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2532, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8790, 3)
     _Documentation = 'A Type of ImageCodec.'
 ImageCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ImageCodecType, enum_prefix=None)
 ImageCodecType.GIF = ImageCodecType._CF_enumeration.addEnumeration(unicode_value='GIF', tag='GIF')
@@ -1078,6 +2417,7 @@ ImageCodecType.Unknown = ImageCodecType._CF_enumeration.addEnumeration(unicode_v
 ImageCodecType.UserDefined = ImageCodecType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ImageCodecType._InitializeFacetMap(ImageCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ImageCodecType', ImageCodecType)
+_module_typeBindings.ImageCodecType = ImageCodecType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ImageType
 class ImageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1085,7 +2425,7 @@ class ImageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of Image."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ImageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2574, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8832, 3)
     _Documentation = 'A Type of Image.'
 ImageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ImageType, enum_prefix=None)
 ImageType.BackCoverImage = ImageType._CF_enumeration.addEnumeration(unicode_value='BackCoverImage', tag='BackCoverImage')
@@ -1102,8 +2442,10 @@ ImageType.Unknown = ImageType._CF_enumeration.addEnumeration(unicode_value='Unkn
 ImageType.UserDefined = ImageType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ImageType.VideoScreenCapture = ImageType._CF_enumeration.addEnumeration(unicode_value='VideoScreenCapture', tag='VideoScreenCapture')
 ImageType.Wallpaper = ImageType._CF_enumeration.addEnumeration(unicode_value='Wallpaper', tag='Wallpaper')
+ImageType.Portrait = ImageType._CF_enumeration.addEnumeration(unicode_value='Portrait', tag='Portrait')
 ImageType._InitializeFacetMap(ImageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ImageType', ImageType)
+_module_typeBindings.ImageType = ImageType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}InvoiceAvailabilityStatus
 class InvoiceAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1111,13 +2453,14 @@ class InvoiceAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.bas
     """A Status of the availability of an invoice."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'InvoiceAvailabilityStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2651, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8914, 3)
     _Documentation = 'A Status of the availability of an invoice.'
 InvoiceAvailabilityStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=InvoiceAvailabilityStatus, enum_prefix=None)
 InvoiceAvailabilityStatus.InvoiceAvailable = InvoiceAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='InvoiceAvailable', tag='InvoiceAvailable')
 InvoiceAvailabilityStatus.InvoiceNotAvailable = InvoiceAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='InvoiceNotAvailable', tag='InvoiceNotAvailable')
 InvoiceAvailabilityStatus._InitializeFacetMap(InvoiceAvailabilityStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'InvoiceAvailabilityStatus', InvoiceAvailabilityStatus)
+_module_typeBindings.InvoiceAvailabilityStatus = InvoiceAvailabilityStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}IsoCurrencyCode
 class IsoCurrencyCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1125,7 +2468,7 @@ class IsoCurrencyCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """An ISO4217 three-letter code representing a Currency."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'IsoCurrencyCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 2668, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 8931, 3)
     _Documentation = 'An ISO4217 three-letter code representing a Currency.'
 IsoCurrencyCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=IsoCurrencyCode, enum_prefix=None)
 IsoCurrencyCode.AED = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='AED', tag='AED')
@@ -1291,8 +2634,15 @@ IsoCurrencyCode.YER = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_val
 IsoCurrencyCode.ZAR = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZAR', tag='ZAR')
 IsoCurrencyCode.ZMK = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZMK', tag='ZMK')
 IsoCurrencyCode.ZWL = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZWL', tag='ZWL')
+IsoCurrencyCode.MRU = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='MRU', tag='MRU')
+IsoCurrencyCode.MZN = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='MZN', tag='MZN')
+IsoCurrencyCode.SSP = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='SSP', tag='SSP')
+IsoCurrencyCode.STN = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='STN', tag='STN')
+IsoCurrencyCode.VES = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='VES', tag='VES')
+IsoCurrencyCode.ZMW = IsoCurrencyCode._CF_enumeration.addEnumeration(unicode_value='ZMW', tag='ZMW')
 IsoCurrencyCode._InitializeFacetMap(IsoCurrencyCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'IsoCurrencyCode', IsoCurrencyCode)
+_module_typeBindings.IsoCurrencyCode = IsoCurrencyCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}IsoLanguageCode
 class IsoLanguageCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1300,9 +2650,11 @@ class IsoLanguageCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """An ISO639-1 two-letter code representing a Language."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'IsoLanguageCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 3490, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 9783, 3)
     _Documentation = 'An ISO639-1 two-letter code representing a Language.'
 IsoLanguageCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=IsoLanguageCode, enum_prefix=None)
+IsoLanguageCode.raj = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='raj', tag='raj')
+IsoLanguageCode.bho = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bho', tag='bho')
 IsoLanguageCode.aa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='aa', tag='aa')
 IsoLanguageCode.ab = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ab', tag='ab')
 IsoLanguageCode.ae = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ae', tag='ae')
@@ -1488,8 +2840,512 @@ IsoLanguageCode.yo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_valu
 IsoLanguageCode.za = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='za', tag='za')
 IsoLanguageCode.zh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zh', tag='zh')
 IsoLanguageCode.zu = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zu', tag='zu')
+IsoLanguageCode.aar = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='aar', tag='aar')
+IsoLanguageCode.abk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='abk', tag='abk')
+IsoLanguageCode.ave = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ave', tag='ave')
+IsoLanguageCode.afr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='afr', tag='afr')
+IsoLanguageCode.aka = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='aka', tag='aka')
+IsoLanguageCode.amh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='amh', tag='amh')
+IsoLanguageCode.arg = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='arg', tag='arg')
+IsoLanguageCode.ara = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ara', tag='ara')
+IsoLanguageCode.asm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='asm', tag='asm')
+IsoLanguageCode.ava = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ava', tag='ava')
+IsoLanguageCode.aym = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='aym', tag='aym')
+IsoLanguageCode.aze = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='aze', tag='aze')
+IsoLanguageCode.bak = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bak', tag='bak')
+IsoLanguageCode.bel = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bel', tag='bel')
+IsoLanguageCode.bul = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bul', tag='bul')
+IsoLanguageCode.bih = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bih', tag='bih')
+IsoLanguageCode.bis = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bis', tag='bis')
+IsoLanguageCode.bam = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bam', tag='bam')
+IsoLanguageCode.ben = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ben', tag='ben')
+IsoLanguageCode.bod = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bod', tag='bod')
+IsoLanguageCode.bre = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bre', tag='bre')
+IsoLanguageCode.bos = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bos', tag='bos')
+IsoLanguageCode.cat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cat', tag='cat')
+IsoLanguageCode.che = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='che', tag='che')
+IsoLanguageCode.cha = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cha', tag='cha')
+IsoLanguageCode.cos = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cos', tag='cos')
+IsoLanguageCode.cre = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cre', tag='cre')
+IsoLanguageCode.ces = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ces', tag='ces')
+IsoLanguageCode.chu = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chu', tag='chu')
+IsoLanguageCode.chv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chv', tag='chv')
+IsoLanguageCode.cym = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cym', tag='cym')
+IsoLanguageCode.dan = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dan', tag='dan')
+IsoLanguageCode.deu = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='deu', tag='deu')
+IsoLanguageCode.div = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='div', tag='div')
+IsoLanguageCode.dzo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dzo', tag='dzo')
+IsoLanguageCode.ewe = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ewe', tag='ewe')
+IsoLanguageCode.ell = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ell', tag='ell')
+IsoLanguageCode.eng = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='eng', tag='eng')
+IsoLanguageCode.epo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='epo', tag='epo')
+IsoLanguageCode.spa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='spa', tag='spa')
+IsoLanguageCode.est = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='est', tag='est')
+IsoLanguageCode.eus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='eus', tag='eus')
+IsoLanguageCode.fas = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fas', tag='fas')
+IsoLanguageCode.ful = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ful', tag='ful')
+IsoLanguageCode.fin = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fin', tag='fin')
+IsoLanguageCode.fij = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fij', tag='fij')
+IsoLanguageCode.fao = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fao', tag='fao')
+IsoLanguageCode.fra = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fra', tag='fra')
+IsoLanguageCode.fry = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fry', tag='fry')
+IsoLanguageCode.gle = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gle', tag='gle')
+IsoLanguageCode.gla = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gla', tag='gla')
+IsoLanguageCode.glg = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='glg', tag='glg')
+IsoLanguageCode.grn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='grn', tag='grn')
+IsoLanguageCode.guj = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='guj', tag='guj')
+IsoLanguageCode.glv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='glv', tag='glv')
+IsoLanguageCode.hau = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hau', tag='hau')
+IsoLanguageCode.heb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='heb', tag='heb')
+IsoLanguageCode.hin = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hin', tag='hin')
+IsoLanguageCode.hmo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hmo', tag='hmo')
+IsoLanguageCode.hrv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hrv', tag='hrv')
+IsoLanguageCode.hat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hat', tag='hat')
+IsoLanguageCode.hun = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hun', tag='hun')
+IsoLanguageCode.hye = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hye', tag='hye')
+IsoLanguageCode.her = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='her', tag='her')
+IsoLanguageCode.ina = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ina', tag='ina')
+IsoLanguageCode.ind = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ind', tag='ind')
+IsoLanguageCode.ile = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ile', tag='ile')
+IsoLanguageCode.ibo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ibo', tag='ibo')
+IsoLanguageCode.iii = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='iii', tag='iii')
+IsoLanguageCode.ipk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ipk', tag='ipk')
+IsoLanguageCode.ido = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ido', tag='ido')
+IsoLanguageCode.isl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='isl', tag='isl')
+IsoLanguageCode.ita = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ita', tag='ita')
+IsoLanguageCode.iku = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='iku', tag='iku')
+IsoLanguageCode.jpn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='jpn', tag='jpn')
+IsoLanguageCode.jav = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='jav', tag='jav')
+IsoLanguageCode.kat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kat', tag='kat')
+IsoLanguageCode.kon = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kon', tag='kon')
+IsoLanguageCode.kik = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kik', tag='kik')
+IsoLanguageCode.kua = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kua', tag='kua')
+IsoLanguageCode.kaz = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kaz', tag='kaz')
+IsoLanguageCode.kal = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kal', tag='kal')
+IsoLanguageCode.khm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='khm', tag='khm')
+IsoLanguageCode.kan = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kan', tag='kan')
+IsoLanguageCode.kor = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kor', tag='kor')
+IsoLanguageCode.kau = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kau', tag='kau')
+IsoLanguageCode.kas = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kas', tag='kas')
+IsoLanguageCode.kur = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kur', tag='kur')
+IsoLanguageCode.kom = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kom', tag='kom')
+IsoLanguageCode.cor = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cor', tag='cor')
+IsoLanguageCode.kir = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kir', tag='kir')
+IsoLanguageCode.lat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lat', tag='lat')
+IsoLanguageCode.ltz = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ltz', tag='ltz')
+IsoLanguageCode.lug = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lug', tag='lug')
+IsoLanguageCode.lim = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lim', tag='lim')
+IsoLanguageCode.lin = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lin', tag='lin')
+IsoLanguageCode.lao = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lao', tag='lao')
+IsoLanguageCode.lit = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lit', tag='lit')
+IsoLanguageCode.lub = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lub', tag='lub')
+IsoLanguageCode.lav = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lav', tag='lav')
+IsoLanguageCode.mlg = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mlg', tag='mlg')
+IsoLanguageCode.mah = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mah', tag='mah')
+IsoLanguageCode.mri = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mri', tag='mri')
+IsoLanguageCode.mkd = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mkd', tag='mkd')
+IsoLanguageCode.mal = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mal', tag='mal')
+IsoLanguageCode.mon = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mon', tag='mon')
+IsoLanguageCode.mar = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mar', tag='mar')
+IsoLanguageCode.msa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='msa', tag='msa')
+IsoLanguageCode.mlt = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mlt', tag='mlt')
+IsoLanguageCode.mya = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mya', tag='mya')
+IsoLanguageCode.nau = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nau', tag='nau')
+IsoLanguageCode.nob = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nob', tag='nob')
+IsoLanguageCode.nde = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nde', tag='nde')
+IsoLanguageCode.nep = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nep', tag='nep')
+IsoLanguageCode.ndo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ndo', tag='ndo')
+IsoLanguageCode.nld = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nld', tag='nld')
+IsoLanguageCode.nno = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nno', tag='nno')
+IsoLanguageCode.nor = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nor', tag='nor')
+IsoLanguageCode.nbl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nbl', tag='nbl')
+IsoLanguageCode.nav = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nav', tag='nav')
+IsoLanguageCode.nya = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nya', tag='nya')
+IsoLanguageCode.oci = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='oci', tag='oci')
+IsoLanguageCode.oji = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='oji', tag='oji')
+IsoLanguageCode.orm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='orm', tag='orm')
+IsoLanguageCode.ori = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ori', tag='ori')
+IsoLanguageCode.oss = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='oss', tag='oss')
+IsoLanguageCode.pan = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pan', tag='pan')
+IsoLanguageCode.pli = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pli', tag='pli')
+IsoLanguageCode.pol = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pol', tag='pol')
+IsoLanguageCode.pus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pus', tag='pus')
+IsoLanguageCode.por = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='por', tag='por')
+IsoLanguageCode.que = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='que', tag='que')
+IsoLanguageCode.roh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='roh', tag='roh')
+IsoLanguageCode.run = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='run', tag='run')
+IsoLanguageCode.ron = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ron', tag='ron')
+IsoLanguageCode.rus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='rus', tag='rus')
+IsoLanguageCode.kin = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kin', tag='kin')
+IsoLanguageCode.san = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='san', tag='san')
+IsoLanguageCode.srd = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='srd', tag='srd')
+IsoLanguageCode.snd = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='snd', tag='snd')
+IsoLanguageCode.sme = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sme', tag='sme')
+IsoLanguageCode.sag = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sag', tag='sag')
+IsoLanguageCode.sin = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sin', tag='sin')
+IsoLanguageCode.slk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='slk', tag='slk')
+IsoLanguageCode.slv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='slv', tag='slv')
+IsoLanguageCode.smo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='smo', tag='smo')
+IsoLanguageCode.sna = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sna', tag='sna')
+IsoLanguageCode.som = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='som', tag='som')
+IsoLanguageCode.sqi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sqi', tag='sqi')
+IsoLanguageCode.srp = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='srp', tag='srp')
+IsoLanguageCode.ssw = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ssw', tag='ssw')
+IsoLanguageCode.sot = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sot', tag='sot')
+IsoLanguageCode.sun = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sun', tag='sun')
+IsoLanguageCode.swe = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='swe', tag='swe')
+IsoLanguageCode.swa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='swa', tag='swa')
+IsoLanguageCode.tam = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tam', tag='tam')
+IsoLanguageCode.tel = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tel', tag='tel')
+IsoLanguageCode.tgk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tgk', tag='tgk')
+IsoLanguageCode.tha = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tha', tag='tha')
+IsoLanguageCode.tir = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tir', tag='tir')
+IsoLanguageCode.tuk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tuk', tag='tuk')
+IsoLanguageCode.tgl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tgl', tag='tgl')
+IsoLanguageCode.tsn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tsn', tag='tsn')
+IsoLanguageCode.ton = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ton', tag='ton')
+IsoLanguageCode.tur = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tur', tag='tur')
+IsoLanguageCode.tso = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tso', tag='tso')
+IsoLanguageCode.tat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tat', tag='tat')
+IsoLanguageCode.twi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='twi', tag='twi')
+IsoLanguageCode.tah = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tah', tag='tah')
+IsoLanguageCode.uig = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='uig', tag='uig')
+IsoLanguageCode.ukr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ukr', tag='ukr')
+IsoLanguageCode.urd = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='urd', tag='urd')
+IsoLanguageCode.uzb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='uzb', tag='uzb')
+IsoLanguageCode.ven = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ven', tag='ven')
+IsoLanguageCode.vie = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='vie', tag='vie')
+IsoLanguageCode.vol = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='vol', tag='vol')
+IsoLanguageCode.wln = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='wln', tag='wln')
+IsoLanguageCode.wol = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='wol', tag='wol')
+IsoLanguageCode.xho = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='xho', tag='xho')
+IsoLanguageCode.yid = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='yid', tag='yid')
+IsoLanguageCode.yor = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='yor', tag='yor')
+IsoLanguageCode.zha = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zha', tag='zha')
+IsoLanguageCode.zho = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zho', tag='zho')
+IsoLanguageCode.zul = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zul', tag='zul')
+IsoLanguageCode.ace = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ace', tag='ace')
+IsoLanguageCode.ach = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ach', tag='ach')
+IsoLanguageCode.ada = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ada', tag='ada')
+IsoLanguageCode.ady = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ady', tag='ady')
+IsoLanguageCode.afa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='afa', tag='afa')
+IsoLanguageCode.afh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='afh', tag='afh')
+IsoLanguageCode.ain = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ain', tag='ain')
+IsoLanguageCode.akk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='akk', tag='akk')
+IsoLanguageCode.ale = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ale', tag='ale')
+IsoLanguageCode.alg = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='alg', tag='alg')
+IsoLanguageCode.alt = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='alt', tag='alt')
+IsoLanguageCode.ang = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ang', tag='ang')
+IsoLanguageCode.anp = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='anp', tag='anp')
+IsoLanguageCode.apa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='apa', tag='apa')
+IsoLanguageCode.arc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='arc', tag='arc')
+IsoLanguageCode.arn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='arn', tag='arn')
+IsoLanguageCode.arp = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='arp', tag='arp')
+IsoLanguageCode.art = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='art', tag='art')
+IsoLanguageCode.arw = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='arw', tag='arw')
+IsoLanguageCode.ast = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ast', tag='ast')
+IsoLanguageCode.ath = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ath', tag='ath')
+IsoLanguageCode.aus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='aus', tag='aus')
+IsoLanguageCode.awa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='awa', tag='awa')
+IsoLanguageCode.bad = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bad', tag='bad')
+IsoLanguageCode.bai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bai', tag='bai')
+IsoLanguageCode.bal = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bal', tag='bal')
+IsoLanguageCode.ban = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ban', tag='ban')
+IsoLanguageCode.bas = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bas', tag='bas')
+IsoLanguageCode.bat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bat', tag='bat')
+IsoLanguageCode.bej = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bej', tag='bej')
+IsoLanguageCode.bem = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bem', tag='bem')
+IsoLanguageCode.ber = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ber', tag='ber')
+IsoLanguageCode.bgc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bgc', tag='bgc')
+IsoLanguageCode.bik = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bik', tag='bik')
+IsoLanguageCode.bin = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bin', tag='bin')
+IsoLanguageCode.bla = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bla', tag='bla')
+IsoLanguageCode.bnt = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bnt', tag='bnt')
+IsoLanguageCode.bra = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bra', tag='bra')
+IsoLanguageCode.btk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='btk', tag='btk')
+IsoLanguageCode.bua = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bua', tag='bua')
+IsoLanguageCode.bug = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='bug', tag='bug')
+IsoLanguageCode.byn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='byn', tag='byn')
+IsoLanguageCode.cad = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cad', tag='cad')
+IsoLanguageCode.cai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cai', tag='cai')
+IsoLanguageCode.car = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='car', tag='car')
+IsoLanguageCode.cau = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cau', tag='cau')
+IsoLanguageCode.ceb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ceb', tag='ceb')
+IsoLanguageCode.cel = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cel', tag='cel')
+IsoLanguageCode.chb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chb', tag='chb')
+IsoLanguageCode.chg = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chg', tag='chg')
+IsoLanguageCode.chk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chk', tag='chk')
+IsoLanguageCode.chm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chm', tag='chm')
+IsoLanguageCode.chn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chn', tag='chn')
+IsoLanguageCode.cho = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cho', tag='cho')
+IsoLanguageCode.chp = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chp', tag='chp')
+IsoLanguageCode.chr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chr', tag='chr')
+IsoLanguageCode.chy = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='chy', tag='chy')
+IsoLanguageCode.cmc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cmc', tag='cmc')
+IsoLanguageCode.cnr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cnr', tag='cnr')
+IsoLanguageCode.cop = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cop', tag='cop')
+IsoLanguageCode.cpe = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cpe', tag='cpe')
+IsoLanguageCode.cpf = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cpf', tag='cpf')
+IsoLanguageCode.cpp = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cpp', tag='cpp')
+IsoLanguageCode.crh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='crh', tag='crh')
+IsoLanguageCode.crp = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='crp', tag='crp')
+IsoLanguageCode.csb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='csb', tag='csb')
+IsoLanguageCode.cus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cus', tag='cus')
+IsoLanguageCode.dak = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dak', tag='dak')
+IsoLanguageCode.dar = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dar', tag='dar')
+IsoLanguageCode.day = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='day', tag='day')
+IsoLanguageCode.del_ = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='del', tag='del_')
+IsoLanguageCode.den = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='den', tag='den')
+IsoLanguageCode.dgr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dgr', tag='dgr')
+IsoLanguageCode.din = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='din', tag='din')
+IsoLanguageCode.doi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='doi', tag='doi')
+IsoLanguageCode.dra = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dra', tag='dra')
+IsoLanguageCode.dsb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dsb', tag='dsb')
+IsoLanguageCode.dua = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dua', tag='dua')
+IsoLanguageCode.dum = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dum', tag='dum')
+IsoLanguageCode.dyu = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='dyu', tag='dyu')
+IsoLanguageCode.efi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='efi', tag='efi')
+IsoLanguageCode.egy = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='egy', tag='egy')
+IsoLanguageCode.eka = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='eka', tag='eka')
+IsoLanguageCode.elx = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='elx', tag='elx')
+IsoLanguageCode.enm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='enm', tag='enm')
+IsoLanguageCode.ewo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ewo', tag='ewo')
+IsoLanguageCode.fan = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fan', tag='fan')
+IsoLanguageCode.fat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fat', tag='fat')
+IsoLanguageCode.fil = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fil', tag='fil')
+IsoLanguageCode.fiu = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fiu', tag='fiu')
+IsoLanguageCode.fon = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fon', tag='fon')
+IsoLanguageCode.frm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='frm', tag='frm')
+IsoLanguageCode.fro = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fro', tag='fro')
+IsoLanguageCode.frr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='frr', tag='frr')
+IsoLanguageCode.frs = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='frs', tag='frs')
+IsoLanguageCode.fur = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='fur', tag='fur')
+IsoLanguageCode.gaa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gaa', tag='gaa')
+IsoLanguageCode.gay = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gay', tag='gay')
+IsoLanguageCode.gba = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gba', tag='gba')
+IsoLanguageCode.gem = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gem', tag='gem')
+IsoLanguageCode.gez = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gez', tag='gez')
+IsoLanguageCode.gil = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gil', tag='gil')
+IsoLanguageCode.gmh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gmh', tag='gmh')
+IsoLanguageCode.goh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='goh', tag='goh')
+IsoLanguageCode.gon = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gon', tag='gon')
+IsoLanguageCode.gor = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gor', tag='gor')
+IsoLanguageCode.got = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='got', tag='got')
+IsoLanguageCode.grb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='grb', tag='grb')
+IsoLanguageCode.grc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='grc', tag='grc')
+IsoLanguageCode.gsw = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gsw', tag='gsw')
+IsoLanguageCode.gwi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gwi', tag='gwi')
+IsoLanguageCode.hai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hai', tag='hai')
+IsoLanguageCode.haw = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='haw', tag='haw')
+IsoLanguageCode.hil = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hil', tag='hil')
+IsoLanguageCode.him = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='him', tag='him')
+IsoLanguageCode.hit = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hit', tag='hit')
+IsoLanguageCode.hmn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hmn', tag='hmn')
+IsoLanguageCode.hsb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hsb', tag='hsb')
+IsoLanguageCode.hup = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hup', tag='hup')
+IsoLanguageCode.iba = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='iba', tag='iba')
+IsoLanguageCode.ijo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ijo', tag='ijo')
+IsoLanguageCode.ilo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ilo', tag='ilo')
+IsoLanguageCode.inc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='inc', tag='inc')
+IsoLanguageCode.ine = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ine', tag='ine')
+IsoLanguageCode.inh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='inh', tag='inh')
+IsoLanguageCode.ira = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ira', tag='ira')
+IsoLanguageCode.iro = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='iro', tag='iro')
+IsoLanguageCode.jbo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='jbo', tag='jbo')
+IsoLanguageCode.jpr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='jpr', tag='jpr')
+IsoLanguageCode.jrb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='jrb', tag='jrb')
+IsoLanguageCode.kaa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kaa', tag='kaa')
+IsoLanguageCode.kab = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kab', tag='kab')
+IsoLanguageCode.kac = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kac', tag='kac')
+IsoLanguageCode.kam = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kam', tag='kam')
+IsoLanguageCode.kar = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kar', tag='kar')
+IsoLanguageCode.kaw = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kaw', tag='kaw')
+IsoLanguageCode.kbd = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kbd', tag='kbd')
+IsoLanguageCode.kha = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kha', tag='kha')
+IsoLanguageCode.khi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='khi', tag='khi')
+IsoLanguageCode.kho = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kho', tag='kho')
+IsoLanguageCode.kmb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kmb', tag='kmb')
+IsoLanguageCode.kok = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kok', tag='kok')
+IsoLanguageCode.kos = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kos', tag='kos')
+IsoLanguageCode.kpe = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kpe', tag='kpe')
+IsoLanguageCode.krc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='krc', tag='krc')
+IsoLanguageCode.krl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='krl', tag='krl')
+IsoLanguageCode.kro = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kro', tag='kro')
+IsoLanguageCode.kru = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kru', tag='kru')
+IsoLanguageCode.kum = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kum', tag='kum')
+IsoLanguageCode.kut = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='kut', tag='kut')
+IsoLanguageCode.lad = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lad', tag='lad')
+IsoLanguageCode.lah = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lah', tag='lah')
+IsoLanguageCode.lam = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lam', tag='lam')
+IsoLanguageCode.lez = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lez', tag='lez')
+IsoLanguageCode.lol = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lol', tag='lol')
+IsoLanguageCode.loz = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='loz', tag='loz')
+IsoLanguageCode.lua = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lua', tag='lua')
+IsoLanguageCode.lui = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lui', tag='lui')
+IsoLanguageCode.lun = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lun', tag='lun')
+IsoLanguageCode.luo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='luo', tag='luo')
+IsoLanguageCode.lus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='lus', tag='lus')
+IsoLanguageCode.mad = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mad', tag='mad')
+IsoLanguageCode.mag = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mag', tag='mag')
+IsoLanguageCode.mai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mai', tag='mai')
+IsoLanguageCode.mak = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mak', tag='mak')
+IsoLanguageCode.man = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='man', tag='man')
+IsoLanguageCode.map = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='map', tag='map')
+IsoLanguageCode.mas = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mas', tag='mas')
+IsoLanguageCode.mdf = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mdf', tag='mdf')
+IsoLanguageCode.mdr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mdr', tag='mdr')
+IsoLanguageCode.men = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='men', tag='men')
+IsoLanguageCode.mga = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mga', tag='mga')
+IsoLanguageCode.mic = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mic', tag='mic')
+IsoLanguageCode.min = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='min', tag='min')
+IsoLanguageCode.mis = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mis', tag='mis')
+IsoLanguageCode.mkh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mkh', tag='mkh')
+IsoLanguageCode.mnc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mnc', tag='mnc')
+IsoLanguageCode.mni = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mni', tag='mni')
+IsoLanguageCode.mno = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mno', tag='mno')
+IsoLanguageCode.moh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='moh', tag='moh')
+IsoLanguageCode.mos = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mos', tag='mos')
+IsoLanguageCode.mul = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mul', tag='mul')
+IsoLanguageCode.mun = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mun', tag='mun')
+IsoLanguageCode.mus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mus', tag='mus')
+IsoLanguageCode.mwl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mwl', tag='mwl')
+IsoLanguageCode.mwr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='mwr', tag='mwr')
+IsoLanguageCode.myn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='myn', tag='myn')
+IsoLanguageCode.myv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='myv', tag='myv')
+IsoLanguageCode.nah = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nah', tag='nah')
+IsoLanguageCode.nai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nai', tag='nai')
+IsoLanguageCode.nap = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nap', tag='nap')
+IsoLanguageCode.nds = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nds', tag='nds')
+IsoLanguageCode.new = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='new', tag='new')
+IsoLanguageCode.nia = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nia', tag='nia')
+IsoLanguageCode.nic = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nic', tag='nic')
+IsoLanguageCode.niu = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='niu', tag='niu')
+IsoLanguageCode.nog = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nog', tag='nog')
+IsoLanguageCode.non = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='non', tag='non')
+IsoLanguageCode.nqo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nqo', tag='nqo')
+IsoLanguageCode.nso = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nso', tag='nso')
+IsoLanguageCode.nub = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nub', tag='nub')
+IsoLanguageCode.nwc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nwc', tag='nwc')
+IsoLanguageCode.nym = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nym', tag='nym')
+IsoLanguageCode.nyn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nyn', tag='nyn')
+IsoLanguageCode.nyo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nyo', tag='nyo')
+IsoLanguageCode.nzi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='nzi', tag='nzi')
+IsoLanguageCode.osa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='osa', tag='osa')
+IsoLanguageCode.ota = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ota', tag='ota')
+IsoLanguageCode.oto = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='oto', tag='oto')
+IsoLanguageCode.paa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='paa', tag='paa')
+IsoLanguageCode.pag = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pag', tag='pag')
+IsoLanguageCode.pal = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pal', tag='pal')
+IsoLanguageCode.pam = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pam', tag='pam')
+IsoLanguageCode.pap = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pap', tag='pap')
+IsoLanguageCode.pau = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pau', tag='pau')
+IsoLanguageCode.peo = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='peo', tag='peo')
+IsoLanguageCode.phi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='phi', tag='phi')
+IsoLanguageCode.phn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='phn', tag='phn')
+IsoLanguageCode.pon = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pon', tag='pon')
+IsoLanguageCode.pra = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pra', tag='pra')
+IsoLanguageCode.pro = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='pro', tag='pro')
+IsoLanguageCode.qqa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqa', tag='qqa')
+IsoLanguageCode.qqb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqb', tag='qqb')
+IsoLanguageCode.qqc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqc', tag='qqc')
+IsoLanguageCode.qqd = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqd', tag='qqd')
+IsoLanguageCode.qqe = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqe', tag='qqe')
+IsoLanguageCode.qqf = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqf', tag='qqf')
+IsoLanguageCode.qqg = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqg', tag='qqg')
+IsoLanguageCode.qqh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqh', tag='qqh')
+IsoLanguageCode.qqi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqi', tag='qqi')
+IsoLanguageCode.qqj = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='qqj', tag='qqj')
+IsoLanguageCode.rap = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='rap', tag='rap')
+IsoLanguageCode.rar = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='rar', tag='rar')
+IsoLanguageCode.roa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='roa', tag='roa')
+IsoLanguageCode.rom = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='rom', tag='rom')
+IsoLanguageCode.rup = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='rup', tag='rup')
+IsoLanguageCode.sad = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sad', tag='sad')
+IsoLanguageCode.sah = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sah', tag='sah')
+IsoLanguageCode.sai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sai', tag='sai')
+IsoLanguageCode.sal = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sal', tag='sal')
+IsoLanguageCode.sam = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sam', tag='sam')
+IsoLanguageCode.sas = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sas', tag='sas')
+IsoLanguageCode.sat = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sat', tag='sat')
+IsoLanguageCode.scn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='scn', tag='scn')
+IsoLanguageCode.sco = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sco', tag='sco')
+IsoLanguageCode.sel = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sel', tag='sel')
+IsoLanguageCode.sem = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sem', tag='sem')
+IsoLanguageCode.sga = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sga', tag='sga')
+IsoLanguageCode.sgn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sgn', tag='sgn')
+IsoLanguageCode.shn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='shn', tag='shn')
+IsoLanguageCode.sid = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sid', tag='sid')
+IsoLanguageCode.sio = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sio', tag='sio')
+IsoLanguageCode.sit = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sit', tag='sit')
+IsoLanguageCode.sla = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sla', tag='sla')
+IsoLanguageCode.sma = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sma', tag='sma')
+IsoLanguageCode.smi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='smi', tag='smi')
+IsoLanguageCode.smj = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='smj', tag='smj')
+IsoLanguageCode.smn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='smn', tag='smn')
+IsoLanguageCode.sms = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sms', tag='sms')
+IsoLanguageCode.snk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='snk', tag='snk')
+IsoLanguageCode.sog = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sog', tag='sog')
+IsoLanguageCode.son = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='son', tag='son')
+IsoLanguageCode.srn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='srn', tag='srn')
+IsoLanguageCode.srr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='srr', tag='srr')
+IsoLanguageCode.ssa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ssa', tag='ssa')
+IsoLanguageCode.suk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='suk', tag='suk')
+IsoLanguageCode.sus = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sus', tag='sus')
+IsoLanguageCode.sux = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sux', tag='sux')
+IsoLanguageCode.syc = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='syc', tag='syc')
+IsoLanguageCode.syr = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='syr', tag='syr')
+IsoLanguageCode.tai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tai', tag='tai')
+IsoLanguageCode.tem = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tem', tag='tem')
+IsoLanguageCode.ter = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ter', tag='ter')
+IsoLanguageCode.tet = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tet', tag='tet')
+IsoLanguageCode.tig = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tig', tag='tig')
+IsoLanguageCode.tiv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tiv', tag='tiv')
+IsoLanguageCode.tkl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tkl', tag='tkl')
+IsoLanguageCode.tlh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tlh', tag='tlh')
+IsoLanguageCode.tli = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tli', tag='tli')
+IsoLanguageCode.tmh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tmh', tag='tmh')
+IsoLanguageCode.tog = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tog', tag='tog')
+IsoLanguageCode.tpi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tpi', tag='tpi')
+IsoLanguageCode.tsi = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tsi', tag='tsi')
+IsoLanguageCode.tum = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tum', tag='tum')
+IsoLanguageCode.tup = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tup', tag='tup')
+IsoLanguageCode.tut = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tut', tag='tut')
+IsoLanguageCode.tvl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tvl', tag='tvl')
+IsoLanguageCode.tyv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='tyv', tag='tyv')
+IsoLanguageCode.udm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='udm', tag='udm')
+IsoLanguageCode.uga = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='uga', tag='uga')
+IsoLanguageCode.umb = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='umb', tag='umb')
+IsoLanguageCode.und = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='und', tag='und')
+IsoLanguageCode.vai = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='vai', tag='vai')
+IsoLanguageCode.vot = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='vot', tag='vot')
+IsoLanguageCode.wak = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='wak', tag='wak')
+IsoLanguageCode.wal = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='wal', tag='wal')
+IsoLanguageCode.war = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='war', tag='war')
+IsoLanguageCode.was = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='was', tag='was')
+IsoLanguageCode.wen = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='wen', tag='wen')
+IsoLanguageCode.xal = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='xal', tag='xal')
+IsoLanguageCode.yao = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='yao', tag='yao')
+IsoLanguageCode.yap = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='yap', tag='yap')
+IsoLanguageCode.ypk = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='ypk', tag='ypk')
+IsoLanguageCode.zap = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zap', tag='zap')
+IsoLanguageCode.zbl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zbl', tag='zbl')
+IsoLanguageCode.zen = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zen', tag='zen')
+IsoLanguageCode.zgh = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zgh', tag='zgh')
+IsoLanguageCode.znd = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='znd', tag='znd')
+IsoLanguageCode.zun = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zun', tag='zun')
+IsoLanguageCode.zxx = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zxx', tag='zxx')
+IsoLanguageCode.zza = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='zza', tag='zza')
+IsoLanguageCode.aaa = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='aaa', tag='aaa')
+IsoLanguageCode.scl = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='scl', tag='scl')
+IsoLanguageCode.spv = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='spv', tag='spv')
+IsoLanguageCode.cmn = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='cmn', tag='cmn')
+IsoLanguageCode.sck = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='sck', tag='sck')
+IsoLanguageCode.khw = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='khw', tag='khw')
+IsoLanguageCode.gbm = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='gbm', tag='gbm')
+IsoLanguageCode.hne = IsoLanguageCode._CF_enumeration.addEnumeration(unicode_value='hne', tag='hne')
 IsoLanguageCode._InitializeFacetMap(IsoLanguageCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'IsoLanguageCode', IsoLanguageCode)
+_module_typeBindings.IsoLanguageCode = IsoLanguageCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}IsoTerritoryCode
 class IsoTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1497,7 +3353,7 @@ class IsoTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumer
     """An ISO 3166-1 two-letter code representing a Territory."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'IsoTerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 4422, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 13241, 3)
     _Documentation = 'An ISO 3166-1 two-letter code representing a Territory.'
 IsoTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=IsoTerritoryCode, enum_prefix=None)
 IsoTerritoryCode.AD = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='AD', tag='AD')
@@ -1570,6 +3426,9 @@ IsoTerritoryCode.EG = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_va
 IsoTerritoryCode.EH = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='EH', tag='EH')
 IsoTerritoryCode.ER = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ER', tag='ER')
 IsoTerritoryCode.ES = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES', tag='ES')
+IsoTerritoryCode.ES_CE = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CE', tag='ES_CE')
+IsoTerritoryCode.ES_CN = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CN', tag='ES_CN')
+IsoTerritoryCode.ES_ML = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-ML', tag='ES_ML')
 IsoTerritoryCode.ET = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ET', tag='ET')
 IsoTerritoryCode.FI = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FI', tag='FI')
 IsoTerritoryCode.FJ = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='FJ', tag='FJ')
@@ -1753,6 +3612,7 @@ IsoTerritoryCode.ZM = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_va
 IsoTerritoryCode.ZW = IsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZW', tag='ZW')
 IsoTerritoryCode._InitializeFacetMap(IsoTerritoryCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'IsoTerritoryCode', IsoTerritoryCode)
+_module_typeBindings.IsoTerritoryCode = IsoTerritoryCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LabelNameType
 class LabelNameType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1760,13 +3620,14 @@ class LabelNameType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A Type of LabelName."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LabelNameType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 5684, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14518, 3)
     _Documentation = 'A Type of LabelName.'
 LabelNameType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LabelNameType, enum_prefix=None)
 LabelNameType.DisplayLabelName = LabelNameType._CF_enumeration.addEnumeration(unicode_value='DisplayLabelName', tag='DisplayLabelName')
 LabelNameType.UserDefined = LabelNameType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 LabelNameType._InitializeFacetMap(LabelNameType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LabelNameType', LabelNameType)
+_module_typeBindings.LabelNameType = LabelNameType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LicenseOrClaimRefusalReason
 class LicenseOrClaimRefusalReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1774,7 +3635,7 @@ class LicenseOrClaimRefusalReason (pyxb.binding.datatypes.string, pyxb.binding.b
     """A Type of reason for a refusing a License or Claim."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseOrClaimRefusalReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 5701, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14535, 3)
     _Documentation = 'A Type of reason for a refusing a License or Claim.'
 LicenseOrClaimRefusalReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseOrClaimRefusalReason, enum_prefix=None)
 LicenseOrClaimRefusalReason.AgreementOfAdditionalProvisionsRequired = LicenseOrClaimRefusalReason._CF_enumeration.addEnumeration(unicode_value='AgreementOfAdditionalProvisionsRequired', tag='AgreementOfAdditionalProvisionsRequired')
@@ -1819,6 +3680,7 @@ LicenseOrClaimRefusalReason.WorkNotUsed = LicenseOrClaimRefusalReason._CF_enumer
 LicenseOrClaimRefusalReason.WorkUnknown = LicenseOrClaimRefusalReason._CF_enumeration.addEnumeration(unicode_value='WorkUnknown', tag='WorkUnknown')
 LicenseOrClaimRefusalReason._InitializeFacetMap(LicenseOrClaimRefusalReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseOrClaimRefusalReason', LicenseOrClaimRefusalReason)
+_module_typeBindings.LicenseOrClaimRefusalReason = LicenseOrClaimRefusalReason
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LicenseOrClaimRequestUpdateReason
 class LicenseOrClaimRequestUpdateReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1826,7 +3688,7 @@ class LicenseOrClaimRequestUpdateReason (pyxb.binding.datatypes.string, pyxb.bin
     """A Type of reason for updating a License request."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseOrClaimRequestUpdateReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 5908, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14742, 3)
     _Documentation = 'A Type of reason for updating a License request.'
 LicenseOrClaimRequestUpdateReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseOrClaimRequestUpdateReason, enum_prefix=None)
 LicenseOrClaimRequestUpdateReason.AdditionalInformationProvided = LicenseOrClaimRequestUpdateReason._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationProvided', tag='AdditionalInformationProvided')
@@ -1834,6 +3696,7 @@ LicenseOrClaimRequestUpdateReason.AdditionalInformationProvidedAsRequested = Lic
 LicenseOrClaimRequestUpdateReason.UserDefined = LicenseOrClaimRequestUpdateReason._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 LicenseOrClaimRequestUpdateReason._InitializeFacetMap(LicenseOrClaimRequestUpdateReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseOrClaimRequestUpdateReason', LicenseOrClaimRequestUpdateReason)
+_module_typeBindings.LicenseOrClaimRequestUpdateReason = LicenseOrClaimRequestUpdateReason
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LicenseOrClaimUpdateReason
 class LicenseOrClaimUpdateReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1841,7 +3704,7 @@ class LicenseOrClaimUpdateReason (pyxb.binding.datatypes.string, pyxb.binding.ba
     """A Type of reason for updating a License."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseOrClaimUpdateReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 5930, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14764, 3)
     _Documentation = 'A Type of reason for updating a License.'
 LicenseOrClaimUpdateReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseOrClaimUpdateReason, enum_prefix=None)
 LicenseOrClaimUpdateReason.NewLicenseIssued = LicenseOrClaimUpdateReason._CF_enumeration.addEnumeration(unicode_value='NewLicenseIssued', tag='NewLicenseIssued')
@@ -1852,6 +3715,7 @@ LicenseOrClaimUpdateReason.Revoked = LicenseOrClaimUpdateReason._CF_enumeration.
 LicenseOrClaimUpdateReason.UserDefined = LicenseOrClaimUpdateReason._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 LicenseOrClaimUpdateReason._InitializeFacetMap(LicenseOrClaimUpdateReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseOrClaimUpdateReason', LicenseOrClaimUpdateReason)
+_module_typeBindings.LicenseOrClaimUpdateReason = LicenseOrClaimUpdateReason
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LicenseRejectionReason
 class LicenseRejectionReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1859,7 +3723,7 @@ class LicenseRejectionReason (pyxb.binding.datatypes.string, pyxb.binding.basis.
     """A Type of reason for a rejecting a License."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseRejectionReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 5967, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14801, 3)
     _Documentation = 'A Type of reason for a rejecting a License.'
 LicenseRejectionReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseRejectionReason, enum_prefix=None)
 LicenseRejectionReason.DisagreementOverRoyalties = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='DisagreementOverRoyalties', tag='DisagreementOverRoyalties')
@@ -1869,8 +3733,14 @@ LicenseRejectionReason.LicenseNotNeeded = LicenseRejectionReason._CF_enumeration
 LicenseRejectionReason.WrongAddressee = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='WrongAddressee', tag='WrongAddressee')
 LicenseRejectionReason.UserDefined = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 LicenseRejectionReason.WorkInPublicDomain = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='WorkInPublicDomain', tag='WorkInPublicDomain')
+LicenseRejectionReason.DuplicateLicenseRequestNumber = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='DuplicateLicenseRequestNumber', tag='DuplicateLicenseRequestNumber')
+LicenseRejectionReason.LicenseBlocked = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='LicenseBlocked', tag='LicenseBlocked')
+LicenseRejectionReason.ReferencedDocumentMissing = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='ReferencedDocumentMissing', tag='ReferencedDocumentMissing')
+LicenseRejectionReason.ShareSplitsDiffer = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='ShareSplitsDiffer', tag='ShareSplitsDiffer')
+LicenseRejectionReason.WorkUsedMultipleTimes = LicenseRejectionReason._CF_enumeration.addEnumeration(unicode_value='WorkUsedMultipleTimes', tag='WorkUsedMultipleTimes')
 LicenseRejectionReason._InitializeFacetMap(LicenseRejectionReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseRejectionReason', LicenseRejectionReason)
+_module_typeBindings.LicenseRejectionReason = LicenseRejectionReason
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LicenseStatus
 class LicenseStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1878,7 +3748,7 @@ class LicenseStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A legal Status of a License for a Claim."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6009, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14868, 3)
     _Documentation = 'A legal Status of a License for a Claim.'
 LicenseStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseStatus, enum_prefix=None)
 LicenseStatus.Active = LicenseStatus._CF_enumeration.addEnumeration(unicode_value='Active', tag='Active')
@@ -1886,6 +3756,7 @@ LicenseStatus.Pending = LicenseStatus._CF_enumeration.addEnumeration(unicode_val
 LicenseStatus.Revoked = LicenseStatus._CF_enumeration.addEnumeration(unicode_value='Revoked', tag='Revoked')
 LicenseStatus._InitializeFacetMap(LicenseStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseStatus', LicenseStatus)
+_module_typeBindings.LicenseStatus = LicenseStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LicensingProcessStatus
 class LicensingProcessStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1893,7 +3764,7 @@ class LicensingProcessStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.
     """An operational Status of a licensing process."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicensingProcessStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6031, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14890, 3)
     _Documentation = 'An operational Status of a licensing process.'
 LicensingProcessStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicensingProcessStatus, enum_prefix=None)
 LicensingProcessStatus.Pending = LicensingProcessStatus._CF_enumeration.addEnumeration(unicode_value='Pending', tag='Pending')
@@ -1901,6 +3772,7 @@ LicensingProcessStatus.Processed = LicensingProcessStatus._CF_enumeration.addEnu
 LicensingProcessStatus.ThirdPartyInformationRequested = LicensingProcessStatus._CF_enumeration.addEnumeration(unicode_value='ThirdPartyInformationRequested', tag='ThirdPartyInformationRequested')
 LicensingProcessStatus._InitializeFacetMap(LicensingProcessStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicensingProcessStatus', LicensingProcessStatus)
+_module_typeBindings.LicensingProcessStatus = LicensingProcessStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LodFileStatus
 class LodFileStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1908,12 +3780,13 @@ class LodFileStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A Status of a File in terms of its validity in the Release Delivery Choreography Standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LodFileStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6053, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14912, 3)
     _Documentation = 'A Status of a File in terms of its validity in the Release Delivery Choreography Standard.'
 LodFileStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LodFileStatus, enum_prefix=None)
 LodFileStatus.FileOK = LodFileStatus._CF_enumeration.addEnumeration(unicode_value='FileOK', tag='FileOK')
 LodFileStatus._InitializeFacetMap(LodFileStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LodFileStatus', LodFileStatus)
+_module_typeBindings.LodFileStatus = LodFileStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}LodProposedActionType
 class LodProposedActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1921,12 +3794,13 @@ class LodProposedActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.e
     """A Type of action that is proposed."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LodProposedActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6065, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14924, 3)
     _Documentation = 'A Type of action that is proposed.'
 LodProposedActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LodProposedActionType, enum_prefix=None)
 LodProposedActionType.ResendXmlOnly = LodProposedActionType._CF_enumeration.addEnumeration(unicode_value='ResendXmlOnly', tag='ResendXmlOnly')
 LodProposedActionType._InitializeFacetMap(LodProposedActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LodProposedActionType', LodProposedActionType)
+_module_typeBindings.LodProposedActionType = LodProposedActionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MembershipType
 class MembershipType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1934,7 +3808,7 @@ class MembershipType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of membership."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MembershipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6077, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14936, 3)
     _Documentation = 'A Type of membership.'
 MembershipType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MembershipType, enum_prefix=None)
 MembershipType.NationalMember = MembershipType._CF_enumeration.addEnumeration(unicode_value='NationalMember', tag='NationalMember')
@@ -1942,6 +3816,7 @@ MembershipType.RegionalMember = MembershipType._CF_enumeration.addEnumeration(un
 MembershipType.WorldwideMember = MembershipType._CF_enumeration.addEnumeration(unicode_value='WorldwideMember', tag='WorldwideMember')
 MembershipType._InitializeFacetMap(MembershipType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MembershipType', MembershipType)
+_module_typeBindings.MembershipType = MembershipType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MessageActionType
 class MessageActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1949,7 +3824,7 @@ class MessageActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A Type of action requested in a Message."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MessageActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6099, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14958, 3)
     _Documentation = 'A Type of action requested in a Message.'
 MessageActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MessageActionType, enum_prefix=None)
 MessageActionType.BackCatalogDelivery = MessageActionType._CF_enumeration.addEnumeration(unicode_value='BackCatalogDelivery', tag='BackCatalogDelivery')
@@ -1960,6 +3835,7 @@ MessageActionType.TakeDown = MessageActionType._CF_enumeration.addEnumeration(un
 MessageActionType.UserDefined = MessageActionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 MessageActionType._InitializeFacetMap(MessageActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MessageActionType', MessageActionType)
+_module_typeBindings.MessageActionType = MessageActionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MessageContentRevenueType
 class MessageContentRevenueType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1967,7 +3843,7 @@ class MessageContentRevenueType (pyxb.binding.datatypes.string, pyxb.binding.bas
     """A Type of revenue to which the content of the Message relates."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MessageContentRevenueType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6136, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 14995, 3)
     _Documentation = 'A Type of revenue to which the content of the Message relates.'
 MessageContentRevenueType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MessageContentRevenueType, enum_prefix=None)
 MessageContentRevenueType.NonTransactionalRevenue = MessageContentRevenueType._CF_enumeration.addEnumeration(unicode_value='NonTransactionalRevenue', tag='NonTransactionalRevenue')
@@ -1975,6 +3851,7 @@ MessageContentRevenueType.TransactionalRevenue = MessageContentRevenueType._CF_e
 MessageContentRevenueType.UserDefined = MessageContentRevenueType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 MessageContentRevenueType._InitializeFacetMap(MessageContentRevenueType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MessageContentRevenueType', MessageContentRevenueType)
+_module_typeBindings.MessageContentRevenueType = MessageContentRevenueType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MessageContextType
 class MessageContextType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -1982,7 +3859,7 @@ class MessageContextType (pyxb.binding.datatypes.string, pyxb.binding.basis.enum
     """A Type of Message in the Letters Of Direction Choreography Standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MessageContextType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6158, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15017, 3)
     _Documentation = 'A Type of Message in the Letters Of Direction Choreography Standard.'
 MessageContextType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MessageContextType, enum_prefix=None)
 MessageContextType.MusicalWorkClaimRequestMessageInIdentificationCycle = MessageContextType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkClaimRequestMessageInIdentificationCycle', tag='MusicalWorkClaimRequestMessageInIdentificationCycle')
@@ -1993,6 +3870,7 @@ MessageContextType.MusicalWorkClaimNotificationMessageInLoCCycleAsLoDMessage = M
 MessageContextType.MusicalWorkClaimNotificationMessageInLoCCycleAsLoDConfirmation = MessageContextType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkClaimNotificationMessageInLoCCycleAsLoDConfirmation', tag='MusicalWorkClaimNotificationMessageInLoCCycleAsLoDConfirmation')
 MessageContextType._InitializeFacetMap(MessageContextType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MessageContextType', MessageContextType)
+_module_typeBindings.MessageContextType = MessageContextType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MessageControlType
 class MessageControlType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2000,13 +3878,14 @@ class MessageControlType (pyxb.binding.datatypes.string, pyxb.binding.basis.enum
     """A Type of Message according to its operational status."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MessageControlType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6195, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15054, 3)
     _Documentation = 'A Type of Message according to its operational status.'
 MessageControlType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MessageControlType, enum_prefix=None)
 MessageControlType.LiveMessage = MessageControlType._CF_enumeration.addEnumeration(unicode_value='LiveMessage', tag='LiveMessage')
 MessageControlType.TestMessage = MessageControlType._CF_enumeration.addEnumeration(unicode_value='TestMessage', tag='TestMessage')
 MessageControlType._InitializeFacetMap(MessageControlType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MessageControlType', MessageControlType)
+_module_typeBindings.MessageControlType = MessageControlType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MidiType
 class MidiType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2014,7 +3893,7 @@ class MidiType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mi
     """A Type of MIDI."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MidiType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6212, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15071, 3)
     _Documentation = 'A Type of MIDI.'
 MidiType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MidiType, enum_prefix=None)
 MidiType.MonophonicMidi = MidiType._CF_enumeration.addEnumeration(unicode_value='MonophonicMidi', tag='MonophonicMidi')
@@ -2023,6 +3902,7 @@ MidiType.Unknown = MidiType._CF_enumeration.addEnumeration(unicode_value='Unknow
 MidiType.UserDefined = MidiType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 MidiType._InitializeFacetMap(MidiType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MidiType', MidiType)
+_module_typeBindings.MidiType = MidiType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MlcMessageType
 class MlcMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2030,7 +3910,7 @@ class MlcMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of Message in the Music Licensing Company Message Suite."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MlcMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6239, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15098, 3)
     _Documentation = 'A Type of Message in the Music Licensing Company Message Suite.'
 MlcMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MlcMessageType, enum_prefix=None)
 MlcMessageType.DeclarationOfSoundRecordingRightsClaimMessage = MlcMessageType._CF_enumeration.addEnumeration(unicode_value='DeclarationOfSoundRecordingRightsClaimMessage', tag='DeclarationOfSoundRecordingRightsClaimMessage')
@@ -2040,6 +3920,68 @@ MlcMessageType.SalesReportMessage = MlcMessageType._CF_enumeration.addEnumeratio
 MlcMessageType.DeclarationOfRevenueMessage = MlcMessageType._CF_enumeration.addEnumeration(unicode_value='DeclarationOfRevenueMessage', tag='DeclarationOfRevenueMessage')
 MlcMessageType._InitializeFacetMap(MlcMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MlcMessageType', MlcMessageType)
+_module_typeBindings.MlcMessageType = MlcMessageType
+
+# Atomic simple type: {http://ddex.net/xml/avs/avs}MusicalWorkContributorRole
+class MusicalWorkContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
+
+    """A role played by a Contributor in relation to a MusicalWork."""
+
+    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MusicalWorkContributorRole')
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15130, 3)
+    _Documentation = 'A role played by a Contributor in relation to a MusicalWork.'
+MusicalWorkContributorRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MusicalWorkContributorRole, enum_prefix=None)
+MusicalWorkContributorRole.Adapter = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Adapter', tag='Adapter')
+MusicalWorkContributorRole.Arranger = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Arranger', tag='Arranger')
+MusicalWorkContributorRole.AssociatedPerformer = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='AssociatedPerformer', tag='AssociatedPerformer')
+MusicalWorkContributorRole.Author = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Author', tag='Author')
+MusicalWorkContributorRole.Composer = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Composer', tag='Composer')
+MusicalWorkContributorRole.ComposerLyricist = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='ComposerLyricist', tag='ComposerLyricist')
+MusicalWorkContributorRole.Librettist = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Librettist', tag='Librettist')
+MusicalWorkContributorRole.Lyricist = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Lyricist', tag='Lyricist')
+MusicalWorkContributorRole.NonLyricAuthor = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='NonLyricAuthor', tag='NonLyricAuthor')
+MusicalWorkContributorRole.SubArranger = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='SubArranger', tag='SubArranger')
+MusicalWorkContributorRole.SubLyricist = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='SubLyricist', tag='SubLyricist')
+MusicalWorkContributorRole.Translator = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Translator', tag='Translator')
+MusicalWorkContributorRole.Contributor = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Contributor', tag='Contributor')
+MusicalWorkContributorRole.MusicPublisher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='MusicPublisher', tag='MusicPublisher')
+MusicalWorkContributorRole.OriginalPublisher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='OriginalPublisher', tag='OriginalPublisher')
+MusicalWorkContributorRole.SubPublisher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='SubPublisher', tag='SubPublisher')
+MusicalWorkContributorRole.SubstitutedPublisher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='SubstitutedPublisher', tag='SubstitutedPublisher')
+MusicalWorkContributorRole.Unknown = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
+MusicalWorkContributorRole.UserDefined = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+MusicalWorkContributorRole.Architect = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Architect', tag='Architect')
+MusicalWorkContributorRole.AuthorInQuotations = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='AuthorInQuotations', tag='AuthorInQuotations')
+MusicalWorkContributorRole.AuthorOfAfterword = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='AuthorOfAfterword', tag='AuthorOfAfterword')
+MusicalWorkContributorRole.Compiler = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Compiler', tag='Compiler')
+MusicalWorkContributorRole.Conceptor = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Conceptor', tag='Conceptor')
+MusicalWorkContributorRole.Creator = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Creator', tag='Creator')
+MusicalWorkContributorRole.DialogueAuthor = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='DialogueAuthor', tag='DialogueAuthor')
+MusicalWorkContributorRole.Dissertant = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Dissertant', tag='Dissertant')
+MusicalWorkContributorRole.Engraver = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Engraver', tag='Engraver')
+MusicalWorkContributorRole.Etcher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Etcher', tag='Etcher')
+MusicalWorkContributorRole.Journalist = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Journalist', tag='Journalist')
+MusicalWorkContributorRole.LandscapeArchitect = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='LandscapeArchitect', tag='LandscapeArchitect')
+MusicalWorkContributorRole.Lithographer = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Lithographer', tag='Lithographer')
+MusicalWorkContributorRole.MetalEngraver = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='MetalEngraver', tag='MetalEngraver')
+MusicalWorkContributorRole.PlateMaker = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='PlateMaker', tag='PlateMaker')
+MusicalWorkContributorRole.Playwright = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Playwright', tag='Playwright')
+MusicalWorkContributorRole.Reporter = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Reporter', tag='Reporter')
+MusicalWorkContributorRole.Reviewer = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Reviewer', tag='Reviewer')
+MusicalWorkContributorRole.Rubricator = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Rubricator', tag='Rubricator')
+MusicalWorkContributorRole.ScreenplayAuthor = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='ScreenplayAuthor', tag='ScreenplayAuthor')
+MusicalWorkContributorRole.Sculptor = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Sculptor', tag='Sculptor')
+MusicalWorkContributorRole.Woodcutter = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Woodcutter', tag='Woodcutter')
+MusicalWorkContributorRole.WoodEngraver = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='WoodEngraver', tag='WoodEngraver')
+MusicalWorkContributorRole.WriterOfAccompanyingMaterial = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='WriterOfAccompanyingMaterial', tag='WriterOfAccompanyingMaterial')
+MusicalWorkContributorRole.BookPublisher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='BookPublisher', tag='BookPublisher')
+MusicalWorkContributorRole.CopyrightClaimant = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='CopyrightClaimant', tag='CopyrightClaimant')
+MusicalWorkContributorRole.CopyrightHolder = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='CopyrightHolder', tag='CopyrightHolder')
+MusicalWorkContributorRole.NewspaperPublisher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='NewspaperPublisher', tag='NewspaperPublisher')
+MusicalWorkContributorRole.PeriodicalPublisher = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='PeriodicalPublisher', tag='PeriodicalPublisher')
+MusicalWorkContributorRole._InitializeFacetMap(MusicalWorkContributorRole._CF_enumeration)
+Namespace.addCategoryObject('typeBinding', 'MusicalWorkContributorRole', MusicalWorkContributorRole)
+_module_typeBindings.MusicalWorkContributorRole = MusicalWorkContributorRole
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MusicalWorkRightsClaimType
 class MusicalWorkRightsClaimType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2047,7 +3989,7 @@ class MusicalWorkRightsClaimType (pyxb.binding.datatypes.string, pyxb.binding.ba
     """A Type of RightsClaim related to a MusicalWork."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MusicalWorkRightsClaimType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6277, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15377, 3)
     _Documentation = 'A Type of RightsClaim related to a MusicalWork.'
 MusicalWorkRightsClaimType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MusicalWorkRightsClaimType, enum_prefix=None)
 MusicalWorkRightsClaimType.CopyrightControl = MusicalWorkRightsClaimType._CF_enumeration.addEnumeration(unicode_value='CopyrightControl', tag='CopyrightControl')
@@ -2057,6 +3999,7 @@ MusicalWorkRightsClaimType.SocietyClaim = MusicalWorkRightsClaimType._CF_enumera
 MusicalWorkRightsClaimType.Unknown = MusicalWorkRightsClaimType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 MusicalWorkRightsClaimType._InitializeFacetMap(MusicalWorkRightsClaimType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MusicalWorkRightsClaimType', MusicalWorkRightsClaimType)
+_module_typeBindings.MusicalWorkRightsClaimType = MusicalWorkRightsClaimType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MusicalWorkType
 class MusicalWorkType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2064,7 +4007,7 @@ class MusicalWorkType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A Type of MusicalWork."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MusicalWorkType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6309, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15409, 3)
     _Documentation = 'A Type of MusicalWork.'
 MusicalWorkType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MusicalWorkType, enum_prefix=None)
 MusicalWorkType.AdaptedInOriginalLanguage = MusicalWorkType._CF_enumeration.addEnumeration(unicode_value='AdaptedInOriginalLanguage', tag='AdaptedInOriginalLanguage')
@@ -2098,6 +4041,7 @@ MusicalWorkType.UserDefined = MusicalWorkType._CF_enumeration.addEnumeration(uni
 MusicalWorkType.VideoProductionWork = MusicalWorkType._CF_enumeration.addEnumeration(unicode_value='VideoProductionWork', tag='VideoProductionWork')
 MusicalWorkType._InitializeFacetMap(MusicalWorkType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MusicalWorkType', MusicalWorkType)
+_module_typeBindings.MusicalWorkType = MusicalWorkType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MwlCaCMessageInBatchType
 class MwlCaCMessageInBatchType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2105,7 +4049,7 @@ class MwlCaCMessageInBatchType (pyxb.binding.datatypes.string, pyxb.binding.basi
     """A Type of Message in a batch in the Choreography for the Mechanical Licensing of Musical Works in Canada."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MwlCaCMessageInBatchType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6461, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15561, 3)
     _Documentation = 'A Type of Message in a batch in the Choreography for the Mechanical Licensing of Musical Works in Canada.'
 MwlCaCMessageInBatchType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MwlCaCMessageInBatchType, enum_prefix=None)
 MwlCaCMessageInBatchType.LicenseOrClaimRequestMessage = MwlCaCMessageInBatchType._CF_enumeration.addEnumeration(unicode_value='LicenseOrClaimRequestMessage', tag='LicenseOrClaimRequestMessage')
@@ -2117,6 +4061,7 @@ MwlCaCMessageInBatchType.ContractDeliveryMessage = MwlCaCMessageInBatchType._CF_
 MwlCaCMessageInBatchType.ProductDeletionMessage = MwlCaCMessageInBatchType._CF_enumeration.addEnumeration(unicode_value='ProductDeletionMessage', tag='ProductDeletionMessage')
 MwlCaCMessageInBatchType._InitializeFacetMap(MwlCaCMessageInBatchType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MwlCaCMessageInBatchType', MwlCaCMessageInBatchType)
+_module_typeBindings.MwlCaCMessageInBatchType = MwlCaCMessageInBatchType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}MwnMessageType
 class MwnMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2124,7 +4069,7 @@ class MwnMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of Message in the Electronic Musical Work Notification Message Suite."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MwnMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6503, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15603, 3)
     _Documentation = 'A Type of Message in the Electronic Musical Work Notification Message Suite.'
 MwnMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MwnMessageType, enum_prefix=None)
 MwnMessageType.MusicalWorkClaimNotificationMessage = MwnMessageType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkClaimNotificationMessage', tag='MusicalWorkClaimNotificationMessage')
@@ -2134,6 +4079,7 @@ MwnMessageType.FtpAcknowledgementMessage = MwnMessageType._CF_enumeration.addEnu
 MwnMessageType.ManifestMessage = MwnMessageType._CF_enumeration.addEnumeration(unicode_value='ManifestMessage', tag='ManifestMessage')
 MwnMessageType._InitializeFacetMap(MwnMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MwnMessageType', MwnMessageType)
+_module_typeBindings.MwnMessageType = MwnMessageType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}NewReleaseMessageStatus
 class NewReleaseMessageStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2141,13 +4087,14 @@ class NewReleaseMessageStatus (pyxb.binding.datatypes.string, pyxb.binding.basis
     """A Status of a NewReleaseMessage."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'NewReleaseMessageStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6535, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15635, 3)
     _Documentation = 'A Status of a NewReleaseMessage.'
 NewReleaseMessageStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=NewReleaseMessageStatus, enum_prefix=None)
 NewReleaseMessageStatus.NewReleaseMessageNotProvided = NewReleaseMessageStatus._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessageNotProvided', tag='NewReleaseMessageNotProvided')
 NewReleaseMessageStatus.NewReleaseMessageProvided = NewReleaseMessageStatus._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessageProvided', tag='NewReleaseMessageProvided')
 NewReleaseMessageStatus._InitializeFacetMap(NewReleaseMessageStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'NewReleaseMessageStatus', NewReleaseMessageStatus)
+_module_typeBindings.NewReleaseMessageStatus = NewReleaseMessageStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}OperatingSystemType
 class OperatingSystemType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2155,7 +4102,7 @@ class OperatingSystemType (pyxb.binding.datatypes.string, pyxb.binding.basis.enu
     """A Type of OperatingSystem."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'OperatingSystemType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6552, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15652, 3)
     _Documentation = 'A Type of OperatingSystem.'
 OperatingSystemType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=OperatingSystemType, enum_prefix=None)
 OperatingSystemType.MacOS = OperatingSystemType._CF_enumeration.addEnumeration(unicode_value='MacOS', tag='MacOS')
@@ -2164,6 +4111,7 @@ OperatingSystemType.Symbian = OperatingSystemType._CF_enumeration.addEnumeration
 OperatingSystemType.Unknown = OperatingSystemType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 OperatingSystemType._InitializeFacetMap(OperatingSystemType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'OperatingSystemType', OperatingSystemType)
+_module_typeBindings.OperatingSystemType = OperatingSystemType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}OrderType
 class OrderType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2171,7 +4119,7 @@ class OrderType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of order."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'OrderType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6579, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15679, 3)
     _Documentation = 'A Type of order.'
 OrderType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=OrderType, enum_prefix=None)
 OrderType.BackCatalogOrder = OrderType._CF_enumeration.addEnumeration(unicode_value='BackCatalogOrder', tag='BackCatalogOrder')
@@ -2186,6 +4134,7 @@ OrderType.TakeDownOrder = OrderType._CF_enumeration.addEnumeration(unicode_value
 OrderType.UserDefined = OrderType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 OrderType._InitializeFacetMap(OrderType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'OrderType', OrderType)
+_module_typeBindings.OrderType = OrderType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}PLineType
 class PLineType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2193,13 +4142,14 @@ class PLineType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of PLine."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PLineType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6636, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15736, 3)
     _Documentation = 'A Type of PLine.'
 PLineType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=PLineType, enum_prefix=None)
 PLineType.OriginalPLine = PLineType._CF_enumeration.addEnumeration(unicode_value='OriginalPLine', tag='OriginalPLine')
 PLineType.RemasteringPLine = PLineType._CF_enumeration.addEnumeration(unicode_value='RemasteringPLine', tag='RemasteringPLine')
 PLineType._InitializeFacetMap(PLineType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'PLineType', PLineType)
+_module_typeBindings.PLineType = PLineType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ParentalWarningType
 class ParentalWarningType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2207,7 +4157,7 @@ class ParentalWarningType (pyxb.binding.datatypes.string, pyxb.binding.basis.enu
     """A Type of Creation according to advice which it carries about the level of explicitness or offensiveness of its content."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ParentalWarningType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6653, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15753, 3)
     _Documentation = 'A Type of Creation according to advice which it carries about the level of explicitness or offensiveness of its content.'
 ParentalWarningType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ParentalWarningType, enum_prefix=None)
 ParentalWarningType.Explicit = ParentalWarningType._CF_enumeration.addEnumeration(unicode_value='Explicit', tag='Explicit')
@@ -2218,6 +4168,7 @@ ParentalWarningType.Unknown = ParentalWarningType._CF_enumeration.addEnumeration
 ParentalWarningType.UserDefined = ParentalWarningType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ParentalWarningType._InitializeFacetMap(ParentalWarningType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ParentalWarningType', ParentalWarningType)
+_module_typeBindings.ParentalWarningType = ParentalWarningType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}PartyRelationshipType
 class PartyRelationshipType (pyxb.binding.datatypes.string):
@@ -2225,10 +4176,11 @@ class PartyRelationshipType (pyxb.binding.datatypes.string):
     """A Type of relationship between two Parties."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PartyRelationshipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6690, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15790, 3)
     _Documentation = 'A Type of relationship between two Parties.'
 PartyRelationshipType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'PartyRelationshipType', PartyRelationshipType)
+_module_typeBindings.PartyRelationshipType = PartyRelationshipType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}PercentageType
 class PercentageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2236,7 +4188,7 @@ class PercentageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of PercentageRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PercentageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6696, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15796, 3)
     _Documentation = 'A Type of PercentageRate.'
 PercentageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=PercentageType, enum_prefix=None)
 PercentageType.PercentageOfFreeGoodsPermitted = PercentageType._CF_enumeration.addEnumeration(unicode_value='PercentageOfFreeGoodsPermitted', tag='PercentageOfFreeGoodsPermitted')
@@ -2247,6 +4199,7 @@ PercentageType.PercentageOfPriceConsumerPaid = PercentageType._CF_enumeration.ad
 PercentageType.PercentageOfStatutoryRoyaltyRate = PercentageType._CF_enumeration.addEnumeration(unicode_value='PercentageOfStatutoryRoyaltyRate', tag='PercentageOfStatutoryRoyaltyRate')
 PercentageType._InitializeFacetMap(PercentageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'PercentageType', PercentageType)
+_module_typeBindings.PercentageType = PercentageType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}PriceInformationType
 class PriceInformationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2254,13 +4207,15 @@ class PriceInformationType (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A Type of Price for which information is provided."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PriceInformationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6733, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15833, 3)
     _Documentation = 'A Type of Price for which information is provided.'
 PriceInformationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=PriceInformationType, enum_prefix=None)
 PriceInformationType.StandardRetailPrice = PriceInformationType._CF_enumeration.addEnumeration(unicode_value='StandardRetailPrice', tag='StandardRetailPrice')
 PriceInformationType.PreOrderPrice = PriceInformationType._CF_enumeration.addEnumeration(unicode_value='PreOrderPrice', tag='PreOrderPrice')
+PriceInformationType.UserDefined = PriceInformationType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 PriceInformationType._InitializeFacetMap(PriceInformationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'PriceInformationType', PriceInformationType)
+_module_typeBindings.PriceInformationType = PriceInformationType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}PriceRangeType
 class PriceRangeType (pyxb.binding.datatypes.string):
@@ -2268,10 +4223,11 @@ class PriceRangeType (pyxb.binding.datatypes.string):
     """A Type of Price according to its value range."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PriceRangeType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6750, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15855, 3)
     _Documentation = 'A Type of Price according to its value range.'
 PriceRangeType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'PriceRangeType', PriceRangeType)
+_module_typeBindings.PriceRangeType = PriceRangeType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}PriceType
 class PriceType (pyxb.binding.datatypes.string):
@@ -2279,10 +4235,11 @@ class PriceType (pyxb.binding.datatypes.string):
     """A Type of Price."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PriceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6756, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15861, 3)
     _Documentation = 'A Type of Price.'
 PriceType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'PriceType', PriceType)
+_module_typeBindings.PriceType = PriceType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}Priority
 class Priority (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2290,7 +4247,7 @@ class Priority (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mi
     """A Type of priority."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'Priority')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6762, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15867, 3)
     _Documentation = 'A Type of priority.'
 Priority._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=Priority, enum_prefix=None)
 Priority.High = Priority._CF_enumeration.addEnumeration(unicode_value='High', tag='High')
@@ -2298,6 +4255,7 @@ Priority.Low = Priority._CF_enumeration.addEnumeration(unicode_value='Low', tag=
 Priority.Normal = Priority._CF_enumeration.addEnumeration(unicode_value='Normal', tag='Normal')
 Priority._InitializeFacetMap(Priority._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'Priority', Priority)
+_module_typeBindings.Priority = Priority
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ProductType
 class ProductType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2305,7 +4263,7 @@ class ProductType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration
     """A Type of Product."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ProductType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6784, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15889, 3)
     _Documentation = 'A Type of Product.'
 ProductType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ProductType, enum_prefix=None)
 ProductType.AudioProduct = ProductType._CF_enumeration.addEnumeration(unicode_value='AudioProduct', tag='AudioProduct')
@@ -2316,6 +4274,7 @@ ProductType.UserDefined = ProductType._CF_enumeration.addEnumeration(unicode_val
 ProductType.VideoProduct = ProductType._CF_enumeration.addEnumeration(unicode_value='VideoProduct', tag='VideoProduct')
 ProductType._InitializeFacetMap(ProductType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ProductType', ProductType)
+_module_typeBindings.ProductType = ProductType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ProjectContributorRelationshipType
 class ProjectContributorRelationshipType (pyxb.binding.datatypes.string):
@@ -2323,10 +4282,11 @@ class ProjectContributorRelationshipType (pyxb.binding.datatypes.string):
     """A Type of relationship between a Project and a Contributor."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ProjectContributorRelationshipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6821, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15926, 3)
     _Documentation = 'A Type of relationship between a Project and a Contributor.'
 ProjectContributorRelationshipType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'ProjectContributorRelationshipType', ProjectContributorRelationshipType)
+_module_typeBindings.ProjectContributorRelationshipType = ProjectContributorRelationshipType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}Purpose
 class Purpose (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2334,7 +4294,7 @@ class Purpose (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mix
     """A Type of use that is the purpose of an action."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'Purpose')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6827, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15932, 3)
     _Documentation = 'A Type of use that is the purpose of an action.'
 Purpose._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=Purpose, enum_prefix=None)
 Purpose.BackgroundMusic = Purpose._CF_enumeration.addEnumeration(unicode_value='BackgroundMusic', tag='BackgroundMusic')
@@ -2346,6 +4306,7 @@ Purpose.TrailerMusic = Purpose._CF_enumeration.addEnumeration(unicode_value='Tra
 Purpose.UserDefined = Purpose._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 Purpose._InitializeFacetMap(Purpose._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'Purpose', Purpose)
+_module_typeBindings.Purpose = Purpose
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RateModificationType
 class RateModificationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2353,7 +4314,7 @@ class RateModificationType (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A Type of a rate modification."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RateModificationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6869, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 15974, 3)
     _Documentation = 'A Type of a rate modification.'
 RateModificationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RateModificationType, enum_prefix=None)
 RateModificationType.MultipleDiscProvision = RateModificationType._CF_enumeration.addEnumeration(unicode_value='MultipleDiscProvision', tag='MultipleDiscProvision')
@@ -2362,6 +4323,7 @@ RateModificationType.SalesVolumeProvision = RateModificationType._CF_enumeration
 RateModificationType.VideoProvision = RateModificationType._CF_enumeration.addEnumeration(unicode_value='VideoProvision', tag='VideoProvision')
 RateModificationType._InitializeFacetMap(RateModificationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RateModificationType', RateModificationType)
+_module_typeBindings.RateModificationType = RateModificationType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RatingAgency
 class RatingAgency (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2369,7 +4331,7 @@ class RatingAgency (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeratio
     """An Organization that issues ParentalWarnings."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RatingAgency')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6896, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16001, 3)
     _Documentation = 'An Organization that issues ParentalWarnings.'
 RatingAgency._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RatingAgency, enum_prefix=None)
 RatingAgency.AFR = RatingAgency._CF_enumeration.addEnumeration(unicode_value='AFR', tag='AFR')
@@ -2416,8 +4378,53 @@ RatingAgency.SPIO_JK = RatingAgency._CF_enumeration.addEnumeration(unicode_value
 RatingAgency.TELA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='TELA', tag='TELA')
 RatingAgency.UserDefined = RatingAgency._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RatingAgency.VET = RatingAgency._CF_enumeration.addEnumeration(unicode_value='VET', tag='VET')
+RatingAgency.ACMA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='ACMA', tag='ACMA')
+RatingAgency.AGCOM = RatingAgency._CF_enumeration.addEnumeration(unicode_value='AGCOM', tag='AGCOM')
+RatingAgency.ANATEL = RatingAgency._CF_enumeration.addEnumeration(unicode_value='ANATEL', tag='ANATEL')
+RatingAgency.BFVC = RatingAgency._CF_enumeration.addEnumeration(unicode_value='BFVC', tag='BFVC')
+RatingAgency.CBSC = RatingAgency._CF_enumeration.addEnumeration(unicode_value='CBSC', tag='CBSC')
+RatingAgency.CBSC_F = RatingAgency._CF_enumeration.addEnumeration(unicode_value='CBSC-F', tag='CBSC_F')
+RatingAgency.CICF = RatingAgency._CF_enumeration.addEnumeration(unicode_value='CICF', tag='CICF')
+RatingAgency.CNA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='CNA', tag='CNA')
+RatingAgency.CPBC = RatingAgency._CF_enumeration.addEnumeration(unicode_value='CPBC', tag='CPBC')
+RatingAgency.CSA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='CSA', tag='CSA')
+RatingAgency.CSCF = RatingAgency._CF_enumeration.addEnumeration(unicode_value='CSCF', tag='CSCF')
+RatingAgency.ESRB = RatingAgency._CF_enumeration.addEnumeration(unicode_value='ESRB', tag='ESRB')
+RatingAgency.FAB = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FAB', tag='FAB')
+RatingAgency.FCO = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FCO', tag='FCO')
+RatingAgency.FILM_CH = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FILM-CH', tag='FILM_CH')
+RatingAgency.FILM_CZ = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FILM-CZ', tag='FILM_CZ')
+RatingAgency.FILM_EG = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FILM-EG', tag='FILM_EG')
+RatingAgency.FILM_EE = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FILM-EE', tag='FILM_EE')
+RatingAgency.FILM_GR = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FILM-GR', tag='FILM_GR')
+RatingAgency.FILM_PE = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FILM-PE', tag='FILM_PE')
+RatingAgency.FILM_SK = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FILM-SK', tag='FILM_SK')
+RatingAgency.FRB = RatingAgency._CF_enumeration.addEnumeration(unicode_value='FRB', tag='FRB')
+RatingAgency.ICAA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='ICAA', tag='ICAA')
+RatingAgency.IFCOF = RatingAgency._CF_enumeration.addEnumeration(unicode_value='IFCOF', tag='IFCOF')
+RatingAgency.KFCB = RatingAgency._CF_enumeration.addEnumeration(unicode_value='KFCB', tag='KFCB')
+RatingAgency.Kijkwijzer = RatingAgency._CF_enumeration.addEnumeration(unicode_value='Kijkwijzer', tag='Kijkwijzer')
+RatingAgency.MBACT = RatingAgency._CF_enumeration.addEnumeration(unicode_value='MBACT', tag='MBACT')
+RatingAgency.MCCAA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='MCCAA', tag='MCCAA')
+RatingAgency.Medietilsynet = RatingAgency._CF_enumeration.addEnumeration(unicode_value='Medietilsynet', tag='Medietilsynet')
+RatingAgency.MEKU = RatingAgency._CF_enumeration.addEnumeration(unicode_value='MEKU', tag='MEKU')
+RatingAgency.MKRF = RatingAgency._CF_enumeration.addEnumeration(unicode_value='MKRF', tag='MKRF')
+RatingAgency.MOC = RatingAgency._CF_enumeration.addEnumeration(unicode_value='MOC', tag='MOC')
+RatingAgency.MOC_TW = RatingAgency._CF_enumeration.addEnumeration(unicode_value='MOC-TW', tag='MOC_TW')
+RatingAgency.MPAAT = RatingAgency._CF_enumeration.addEnumeration(unicode_value='MPAAT', tag='MPAAT')
+RatingAgency.NCS = RatingAgency._CF_enumeration.addEnumeration(unicode_value='NCS', tag='NCS')
+RatingAgency.NFRC = RatingAgency._CF_enumeration.addEnumeration(unicode_value='NFRC', tag='NFRC')
+RatingAgency.PEGI = RatingAgency._CF_enumeration.addEnumeration(unicode_value='PEGI', tag='PEGI')
+RatingAgency.RCNOF = RatingAgency._CF_enumeration.addEnumeration(unicode_value='RCNOF', tag='RCNOF')
+RatingAgency.RIAA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='RIAA', tag='RIAA')
+RatingAgency.RTE = RatingAgency._CF_enumeration.addEnumeration(unicode_value='RTE', tag='RTE')
+RatingAgency.SiBCI = RatingAgency._CF_enumeration.addEnumeration(unicode_value='SiBCI', tag='SiBCI')
+RatingAgency.SM_SA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='SM-SA', tag='SM_SA')
+RatingAgency.USFA = RatingAgency._CF_enumeration.addEnumeration(unicode_value='USFA', tag='USFA')
+RatingAgency.TVPG = RatingAgency._CF_enumeration.addEnumeration(unicode_value='TVPG', tag='TVPG')
 RatingAgency._InitializeFacetMap(RatingAgency._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RatingAgency', RatingAgency)
+_module_typeBindings.RatingAgency = RatingAgency
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReasonType
 class ReasonType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2425,7 +4432,7 @@ class ReasonType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
     """A Type of reason."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReasonType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7123, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16448, 3)
     _Documentation = 'A Type of reason.'
 ReasonType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReasonType, enum_prefix=None)
 ReasonType.ChartReporting = ReasonType._CF_enumeration.addEnumeration(unicode_value='ChartReporting', tag='ChartReporting')
@@ -2433,6 +4440,7 @@ ReasonType.RoyaltyReporting = ReasonType._CF_enumeration.addEnumeration(unicode_
 ReasonType.UserDefined = ReasonType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ReasonType._InitializeFacetMap(ReasonType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReasonType', ReasonType)
+_module_typeBindings.ReasonType = ReasonType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RecipientRevenueType
 class RecipientRevenueType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2440,7 +4448,7 @@ class RecipientRevenueType (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A Type of revenue according to the recipient of the payment."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RecipientRevenueType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7145, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16470, 3)
     _Documentation = 'A Type of revenue according to the recipient of the payment.'
 RecipientRevenueType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RecipientRevenueType, enum_prefix=None)
 RecipientRevenueType.PerformerAndProducerRevenue = RecipientRevenueType._CF_enumeration.addEnumeration(unicode_value='PerformerAndProducerRevenue', tag='PerformerAndProducerRevenue')
@@ -2448,6 +4456,7 @@ RecipientRevenueType.PerformerRevenue = RecipientRevenueType._CF_enumeration.add
 RecipientRevenueType.ProducerRevenue = RecipientRevenueType._CF_enumeration.addEnumeration(unicode_value='ProducerRevenue', tag='ProducerRevenue')
 RecipientRevenueType._InitializeFacetMap(RecipientRevenueType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RecipientRevenueType', RecipientRevenueType)
+_module_typeBindings.RecipientRevenueType = RecipientRevenueType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RecordingMode
 class RecordingMode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2455,15 +4464,22 @@ class RecordingMode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A mode of a Recording."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RecordingMode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7167, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16492, 3)
     _Documentation = 'A mode of a Recording.'
 RecordingMode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RecordingMode, enum_prefix=None)
 RecordingMode.Mono = RecordingMode._CF_enumeration.addEnumeration(unicode_value='Mono', tag='Mono')
 RecordingMode.MultichannelAudio = RecordingMode._CF_enumeration.addEnumeration(unicode_value='MultichannelAudio', tag='MultichannelAudio')
 RecordingMode.Stereo = RecordingMode._CF_enumeration.addEnumeration(unicode_value='Stereo', tag='Stereo')
 RecordingMode.Unknown = RecordingMode._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
+RecordingMode.BinauralAudio = RecordingMode._CF_enumeration.addEnumeration(unicode_value='BinauralAudio', tag='BinauralAudio')
+RecordingMode.LCR = RecordingMode._CF_enumeration.addEnumeration(unicode_value='LCR', tag='LCR')
+RecordingMode.MultiTrack = RecordingMode._CF_enumeration.addEnumeration(unicode_value='MultiTrack', tag='MultiTrack')
+RecordingMode.Quad = RecordingMode._CF_enumeration.addEnumeration(unicode_value='Quad', tag='Quad')
+RecordingMode.Stems = RecordingMode._CF_enumeration.addEnumeration(unicode_value='Stems', tag='Stems')
+RecordingMode.SurroundSound = RecordingMode._CF_enumeration.addEnumeration(unicode_value='SurroundSound', tag='SurroundSound')
 RecordingMode._InitializeFacetMap(RecordingMode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RecordingMode', RecordingMode)
+_module_typeBindings.RecordingMode = RecordingMode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RedeliveryReasonType
 class RedeliveryReasonType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2471,7 +4487,7 @@ class RedeliveryReasonType (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A reason for a redelivery."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RedeliveryReasonType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7194, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16549, 3)
     _Documentation = 'A reason for a redelivery.'
 RedeliveryReasonType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RedeliveryReasonType, enum_prefix=None)
 RedeliveryReasonType.BinaryCorrupted = RedeliveryReasonType._CF_enumeration.addEnumeration(unicode_value='BinaryCorrupted', tag='BinaryCorrupted')
@@ -2481,6 +4497,7 @@ RedeliveryReasonType.ProcessingErrorAtReleaseDistributor = RedeliveryReasonType.
 RedeliveryReasonType.UserDefined = RedeliveryReasonType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RedeliveryReasonType._InitializeFacetMap(RedeliveryReasonType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RedeliveryReasonType', RedeliveryReasonType)
+_module_typeBindings.RedeliveryReasonType = RedeliveryReasonType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReferenceUnit
 class ReferenceUnit (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2488,13 +4505,14 @@ class ReferenceUnit (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A unit to which a Quantity refers."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReferenceUnit')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7226, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16581, 3)
     _Documentation = 'A unit to which a Quantity refers.'
 ReferenceUnit._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReferenceUnit, enum_prefix=None)
 ReferenceUnit.PerLicense = ReferenceUnit._CF_enumeration.addEnumeration(unicode_value='PerLicense', tag='PerLicense')
 ReferenceUnit.PerUse = ReferenceUnit._CF_enumeration.addEnumeration(unicode_value='PerUse', tag='PerUse')
 ReferenceUnit._InitializeFacetMap(ReferenceUnit._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReferenceUnit', ReferenceUnit)
+_module_typeBindings.ReferenceUnit = ReferenceUnit
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RelationalRelator
 class RelationalRelator (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2502,7 +4520,7 @@ class RelationalRelator (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A Relator between two Entities expressing a measurable relationship."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RelationalRelator')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7243, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16598, 3)
     _Documentation = 'A Relator between two Entities expressing a measurable relationship.'
 RelationalRelator._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RelationalRelator, enum_prefix=None)
 RelationalRelator.EqualTo = RelationalRelator._CF_enumeration.addEnumeration(unicode_value='EqualTo', tag='EqualTo')
@@ -2513,6 +4531,7 @@ RelationalRelator.MoreThanOrEqualTo = RelationalRelator._CF_enumeration.addEnume
 RelationalRelator.NotEqualTo = RelationalRelator._CF_enumeration.addEnumeration(unicode_value='NotEqualTo', tag='NotEqualTo')
 RelationalRelator._InitializeFacetMap(RelationalRelator._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RelationalRelator', RelationalRelator)
+_module_typeBindings.RelationalRelator = RelationalRelator
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReleaseAvailabilityStatus
 class ReleaseAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2520,7 +4539,7 @@ class ReleaseAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.bas
     """A Status of the availability of a Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseAvailabilityStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7280, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16635, 3)
     _Documentation = 'A Status of the availability of a Release.'
 ReleaseAvailabilityStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseAvailabilityStatus, enum_prefix=None)
 ReleaseAvailabilityStatus.AvailableForDSP = ReleaseAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='AvailableForDSP', tag='AvailableForDSP')
@@ -2531,6 +4550,7 @@ ReleaseAvailabilityStatus.NotYetPrepared = ReleaseAvailabilityStatus._CF_enumera
 ReleaseAvailabilityStatus.UserDefined = ReleaseAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ReleaseAvailabilityStatus._InitializeFacetMap(ReleaseAvailabilityStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseAvailabilityStatus', ReleaseAvailabilityStatus)
+_module_typeBindings.ReleaseAvailabilityStatus = ReleaseAvailabilityStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReleaseRelationshipType
 class ReleaseRelationshipType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2538,7 +4558,7 @@ class ReleaseRelationshipType (pyxb.binding.datatypes.string, pyxb.binding.basis
     """A Type of relationship between two Releases."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseRelationshipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7317, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16672, 3)
     _Documentation = 'A Type of relationship between two Releases.'
 ReleaseRelationshipType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseRelationshipType, enum_prefix=None)
 ReleaseRelationshipType.HasArtistFromEnsemble = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='HasArtistFromEnsemble', tag='HasArtistFromEnsemble')
@@ -2559,8 +4579,11 @@ ReleaseRelationshipType.IsReleaseFromRelease = ReleaseRelationshipType._CF_enume
 ReleaseRelationshipType.IsShortenedFromAlbum = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='IsShortenedFromAlbum', tag='IsShortenedFromAlbum')
 ReleaseRelationshipType.Unknown = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 ReleaseRelationshipType.UserDefined = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+ReleaseRelationshipType.HasContentFrom = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='HasContentFrom', tag='HasContentFrom')
+ReleaseRelationshipType.IsDifferentEncoding = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='IsDifferentEncoding', tag='IsDifferentEncoding')
 ReleaseRelationshipType._InitializeFacetMap(ReleaseRelationshipType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseRelationshipType', ReleaseRelationshipType)
+_module_typeBindings.ReleaseRelationshipType = ReleaseRelationshipType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReleaseResourceType
 class ReleaseResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2568,13 +4591,14 @@ class ReleaseResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enu
     """A Type of Resource in the context of a Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseResourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7414, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16779, 3)
     _Documentation = 'A Type of Resource in the context of a Release.'
 ReleaseResourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseResourceType, enum_prefix=None)
 ReleaseResourceType.PrimaryResource = ReleaseResourceType._CF_enumeration.addEnumeration(unicode_value='PrimaryResource', tag='PrimaryResource')
 ReleaseResourceType.SecondaryResource = ReleaseResourceType._CF_enumeration.addEnumeration(unicode_value='SecondaryResource', tag='SecondaryResource')
 ReleaseResourceType._InitializeFacetMap(ReleaseResourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseResourceType', ReleaseResourceType)
+_module_typeBindings.ReleaseResourceType = ReleaseResourceType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReleaseType
 class ReleaseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2582,7 +4606,7 @@ class ReleaseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration
     """A Type of Release according to its content, Duration and/or number of components. Note: a ReleaseType is the form in which a ReleaseCreator anticipates offering a Release to Consumers."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7431, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 16796, 3)
     _Documentation = 'A Type of Release according to its content, Duration and/or number of components. Note: a ReleaseType is the form in which a ReleaseCreator anticipates offering a Release to Consumers.'
 ReleaseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseType, enum_prefix=None)
 ReleaseType.AdvertisementVideo = ReleaseType._CF_enumeration.addEnumeration(unicode_value='AdvertisementVideo', tag='AdvertisementVideo')
@@ -2604,6 +4628,7 @@ ReleaseType.DigitalBoxSetRelease = ReleaseType._CF_enumeration.addEnumeration(un
 ReleaseType.Documentary = ReleaseType._CF_enumeration.addEnumeration(unicode_value='Documentary', tag='Documentary')
 ReleaseType.DocumentImageRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='DocumentImageRelease', tag='DocumentImageRelease')
 ReleaseType.EBookRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='EBookRelease', tag='EBookRelease')
+ReleaseType.EP = ReleaseType._CF_enumeration.addEnumeration(unicode_value='EP', tag='EP')
 ReleaseType.Episode = ReleaseType._CF_enumeration.addEnumeration(unicode_value='Episode', tag='Episode')
 ReleaseType.FeatureFilm = ReleaseType._CF_enumeration.addEnumeration(unicode_value='FeatureFilm', tag='FeatureFilm')
 ReleaseType.FilmBundle = ReleaseType._CF_enumeration.addEnumeration(unicode_value='FilmBundle', tag='FilmBundle')
@@ -2655,8 +4680,20 @@ ReleaseType.VideoScreenCaptureRelease = ReleaseType._CF_enumeration.addEnumerati
 ReleaseType.VideoSingle = ReleaseType._CF_enumeration.addEnumeration(unicode_value='VideoSingle', tag='VideoSingle')
 ReleaseType.VideoTrackRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='VideoTrackRelease', tag='VideoTrackRelease')
 ReleaseType.WallpaperRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='WallpaperRelease', tag='WallpaperRelease')
+ReleaseType.AudioDramaRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='AudioDramaRelease', tag='AudioDramaRelease')
+ReleaseType.ClassicalDigitalBoxedSet = ReleaseType._CF_enumeration.addEnumeration(unicode_value='ClassicalDigitalBoxedSet', tag='ClassicalDigitalBoxedSet')
+ReleaseType.ClassicalMultimediaAlbum = ReleaseType._CF_enumeration.addEnumeration(unicode_value='ClassicalMultimediaAlbum', tag='ClassicalMultimediaAlbum')
+ReleaseType.DjMix = ReleaseType._CF_enumeration.addEnumeration(unicode_value='DjMix', tag='DjMix')
+ReleaseType.Drama = ReleaseType._CF_enumeration.addEnumeration(unicode_value='Drama', tag='Drama')
+ReleaseType.DramaticoMusicalVideoRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='DramaticoMusicalVideoRelease', tag='DramaticoMusicalVideoRelease')
+ReleaseType.MultimediaDigitalBoxedSet = ReleaseType._CF_enumeration.addEnumeration(unicode_value='MultimediaDigitalBoxedSet', tag='MultimediaDigitalBoxedSet')
+ReleaseType.PlayList = ReleaseType._CF_enumeration.addEnumeration(unicode_value='PlayList', tag='PlayList')
+ReleaseType.ShortFilm = ReleaseType._CF_enumeration.addEnumeration(unicode_value='ShortFilm', tag='ShortFilm')
+ReleaseType.StemBundle = ReleaseType._CF_enumeration.addEnumeration(unicode_value='StemBundle', tag='StemBundle')
+ReleaseType.VideoMastertoneRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='VideoMastertoneRelease', tag='VideoMastertoneRelease')
 ReleaseType._InitializeFacetMap(ReleaseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseType', ReleaseType)
+_module_typeBindings.ReleaseType = ReleaseType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReportFormat
 class ReportFormat (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2664,7 +4701,7 @@ class ReportFormat (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeratio
     """A Type of report according to its FileFormat."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReportFormat')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7789, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 17214, 3)
     _Documentation = 'A Type of report according to its FileFormat.'
 ReportFormat._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReportFormat, enum_prefix=None)
 ReportFormat.ASCII = ReportFormat._CF_enumeration.addEnumeration(unicode_value='ASCII', tag='ASCII')
@@ -2676,6 +4713,7 @@ ReportFormat.UserDefined = ReportFormat._CF_enumeration.addEnumeration(unicode_v
 ReportFormat.XML = ReportFormat._CF_enumeration.addEnumeration(unicode_value='XML', tag='XML')
 ReportFormat._InitializeFacetMap(ReportFormat._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReportFormat', ReportFormat)
+_module_typeBindings.ReportFormat = ReportFormat
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ReportType
 class ReportType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2683,7 +4721,7 @@ class ReportType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
     """A Type of report."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReportType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7831, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 17256, 3)
     _Documentation = 'A Type of report.'
 ReportType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReportType, enum_prefix=None)
 ReportType.DeliveryFrequencyRequestCall = ReportType._CF_enumeration.addEnumeration(unicode_value='DeliveryFrequencyRequestCall', tag='DeliveryFrequencyRequestCall')
@@ -2701,6 +4739,7 @@ ReportType.SupplyChainStatusCall = ReportType._CF_enumeration.addEnumeration(uni
 ReportType.UserDefined = ReportType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ReportType._InitializeFacetMap(ReportType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReportType', ReportType)
+_module_typeBindings.ReportType = ReportType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RequestReason
 class RequestReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2708,12 +4747,24 @@ class RequestReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A Type of reason for requesting something."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RequestReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7903, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 17328, 3)
     _Documentation = 'A Type of reason for requesting something.'
 RequestReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RequestReason, enum_prefix=None)
 RequestReason.UserDefined = RequestReason._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+RequestReason.DisputeResolutionRequest = RequestReason._CF_enumeration.addEnumeration(unicode_value='DisputeResolutionRequest', tag='DisputeResolutionRequest')
+RequestReason.GeneralRequest = RequestReason._CF_enumeration.addEnumeration(unicode_value='GeneralRequest', tag='GeneralRequest')
+RequestReason.PublisherAddition = RequestReason._CF_enumeration.addEnumeration(unicode_value='PublisherAddition', tag='PublisherAddition')
+RequestReason.PublisherChange = RequestReason._CF_enumeration.addEnumeration(unicode_value='PublisherChange', tag='PublisherChange')
+RequestReason.PublisherRemoval = RequestReason._CF_enumeration.addEnumeration(unicode_value='PublisherRemoval', tag='PublisherRemoval')
+RequestReason.Recall = RequestReason._CF_enumeration.addEnumeration(unicode_value='Recall', tag='Recall')
+RequestReason.ReleaseListUpdate = RequestReason._CF_enumeration.addEnumeration(unicode_value='ReleaseListUpdate', tag='ReleaseListUpdate')
+RequestReason.SpecificRequest = RequestReason._CF_enumeration.addEnumeration(unicode_value='SpecificRequest', tag='SpecificRequest')
+RequestReason.WriterAddition = RequestReason._CF_enumeration.addEnumeration(unicode_value='WriterAddition', tag='WriterAddition')
+RequestReason.WriterChange = RequestReason._CF_enumeration.addEnumeration(unicode_value='WriterChange', tag='WriterChange')
+RequestReason.WriterRemoval = RequestReason._CF_enumeration.addEnumeration(unicode_value='WriterRemoval', tag='WriterRemoval')
 RequestReason._InitializeFacetMap(RequestReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RequestReason', RequestReason)
+_module_typeBindings.RequestReason = RequestReason
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RequestedActionType
 class RequestedActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2721,7 +4772,7 @@ class RequestedActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enu
     """A Type of action requested."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RequestedActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7915, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 17395, 3)
     _Documentation = 'A Type of action requested.'
 RequestedActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RequestedActionType, enum_prefix=None)
 RequestedActionType.AdditionalInformationOnly = RequestedActionType._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -2731,6 +4782,7 @@ RequestedActionType.NoAction = RequestedActionType._CF_enumeration.addEnumeratio
 RequestedActionType.UserDefined = RequestedActionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RequestedActionType._InitializeFacetMap(RequestedActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RequestedActionType', RequestedActionType)
+_module_typeBindings.RequestedActionType = RequestedActionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ResourceContributorRole
 class ResourceContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2738,7 +4790,7 @@ class ResourceContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis
     """A role played by a Contributor in relation to a Fixation of an abstract Creation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ResourceContributorRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 7947, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 17427, 3)
     _Documentation = 'A role played by a Contributor in relation to a Fixation of an abstract Creation.'
 ResourceContributorRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ResourceContributorRole, enum_prefix=None)
 ResourceContributorRole.Actor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Actor', tag='Actor')
@@ -2776,6 +4828,7 @@ ResourceContributorRole.Painter = ResourceContributorRole._CF_enumeration.addEnu
 ResourceContributorRole.PeriodicalPublisher = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PeriodicalPublisher', tag='PeriodicalPublisher')
 ResourceContributorRole.Photographer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Photographer', tag='Photographer')
 ResourceContributorRole.PhotographyDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PhotographyDirector', tag='PhotographyDirector')
+ResourceContributorRole.PlaybackSinger = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PlaybackSinger', tag='PlaybackSinger')
 ResourceContributorRole.PrimaryMusician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PrimaryMusician', tag='PrimaryMusician')
 ResourceContributorRole.Producer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Producer', tag='Producer')
 ResourceContributorRole.Programmer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Programmer', tag='Programmer')
@@ -2789,8 +4842,236 @@ ResourceContributorRole.SubtitlesEditor = ResourceContributorRole._CF_enumeratio
 ResourceContributorRole.SubtitlesTranslator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SubtitlesTranslator', tag='SubtitlesTranslator')
 ResourceContributorRole.Unknown = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 ResourceContributorRole.UserDefined = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+ResourceContributorRole.VoiceActor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VoiceActor', tag='VoiceActor')
+ResourceContributorRole.MusicDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MusicDirector', tag='MusicDirector')
+ResourceContributorRole.Accompanyist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Accompanyist', tag='Accompanyist')
+ResourceContributorRole.AdditionalEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AdditionalEngineer', tag='AdditionalEngineer')
+ResourceContributorRole.AdditionalMixingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AdditionalMixingEngineer', tag='AdditionalMixingEngineer')
+ResourceContributorRole.AdditionalPerformer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AdditionalPerformer', tag='AdditionalPerformer')
+ResourceContributorRole.AdditionalProgrammingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AdditionalProgrammingEngineer', tag='AdditionalProgrammingEngineer')
+ResourceContributorRole.AdditionalStudioProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AdditionalStudioProducer', tag='AdditionalStudioProducer')
+ResourceContributorRole.AnchorPerson = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AnchorPerson', tag='AnchorPerson')
+ResourceContributorRole.AnimalTrainer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AnimalTrainer', tag='AnimalTrainer')
+ResourceContributorRole.Animator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Animator', tag='Animator')
+ResourceContributorRole.Annotator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Annotator', tag='Annotator')
+ResourceContributorRole.Announcer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Announcer', tag='Announcer')
+ResourceContributorRole.AAndRAdministrator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AAndRAdministrator', tag='AAndRAdministrator')
+ResourceContributorRole.AAndRCoordinator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AAndRCoordinator', tag='AAndRCoordinator')
+ResourceContributorRole.Armourer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Armourer', tag='Armourer')
+ResourceContributorRole.ArtCopyist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ArtCopyist', tag='ArtCopyist')
+ResourceContributorRole.ArtDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ArtDirector', tag='ArtDirector')
+ResourceContributorRole.ArtistBackgroundVocalEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ArtistBackgroundVocalEngineer', tag='ArtistBackgroundVocalEngineer')
+ResourceContributorRole.ArtistVocalEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ArtistVocalEngineer', tag='ArtistVocalEngineer')
+ResourceContributorRole.ArtistVocalSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ArtistVocalSecondEngineer', tag='ArtistVocalSecondEngineer')
+ResourceContributorRole.AssistantCameraOperator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantCameraOperator', tag='AssistantCameraOperator')
+ResourceContributorRole.AssistantChiefLightingTechnician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantChiefLightingTechnician', tag='AssistantChiefLightingTechnician')
+ResourceContributorRole.AssistantConductor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantConductor', tag='AssistantConductor')
+ResourceContributorRole.AssistantDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantDirector', tag='AssistantDirector')
+ResourceContributorRole.AssistantEditor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantEditor', tag='AssistantEditor')
+ResourceContributorRole.AssistantEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantEngineer', tag='AssistantEngineer')
+ResourceContributorRole.AssistantProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantProducer', tag='AssistantProducer')
+ResourceContributorRole.AssistantVisualEditor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssistantVisualEditor', tag='AssistantVisualEditor')
+ResourceContributorRole.AssociateProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AssociateProducer', tag='AssociateProducer')
+ResourceContributorRole.AuralTrainer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='AuralTrainer', tag='AuralTrainer')
+ResourceContributorRole.BackgroundVocalist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BackgroundVocalist', tag='BackgroundVocalist')
+ResourceContributorRole.BalanceEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BalanceEngineer', tag='BalanceEngineer')
+ResourceContributorRole.BandLeader = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BandLeader', tag='BandLeader')
+ResourceContributorRole.Binder = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Binder', tag='Binder')
+ResourceContributorRole.BindingDesigner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BindingDesigner', tag='BindingDesigner')
+ResourceContributorRole.BookDesigner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BookDesigner', tag='BookDesigner')
+ResourceContributorRole.BookjackDesigner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BookjackDesigner', tag='BookjackDesigner')
+ResourceContributorRole.BookplateDesigner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BookplateDesigner', tag='BookplateDesigner')
+ResourceContributorRole.BookProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BookProducer', tag='BookProducer')
+ResourceContributorRole.BroadcastAssistant = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BroadcastAssistant', tag='BroadcastAssistant')
+ResourceContributorRole.BroadcastJournalist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='BroadcastJournalist', tag='BroadcastJournalist')
+ResourceContributorRole.Calligrapher = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Calligrapher', tag='Calligrapher')
+ResourceContributorRole.CameraOperator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CameraOperator', tag='CameraOperator')
+ResourceContributorRole.Carpenter = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Carpenter', tag='Carpenter')
+ResourceContributorRole.Cartographer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Cartographer', tag='Cartographer')
+ResourceContributorRole.CastingDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CastingDirector', tag='CastingDirector')
+ResourceContributorRole.Causeur = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Causeur', tag='Causeur')
+ResourceContributorRole.Censor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Censor', tag='Censor')
+ResourceContributorRole.ChiefLightingTechnician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ChiefLightingTechnician', tag='ChiefLightingTechnician')
+ResourceContributorRole.ChoirMember = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ChoirMember', tag='ChoirMember')
+ResourceContributorRole.ChorusMaster = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ChorusMaster', tag='ChorusMaster')
+ResourceContributorRole.CircusArtist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CircusArtist', tag='CircusArtist')
+ResourceContributorRole.ClapperLoader = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ClapperLoader', tag='ClapperLoader')
+ResourceContributorRole.ClubDJ = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ClubDJ', tag='ClubDJ')
+ResourceContributorRole.CoDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CoDirector', tag='CoDirector')
+ResourceContributorRole.CoExecutiveProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CoExecutiveProducer', tag='CoExecutiveProducer')
+ResourceContributorRole.ColorSeparator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ColorSeparator', tag='ColorSeparator')
+ResourceContributorRole.Comedian = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Comedian', tag='Comedian')
+ResourceContributorRole.CoMixer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CoMixer', tag='CoMixer')
+ResourceContributorRole.CoMixingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CoMixingEngineer', tag='CoMixingEngineer')
+ResourceContributorRole.Commentator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Commentator', tag='Commentator')
+ResourceContributorRole.CommissioningBroadcaster = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CommissioningBroadcaster', tag='CommissioningBroadcaster')
+ResourceContributorRole.CompilationProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CompilationProducer', tag='CompilationProducer')
+ResourceContributorRole.ComputerProgrammer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ComputerProgrammer', tag='ComputerProgrammer')
+ResourceContributorRole.ConcertMaster = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ConcertMaster', tag='ConcertMaster')
+ResourceContributorRole.Consultant = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Consultant', tag='Consultant')
+ResourceContributorRole.ContinuityChecker = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ContinuityChecker', tag='ContinuityChecker')
+ResourceContributorRole.Contractor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Contractor', tag='Contractor')
+ResourceContributorRole.CoProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CoProducer', tag='CoProducer')
+ResourceContributorRole.Correspondent = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Correspondent', tag='Correspondent')
+ResourceContributorRole.CoverDesigner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='CoverDesigner', tag='CoverDesigner')
+ResourceContributorRole.Dancer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Dancer', tag='Dancer')
+ResourceContributorRole.Delineator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Delineator', tag='Delineator')
+ResourceContributorRole.DialogueCoach = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DialogueCoach', tag='DialogueCoach')
+ResourceContributorRole.DialogueDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DialogueDirector', tag='DialogueDirector')
+ResourceContributorRole.DigitalAudioWorkstationEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DigitalAudioWorkstationEngineer', tag='DigitalAudioWorkstationEngineer')
+ResourceContributorRole.DigitalEditingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DigitalEditingEngineer', tag='DigitalEditingEngineer')
+ResourceContributorRole.DigitalEditingSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DigitalEditingSecondEngineer', tag='DigitalEditingSecondEngineer')
+ResourceContributorRole.Director = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Director', tag='Director')
+ResourceContributorRole.DirectStreamDigitalEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DirectStreamDigitalEngineer', tag='DirectStreamDigitalEngineer')
+ResourceContributorRole.DistributionCompany = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DistributionCompany', tag='DistributionCompany')
+ResourceContributorRole.DJ = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='DJ', tag='DJ')
+ResourceContributorRole.Draughtsman = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Draughtsman', tag='Draughtsman')
+ResourceContributorRole.Dresser = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Dresser', tag='Dresser')
+ResourceContributorRole.Editor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Editor', tag='Editor')
+ResourceContributorRole.EditorInChief = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='EditorInChief', tag='EditorInChief')
+ResourceContributorRole.EditorOfTheDay = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='EditorOfTheDay', tag='EditorOfTheDay')
+ResourceContributorRole.Engineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Engineer', tag='Engineer')
+ResourceContributorRole.ExecutiveProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ExecutiveProducer', tag='ExecutiveProducer')
+ResourceContributorRole.Expert = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Expert', tag='Expert')
+ResourceContributorRole.Facsimilist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Facsimilist', tag='Facsimilist')
+ResourceContributorRole.FightDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='FightDirector', tag='FightDirector')
+ResourceContributorRole.FloorManager = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='FloorManager', tag='FloorManager')
+ResourceContributorRole.FocusPuller = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='FocusPuller', tag='FocusPuller')
+ResourceContributorRole.FoleyArtist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='FoleyArtist', tag='FoleyArtist')
+ResourceContributorRole.FoleyEditor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='FoleyEditor', tag='FoleyEditor')
+ResourceContributorRole.FoleyMixer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='FoleyMixer', tag='FoleyMixer')
+ResourceContributorRole.GraphicAssistant = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='GraphicAssistant', tag='GraphicAssistant')
+ResourceContributorRole.Greensman = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Greensman', tag='Greensman')
+ResourceContributorRole.Grip = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Grip', tag='Grip')
+ResourceContributorRole.GuestConductor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='GuestConductor', tag='GuestConductor')
+ResourceContributorRole.GroupMember = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='GroupMember', tag='GroupMember')
+ResourceContributorRole.Hairdresser = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Hairdresser', tag='Hairdresser')
+ResourceContributorRole.Illustrator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Illustrator', tag='Illustrator')
+ResourceContributorRole.ImmersiveMixingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ImmersiveMixingEngineer', tag='ImmersiveMixingEngineer')
+ResourceContributorRole.InitialProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='InitialProducer', tag='InitialProducer')
+ResourceContributorRole.InterviewedGuest = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='InterviewedGuest', tag='InterviewedGuest')
+ResourceContributorRole.Interviewer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Interviewer', tag='Interviewer')
+ResourceContributorRole.KeyCharacter = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='KeyCharacter', tag='KeyCharacter')
+ResourceContributorRole.KeyGrip = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='KeyGrip', tag='KeyGrip')
+ResourceContributorRole.KeyTalent = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='KeyTalent', tag='KeyTalent')
+ResourceContributorRole.Leadman = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Leadman', tag='Leadman')
+ResourceContributorRole.LeadPerformer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='LeadPerformer', tag='LeadPerformer')
+ResourceContributorRole.LeadVocalist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='LeadVocalist', tag='LeadVocalist')
+ResourceContributorRole.LightingDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='LightingDirector', tag='LightingDirector')
+ResourceContributorRole.LightingTechnician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='LightingTechnician', tag='LightingTechnician')
+ResourceContributorRole.LocationManager = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='LocationManager', tag='LocationManager')
+ResourceContributorRole.MakeUpArtist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MakeUpArtist', tag='MakeUpArtist')
+ResourceContributorRole.Manufacturer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Manufacturer', tag='Manufacturer')
+ResourceContributorRole.MasteringEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MasteringEngineer', tag='MasteringEngineer')
+ResourceContributorRole.MasteringSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MasteringSecondEngineer', tag='MasteringSecondEngineer')
+ResourceContributorRole.MatteArtist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MatteArtist', tag='MatteArtist')
+ResourceContributorRole.Mixer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Mixer', tag='Mixer')
+ResourceContributorRole.MixingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MixingEngineer', tag='MixingEngineer')
+ResourceContributorRole.MixingSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MixingSecondEngineer', tag='MixingSecondEngineer')
+ResourceContributorRole.MusicArranger = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MusicArranger', tag='MusicArranger')
+ResourceContributorRole.MusicCopyist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MusicCopyist', tag='MusicCopyist')
+ResourceContributorRole.MusicGroup = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='MusicGroup', tag='MusicGroup')
+ResourceContributorRole.Musician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Musician', tag='Musician')
+ResourceContributorRole.NewsProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='NewsProducer', tag='NewsProducer')
+ResourceContributorRole.NewsReader = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='NewsReader', tag='NewsReader')
+ResourceContributorRole.NotSpecified = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='NotSpecified', tag='NotSpecified')
+ResourceContributorRole.OrchestraMember = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='OrchestraMember', tag='OrchestraMember')
+ResourceContributorRole.OriginalArtist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='OriginalArtist', tag='OriginalArtist')
+ResourceContributorRole.OverdubEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='OverdubEngineer', tag='OverdubEngineer')
+ResourceContributorRole.OverdubSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='OverdubSecondEngineer', tag='OverdubSecondEngineer')
+ResourceContributorRole.Performer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Performer', tag='Performer')
+ResourceContributorRole.PostProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PostProducer', tag='PostProducer')
+ResourceContributorRole.PreProduction = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PreProduction', tag='PreProduction')
+ResourceContributorRole.PreProductionEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PreProductionEngineer', tag='PreProductionEngineer')
+ResourceContributorRole.PreProductionSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PreProductionSecondEngineer', tag='PreProductionSecondEngineer')
+ResourceContributorRole.Presenter = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Presenter', tag='Presenter')
+ResourceContributorRole.ProductionAssistant = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProductionAssistant', tag='ProductionAssistant')
+ResourceContributorRole.ProductionCompany = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProductionCompany', tag='ProductionCompany')
+ResourceContributorRole.ProductionCoordinator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProductionCoordinator', tag='ProductionCoordinator')
+ResourceContributorRole.ProductionDepartment = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProductionDepartment', tag='ProductionDepartment')
+ResourceContributorRole.ProductionManager = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProductionManager', tag='ProductionManager')
+ResourceContributorRole.ProductionSecretary = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProductionSecretary', tag='ProductionSecretary')
+ResourceContributorRole.ProjectEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProjectEngineer', tag='ProjectEngineer')
+ResourceContributorRole.ProgrammingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProgrammingEngineer', tag='ProgrammingEngineer')
+ResourceContributorRole.ProgramProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ProgramProducer', tag='ProgramProducer')
+ResourceContributorRole.PropertyManager = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PropertyManager', tag='PropertyManager')
+ResourceContributorRole.PublishingDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='PublishingDirector', tag='PublishingDirector')
+ResourceContributorRole.Puppeteer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Puppeteer', tag='Puppeteer')
+ResourceContributorRole.Pyrotechnician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Pyrotechnician', tag='Pyrotechnician')
+ResourceContributorRole.RecordingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='RecordingEngineer', tag='RecordingEngineer')
+ResourceContributorRole.RecordingSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='RecordingSecondEngineer', tag='RecordingSecondEngineer')
+ResourceContributorRole.Redactor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Redactor', tag='Redactor')
+ResourceContributorRole.ReissueProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ReissueProducer', tag='ReissueProducer')
+ResourceContributorRole.RemixedArtist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='RemixedArtist', tag='RemixedArtist')
+ResourceContributorRole.Remixer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Remixer', tag='Remixer')
+ResourceContributorRole.RemixingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='RemixingEngineer', tag='RemixingEngineer')
+ResourceContributorRole.RemixingSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='RemixingSecondEngineer', tag='RemixingSecondEngineer')
+ResourceContributorRole.Repetiteur = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Repetiteur', tag='Repetiteur')
+ResourceContributorRole.Researcher = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Researcher', tag='Researcher')
+ResourceContributorRole.ResearchTeamHead = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ResearchTeamHead', tag='ResearchTeamHead')
+ResourceContributorRole.ResearchTeamMember = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ResearchTeamMember', tag='ResearchTeamMember')
+ResourceContributorRole.Restager = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Restager', tag='Restager')
+ResourceContributorRole.Rigger = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Rigger', tag='Rigger')
+ResourceContributorRole.Runner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Runner', tag='Runner')
+ResourceContributorRole.ScenicOperative = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ScenicOperative', tag='ScenicOperative')
+ResourceContributorRole.ScientificAdvisor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ScientificAdvisor', tag='ScientificAdvisor')
+ResourceContributorRole.ScriptSupervisor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='ScriptSupervisor', tag='ScriptSupervisor')
+ResourceContributorRole.SecondAssistantCameraOperator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SecondAssistantCameraOperator', tag='SecondAssistantCameraOperator')
+ResourceContributorRole.SecondAssistantDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SecondAssistantDirector', tag='SecondAssistantDirector')
+ResourceContributorRole.SecondConductor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SecondConductor', tag='SecondConductor')
+ResourceContributorRole.SecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SecondEngineer', tag='SecondEngineer')
+ResourceContributorRole.SecondUnitDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SecondUnitDirector', tag='SecondUnitDirector')
+ResourceContributorRole.SeriesProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SeriesProducer', tag='SeriesProducer')
+ResourceContributorRole.SetDresser = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SetDresser', tag='SetDresser')
+ResourceContributorRole.SignLanguageInterpreter = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SignLanguageInterpreter', tag='SignLanguageInterpreter')
+ResourceContributorRole.SoundDesigner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SoundDesigner', tag='SoundDesigner')
+ResourceContributorRole.SoundMixer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SoundMixer', tag='SoundMixer')
+ResourceContributorRole.SoundRecordist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SoundRecordist', tag='SoundRecordist')
+ResourceContributorRole.SoundSupervisor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SoundSupervisor', tag='SoundSupervisor')
+ResourceContributorRole.Speaker = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Speaker', tag='Speaker')
+ResourceContributorRole.SpecialEffectsTechnician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SpecialEffectsTechnician', tag='SpecialEffectsTechnician')
+ResourceContributorRole.Sponsor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Sponsor', tag='Sponsor')
+ResourceContributorRole.StageAssistantEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StageAssistantEngineer', tag='StageAssistantEngineer')
+ResourceContributorRole.StageEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StageEngineer', tag='StageEngineer')
+ResourceContributorRole.StoryTeller = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StoryTeller', tag='StoryTeller')
+ResourceContributorRole.StringEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StringEngineer', tag='StringEngineer')
+ResourceContributorRole.StringProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StringProducer', tag='StringProducer')
+ResourceContributorRole.StringsDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StringsDirector', tag='StringsDirector')
+ResourceContributorRole.StudioConductor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StudioConductor', tag='StudioConductor')
+ResourceContributorRole.StudioMusician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StudioMusician', tag='StudioMusician')
+ResourceContributorRole.StudioProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='StudioProducer', tag='StudioProducer')
+ResourceContributorRole.Stunts = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Stunts', tag='Stunts')
+ResourceContributorRole.SupportingActor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SupportingActor', tag='SupportingActor')
+ResourceContributorRole.SurroundMixingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SurroundMixingEngineer', tag='SurroundMixingEngineer')
+ResourceContributorRole.SurroundMixingSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='SurroundMixingSecondEngineer', tag='SurroundMixingSecondEngineer')
+ResourceContributorRole.TapeOperator = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TapeOperator', tag='TapeOperator')
+ResourceContributorRole.TechnicalDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TechnicalDirector', tag='TechnicalDirector')
+ResourceContributorRole.Tonmeister = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Tonmeister', tag='Tonmeister')
+ResourceContributorRole.TrackingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TrackingEngineer', tag='TrackingEngineer')
+ResourceContributorRole.TrackingSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TrackingSecondEngineer', tag='TrackingSecondEngineer')
+ResourceContributorRole.TransfersAndSafetiesEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TransfersAndSafetiesEngineer', tag='TransfersAndSafetiesEngineer')
+ResourceContributorRole.TransfersAndSafetiesSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TransfersAndSafetiesSecondEngineer', tag='TransfersAndSafetiesSecondEngineer')
+ResourceContributorRole.TransportationManager = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TransportationManager', tag='TransportationManager')
+ResourceContributorRole.TreatmentProgramProposal = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Treatment/ProgramProposal', tag='TreatmentProgramProposal')
+ResourceContributorRole.TypeDesigner = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='TypeDesigner', tag='TypeDesigner')
+ResourceContributorRole.VideoDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VideoDirector', tag='VideoDirector')
+ResourceContributorRole.Videographer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Videographer', tag='Videographer')
+ResourceContributorRole.VideoMusicalDirector = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VideoMusicalDirector', tag='VideoMusicalDirector')
+ResourceContributorRole.VideoProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VideoProducer', tag='VideoProducer')
+ResourceContributorRole.VisionMixer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VisionMixer', tag='VisionMixer')
+ResourceContributorRole.VisualEditor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VisualEditor', tag='VisualEditor')
+ResourceContributorRole.VisualEffectsTechnician = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VisualEffectsTechnician', tag='VisualEffectsTechnician')
+ResourceContributorRole.VocalArranger = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VocalArranger', tag='VocalArranger')
+ResourceContributorRole.VocalEditingEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VocalEditingEngineer', tag='VocalEditingEngineer')
+ResourceContributorRole.VocalEditingSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VocalEditingSecondEngineer', tag='VocalEditingSecondEngineer')
+ResourceContributorRole.VocalEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VocalEngineer', tag='VocalEngineer')
+ResourceContributorRole.Vocalist = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Vocalist', tag='Vocalist')
+ResourceContributorRole.VocalSecondEngineer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VocalSecondEngineer', tag='VocalSecondEngineer')
+ResourceContributorRole.VocalProducer = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='VocalProducer', tag='VocalProducer')
+ResourceContributorRole.Wardrobe = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Wardrobe', tag='Wardrobe')
 ResourceContributorRole._InitializeFacetMap(ResourceContributorRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ResourceContributorRole', ResourceContributorRole)
+_module_typeBindings.ResourceContributorRole = ResourceContributorRole
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ResourceOmissionReason
 class ResourceOmissionReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2798,7 +5079,7 @@ class ResourceOmissionReason (pyxb.binding.datatypes.string, pyxb.binding.basis.
     """A Type of reason for omitting a Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ResourceOmissionReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8194, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 18814, 3)
     _Documentation = 'A Type of reason for omitting a Resource.'
 ResourceOmissionReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ResourceOmissionReason, enum_prefix=None)
 ResourceOmissionReason.PassportServiceRelease = ResourceOmissionReason._CF_enumeration.addEnumeration(unicode_value='PassportServiceRelease', tag='PassportServiceRelease')
@@ -2807,6 +5088,7 @@ ResourceOmissionReason.UserDefined = ResourceOmissionReason._CF_enumeration.addE
 ResourceOmissionReason.VirtualRelease = ResourceOmissionReason._CF_enumeration.addEnumeration(unicode_value='VirtualRelease', tag='VirtualRelease')
 ResourceOmissionReason._InitializeFacetMap(ResourceOmissionReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ResourceOmissionReason', ResourceOmissionReason)
+_module_typeBindings.ResourceOmissionReason = ResourceOmissionReason
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ResourceType
 class ResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2814,7 +5096,7 @@ class ResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeratio
     """A Type of Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ResourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8221, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 18841, 3)
     _Documentation = 'A Type of Resource.'
 ResourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ResourceType, enum_prefix=None)
 ResourceType.Image = ResourceType._CF_enumeration.addEnumeration(unicode_value='Image', tag='Image')
@@ -2827,6 +5109,7 @@ ResourceType.UserDefinedResource = ResourceType._CF_enumeration.addEnumeration(u
 ResourceType.Video = ResourceType._CF_enumeration.addEnumeration(unicode_value='Video', tag='Video')
 ResourceType._InitializeFacetMap(ResourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ResourceType', ResourceType)
+_module_typeBindings.ResourceType = ResourceType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RevenueSourceType
 class RevenueSourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2834,7 +5117,7 @@ class RevenueSourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A Type of revenue earned by the SoundRecording, according to the way the revenue is generated."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RevenueSourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8268, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 18888, 3)
     _Documentation = 'A Type of revenue earned by the SoundRecording, according to the way the revenue is generated.'
 RevenueSourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RevenueSourceType, enum_prefix=None)
 RevenueSourceType.FinancialRevenue = RevenueSourceType._CF_enumeration.addEnumeration(unicode_value='FinancialRevenue', tag='FinancialRevenue')
@@ -2842,6 +5125,7 @@ RevenueSourceType.IndemnityRevenue = RevenueSourceType._CF_enumeration.addEnumer
 RevenueSourceType.RoyaltyRevenue = RevenueSourceType._CF_enumeration.addEnumeration(unicode_value='RoyaltyRevenue', tag='RoyaltyRevenue')
 RevenueSourceType._InitializeFacetMap(RevenueSourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RevenueSourceType', RevenueSourceType)
+_module_typeBindings.RevenueSourceType = RevenueSourceType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RightShareRelationshipType
 class RightShareRelationshipType (pyxb.binding.datatypes.string):
@@ -2849,10 +5133,11 @@ class RightShareRelationshipType (pyxb.binding.datatypes.string):
     """A Type of relationship between two RightShares."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightShareRelationshipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8290, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 18910, 3)
     _Documentation = 'A Type of relationship between two RightShares.'
 RightShareRelationshipType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'RightShareRelationshipType', RightShareRelationshipType)
+_module_typeBindings.RightShareRelationshipType = RightShareRelationshipType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RightShareType
 class RightShareType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2860,14 +5145,16 @@ class RightShareType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of RightShare."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightShareType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8296, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 18916, 3)
     _Documentation = 'A Type of RightShare.'
 RightShareType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightShareType, enum_prefix=None)
 RightShareType.MusicalWorkManuscriptShare = RightShareType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkManuscriptShare', tag='MusicalWorkManuscriptShare')
 RightShareType.MusicalWorkCollectionShare = RightShareType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkCollectionShare', tag='MusicalWorkCollectionShare')
 RightShareType.OriginalPublisherShare = RightShareType._CF_enumeration.addEnumeration(unicode_value='OriginalPublisherShare', tag='OriginalPublisherShare')
+RightShareType.LicensingShare = RightShareType._CF_enumeration.addEnumeration(unicode_value='LicensingShare', tag='LicensingShare')
 RightShareType._InitializeFacetMap(RightShareType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightShareType', RightShareType)
+_module_typeBindings.RightShareType = RightShareType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RightsClaimPolicyType
 class RightsClaimPolicyType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2875,7 +5162,7 @@ class RightsClaimPolicyType (pyxb.binding.datatypes.string, pyxb.binding.basis.e
     """A Type of rights claim policy."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightsClaimPolicyType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8318, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 18943, 3)
     _Documentation = 'A Type of rights claim policy.'
 RightsClaimPolicyType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightsClaimPolicyType, enum_prefix=None)
 RightsClaimPolicyType.ReportUsage = RightsClaimPolicyType._CF_enumeration.addEnumeration(unicode_value='ReportUsage', tag='ReportUsage')
@@ -2883,6 +5170,7 @@ RightsClaimPolicyType.BlockAccess = RightsClaimPolicyType._CF_enumeration.addEnu
 RightsClaimPolicyType.Monetize = RightsClaimPolicyType._CF_enumeration.addEnumeration(unicode_value='Monetize', tag='Monetize')
 RightsClaimPolicyType._InitializeFacetMap(RightsClaimPolicyType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightsClaimPolicyType', RightsClaimPolicyType)
+_module_typeBindings.RightsClaimPolicyType = RightsClaimPolicyType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RightsControllerRole
 class RightsControllerRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2890,7 +5178,7 @@ class RightsControllerRole (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A role of a RightsController."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightsControllerRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8340, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 18965, 3)
     _Documentation = 'A role of a RightsController.'
 RightsControllerRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightsControllerRole, enum_prefix=None)
 RightsControllerRole.AdministratingRecordCompany = RightsControllerRole._CF_enumeration.addEnumeration(unicode_value='AdministratingRecordCompany', tag='AdministratingRecordCompany')
@@ -2898,8 +5186,10 @@ RightsControllerRole.RightsAdministrator = RightsControllerRole._CF_enumeration.
 RightsControllerRole.RightsController = RightsControllerRole._CF_enumeration.addEnumeration(unicode_value='RightsController', tag='RightsController')
 RightsControllerRole.RoyaltyAdministrator = RightsControllerRole._CF_enumeration.addEnumeration(unicode_value='RoyaltyAdministrator', tag='RoyaltyAdministrator')
 RightsControllerRole.Unknown = RightsControllerRole._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
+RightsControllerRole.LocalPayee = RightsControllerRole._CF_enumeration.addEnumeration(unicode_value='LocalPayee', tag='LocalPayee')
 RightsControllerRole._InitializeFacetMap(RightsControllerRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightsControllerRole', RightsControllerRole)
+_module_typeBindings.RightsControllerRole = RightsControllerRole
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RightsControllerType
 class RightsControllerType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2907,7 +5197,7 @@ class RightsControllerType (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A Type of a RightsController."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightsControllerType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8372, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19002, 3)
     _Documentation = 'A Type of a RightsController.'
 RightsControllerType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightsControllerType, enum_prefix=None)
 RightsControllerType.OriginalOwner = RightsControllerType._CF_enumeration.addEnumeration(unicode_value='OriginalOwner', tag='OriginalOwner')
@@ -2915,6 +5205,7 @@ RightsControllerType.SuccessorInTitle = RightsControllerType._CF_enumeration.add
 RightsControllerType.ExclusiveLicensee = RightsControllerType._CF_enumeration.addEnumeration(unicode_value='ExclusiveLicensee', tag='ExclusiveLicensee')
 RightsControllerType._InitializeFacetMap(RightsControllerType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightsControllerType', RightsControllerType)
+_module_typeBindings.RightsControllerType = RightsControllerType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RightsCoverage
 class RightsCoverage (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2922,7 +5213,7 @@ class RightsCoverage (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of Right which is covered."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightsCoverage')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8394, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19024, 3)
     _Documentation = 'A Type of Right which is covered.'
 RightsCoverage._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightsCoverage, enum_prefix=None)
 RightsCoverage.MakeAvailableRight = RightsCoverage._CF_enumeration.addEnumeration(unicode_value='MakeAvailableRight', tag='MakeAvailableRight')
@@ -2934,6 +5225,7 @@ RightsCoverage.SynchronizationRight = RightsCoverage._CF_enumeration.addEnumerat
 RightsCoverage.UserDefined = RightsCoverage._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RightsCoverage._InitializeFacetMap(RightsCoverage._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightsCoverage', RightsCoverage)
+_module_typeBindings.RightsCoverage = RightsCoverage
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RoyaltyRateCalculationType
 class RoyaltyRateCalculationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2941,7 +5233,7 @@ class RoyaltyRateCalculationType (pyxb.binding.datatypes.string, pyxb.binding.ba
     """A Type of RoyaltyRate according to the calculation method."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RoyaltyRateCalculationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8436, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19066, 3)
     _Documentation = 'A Type of RoyaltyRate according to the calculation method.'
 RoyaltyRateCalculationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RoyaltyRateCalculationType, enum_prefix=None)
 RoyaltyRateCalculationType.BudgetRoyaltyRate = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='BudgetRoyaltyRate', tag='BudgetRoyaltyRate')
@@ -2952,8 +5244,11 @@ RoyaltyRateCalculationType.NegotiatedRoyaltyRate = RoyaltyRateCalculationType._C
 RoyaltyRateCalculationType.ReducedRoyaltyRate = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='ReducedRoyaltyRate', tag='ReducedRoyaltyRate')
 RoyaltyRateCalculationType.ReducedStatutoryRoyaltyRate = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='ReducedStatutoryRoyaltyRate', tag='ReducedStatutoryRoyaltyRate')
 RoyaltyRateCalculationType.StatutoryRoyaltyRate = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='StatutoryRoyaltyRate', tag='StatutoryRoyaltyRate')
+RoyaltyRateCalculationType.PPD = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='PPD', tag='PPD')
+RoyaltyRateCalculationType.RetailPrice = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='RetailPrice', tag='RetailPrice')
 RoyaltyRateCalculationType._InitializeFacetMap(RoyaltyRateCalculationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RoyaltyRateCalculationType', RoyaltyRateCalculationType)
+_module_typeBindings.RoyaltyRateCalculationType = RoyaltyRateCalculationType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}RoyaltyRateType
 class RoyaltyRateType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2961,7 +5256,7 @@ class RoyaltyRateType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A Type of RoyaltyRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RoyaltyRateType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8483, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19123, 3)
     _Documentation = 'A Type of RoyaltyRate.'
 RoyaltyRateType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RoyaltyRateType, enum_prefix=None)
 RoyaltyRateType.PennyRate = RoyaltyRateType._CF_enumeration.addEnumeration(unicode_value='PennyRate', tag='PennyRate')
@@ -2969,6 +5264,7 @@ RoyaltyRateType.PercentageRoyaltyRate = RoyaltyRateType._CF_enumeration.addEnume
 RoyaltyRateType.UserDefined = RoyaltyRateType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RoyaltyRateType._InitializeFacetMap(RoyaltyRateType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RoyaltyRateType', RoyaltyRateType)
+_module_typeBindings.RoyaltyRateType = RoyaltyRateType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}SalesReportAvailabilityStatus
 class SalesReportAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2976,13 +5272,14 @@ class SalesReportAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding
     """A Status of the availability of a sales report."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SalesReportAvailabilityStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8505, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19145, 3)
     _Documentation = 'A Status of the availability of a sales report.'
 SalesReportAvailabilityStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SalesReportAvailabilityStatus, enum_prefix=None)
 SalesReportAvailabilityStatus.SalesReportAvailable = SalesReportAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='SalesReportAvailable', tag='SalesReportAvailable')
 SalesReportAvailabilityStatus.SalesReportNotAvailable = SalesReportAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='SalesReportNotAvailable', tag='SalesReportNotAvailable')
 SalesReportAvailabilityStatus._InitializeFacetMap(SalesReportAvailabilityStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SalesReportAvailabilityStatus', SalesReportAvailabilityStatus)
+_module_typeBindings.SalesReportAvailabilityStatus = SalesReportAvailabilityStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}Sex
 class Sex (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -2990,7 +5287,7 @@ class Sex (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
     """The biological sex of a being."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'Sex')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8522, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19162, 3)
     _Documentation = 'The biological sex of a being.'
 Sex._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=Sex, enum_prefix=None)
 Sex.Female = Sex._CF_enumeration.addEnumeration(unicode_value='Female', tag='Female')
@@ -2998,6 +5295,7 @@ Sex.Male = Sex._CF_enumeration.addEnumeration(unicode_value='Male', tag='Male')
 Sex.Unknown = Sex._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 Sex._InitializeFacetMap(Sex._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'Sex', Sex)
+_module_typeBindings.Sex = Sex
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}SheetMusicCodecType
 class SheetMusicCodecType (pyxb.binding.datatypes.string):
@@ -3005,10 +5303,11 @@ class SheetMusicCodecType (pyxb.binding.datatypes.string):
     """A Type of SheetMusicCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SheetMusicCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8544, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19184, 3)
     _Documentation = 'A Type of SheetMusicCodec.'
 SheetMusicCodecType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'SheetMusicCodecType', SheetMusicCodecType)
+_module_typeBindings.SheetMusicCodecType = SheetMusicCodecType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}SheetMusicType
 class SheetMusicType (pyxb.binding.datatypes.string):
@@ -3016,10 +5315,11 @@ class SheetMusicType (pyxb.binding.datatypes.string):
     """A Type of SheetMusic."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SheetMusicType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8550, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19190, 3)
     _Documentation = 'A Type of SheetMusic.'
 SheetMusicType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'SheetMusicType', SheetMusicType)
+_module_typeBindings.SheetMusicType = SheetMusicType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}SoftwareType
 class SoftwareType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3027,7 +5327,7 @@ class SoftwareType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeratio
     """A Type of Software."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SoftwareType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8556, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19196, 3)
     _Documentation = 'A Type of Software.'
 SoftwareType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SoftwareType, enum_prefix=None)
 SoftwareType.InteractiveBooklet = SoftwareType._CF_enumeration.addEnumeration(unicode_value='InteractiveBooklet', tag='InteractiveBooklet')
@@ -3038,6 +5338,7 @@ SoftwareType.Unknown = SoftwareType._CF_enumeration.addEnumeration(unicode_value
 SoftwareType.UserDefined = SoftwareType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 SoftwareType._InitializeFacetMap(SoftwareType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SoftwareType', SoftwareType)
+_module_typeBindings.SoftwareType = SoftwareType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}SoundProcessorType
 class SoundProcessorType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3045,7 +5346,7 @@ class SoundProcessorType (pyxb.binding.datatypes.string, pyxb.binding.basis.enum
     """A Type of sound processor."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SoundProcessorType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8593, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19233, 3)
     _Documentation = 'A Type of sound processor.'
 SoundProcessorType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SoundProcessorType, enum_prefix=None)
 SoundProcessorType.MidiProcessor = SoundProcessorType._CF_enumeration.addEnumeration(unicode_value='MidiProcessor', tag='MidiProcessor')
@@ -3055,6 +5356,7 @@ SoundProcessorType.Unknown = SoundProcessorType._CF_enumeration.addEnumeration(u
 SoundProcessorType.UserDefined = SoundProcessorType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 SoundProcessorType._InitializeFacetMap(SoundProcessorType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SoundProcessorType', SoundProcessorType)
+_module_typeBindings.SoundProcessorType = SoundProcessorType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}SoundRecordingType
 class SoundRecordingType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3062,7 +5364,7 @@ class SoundRecordingType (pyxb.binding.datatypes.string, pyxb.binding.basis.enum
     """A Type of SoundRecording."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SoundRecordingType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8625, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19265, 3)
     _Documentation = 'A Type of SoundRecording.'
 SoundRecordingType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SoundRecordingType, enum_prefix=None)
 SoundRecordingType.MusicalWorkReadalongSoundRecording = SoundRecordingType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkReadalongSoundRecording', tag='MusicalWorkReadalongSoundRecording')
@@ -3072,8 +5374,10 @@ SoundRecordingType.NonMusicalWorkSoundRecording = SoundRecordingType._CF_enumera
 SoundRecordingType.SpokenWordSoundRecording = SoundRecordingType._CF_enumeration.addEnumeration(unicode_value='SpokenWordSoundRecording', tag='SpokenWordSoundRecording')
 SoundRecordingType.Unknown = SoundRecordingType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 SoundRecordingType.UserDefined = SoundRecordingType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+SoundRecordingType.AudioStem = SoundRecordingType._CF_enumeration.addEnumeration(unicode_value='AudioStem', tag='AudioStem')
 SoundRecordingType._InitializeFacetMap(SoundRecordingType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SoundRecordingType', SoundRecordingType)
+_module_typeBindings.SoundRecordingType = SoundRecordingType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}SupplyChainStatus
 class SupplyChainStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3081,7 +5385,7 @@ class SupplyChainStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A Status of a Release in a supply chain."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SupplyChainStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8667, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19312, 3)
     _Documentation = 'A Status of a Release in a supply chain.'
 SupplyChainStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SupplyChainStatus, enum_prefix=None)
 SupplyChainStatus.DeliveredToReleaseDistributor = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='DeliveredToReleaseDistributor', tag='DeliveredToReleaseDistributor')
@@ -3096,8 +5400,11 @@ SupplyChainStatus.ReleaseReceivedByReleaseDistributor = SupplyChainStatus._CF_en
 SupplyChainStatus.ReleaseStagedForPublication = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='ReleaseStagedForPublication', tag='ReleaseStagedForPublication')
 SupplyChainStatus.SuccessfullyIngestedByReleaseDistributor = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='SuccessfullyIngestedByReleaseDistributor', tag='SuccessfullyIngestedByReleaseDistributor')
 SupplyChainStatus.UserDefined = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+SupplyChainStatus.ReleaseViolatesTermsOfService = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='ReleaseViolatesTermsOfService', tag='ReleaseViolatesTermsOfService')
+SupplyChainStatus.RightsConflict = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='RightsConflict', tag='RightsConflict')
 SupplyChainStatus._InitializeFacetMap(SupplyChainStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SupplyChainStatus', SupplyChainStatus)
+_module_typeBindings.SupplyChainStatus = SupplyChainStatus
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TaxScope
 class TaxScope (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3105,7 +5412,7 @@ class TaxScope (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mi
     """A Type of Tax according to its scope."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TaxScope')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8734, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19389, 3)
     _Documentation = 'A Type of Tax according to its scope.'
 TaxScope._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TaxScope, enum_prefix=None)
 TaxScope.CombinedTax = TaxScope._CF_enumeration.addEnumeration(unicode_value='CombinedTax', tag='CombinedTax')
@@ -3116,6 +5423,7 @@ TaxScope.StateTax = TaxScope._CF_enumeration.addEnumeration(unicode_value='State
 TaxScope.UserDefined = TaxScope._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TaxScope._InitializeFacetMap(TaxScope._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TaxScope', TaxScope)
+_module_typeBindings.TaxScope = TaxScope
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TaxType
 class TaxType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3123,7 +5431,7 @@ class TaxType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mix
     """A Type of Tax."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TaxType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8771, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19426, 3)
     _Documentation = 'A Type of Tax.'
 TaxType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TaxType, enum_prefix=None)
 TaxType.CombinedTax = TaxType._CF_enumeration.addEnumeration(unicode_value='CombinedTax', tag='CombinedTax')
@@ -3133,6 +5441,7 @@ TaxType.SourceTax = TaxType._CF_enumeration.addEnumeration(unicode_value='Source
 TaxType.UserDefined = TaxType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TaxType._InitializeFacetMap(TaxType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TaxType', TaxType)
+_module_typeBindings.TaxType = TaxType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TerritoryCodeType
 class TerritoryCodeType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3140,13 +5449,14 @@ class TerritoryCodeType (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A Type of code."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TerritoryCodeType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8803, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19458, 3)
     _Documentation = 'A Type of code.'
 TerritoryCodeType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TerritoryCodeType, enum_prefix=None)
 TerritoryCodeType.ISO = TerritoryCodeType._CF_enumeration.addEnumeration(unicode_value='ISO', tag='ISO')
 TerritoryCodeType.TIS = TerritoryCodeType._CF_enumeration.addEnumeration(unicode_value='TIS', tag='TIS')
 TerritoryCodeType._InitializeFacetMap(TerritoryCodeType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TerritoryCodeType', TerritoryCodeType)
+_module_typeBindings.TerritoryCodeType = TerritoryCodeType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TerritoryCodeTypeIncludingDeprecatedCodes
 class TerritoryCodeTypeIncludingDeprecatedCodes (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3154,7 +5464,7 @@ class TerritoryCodeTypeIncludingDeprecatedCodes (pyxb.binding.datatypes.string, 
     """A Type of code which also includes deprecated codes."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TerritoryCodeTypeIncludingDeprecatedCodes')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8820, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19475, 3)
     _Documentation = 'A Type of code which also includes deprecated codes.'
 TerritoryCodeTypeIncludingDeprecatedCodes._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TerritoryCodeTypeIncludingDeprecatedCodes, enum_prefix=None)
 TerritoryCodeTypeIncludingDeprecatedCodes.DeprecatedISO = TerritoryCodeTypeIncludingDeprecatedCodes._CF_enumeration.addEnumeration(unicode_value='DeprecatedISO', tag='DeprecatedISO')
@@ -3162,6 +5472,7 @@ TerritoryCodeTypeIncludingDeprecatedCodes.ISO = TerritoryCodeTypeIncludingDeprec
 TerritoryCodeTypeIncludingDeprecatedCodes.TIS = TerritoryCodeTypeIncludingDeprecatedCodes._CF_enumeration.addEnumeration(unicode_value='TIS', tag='TIS')
 TerritoryCodeTypeIncludingDeprecatedCodes._InitializeFacetMap(TerritoryCodeTypeIncludingDeprecatedCodes._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TerritoryCodeTypeIncludingDeprecatedCodes', TerritoryCodeTypeIncludingDeprecatedCodes)
+_module_typeBindings.TerritoryCodeTypeIncludingDeprecatedCodes = TerritoryCodeTypeIncludingDeprecatedCodes
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TextCodecType
 class TextCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3169,7 +5480,7 @@ class TextCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A Type of TextCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TextCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8842, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19497, 3)
     _Documentation = 'A Type of TextCodec.'
 TextCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TextCodecType, enum_prefix=None)
 TextCodecType.ASCII = TextCodecType._CF_enumeration.addEnumeration(unicode_value='ASCII', tag='ASCII')
@@ -3184,8 +5495,20 @@ TextCodecType.TTML = TextCodecType._CF_enumeration.addEnumeration(unicode_value=
 TextCodecType.Unknown = TextCodecType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 TextCodecType.UserDefined = TextCodecType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TextCodecType.VTT = TextCodecType._CF_enumeration.addEnumeration(unicode_value='VTT', tag='VTT')
+TextCodecType.AsciiOrIso8859nText = TextCodecType._CF_enumeration.addEnumeration(unicode_value='AsciiOrIso8859nText', tag='AsciiOrIso8859nText')
+TextCodecType.EnhancedLRC = TextCodecType._CF_enumeration.addEnumeration(unicode_value='EnhancedLRC', tag='EnhancedLRC')
+TextCodecType.EPUB = TextCodecType._CF_enumeration.addEnumeration(unicode_value='EPUB', tag='EPUB')
+TextCodecType.LRC = TextCodecType._CF_enumeration.addEnumeration(unicode_value='LRC', tag='LRC')
+TextCodecType.MicrosoftWord = TextCodecType._CF_enumeration.addEnumeration(unicode_value='MicrosoftWord', tag='MicrosoftWord')
+TextCodecType.OpenDocumentText = TextCodecType._CF_enumeration.addEnumeration(unicode_value='OpenDocumentText', tag='OpenDocumentText')
+TextCodecType.SimpleLRC = TextCodecType._CF_enumeration.addEnumeration(unicode_value='SimpleLRC', tag='SimpleLRC')
+TextCodecType.UTF8Text = TextCodecType._CF_enumeration.addEnumeration(unicode_value='UTF8Text', tag='UTF8Text')
+TextCodecType.WindowsText = TextCodecType._CF_enumeration.addEnumeration(unicode_value='WindowsText', tag='WindowsText')
+TextCodecType.XHTML = TextCodecType._CF_enumeration.addEnumeration(unicode_value='XHTML', tag='XHTML')
+TextCodecType.XML = TextCodecType._CF_enumeration.addEnumeration(unicode_value='XML', tag='XML')
 TextCodecType._InitializeFacetMap(TextCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TextCodecType', TextCodecType)
+_module_typeBindings.TextCodecType = TextCodecType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TextType
 class TextType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3193,7 +5516,7 @@ class TextType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mi
     """A Type of Text."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TextType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8909, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19619, 3)
     _Documentation = 'A Type of Text.'
 TextType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TextType, enum_prefix=None)
 TextType.Caption = TextType._CF_enumeration.addEnumeration(unicode_value='Caption', tag='Caption')
@@ -3206,6 +5529,7 @@ TextType.Unknown = TextType._CF_enumeration.addEnumeration(unicode_value='Unknow
 TextType.UserDefined = TextType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TextType._InitializeFacetMap(TextType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TextType', TextType)
+_module_typeBindings.TextType = TextType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ThemeType
 class ThemeType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3213,7 +5537,7 @@ class ThemeType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of Theme."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ThemeType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8956, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19666, 3)
     _Documentation = 'A Type of Theme.'
 ThemeType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ThemeType, enum_prefix=None)
 ThemeType.ClosingTheme = ThemeType._CF_enumeration.addEnumeration(unicode_value='ClosingTheme', tag='ClosingTheme')
@@ -3224,6 +5548,7 @@ ThemeType.TitleTheme = ThemeType._CF_enumeration.addEnumeration(unicode_value='T
 ThemeType.UserDefined = ThemeType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ThemeType._InitializeFacetMap(ThemeType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ThemeType', ThemeType)
+_module_typeBindings.ThemeType = ThemeType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TisTerritoryCode
 class TisTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3231,7 +5556,7 @@ class TisTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumer
     """A CISAC four-digit TIS code representing a Territory."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TisTerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 8993, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 19703, 3)
     _Documentation = 'A CISAC four-digit TIS code representing a Territory.'
 TisTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TisTerritoryCode, enum_prefix=None)
 TisTerritoryCode.n4 = TisTerritoryCode._CF_enumeration.addEnumeration(unicode_value='4', tag='n4')
@@ -3480,8 +5805,10 @@ TisTerritoryCode.n2132 = TisTerritoryCode._CF_enumeration.addEnumeration(unicode
 TisTerritoryCode.n2133 = TisTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2133', tag='n2133')
 TisTerritoryCode.n2134 = TisTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2134', tag='n2134')
 TisTerritoryCode.n2136 = TisTerritoryCode._CF_enumeration.addEnumeration(unicode_value='2136', tag='n2136')
+TisTerritoryCode.n446 = TisTerritoryCode._CF_enumeration.addEnumeration(unicode_value='446', tag='n446')
 TisTerritoryCode._InitializeFacetMap(TisTerritoryCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TisTerritoryCode', TisTerritoryCode)
+_module_typeBindings.TisTerritoryCode = TisTerritoryCode
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TitleType
 class TitleType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3489,7 +5816,7 @@ class TitleType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of Title which defines its origin, form or the function it fulfils in relation to a Creation. Note: A Title may fulfil more than one role. Example: 'Help' may be both the OriginalTitle and the DisplayTitle for the well-known Beatles song.  """
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TitleType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10230, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 20945, 3)
     _Documentation = "A Type of Title which defines its origin, form or the function it fulfils in relation to a Creation. Note: A Title may fulfil more than one role. Example: 'Help' may be both the OriginalTitle and the DisplayTitle for the well-known Beatles song.  "
 TitleType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TitleType, enum_prefix=None)
 TitleType.AbbreviatedDisplayTitle = TitleType._CF_enumeration.addEnumeration(unicode_value='AbbreviatedDisplayTitle', tag='AbbreviatedDisplayTitle')
@@ -3508,8 +5835,10 @@ TitleType.TitleWithoutPunctuation = TitleType._CF_enumeration.addEnumeration(uni
 TitleType.TranslatedTitle = TitleType._CF_enumeration.addEnumeration(unicode_value='TranslatedTitle', tag='TranslatedTitle')
 TitleType.Unknown = TitleType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 TitleType.UserDefined = TitleType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+TitleType.MusicalWorkTitle = TitleType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkTitle', tag='MusicalWorkTitle')
 TitleType._InitializeFacetMap(TitleType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TitleType', TitleType)
+_module_typeBindings.TitleType = TitleType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}TrackContributorRelationshipType
 class TrackContributorRelationshipType (pyxb.binding.datatypes.string):
@@ -3517,10 +5846,11 @@ class TrackContributorRelationshipType (pyxb.binding.datatypes.string):
     """A Type of relationship between a Track and a Contributor."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TrackContributorRelationshipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10317, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21037, 3)
     _Documentation = 'A Type of relationship between a Track and a Contributor.'
 TrackContributorRelationshipType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'TrackContributorRelationshipType', TrackContributorRelationshipType)
+_module_typeBindings.TrackContributorRelationshipType = TrackContributorRelationshipType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UnitOfBitRate
 class UnitOfBitRate (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3528,7 +5858,7 @@ class UnitOfBitRate (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerati
     """A UnitOfMeasure for a BitRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfBitRate')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10323, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21043, 3)
     _Documentation = 'A UnitOfMeasure for a BitRate.'
 UnitOfBitRate._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfBitRate, enum_prefix=None)
 UnitOfBitRate.bps = UnitOfBitRate._CF_enumeration.addEnumeration(unicode_value='bps', tag='bps')
@@ -3537,6 +5867,7 @@ UnitOfBitRate.kbps = UnitOfBitRate._CF_enumeration.addEnumeration(unicode_value=
 UnitOfBitRate.Mbps = UnitOfBitRate._CF_enumeration.addEnumeration(unicode_value='Mbps', tag='Mbps')
 UnitOfBitRate._InitializeFacetMap(UnitOfBitRate._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfBitRate', UnitOfBitRate)
+_module_typeBindings.UnitOfBitRate = UnitOfBitRate
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UnitOfConditionValue
 class UnitOfConditionValue (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3544,7 +5875,7 @@ class UnitOfConditionValue (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A UnitOfMeasure for a condition value."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfConditionValue')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10350, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21070, 3)
     _Documentation = 'A UnitOfMeasure for a condition value.'
 UnitOfConditionValue._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfConditionValue, enum_prefix=None)
 UnitOfConditionValue.Millisecond = UnitOfConditionValue._CF_enumeration.addEnumeration(unicode_value='Millisecond', tag='Millisecond')
@@ -3554,6 +5885,7 @@ UnitOfConditionValue.Pixel = UnitOfConditionValue._CF_enumeration.addEnumeration
 UnitOfConditionValue.Second = UnitOfConditionValue._CF_enumeration.addEnumeration(unicode_value='Second', tag='Second')
 UnitOfConditionValue._InitializeFacetMap(UnitOfConditionValue._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfConditionValue', UnitOfConditionValue)
+_module_typeBindings.UnitOfConditionValue = UnitOfConditionValue
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UnitOfExtent
 class UnitOfExtent (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3561,7 +5893,7 @@ class UnitOfExtent (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeratio
     """A UnitOfMeasure for an Extent."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfExtent')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10382, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21102, 3)
     _Documentation = 'A UnitOfMeasure for an Extent.'
 UnitOfExtent._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfExtent, enum_prefix=None)
 UnitOfExtent.cm = UnitOfExtent._CF_enumeration.addEnumeration(unicode_value='cm', tag='cm')
@@ -3571,6 +5903,7 @@ UnitOfExtent.PercentOfScreen = UnitOfExtent._CF_enumeration.addEnumeration(unico
 UnitOfExtent.Pixel = UnitOfExtent._CF_enumeration.addEnumeration(unicode_value='Pixel', tag='Pixel')
 UnitOfExtent._InitializeFacetMap(UnitOfExtent._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfExtent', UnitOfExtent)
+_module_typeBindings.UnitOfExtent = UnitOfExtent
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UnitOfFrameRate
 class UnitOfFrameRate (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3578,13 +5911,14 @@ class UnitOfFrameRate (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A UnitOfMeasure for a FrameRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfFrameRate')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10414, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21134, 3)
     _Documentation = 'A UnitOfMeasure for a FrameRate.'
 UnitOfFrameRate._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfFrameRate, enum_prefix=None)
 UnitOfFrameRate.Hzinterlaced = UnitOfFrameRate._CF_enumeration.addEnumeration(unicode_value='Hz(interlaced)', tag='Hzinterlaced')
 UnitOfFrameRate.Hznon_interlaced = UnitOfFrameRate._CF_enumeration.addEnumeration(unicode_value='Hz(non-interlaced)', tag='Hznon_interlaced')
 UnitOfFrameRate._InitializeFacetMap(UnitOfFrameRate._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfFrameRate', UnitOfFrameRate)
+_module_typeBindings.UnitOfFrameRate = UnitOfFrameRate
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UnitOfFrequency
 class UnitOfFrequency (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3592,7 +5926,7 @@ class UnitOfFrequency (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A UnitOfMeasure for a frequency."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfFrequency')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10431, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21151, 3)
     _Documentation = 'A UnitOfMeasure for a frequency.'
 UnitOfFrequency._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfFrequency, enum_prefix=None)
 UnitOfFrequency.GHz = UnitOfFrequency._CF_enumeration.addEnumeration(unicode_value='GHz', tag='GHz')
@@ -3601,6 +5935,7 @@ UnitOfFrequency.kHz = UnitOfFrequency._CF_enumeration.addEnumeration(unicode_val
 UnitOfFrequency.MHz = UnitOfFrequency._CF_enumeration.addEnumeration(unicode_value='MHz', tag='MHz')
 UnitOfFrequency._InitializeFacetMap(UnitOfFrequency._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfFrequency', UnitOfFrequency)
+_module_typeBindings.UnitOfFrequency = UnitOfFrequency
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UpdateIndicator
 class UpdateIndicator (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3608,13 +5943,14 @@ class UpdateIndicator (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A Type of Message according to whether the Message contains original data or updates to previously sent data."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UpdateIndicator')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10458, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21178, 3)
     _Documentation = 'A Type of Message according to whether the Message contains original data or updates to previously sent data.'
 UpdateIndicator._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UpdateIndicator, enum_prefix=None)
 UpdateIndicator.OriginalMessage = UpdateIndicator._CF_enumeration.addEnumeration(unicode_value='OriginalMessage', tag='OriginalMessage')
 UpdateIndicator.UpdateMessage = UpdateIndicator._CF_enumeration.addEnumeration(unicode_value='UpdateMessage', tag='UpdateMessage')
 UpdateIndicator._InitializeFacetMap(UpdateIndicator._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UpdateIndicator', UpdateIndicator)
+_module_typeBindings.UpdateIndicator = UpdateIndicator
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UseType
 class UseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3622,7 +5958,7 @@ class UseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mix
     """A Type of a nature of a Service, or a Release, as used by a Consumer."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10475, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21195, 3)
     _Documentation = 'A Type of a nature of a Service, or a Release, as used by a Consumer.'
 UseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UseType, enum_prefix=None)
 UseType.AsPerContract = UseType._CF_enumeration.addEnumeration(unicode_value='AsPerContract', tag='AsPerContract')
@@ -3676,8 +6012,14 @@ UseType.UserDefined = UseType._CF_enumeration.addEnumeration(unicode_value='User
 UseType.UserMakeAvailableLabelProvided = UseType._CF_enumeration.addEnumeration(unicode_value='UserMakeAvailableLabelProvided', tag='UserMakeAvailableLabelProvided')
 UseType.UserMakeAvailableUserProvided = UseType._CF_enumeration.addEnumeration(unicode_value='UserMakeAvailableUserProvided', tag='UserMakeAvailableUserProvided')
 UseType.Webcast = UseType._CF_enumeration.addEnumeration(unicode_value='Webcast', tag='Webcast')
+UseType.Cable = UseType._CF_enumeration.addEnumeration(unicode_value='Cable', tag='Cable')
+UseType.Dub = UseType._CF_enumeration.addEnumeration(unicode_value='Dub', tag='Dub')
+UseType.DubForOnDemandStreaming = UseType._CF_enumeration.addEnumeration(unicode_value='DubForOnDemandStreaming', tag='DubForOnDemandStreaming')
+UseType.Perform = UseType._CF_enumeration.addEnumeration(unicode_value='Perform', tag='Perform')
+UseType.Use = UseType._CF_enumeration.addEnumeration(unicode_value='Use', tag='Use')
 UseType._InitializeFacetMap(UseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UseType', UseType)
+_module_typeBindings.UseType = UseType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}UserInterfaceType
 class UserInterfaceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3685,7 +6027,7 @@ class UserInterfaceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enume
     """A Type of physical interface by which a Consumer uses a Service or Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UserInterfaceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10737, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21482, 3)
     _Documentation = 'A Type of physical interface by which a Consumer uses a Service or Release.'
 UserInterfaceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UserInterfaceType, enum_prefix=None)
 UserInterfaceType.AsPerContract = UserInterfaceType._CF_enumeration.addEnumeration(unicode_value='AsPerContract', tag='AsPerContract')
@@ -3701,8 +6043,10 @@ UserInterfaceType.PortableDevice = UserInterfaceType._CF_enumeration.addEnumerat
 UserInterfaceType.RemoteStorageJukebox = UserInterfaceType._CF_enumeration.addEnumeration(unicode_value='RemoteStorageJukebox', tag='RemoteStorageJukebox')
 UserInterfaceType.Unknown = UserInterfaceType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 UserInterfaceType.UserDefined = UserInterfaceType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
+UserInterfaceType.SmartSpeakers = UserInterfaceType._CF_enumeration.addEnumeration(unicode_value='SmartSpeakers', tag='SmartSpeakers')
 UserInterfaceType._InitializeFacetMap(UserInterfaceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UserInterfaceType', UserInterfaceType)
+_module_typeBindings.UserInterfaceType = UserInterfaceType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}ValueType
 class ValueType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3710,7 +6054,7 @@ class ValueType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of RoyaltyRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ValueType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10809, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21559, 3)
     _Documentation = 'A Type of RoyaltyRate.'
 ValueType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueType, enum_prefix=None)
 ValueType.Calculated = ValueType._CF_enumeration.addEnumeration(unicode_value='Calculated', tag='Calculated')
@@ -3718,6 +6062,7 @@ ValueType.Maximum = ValueType._CF_enumeration.addEnumeration(unicode_value='Maxi
 ValueType.Minimum = ValueType._CF_enumeration.addEnumeration(unicode_value='Minimum', tag='Minimum')
 ValueType._InitializeFacetMap(ValueType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ValueType', ValueType)
+_module_typeBindings.ValueType = ValueType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}VideoCodecType
 class VideoCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3725,7 +6070,7 @@ class VideoCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumerat
     """A Type of VideoCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VideoCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10831, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21581, 3)
     _Documentation = 'A Type of VideoCodec.'
 VideoCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VideoCodecType, enum_prefix=None)
 VideoCodecType.AVC = VideoCodecType._CF_enumeration.addEnumeration(unicode_value='AVC', tag='AVC')
@@ -3742,6 +6087,7 @@ VideoCodecType.UserDefined = VideoCodecType._CF_enumeration.addEnumeration(unico
 VideoCodecType.WMV = VideoCodecType._CF_enumeration.addEnumeration(unicode_value='WMV', tag='WMV')
 VideoCodecType._InitializeFacetMap(VideoCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VideoCodecType', VideoCodecType)
+_module_typeBindings.VideoCodecType = VideoCodecType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}VideoContentType
 class VideoContentType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3749,7 +6095,7 @@ class VideoContentType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumer
     """A Type of Video."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VideoContentType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10898, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21648, 3)
     _Documentation = 'A Type of Video.'
 VideoContentType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VideoContentType, enum_prefix=None)
 VideoContentType.ActedVideo = VideoContentType._CF_enumeration.addEnumeration(unicode_value='ActedVideo', tag='ActedVideo')
@@ -3757,6 +6103,7 @@ VideoContentType.Animation = VideoContentType._CF_enumeration.addEnumeration(uni
 VideoContentType.AnimationAndActedVideo = VideoContentType._CF_enumeration.addEnumeration(unicode_value='AnimationAndActedVideo', tag='AnimationAndActedVideo')
 VideoContentType._InitializeFacetMap(VideoContentType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VideoContentType', VideoContentType)
+_module_typeBindings.VideoContentType = VideoContentType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}VideoDefinitionType
 class VideoDefinitionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3764,13 +6111,15 @@ class VideoDefinitionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enu
     """A Type of resolution (or definition) in which a Video is provided."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VideoDefinitionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10920, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21670, 3)
     _Documentation = 'A Type of resolution (or definition) in which a Video is provided.'
 VideoDefinitionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VideoDefinitionType, enum_prefix=None)
 VideoDefinitionType.HighDefinition = VideoDefinitionType._CF_enumeration.addEnumeration(unicode_value='HighDefinition', tag='HighDefinition')
 VideoDefinitionType.StandardDefinition = VideoDefinitionType._CF_enumeration.addEnumeration(unicode_value='StandardDefinition', tag='StandardDefinition')
+VideoDefinitionType.UserDefined = VideoDefinitionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 VideoDefinitionType._InitializeFacetMap(VideoDefinitionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VideoDefinitionType', VideoDefinitionType)
+_module_typeBindings.VideoDefinitionType = VideoDefinitionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}VideoType
 class VideoType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3778,7 +6127,7 @@ class VideoType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of Video."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VideoType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 10937, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 21692, 3)
     _Documentation = 'A Type of Video.'
 VideoType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VideoType, enum_prefix=None)
 VideoType.AdvertisementVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='AdvertisementVideo', tag='AdvertisementVideo')
@@ -3828,8 +6177,31 @@ VideoType.Unknown = VideoType._CF_enumeration.addEnumeration(unicode_value='Unkn
 VideoType.UserDefined = VideoType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 VideoType.VideoChapter = VideoType._CF_enumeration.addEnumeration(unicode_value='VideoChapter', tag='VideoChapter')
 VideoType.VideoStem = VideoType._CF_enumeration.addEnumeration(unicode_value='VideoStem', tag='VideoStem')
+VideoType.AdultContent = VideoType._CF_enumeration.addEnumeration(unicode_value='AdultContent', tag='AdultContent')
+VideoType.AdviceMagazine = VideoType._CF_enumeration.addEnumeration(unicode_value='AdviceMagazine', tag='AdviceMagazine')
+VideoType.BalletVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='BalletVideo', tag='BalletVideo')
+VideoType.BlackAndWhiteVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='BlackAndWhiteVideo', tag='BlackAndWhiteVideo')
+VideoType.ChildrensFilm = VideoType._CF_enumeration.addEnumeration(unicode_value='ChildrensFilm', tag='ChildrensFilm')
+VideoType.ColorizedVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='ColorizedVideo', tag='ColorizedVideo')
+VideoType.ColumnVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='ColumnVideo', tag='ColumnVideo')
+VideoType.Fiction = VideoType._CF_enumeration.addEnumeration(unicode_value='Fiction', tag='Fiction')
+VideoType.Magazine = VideoType._CF_enumeration.addEnumeration(unicode_value='Magazine', tag='Magazine')
+VideoType.ReadalongVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='ReadalongVideo', tag='ReadalongVideo')
+VideoType.RealityTvShowVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='RealityTvShowVideo', tag='RealityTvShowVideo')
+VideoType.SerialAudioVisualRecording = VideoType._CF_enumeration.addEnumeration(unicode_value='SerialAudioVisualRecording', tag='SerialAudioVisualRecording')
+VideoType.SilentVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='SilentVideo', tag='SilentVideo')
+VideoType.SketchVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='SketchVideo', tag='SketchVideo')
+VideoType.SoapSitcom = VideoType._CF_enumeration.addEnumeration(unicode_value='SoapSitcom', tag='SoapSitcom')
+VideoType.TvProgram = VideoType._CF_enumeration.addEnumeration(unicode_value='TvProgram', tag='TvProgram')
+VideoType.VideoClip = VideoType._CF_enumeration.addEnumeration(unicode_value='VideoClip', tag='VideoClip')
+VideoType.VideoReport = VideoType._CF_enumeration.addEnumeration(unicode_value='VideoReport', tag='VideoReport')
+VideoType.Drama = VideoType._CF_enumeration.addEnumeration(unicode_value='Drama', tag='Drama')
+VideoType.DramaticoMusicalVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='DramaticoMusicalVideo', tag='DramaticoMusicalVideo')
+VideoType.InteractiveResource = VideoType._CF_enumeration.addEnumeration(unicode_value='InteractiveResource', tag='InteractiveResource')
+VideoType.WebResource = VideoType._CF_enumeration.addEnumeration(unicode_value='WebResource', tag='WebResource')
 VideoType._InitializeFacetMap(VideoType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VideoType', VideoType)
+_module_typeBindings.VideoType = VideoType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}VisualPerceptionType
 class VisualPerceptionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3837,7 +6209,7 @@ class VisualPerceptionType (pyxb.binding.datatypes.string, pyxb.binding.basis.en
     """A Type of MusicalCreation according to how it is experienced in an audio-visual Creation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VisualPerceptionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 11180, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 22045, 3)
     _Documentation = 'A Type of MusicalCreation according to how it is experienced in an audio-visual Creation.'
 VisualPerceptionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VisualPerceptionType, enum_prefix=None)
 VisualPerceptionType.Background = VisualPerceptionType._CF_enumeration.addEnumeration(unicode_value='Background', tag='Background')
@@ -3845,6 +6217,7 @@ VisualPerceptionType.UserDefined = VisualPerceptionType._CF_enumeration.addEnume
 VisualPerceptionType.Visual = VisualPerceptionType._CF_enumeration.addEnumeration(unicode_value='Visual', tag='Visual')
 VisualPerceptionType._InitializeFacetMap(VisualPerceptionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VisualPerceptionType', VisualPerceptionType)
+_module_typeBindings.VisualPerceptionType = VisualPerceptionType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}VocalType
 class VocalType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3852,7 +6225,7 @@ class VocalType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_m
     """A Type of a MusicalCreation according to the occurrence of vocals."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VocalType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 11202, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 22067, 3)
     _Documentation = 'A Type of a MusicalCreation according to the occurrence of vocals.'
 VocalType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VocalType, enum_prefix=None)
 VocalType.Instrumental = VocalType._CF_enumeration.addEnumeration(unicode_value='Instrumental', tag='Instrumental')
@@ -3860,6 +6233,7 @@ VocalType.UserDefined = VocalType._CF_enumeration.addEnumeration(unicode_value='
 VocalType.Vocal = VocalType._CF_enumeration.addEnumeration(unicode_value='Vocal', tag='Vocal')
 VocalType._InitializeFacetMap(VocalType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VocalType', VocalType)
+_module_typeBindings.VocalType = VocalType
 
 # Atomic simple type: {http://ddex.net/xml/avs/avs}WsMessageStatus
 class WsMessageStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -3867,7 +6241,7 @@ class WsMessageStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumera
     """A Status of a WsMessage."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'WsMessageStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 11224, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 22089, 3)
     _Documentation = 'A Status of a WsMessage.'
 WsMessageStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=WsMessageStatus, enum_prefix=None)
 WsMessageStatus.BackendProcessingError = WsMessageStatus._CF_enumeration.addEnumeration(unicode_value='BackendProcessingError', tag='BackendProcessingError')
@@ -3876,1555 +6250,288 @@ WsMessageStatus.ValidMessageQueuedForProcessing = WsMessageStatus._CF_enumeratio
 WsMessageStatus.ValidMessageReceived = WsMessageStatus._CF_enumeration.addEnumeration(unicode_value='ValidMessageReceived', tag='ValidMessageReceived')
 WsMessageStatus._InitializeFacetMap(WsMessageStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'WsMessageStatus', WsMessageStatus)
+_module_typeBindings.WsMessageStatus = WsMessageStatus
 
-# Union simple type: {http://ddex.net/xml/avs/avs}AllTerritoryCode
-# superclasses pyxb.binding.datatypes.anySimpleType
-class AllTerritoryCode (pyxb.binding.basis.STD_union):
-
-    """A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide. It also includes deprecated ISO codes defined in ISO 3166-3."""
-
-    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AllTerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 62, 3)
-    _Documentation = 'A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide. It also includes deprecated ISO codes defined in ISO 3166-3.'
-
-    _MemberTypes = ( IsoTerritoryCode, TisTerritoryCode, DdexTerritoryCode, DeprecatedIsoTerritoryCode, )
-AllTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AllTerritoryCode)
-AllTerritoryCode._CF_pattern = pyxb.binding.facets.CF_pattern()
-AllTerritoryCode.AD = 'AD'                        # originally IsoTerritoryCode.AD
-AllTerritoryCode.AE = 'AE'                        # originally IsoTerritoryCode.AE
-AllTerritoryCode.AF = 'AF'                        # originally IsoTerritoryCode.AF
-AllTerritoryCode.AG = 'AG'                        # originally IsoTerritoryCode.AG
-AllTerritoryCode.AI = 'AI'                        # originally IsoTerritoryCode.AI
-AllTerritoryCode.AL = 'AL'                        # originally IsoTerritoryCode.AL
-AllTerritoryCode.AM = 'AM'                        # originally IsoTerritoryCode.AM
-AllTerritoryCode.AN = 'AN'                        # originally IsoTerritoryCode.AN
-AllTerritoryCode.AO = 'AO'                        # originally IsoTerritoryCode.AO
-AllTerritoryCode.AQ = 'AQ'                        # originally IsoTerritoryCode.AQ
-AllTerritoryCode.AR = 'AR'                        # originally IsoTerritoryCode.AR
-AllTerritoryCode.AS = 'AS'                        # originally IsoTerritoryCode.AS
-AllTerritoryCode.AT = 'AT'                        # originally IsoTerritoryCode.AT
-AllTerritoryCode.AU = 'AU'                        # originally IsoTerritoryCode.AU
-AllTerritoryCode.AW = 'AW'                        # originally IsoTerritoryCode.AW
-AllTerritoryCode.AX = 'AX'                        # originally IsoTerritoryCode.AX
-AllTerritoryCode.AZ = 'AZ'                        # originally IsoTerritoryCode.AZ
-AllTerritoryCode.BA = 'BA'                        # originally IsoTerritoryCode.BA
-AllTerritoryCode.BB = 'BB'                        # originally IsoTerritoryCode.BB
-AllTerritoryCode.BD = 'BD'                        # originally IsoTerritoryCode.BD
-AllTerritoryCode.BE = 'BE'                        # originally IsoTerritoryCode.BE
-AllTerritoryCode.BF = 'BF'                        # originally IsoTerritoryCode.BF
-AllTerritoryCode.BG = 'BG'                        # originally IsoTerritoryCode.BG
-AllTerritoryCode.BH = 'BH'                        # originally IsoTerritoryCode.BH
-AllTerritoryCode.BI = 'BI'                        # originally IsoTerritoryCode.BI
-AllTerritoryCode.BJ = 'BJ'                        # originally IsoTerritoryCode.BJ
-AllTerritoryCode.BL = 'BL'                        # originally IsoTerritoryCode.BL
-AllTerritoryCode.BM = 'BM'                        # originally IsoTerritoryCode.BM
-AllTerritoryCode.BN = 'BN'                        # originally IsoTerritoryCode.BN
-AllTerritoryCode.BO = 'BO'                        # originally IsoTerritoryCode.BO
-AllTerritoryCode.BQ = 'BQ'                        # originally IsoTerritoryCode.BQ
-AllTerritoryCode.BR = 'BR'                        # originally IsoTerritoryCode.BR
-AllTerritoryCode.BS = 'BS'                        # originally IsoTerritoryCode.BS
-AllTerritoryCode.BT = 'BT'                        # originally IsoTerritoryCode.BT
-AllTerritoryCode.BV = 'BV'                        # originally IsoTerritoryCode.BV
-AllTerritoryCode.BW = 'BW'                        # originally IsoTerritoryCode.BW
-AllTerritoryCode.BY = 'BY'                        # originally IsoTerritoryCode.BY
-AllTerritoryCode.BZ = 'BZ'                        # originally IsoTerritoryCode.BZ
-AllTerritoryCode.CA = 'CA'                        # originally IsoTerritoryCode.CA
-AllTerritoryCode.CC = 'CC'                        # originally IsoTerritoryCode.CC
-AllTerritoryCode.CD = 'CD'                        # originally IsoTerritoryCode.CD
-AllTerritoryCode.CF = 'CF'                        # originally IsoTerritoryCode.CF
-AllTerritoryCode.CG = 'CG'                        # originally IsoTerritoryCode.CG
-AllTerritoryCode.CH = 'CH'                        # originally IsoTerritoryCode.CH
-AllTerritoryCode.CI = 'CI'                        # originally IsoTerritoryCode.CI
-AllTerritoryCode.CK = 'CK'                        # originally IsoTerritoryCode.CK
-AllTerritoryCode.CL = 'CL'                        # originally IsoTerritoryCode.CL
-AllTerritoryCode.CM = 'CM'                        # originally IsoTerritoryCode.CM
-AllTerritoryCode.CN = 'CN'                        # originally IsoTerritoryCode.CN
-AllTerritoryCode.CO = 'CO'                        # originally IsoTerritoryCode.CO
-AllTerritoryCode.CR = 'CR'                        # originally IsoTerritoryCode.CR
-AllTerritoryCode.CS = 'CS'                        # originally IsoTerritoryCode.CS
-AllTerritoryCode.CU = 'CU'                        # originally IsoTerritoryCode.CU
-AllTerritoryCode.CV = 'CV'                        # originally IsoTerritoryCode.CV
-AllTerritoryCode.CW = 'CW'                        # originally IsoTerritoryCode.CW
-AllTerritoryCode.CX = 'CX'                        # originally IsoTerritoryCode.CX
-AllTerritoryCode.CY = 'CY'                        # originally IsoTerritoryCode.CY
-AllTerritoryCode.CZ = 'CZ'                        # originally IsoTerritoryCode.CZ
-AllTerritoryCode.DE = 'DE'                        # originally IsoTerritoryCode.DE
-AllTerritoryCode.DJ = 'DJ'                        # originally IsoTerritoryCode.DJ
-AllTerritoryCode.DK = 'DK'                        # originally IsoTerritoryCode.DK
-AllTerritoryCode.DM = 'DM'                        # originally IsoTerritoryCode.DM
-AllTerritoryCode.DO = 'DO'                        # originally IsoTerritoryCode.DO
-AllTerritoryCode.DZ = 'DZ'                        # originally IsoTerritoryCode.DZ
-AllTerritoryCode.EC = 'EC'                        # originally IsoTerritoryCode.EC
-AllTerritoryCode.EE = 'EE'                        # originally IsoTerritoryCode.EE
-AllTerritoryCode.EG = 'EG'                        # originally IsoTerritoryCode.EG
-AllTerritoryCode.EH = 'EH'                        # originally IsoTerritoryCode.EH
-AllTerritoryCode.ER = 'ER'                        # originally IsoTerritoryCode.ER
-AllTerritoryCode.ES = 'ES'                        # originally IsoTerritoryCode.ES
-AllTerritoryCode.ET = 'ET'                        # originally IsoTerritoryCode.ET
-AllTerritoryCode.FI = 'FI'                        # originally IsoTerritoryCode.FI
-AllTerritoryCode.FJ = 'FJ'                        # originally IsoTerritoryCode.FJ
-AllTerritoryCode.FK = 'FK'                        # originally IsoTerritoryCode.FK
-AllTerritoryCode.FM = 'FM'                        # originally IsoTerritoryCode.FM
-AllTerritoryCode.FO = 'FO'                        # originally IsoTerritoryCode.FO
-AllTerritoryCode.FR = 'FR'                        # originally IsoTerritoryCode.FR
-AllTerritoryCode.GA = 'GA'                        # originally IsoTerritoryCode.GA
-AllTerritoryCode.GB = 'GB'                        # originally IsoTerritoryCode.GB
-AllTerritoryCode.GD = 'GD'                        # originally IsoTerritoryCode.GD
-AllTerritoryCode.GE = 'GE'                        # originally IsoTerritoryCode.GE
-AllTerritoryCode.GF = 'GF'                        # originally IsoTerritoryCode.GF
-AllTerritoryCode.GG = 'GG'                        # originally IsoTerritoryCode.GG
-AllTerritoryCode.GH = 'GH'                        # originally IsoTerritoryCode.GH
-AllTerritoryCode.GI = 'GI'                        # originally IsoTerritoryCode.GI
-AllTerritoryCode.GL = 'GL'                        # originally IsoTerritoryCode.GL
-AllTerritoryCode.GM = 'GM'                        # originally IsoTerritoryCode.GM
-AllTerritoryCode.GN = 'GN'                        # originally IsoTerritoryCode.GN
-AllTerritoryCode.GP = 'GP'                        # originally IsoTerritoryCode.GP
-AllTerritoryCode.GQ = 'GQ'                        # originally IsoTerritoryCode.GQ
-AllTerritoryCode.GR = 'GR'                        # originally IsoTerritoryCode.GR
-AllTerritoryCode.GS = 'GS'                        # originally IsoTerritoryCode.GS
-AllTerritoryCode.GT = 'GT'                        # originally IsoTerritoryCode.GT
-AllTerritoryCode.GU = 'GU'                        # originally IsoTerritoryCode.GU
-AllTerritoryCode.GW = 'GW'                        # originally IsoTerritoryCode.GW
-AllTerritoryCode.GY = 'GY'                        # originally IsoTerritoryCode.GY
-AllTerritoryCode.HK = 'HK'                        # originally IsoTerritoryCode.HK
-AllTerritoryCode.HM = 'HM'                        # originally IsoTerritoryCode.HM
-AllTerritoryCode.HN = 'HN'                        # originally IsoTerritoryCode.HN
-AllTerritoryCode.HR = 'HR'                        # originally IsoTerritoryCode.HR
-AllTerritoryCode.HT = 'HT'                        # originally IsoTerritoryCode.HT
-AllTerritoryCode.HU = 'HU'                        # originally IsoTerritoryCode.HU
-AllTerritoryCode.ID = 'ID'                        # originally IsoTerritoryCode.ID
-AllTerritoryCode.IE = 'IE'                        # originally IsoTerritoryCode.IE
-AllTerritoryCode.IL = 'IL'                        # originally IsoTerritoryCode.IL
-AllTerritoryCode.IM = 'IM'                        # originally IsoTerritoryCode.IM
-AllTerritoryCode.IN = 'IN'                        # originally IsoTerritoryCode.IN
-AllTerritoryCode.IO = 'IO'                        # originally IsoTerritoryCode.IO
-AllTerritoryCode.IQ = 'IQ'                        # originally IsoTerritoryCode.IQ
-AllTerritoryCode.IR = 'IR'                        # originally IsoTerritoryCode.IR
-AllTerritoryCode.IS = 'IS'                        # originally IsoTerritoryCode.IS
-AllTerritoryCode.IT = 'IT'                        # originally IsoTerritoryCode.IT
-AllTerritoryCode.JE = 'JE'                        # originally IsoTerritoryCode.JE
-AllTerritoryCode.JM = 'JM'                        # originally IsoTerritoryCode.JM
-AllTerritoryCode.JO = 'JO'                        # originally IsoTerritoryCode.JO
-AllTerritoryCode.JP = 'JP'                        # originally IsoTerritoryCode.JP
-AllTerritoryCode.KE = 'KE'                        # originally IsoTerritoryCode.KE
-AllTerritoryCode.KG = 'KG'                        # originally IsoTerritoryCode.KG
-AllTerritoryCode.KH = 'KH'                        # originally IsoTerritoryCode.KH
-AllTerritoryCode.KI = 'KI'                        # originally IsoTerritoryCode.KI
-AllTerritoryCode.KM = 'KM'                        # originally IsoTerritoryCode.KM
-AllTerritoryCode.KN = 'KN'                        # originally IsoTerritoryCode.KN
-AllTerritoryCode.KP = 'KP'                        # originally IsoTerritoryCode.KP
-AllTerritoryCode.KR = 'KR'                        # originally IsoTerritoryCode.KR
-AllTerritoryCode.KW = 'KW'                        # originally IsoTerritoryCode.KW
-AllTerritoryCode.KY = 'KY'                        # originally IsoTerritoryCode.KY
-AllTerritoryCode.KZ = 'KZ'                        # originally IsoTerritoryCode.KZ
-AllTerritoryCode.LA = 'LA'                        # originally IsoTerritoryCode.LA
-AllTerritoryCode.LB = 'LB'                        # originally IsoTerritoryCode.LB
-AllTerritoryCode.LC = 'LC'                        # originally IsoTerritoryCode.LC
-AllTerritoryCode.LI = 'LI'                        # originally IsoTerritoryCode.LI
-AllTerritoryCode.LK = 'LK'                        # originally IsoTerritoryCode.LK
-AllTerritoryCode.LR = 'LR'                        # originally IsoTerritoryCode.LR
-AllTerritoryCode.LS = 'LS'                        # originally IsoTerritoryCode.LS
-AllTerritoryCode.LT = 'LT'                        # originally IsoTerritoryCode.LT
-AllTerritoryCode.LU = 'LU'                        # originally IsoTerritoryCode.LU
-AllTerritoryCode.LV = 'LV'                        # originally IsoTerritoryCode.LV
-AllTerritoryCode.LY = 'LY'                        # originally IsoTerritoryCode.LY
-AllTerritoryCode.MA = 'MA'                        # originally IsoTerritoryCode.MA
-AllTerritoryCode.MC = 'MC'                        # originally IsoTerritoryCode.MC
-AllTerritoryCode.MD = 'MD'                        # originally IsoTerritoryCode.MD
-AllTerritoryCode.ME = 'ME'                        # originally IsoTerritoryCode.ME
-AllTerritoryCode.MF = 'MF'                        # originally IsoTerritoryCode.MF
-AllTerritoryCode.MG = 'MG'                        # originally IsoTerritoryCode.MG
-AllTerritoryCode.MH = 'MH'                        # originally IsoTerritoryCode.MH
-AllTerritoryCode.MK = 'MK'                        # originally IsoTerritoryCode.MK
-AllTerritoryCode.ML = 'ML'                        # originally IsoTerritoryCode.ML
-AllTerritoryCode.MM = 'MM'                        # originally IsoTerritoryCode.MM
-AllTerritoryCode.MN = 'MN'                        # originally IsoTerritoryCode.MN
-AllTerritoryCode.MO = 'MO'                        # originally IsoTerritoryCode.MO
-AllTerritoryCode.MP = 'MP'                        # originally IsoTerritoryCode.MP
-AllTerritoryCode.MQ = 'MQ'                        # originally IsoTerritoryCode.MQ
-AllTerritoryCode.MR = 'MR'                        # originally IsoTerritoryCode.MR
-AllTerritoryCode.MS = 'MS'                        # originally IsoTerritoryCode.MS
-AllTerritoryCode.MT = 'MT'                        # originally IsoTerritoryCode.MT
-AllTerritoryCode.MU = 'MU'                        # originally IsoTerritoryCode.MU
-AllTerritoryCode.MV = 'MV'                        # originally IsoTerritoryCode.MV
-AllTerritoryCode.MW = 'MW'                        # originally IsoTerritoryCode.MW
-AllTerritoryCode.MX = 'MX'                        # originally IsoTerritoryCode.MX
-AllTerritoryCode.MY = 'MY'                        # originally IsoTerritoryCode.MY
-AllTerritoryCode.MZ = 'MZ'                        # originally IsoTerritoryCode.MZ
-AllTerritoryCode.NA = 'NA'                        # originally IsoTerritoryCode.NA
-AllTerritoryCode.NC = 'NC'                        # originally IsoTerritoryCode.NC
-AllTerritoryCode.NE = 'NE'                        # originally IsoTerritoryCode.NE
-AllTerritoryCode.NF = 'NF'                        # originally IsoTerritoryCode.NF
-AllTerritoryCode.NG = 'NG'                        # originally IsoTerritoryCode.NG
-AllTerritoryCode.NI = 'NI'                        # originally IsoTerritoryCode.NI
-AllTerritoryCode.NL = 'NL'                        # originally IsoTerritoryCode.NL
-AllTerritoryCode.NO = 'NO'                        # originally IsoTerritoryCode.NO
-AllTerritoryCode.NP = 'NP'                        # originally IsoTerritoryCode.NP
-AllTerritoryCode.NR = 'NR'                        # originally IsoTerritoryCode.NR
-AllTerritoryCode.NU = 'NU'                        # originally IsoTerritoryCode.NU
-AllTerritoryCode.NZ = 'NZ'                        # originally IsoTerritoryCode.NZ
-AllTerritoryCode.OM = 'OM'                        # originally IsoTerritoryCode.OM
-AllTerritoryCode.PA = 'PA'                        # originally IsoTerritoryCode.PA
-AllTerritoryCode.PE = 'PE'                        # originally IsoTerritoryCode.PE
-AllTerritoryCode.PF = 'PF'                        # originally IsoTerritoryCode.PF
-AllTerritoryCode.PG = 'PG'                        # originally IsoTerritoryCode.PG
-AllTerritoryCode.PH = 'PH'                        # originally IsoTerritoryCode.PH
-AllTerritoryCode.PK = 'PK'                        # originally IsoTerritoryCode.PK
-AllTerritoryCode.PL = 'PL'                        # originally IsoTerritoryCode.PL
-AllTerritoryCode.PM = 'PM'                        # originally IsoTerritoryCode.PM
-AllTerritoryCode.PN = 'PN'                        # originally IsoTerritoryCode.PN
-AllTerritoryCode.PR = 'PR'                        # originally IsoTerritoryCode.PR
-AllTerritoryCode.PS = 'PS'                        # originally IsoTerritoryCode.PS
-AllTerritoryCode.PT = 'PT'                        # originally IsoTerritoryCode.PT
-AllTerritoryCode.PW = 'PW'                        # originally IsoTerritoryCode.PW
-AllTerritoryCode.PY = 'PY'                        # originally IsoTerritoryCode.PY
-AllTerritoryCode.QA = 'QA'                        # originally IsoTerritoryCode.QA
-AllTerritoryCode.RE = 'RE'                        # originally IsoTerritoryCode.RE
-AllTerritoryCode.RO = 'RO'                        # originally IsoTerritoryCode.RO
-AllTerritoryCode.RS = 'RS'                        # originally IsoTerritoryCode.RS
-AllTerritoryCode.RU = 'RU'                        # originally IsoTerritoryCode.RU
-AllTerritoryCode.RW = 'RW'                        # originally IsoTerritoryCode.RW
-AllTerritoryCode.SA = 'SA'                        # originally IsoTerritoryCode.SA
-AllTerritoryCode.SB = 'SB'                        # originally IsoTerritoryCode.SB
-AllTerritoryCode.SC = 'SC'                        # originally IsoTerritoryCode.SC
-AllTerritoryCode.SD = 'SD'                        # originally IsoTerritoryCode.SD
-AllTerritoryCode.SE = 'SE'                        # originally IsoTerritoryCode.SE
-AllTerritoryCode.SG = 'SG'                        # originally IsoTerritoryCode.SG
-AllTerritoryCode.SH = 'SH'                        # originally IsoTerritoryCode.SH
-AllTerritoryCode.SI = 'SI'                        # originally IsoTerritoryCode.SI
-AllTerritoryCode.SJ = 'SJ'                        # originally IsoTerritoryCode.SJ
-AllTerritoryCode.SK = 'SK'                        # originally IsoTerritoryCode.SK
-AllTerritoryCode.SL = 'SL'                        # originally IsoTerritoryCode.SL
-AllTerritoryCode.SM = 'SM'                        # originally IsoTerritoryCode.SM
-AllTerritoryCode.SN = 'SN'                        # originally IsoTerritoryCode.SN
-AllTerritoryCode.SO = 'SO'                        # originally IsoTerritoryCode.SO
-AllTerritoryCode.SR = 'SR'                        # originally IsoTerritoryCode.SR
-AllTerritoryCode.SS = 'SS'                        # originally IsoTerritoryCode.SS
-AllTerritoryCode.ST = 'ST'                        # originally IsoTerritoryCode.ST
-AllTerritoryCode.SV = 'SV'                        # originally IsoTerritoryCode.SV
-AllTerritoryCode.SX = 'SX'                        # originally IsoTerritoryCode.SX
-AllTerritoryCode.SY = 'SY'                        # originally IsoTerritoryCode.SY
-AllTerritoryCode.SZ = 'SZ'                        # originally IsoTerritoryCode.SZ
-AllTerritoryCode.TC = 'TC'                        # originally IsoTerritoryCode.TC
-AllTerritoryCode.TD = 'TD'                        # originally IsoTerritoryCode.TD
-AllTerritoryCode.TF = 'TF'                        # originally IsoTerritoryCode.TF
-AllTerritoryCode.TG = 'TG'                        # originally IsoTerritoryCode.TG
-AllTerritoryCode.TH = 'TH'                        # originally IsoTerritoryCode.TH
-AllTerritoryCode.TJ = 'TJ'                        # originally IsoTerritoryCode.TJ
-AllTerritoryCode.TK = 'TK'                        # originally IsoTerritoryCode.TK
-AllTerritoryCode.TL = 'TL'                        # originally IsoTerritoryCode.TL
-AllTerritoryCode.TM = 'TM'                        # originally IsoTerritoryCode.TM
-AllTerritoryCode.TN = 'TN'                        # originally IsoTerritoryCode.TN
-AllTerritoryCode.TO = 'TO'                        # originally IsoTerritoryCode.TO
-AllTerritoryCode.TR = 'TR'                        # originally IsoTerritoryCode.TR
-AllTerritoryCode.TT = 'TT'                        # originally IsoTerritoryCode.TT
-AllTerritoryCode.TV = 'TV'                        # originally IsoTerritoryCode.TV
-AllTerritoryCode.TW = 'TW'                        # originally IsoTerritoryCode.TW
-AllTerritoryCode.TZ = 'TZ'                        # originally IsoTerritoryCode.TZ
-AllTerritoryCode.UA = 'UA'                        # originally IsoTerritoryCode.UA
-AllTerritoryCode.UG = 'UG'                        # originally IsoTerritoryCode.UG
-AllTerritoryCode.UM = 'UM'                        # originally IsoTerritoryCode.UM
-AllTerritoryCode.US = 'US'                        # originally IsoTerritoryCode.US
-AllTerritoryCode.UY = 'UY'                        # originally IsoTerritoryCode.UY
-AllTerritoryCode.UZ = 'UZ'                        # originally IsoTerritoryCode.UZ
-AllTerritoryCode.VA = 'VA'                        # originally IsoTerritoryCode.VA
-AllTerritoryCode.VC = 'VC'                        # originally IsoTerritoryCode.VC
-AllTerritoryCode.VE = 'VE'                        # originally IsoTerritoryCode.VE
-AllTerritoryCode.VG = 'VG'                        # originally IsoTerritoryCode.VG
-AllTerritoryCode.VI = 'VI'                        # originally IsoTerritoryCode.VI
-AllTerritoryCode.VN = 'VN'                        # originally IsoTerritoryCode.VN
-AllTerritoryCode.VU = 'VU'                        # originally IsoTerritoryCode.VU
-AllTerritoryCode.WF = 'WF'                        # originally IsoTerritoryCode.WF
-AllTerritoryCode.WS = 'WS'                        # originally IsoTerritoryCode.WS
-AllTerritoryCode.YE = 'YE'                        # originally IsoTerritoryCode.YE
-AllTerritoryCode.YT = 'YT'                        # originally IsoTerritoryCode.YT
-AllTerritoryCode.ZA = 'ZA'                        # originally IsoTerritoryCode.ZA
-AllTerritoryCode.ZM = 'ZM'                        # originally IsoTerritoryCode.ZM
-AllTerritoryCode.ZW = 'ZW'                        # originally IsoTerritoryCode.ZW
-AllTerritoryCode.n4 = '4'                         # originally TisTerritoryCode.n4
-AllTerritoryCode.n8 = '8'                         # originally TisTerritoryCode.n8
-AllTerritoryCode.n12 = '12'                       # originally TisTerritoryCode.n12
-AllTerritoryCode.n20 = '20'                       # originally TisTerritoryCode.n20
-AllTerritoryCode.n24 = '24'                       # originally TisTerritoryCode.n24
-AllTerritoryCode.n28 = '28'                       # originally TisTerritoryCode.n28
-AllTerritoryCode.n31 = '31'                       # originally TisTerritoryCode.n31
-AllTerritoryCode.n32 = '32'                       # originally TisTerritoryCode.n32
-AllTerritoryCode.n36 = '36'                       # originally TisTerritoryCode.n36
-AllTerritoryCode.n40 = '40'                       # originally TisTerritoryCode.n40
-AllTerritoryCode.n44 = '44'                       # originally TisTerritoryCode.n44
-AllTerritoryCode.n48 = '48'                       # originally TisTerritoryCode.n48
-AllTerritoryCode.n50 = '50'                       # originally TisTerritoryCode.n50
-AllTerritoryCode.n51 = '51'                       # originally TisTerritoryCode.n51
-AllTerritoryCode.n52 = '52'                       # originally TisTerritoryCode.n52
-AllTerritoryCode.n56 = '56'                       # originally TisTerritoryCode.n56
-AllTerritoryCode.n64 = '64'                       # originally TisTerritoryCode.n64
-AllTerritoryCode.n68 = '68'                       # originally TisTerritoryCode.n68
-AllTerritoryCode.n70 = '70'                       # originally TisTerritoryCode.n70
-AllTerritoryCode.n72 = '72'                       # originally TisTerritoryCode.n72
-AllTerritoryCode.n76 = '76'                       # originally TisTerritoryCode.n76
-AllTerritoryCode.n84 = '84'                       # originally TisTerritoryCode.n84
-AllTerritoryCode.n90 = '90'                       # originally TisTerritoryCode.n90
-AllTerritoryCode.n96 = '96'                       # originally TisTerritoryCode.n96
-AllTerritoryCode.n100 = '100'                     # originally TisTerritoryCode.n100
-AllTerritoryCode.n104 = '104'                     # originally TisTerritoryCode.n104
-AllTerritoryCode.n108 = '108'                     # originally TisTerritoryCode.n108
-AllTerritoryCode.n112 = '112'                     # originally TisTerritoryCode.n112
-AllTerritoryCode.n116 = '116'                     # originally TisTerritoryCode.n116
-AllTerritoryCode.n120 = '120'                     # originally TisTerritoryCode.n120
-AllTerritoryCode.n124 = '124'                     # originally TisTerritoryCode.n124
-AllTerritoryCode.n132 = '132'                     # originally TisTerritoryCode.n132
-AllTerritoryCode.n140 = '140'                     # originally TisTerritoryCode.n140
-AllTerritoryCode.n144 = '144'                     # originally TisTerritoryCode.n144
-AllTerritoryCode.n148 = '148'                     # originally TisTerritoryCode.n148
-AllTerritoryCode.n152 = '152'                     # originally TisTerritoryCode.n152
-AllTerritoryCode.n156 = '156'                     # originally TisTerritoryCode.n156
-AllTerritoryCode.n158 = '158'                     # originally TisTerritoryCode.n158
-AllTerritoryCode.n170 = '170'                     # originally TisTerritoryCode.n170
-AllTerritoryCode.n174 = '174'                     # originally TisTerritoryCode.n174
-AllTerritoryCode.n178 = '178'                     # originally TisTerritoryCode.n178
-AllTerritoryCode.n180 = '180'                     # originally TisTerritoryCode.n180
-AllTerritoryCode.n188 = '188'                     # originally TisTerritoryCode.n188
-AllTerritoryCode.n191 = '191'                     # originally TisTerritoryCode.n191
-AllTerritoryCode.n192 = '192'                     # originally TisTerritoryCode.n192
-AllTerritoryCode.n196 = '196'                     # originally TisTerritoryCode.n196
-AllTerritoryCode.n200 = '200'                     # originally TisTerritoryCode.n200
-AllTerritoryCode.n203 = '203'                     # originally TisTerritoryCode.n203
-AllTerritoryCode.n204 = '204'                     # originally TisTerritoryCode.n204
-AllTerritoryCode.n208 = '208'                     # originally TisTerritoryCode.n208
-AllTerritoryCode.n212 = '212'                     # originally TisTerritoryCode.n212
-AllTerritoryCode.n214 = '214'                     # originally TisTerritoryCode.n214
-AllTerritoryCode.n218 = '218'                     # originally TisTerritoryCode.n218
-AllTerritoryCode.n222 = '222'                     # originally TisTerritoryCode.n222
-AllTerritoryCode.n226 = '226'                     # originally TisTerritoryCode.n226
-AllTerritoryCode.n230 = '230'                     # originally TisTerritoryCode.n230
-AllTerritoryCode.n231 = '231'                     # originally TisTerritoryCode.n231
-AllTerritoryCode.n232 = '232'                     # originally TisTerritoryCode.n232
-AllTerritoryCode.n233 = '233'                     # originally TisTerritoryCode.n233
-AllTerritoryCode.n242 = '242'                     # originally TisTerritoryCode.n242
-AllTerritoryCode.n246 = '246'                     # originally TisTerritoryCode.n246
-AllTerritoryCode.n250 = '250'                     # originally TisTerritoryCode.n250
-AllTerritoryCode.n258 = '258'                     # originally TisTerritoryCode.n258
-AllTerritoryCode.n262 = '262'                     # originally TisTerritoryCode.n262
-AllTerritoryCode.n266 = '266'                     # originally TisTerritoryCode.n266
-AllTerritoryCode.n268 = '268'                     # originally TisTerritoryCode.n268
-AllTerritoryCode.n270 = '270'                     # originally TisTerritoryCode.n270
-AllTerritoryCode.n276 = '276'                     # originally TisTerritoryCode.n276
-AllTerritoryCode.n278 = '278'                     # originally TisTerritoryCode.n278
-AllTerritoryCode.n280 = '280'                     # originally TisTerritoryCode.n280
-AllTerritoryCode.n288 = '288'                     # originally TisTerritoryCode.n288
-AllTerritoryCode.n296 = '296'                     # originally TisTerritoryCode.n296
-AllTerritoryCode.n300 = '300'                     # originally TisTerritoryCode.n300
-AllTerritoryCode.n308 = '308'                     # originally TisTerritoryCode.n308
-AllTerritoryCode.n320 = '320'                     # originally TisTerritoryCode.n320
-AllTerritoryCode.n324 = '324'                     # originally TisTerritoryCode.n324
-AllTerritoryCode.n328 = '328'                     # originally TisTerritoryCode.n328
-AllTerritoryCode.n332 = '332'                     # originally TisTerritoryCode.n332
-AllTerritoryCode.n336 = '336'                     # originally TisTerritoryCode.n336
-AllTerritoryCode.n340 = '340'                     # originally TisTerritoryCode.n340
-AllTerritoryCode.n344 = '344'                     # originally TisTerritoryCode.n344
-AllTerritoryCode.n348 = '348'                     # originally TisTerritoryCode.n348
-AllTerritoryCode.n352 = '352'                     # originally TisTerritoryCode.n352
-AllTerritoryCode.n356 = '356'                     # originally TisTerritoryCode.n356
-AllTerritoryCode.n360 = '360'                     # originally TisTerritoryCode.n360
-AllTerritoryCode.n364 = '364'                     # originally TisTerritoryCode.n364
-AllTerritoryCode.n368 = '368'                     # originally TisTerritoryCode.n368
-AllTerritoryCode.n372 = '372'                     # originally TisTerritoryCode.n372
-AllTerritoryCode.n376 = '376'                     # originally TisTerritoryCode.n376
-AllTerritoryCode.n380 = '380'                     # originally TisTerritoryCode.n380
-AllTerritoryCode.n384 = '384'                     # originally TisTerritoryCode.n384
-AllTerritoryCode.n388 = '388'                     # originally TisTerritoryCode.n388
-AllTerritoryCode.n392 = '392'                     # originally TisTerritoryCode.n392
-AllTerritoryCode.n398 = '398'                     # originally TisTerritoryCode.n398
-AllTerritoryCode.n400 = '400'                     # originally TisTerritoryCode.n400
-AllTerritoryCode.n404 = '404'                     # originally TisTerritoryCode.n404
-AllTerritoryCode.n408 = '408'                     # originally TisTerritoryCode.n408
-AllTerritoryCode.n410 = '410'                     # originally TisTerritoryCode.n410
-AllTerritoryCode.n414 = '414'                     # originally TisTerritoryCode.n414
-AllTerritoryCode.n417 = '417'                     # originally TisTerritoryCode.n417
-AllTerritoryCode.n418 = '418'                     # originally TisTerritoryCode.n418
-AllTerritoryCode.n422 = '422'                     # originally TisTerritoryCode.n422
-AllTerritoryCode.n426 = '426'                     # originally TisTerritoryCode.n426
-AllTerritoryCode.n428 = '428'                     # originally TisTerritoryCode.n428
-AllTerritoryCode.n430 = '430'                     # originally TisTerritoryCode.n430
-AllTerritoryCode.n434 = '434'                     # originally TisTerritoryCode.n434
-AllTerritoryCode.n438 = '438'                     # originally TisTerritoryCode.n438
-AllTerritoryCode.n440 = '440'                     # originally TisTerritoryCode.n440
-AllTerritoryCode.n442 = '442'                     # originally TisTerritoryCode.n442
-AllTerritoryCode.n450 = '450'                     # originally TisTerritoryCode.n450
-AllTerritoryCode.n454 = '454'                     # originally TisTerritoryCode.n454
-AllTerritoryCode.n458 = '458'                     # originally TisTerritoryCode.n458
-AllTerritoryCode.n462 = '462'                     # originally TisTerritoryCode.n462
-AllTerritoryCode.n466 = '466'                     # originally TisTerritoryCode.n466
-AllTerritoryCode.n470 = '470'                     # originally TisTerritoryCode.n470
-AllTerritoryCode.n478 = '478'                     # originally TisTerritoryCode.n478
-AllTerritoryCode.n480 = '480'                     # originally TisTerritoryCode.n480
-AllTerritoryCode.n484 = '484'                     # originally TisTerritoryCode.n484
-AllTerritoryCode.n492 = '492'                     # originally TisTerritoryCode.n492
-AllTerritoryCode.n496 = '496'                     # originally TisTerritoryCode.n496
-AllTerritoryCode.n498 = '498'                     # originally TisTerritoryCode.n498
-AllTerritoryCode.n499 = '499'                     # originally TisTerritoryCode.n499
-AllTerritoryCode.n504 = '504'                     # originally TisTerritoryCode.n504
-AllTerritoryCode.n508 = '508'                     # originally TisTerritoryCode.n508
-AllTerritoryCode.n512 = '512'                     # originally TisTerritoryCode.n512
-AllTerritoryCode.n516 = '516'                     # originally TisTerritoryCode.n516
-AllTerritoryCode.n520 = '520'                     # originally TisTerritoryCode.n520
-AllTerritoryCode.n524 = '524'                     # originally TisTerritoryCode.n524
-AllTerritoryCode.n528 = '528'                     # originally TisTerritoryCode.n528
-AllTerritoryCode.n540 = '540'                     # originally TisTerritoryCode.n540
-AllTerritoryCode.n548 = '548'                     # originally TisTerritoryCode.n548
-AllTerritoryCode.n554 = '554'                     # originally TisTerritoryCode.n554
-AllTerritoryCode.n558 = '558'                     # originally TisTerritoryCode.n558
-AllTerritoryCode.n562 = '562'                     # originally TisTerritoryCode.n562
-AllTerritoryCode.n566 = '566'                     # originally TisTerritoryCode.n566
-AllTerritoryCode.n578 = '578'                     # originally TisTerritoryCode.n578
-AllTerritoryCode.n583 = '583'                     # originally TisTerritoryCode.n583
-AllTerritoryCode.n584 = '584'                     # originally TisTerritoryCode.n584
-AllTerritoryCode.n585 = '585'                     # originally TisTerritoryCode.n585
-AllTerritoryCode.n586 = '586'                     # originally TisTerritoryCode.n586
-AllTerritoryCode.n591 = '591'                     # originally TisTerritoryCode.n591
-AllTerritoryCode.n598 = '598'                     # originally TisTerritoryCode.n598
-AllTerritoryCode.n600 = '600'                     # originally TisTerritoryCode.n600
-AllTerritoryCode.n604 = '604'                     # originally TisTerritoryCode.n604
-AllTerritoryCode.n608 = '608'                     # originally TisTerritoryCode.n608
-AllTerritoryCode.n616 = '616'                     # originally TisTerritoryCode.n616
-AllTerritoryCode.n620 = '620'                     # originally TisTerritoryCode.n620
-AllTerritoryCode.n624 = '624'                     # originally TisTerritoryCode.n624
-AllTerritoryCode.n626 = '626'                     # originally TisTerritoryCode.n626
-AllTerritoryCode.n630 = '630'                     # originally TisTerritoryCode.n630
-AllTerritoryCode.n634 = '634'                     # originally TisTerritoryCode.n634
-AllTerritoryCode.n642 = '642'                     # originally TisTerritoryCode.n642
-AllTerritoryCode.n643 = '643'                     # originally TisTerritoryCode.n643
-AllTerritoryCode.n646 = '646'                     # originally TisTerritoryCode.n646
-AllTerritoryCode.n659 = '659'                     # originally TisTerritoryCode.n659
-AllTerritoryCode.n662 = '662'                     # originally TisTerritoryCode.n662
-AllTerritoryCode.n670 = '670'                     # originally TisTerritoryCode.n670
-AllTerritoryCode.n674 = '674'                     # originally TisTerritoryCode.n674
-AllTerritoryCode.n678 = '678'                     # originally TisTerritoryCode.n678
-AllTerritoryCode.n682 = '682'                     # originally TisTerritoryCode.n682
-AllTerritoryCode.n686 = '686'                     # originally TisTerritoryCode.n686
-AllTerritoryCode.n688 = '688'                     # originally TisTerritoryCode.n688
-AllTerritoryCode.n690 = '690'                     # originally TisTerritoryCode.n690
-AllTerritoryCode.n694 = '694'                     # originally TisTerritoryCode.n694
-AllTerritoryCode.n702 = '702'                     # originally TisTerritoryCode.n702
-AllTerritoryCode.n703 = '703'                     # originally TisTerritoryCode.n703
-AllTerritoryCode.n704 = '704'                     # originally TisTerritoryCode.n704
-AllTerritoryCode.n705 = '705'                     # originally TisTerritoryCode.n705
-AllTerritoryCode.n706 = '706'                     # originally TisTerritoryCode.n706
-AllTerritoryCode.n710 = '710'                     # originally TisTerritoryCode.n710
-AllTerritoryCode.n716 = '716'                     # originally TisTerritoryCode.n716
-AllTerritoryCode.n720 = '720'                     # originally TisTerritoryCode.n720
-AllTerritoryCode.n724 = '724'                     # originally TisTerritoryCode.n724
-AllTerritoryCode.n728 = '728'                     # originally TisTerritoryCode.n728
-AllTerritoryCode.n729 = '729'                     # originally TisTerritoryCode.n729
-AllTerritoryCode.n732 = '732'                     # originally TisTerritoryCode.n732
-AllTerritoryCode.n736 = '736'                     # originally TisTerritoryCode.n736
-AllTerritoryCode.n740 = '740'                     # originally TisTerritoryCode.n740
-AllTerritoryCode.n748 = '748'                     # originally TisTerritoryCode.n748
-AllTerritoryCode.n752 = '752'                     # originally TisTerritoryCode.n752
-AllTerritoryCode.n756 = '756'                     # originally TisTerritoryCode.n756
-AllTerritoryCode.n760 = '760'                     # originally TisTerritoryCode.n760
-AllTerritoryCode.n762 = '762'                     # originally TisTerritoryCode.n762
-AllTerritoryCode.n764 = '764'                     # originally TisTerritoryCode.n764
-AllTerritoryCode.n768 = '768'                     # originally TisTerritoryCode.n768
-AllTerritoryCode.n776 = '776'                     # originally TisTerritoryCode.n776
-AllTerritoryCode.n780 = '780'                     # originally TisTerritoryCode.n780
-AllTerritoryCode.n784 = '784'                     # originally TisTerritoryCode.n784
-AllTerritoryCode.n788 = '788'                     # originally TisTerritoryCode.n788
-AllTerritoryCode.n792 = '792'                     # originally TisTerritoryCode.n792
-AllTerritoryCode.n795 = '795'                     # originally TisTerritoryCode.n795
-AllTerritoryCode.n798 = '798'                     # originally TisTerritoryCode.n798
-AllTerritoryCode.n800 = '800'                     # originally TisTerritoryCode.n800
-AllTerritoryCode.n804 = '804'                     # originally TisTerritoryCode.n804
-AllTerritoryCode.n807 = '807'                     # originally TisTerritoryCode.n807
-AllTerritoryCode.n810 = '810'                     # originally TisTerritoryCode.n810
-AllTerritoryCode.n818 = '818'                     # originally TisTerritoryCode.n818
-AllTerritoryCode.n826 = '826'                     # originally TisTerritoryCode.n826
-AllTerritoryCode.n834 = '834'                     # originally TisTerritoryCode.n834
-AllTerritoryCode.n840 = '840'                     # originally TisTerritoryCode.n840
-AllTerritoryCode.n854 = '854'                     # originally TisTerritoryCode.n854
-AllTerritoryCode.n858 = '858'                     # originally TisTerritoryCode.n858
-AllTerritoryCode.n860 = '860'                     # originally TisTerritoryCode.n860
-AllTerritoryCode.n862 = '862'                     # originally TisTerritoryCode.n862
-AllTerritoryCode.n882 = '882'                     # originally TisTerritoryCode.n882
-AllTerritoryCode.n886 = '886'                     # originally TisTerritoryCode.n886
-AllTerritoryCode.n887 = '887'                     # originally TisTerritoryCode.n887
-AllTerritoryCode.n890 = '890'                     # originally TisTerritoryCode.n890
-AllTerritoryCode.n891 = '891'                     # originally TisTerritoryCode.n891
-AllTerritoryCode.n894 = '894'                     # originally TisTerritoryCode.n894
-AllTerritoryCode.n2100 = '2100'                   # originally TisTerritoryCode.n2100
-AllTerritoryCode.n2101 = '2101'                   # originally TisTerritoryCode.n2101
-AllTerritoryCode.n2102 = '2102'                   # originally TisTerritoryCode.n2102
-AllTerritoryCode.n2103 = '2103'                   # originally TisTerritoryCode.n2103
-AllTerritoryCode.n2104 = '2104'                   # originally TisTerritoryCode.n2104
-AllTerritoryCode.n2105 = '2105'                   # originally TisTerritoryCode.n2105
-AllTerritoryCode.n2106 = '2106'                   # originally TisTerritoryCode.n2106
-AllTerritoryCode.n2107 = '2107'                   # originally TisTerritoryCode.n2107
-AllTerritoryCode.n2108 = '2108'                   # originally TisTerritoryCode.n2108
-AllTerritoryCode.n2109 = '2109'                   # originally TisTerritoryCode.n2109
-AllTerritoryCode.n2110 = '2110'                   # originally TisTerritoryCode.n2110
-AllTerritoryCode.n2111 = '2111'                   # originally TisTerritoryCode.n2111
-AllTerritoryCode.n2112 = '2112'                   # originally TisTerritoryCode.n2112
-AllTerritoryCode.n2113 = '2113'                   # originally TisTerritoryCode.n2113
-AllTerritoryCode.n2114 = '2114'                   # originally TisTerritoryCode.n2114
-AllTerritoryCode.n2115 = '2115'                   # originally TisTerritoryCode.n2115
-AllTerritoryCode.n2116 = '2116'                   # originally TisTerritoryCode.n2116
-AllTerritoryCode.n2117 = '2117'                   # originally TisTerritoryCode.n2117
-AllTerritoryCode.n2118 = '2118'                   # originally TisTerritoryCode.n2118
-AllTerritoryCode.n2119 = '2119'                   # originally TisTerritoryCode.n2119
-AllTerritoryCode.n2120 = '2120'                   # originally TisTerritoryCode.n2120
-AllTerritoryCode.n2121 = '2121'                   # originally TisTerritoryCode.n2121
-AllTerritoryCode.n2122 = '2122'                   # originally TisTerritoryCode.n2122
-AllTerritoryCode.n2123 = '2123'                   # originally TisTerritoryCode.n2123
-AllTerritoryCode.n2124 = '2124'                   # originally TisTerritoryCode.n2124
-AllTerritoryCode.n2125 = '2125'                   # originally TisTerritoryCode.n2125
-AllTerritoryCode.n2126 = '2126'                   # originally TisTerritoryCode.n2126
-AllTerritoryCode.n2127 = '2127'                   # originally TisTerritoryCode.n2127
-AllTerritoryCode.n2128 = '2128'                   # originally TisTerritoryCode.n2128
-AllTerritoryCode.n2129 = '2129'                   # originally TisTerritoryCode.n2129
-AllTerritoryCode.n2130 = '2130'                   # originally TisTerritoryCode.n2130
-AllTerritoryCode.n2131 = '2131'                   # originally TisTerritoryCode.n2131
-AllTerritoryCode.n2132 = '2132'                   # originally TisTerritoryCode.n2132
-AllTerritoryCode.n2133 = '2133'                   # originally TisTerritoryCode.n2133
-AllTerritoryCode.n2134 = '2134'                   # originally TisTerritoryCode.n2134
-AllTerritoryCode.n2136 = '2136'                   # originally TisTerritoryCode.n2136
-AllTerritoryCode.Worldwide = 'Worldwide'          # originally DdexTerritoryCode.Worldwide
-AllTerritoryCode.AIDJ = 'AIDJ'                    # originally DeprecatedIsoTerritoryCode.AIDJ
-AllTerritoryCode.ANHH = 'ANHH'                    # originally DeprecatedIsoTerritoryCode.ANHH
-AllTerritoryCode.BQAQ = 'BQAQ'                    # originally DeprecatedIsoTerritoryCode.BQAQ
-AllTerritoryCode.BUMM = 'BUMM'                    # originally DeprecatedIsoTerritoryCode.BUMM
-AllTerritoryCode.BYAA = 'BYAA'                    # originally DeprecatedIsoTerritoryCode.BYAA
-AllTerritoryCode.CSHH = 'CSHH'                    # originally DeprecatedIsoTerritoryCode.CSHH
-AllTerritoryCode.CSXX = 'CSXX'                    # originally DeprecatedIsoTerritoryCode.CSXX
-AllTerritoryCode.CTKI = 'CTKI'                    # originally DeprecatedIsoTerritoryCode.CTKI
-AllTerritoryCode.DDDE = 'DDDE'                    # originally DeprecatedIsoTerritoryCode.DDDE
-AllTerritoryCode.DYBJ = 'DYBJ'                    # originally DeprecatedIsoTerritoryCode.DYBJ
-AllTerritoryCode.FQHH = 'FQHH'                    # originally DeprecatedIsoTerritoryCode.FQHH
-AllTerritoryCode.FXFR = 'FXFR'                    # originally DeprecatedIsoTerritoryCode.FXFR
-AllTerritoryCode.GEHH = 'GEHH'                    # originally DeprecatedIsoTerritoryCode.GEHH
-AllTerritoryCode.HVBF = 'HVBF'                    # originally DeprecatedIsoTerritoryCode.HVBF
-AllTerritoryCode.JTUM = 'JTUM'                    # originally DeprecatedIsoTerritoryCode.JTUM
-AllTerritoryCode.MIUM = 'MIUM'                    # originally DeprecatedIsoTerritoryCode.MIUM
-AllTerritoryCode.NHVU = 'NHVU'                    # originally DeprecatedIsoTerritoryCode.NHVU
-AllTerritoryCode.NQAQ = 'NQAQ'                    # originally DeprecatedIsoTerritoryCode.NQAQ
-AllTerritoryCode.NTHH = 'NTHH'                    # originally DeprecatedIsoTerritoryCode.NTHH
-AllTerritoryCode.PCHH = 'PCHH'                    # originally DeprecatedIsoTerritoryCode.PCHH
-AllTerritoryCode.PUUM = 'PUUM'                    # originally DeprecatedIsoTerritoryCode.PUUM
-AllTerritoryCode.PZPA = 'PZPA'                    # originally DeprecatedIsoTerritoryCode.PZPA
-AllTerritoryCode.RHZW = 'RHZW'                    # originally DeprecatedIsoTerritoryCode.RHZW
-AllTerritoryCode.SKIN = 'SKIN'                    # originally DeprecatedIsoTerritoryCode.SKIN
-AllTerritoryCode.SUHH = 'SUHH'                    # originally DeprecatedIsoTerritoryCode.SUHH
-AllTerritoryCode.TPTL = 'TPTL'                    # originally DeprecatedIsoTerritoryCode.TPTL
-AllTerritoryCode.VDVN = 'VDVN'                    # originally DeprecatedIsoTerritoryCode.VDVN
-AllTerritoryCode.WKUM = 'WKUM'                    # originally DeprecatedIsoTerritoryCode.WKUM
-AllTerritoryCode.YDYE = 'YDYE'                    # originally DeprecatedIsoTerritoryCode.YDYE
-AllTerritoryCode.YUCS = 'YUCS'                    # originally DeprecatedIsoTerritoryCode.YUCS
-AllTerritoryCode.ZRCD = 'ZRCD'                    # originally DeprecatedIsoTerritoryCode.ZRCD
-AllTerritoryCode._InitializeFacetMap(AllTerritoryCode._CF_enumeration,
-   AllTerritoryCode._CF_pattern)
-Namespace.addCategoryObject('typeBinding', 'AllTerritoryCode', AllTerritoryCode)
-
-# Union simple type: {http://ddex.net/xml/avs/avs}CurrencyCode
-# superclasses pyxb.binding.datatypes.anySimpleType
-class CurrencyCode (pyxb.binding.basis.STD_union):
-
-    """A code representing a Currency."""
-
-    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CurrencyCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1498, 3)
-    _Documentation = 'A code representing a Currency.'
-
-    _MemberTypes = ( IsoCurrencyCode, DeprecatedCurrencyCode, )
-CurrencyCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CurrencyCode)
-CurrencyCode._CF_pattern = pyxb.binding.facets.CF_pattern()
-CurrencyCode.AED = 'AED'                          # originally IsoCurrencyCode.AED
-CurrencyCode.AFN = 'AFN'                          # originally IsoCurrencyCode.AFN
-CurrencyCode.ALL = 'ALL'                          # originally IsoCurrencyCode.ALL
-CurrencyCode.AMD = 'AMD'                          # originally IsoCurrencyCode.AMD
-CurrencyCode.ANG = 'ANG'                          # originally IsoCurrencyCode.ANG
-CurrencyCode.AOA = 'AOA'                          # originally IsoCurrencyCode.AOA
-CurrencyCode.ARS = 'ARS'                          # originally IsoCurrencyCode.ARS
-CurrencyCode.AUD = 'AUD'                          # originally IsoCurrencyCode.AUD
-CurrencyCode.AWG = 'AWG'                          # originally IsoCurrencyCode.AWG
-CurrencyCode.AZN = 'AZN'                          # originally IsoCurrencyCode.AZN
-CurrencyCode.BAM = 'BAM'                          # originally IsoCurrencyCode.BAM
-CurrencyCode.BBD = 'BBD'                          # originally IsoCurrencyCode.BBD
-CurrencyCode.BDT = 'BDT'                          # originally IsoCurrencyCode.BDT
-CurrencyCode.BGN = 'BGN'                          # originally IsoCurrencyCode.BGN
-CurrencyCode.BHD = 'BHD'                          # originally IsoCurrencyCode.BHD
-CurrencyCode.BIF = 'BIF'                          # originally IsoCurrencyCode.BIF
-CurrencyCode.BMD = 'BMD'                          # originally IsoCurrencyCode.BMD
-CurrencyCode.BND = 'BND'                          # originally IsoCurrencyCode.BND
-CurrencyCode.BOB = 'BOB'                          # originally IsoCurrencyCode.BOB
-CurrencyCode.BOV = 'BOV'                          # originally IsoCurrencyCode.BOV
-CurrencyCode.BRL = 'BRL'                          # originally IsoCurrencyCode.BRL
-CurrencyCode.BSD = 'BSD'                          # originally IsoCurrencyCode.BSD
-CurrencyCode.BTN = 'BTN'                          # originally IsoCurrencyCode.BTN
-CurrencyCode.BWP = 'BWP'                          # originally IsoCurrencyCode.BWP
-CurrencyCode.BYR = 'BYR'                          # originally IsoCurrencyCode.BYR
-CurrencyCode.BZD = 'BZD'                          # originally IsoCurrencyCode.BZD
-CurrencyCode.CAD = 'CAD'                          # originally IsoCurrencyCode.CAD
-CurrencyCode.CDF = 'CDF'                          # originally IsoCurrencyCode.CDF
-CurrencyCode.CHF = 'CHF'                          # originally IsoCurrencyCode.CHF
-CurrencyCode.CLF = 'CLF'                          # originally IsoCurrencyCode.CLF
-CurrencyCode.CLP = 'CLP'                          # originally IsoCurrencyCode.CLP
-CurrencyCode.CNY = 'CNY'                          # originally IsoCurrencyCode.CNY
-CurrencyCode.COP = 'COP'                          # originally IsoCurrencyCode.COP
-CurrencyCode.COU = 'COU'                          # originally IsoCurrencyCode.COU
-CurrencyCode.CRC = 'CRC'                          # originally IsoCurrencyCode.CRC
-CurrencyCode.CUC = 'CUC'                          # originally IsoCurrencyCode.CUC
-CurrencyCode.CUP = 'CUP'                          # originally IsoCurrencyCode.CUP
-CurrencyCode.CVE = 'CVE'                          # originally IsoCurrencyCode.CVE
-CurrencyCode.CZK = 'CZK'                          # originally IsoCurrencyCode.CZK
-CurrencyCode.DJF = 'DJF'                          # originally IsoCurrencyCode.DJF
-CurrencyCode.DKK = 'DKK'                          # originally IsoCurrencyCode.DKK
-CurrencyCode.DOP = 'DOP'                          # originally IsoCurrencyCode.DOP
-CurrencyCode.DZD = 'DZD'                          # originally IsoCurrencyCode.DZD
-CurrencyCode.EGP = 'EGP'                          # originally IsoCurrencyCode.EGP
-CurrencyCode.ERN = 'ERN'                          # originally IsoCurrencyCode.ERN
-CurrencyCode.ETB = 'ETB'                          # originally IsoCurrencyCode.ETB
-CurrencyCode.EUR = 'EUR'                          # originally IsoCurrencyCode.EUR
-CurrencyCode.FJD = 'FJD'                          # originally IsoCurrencyCode.FJD
-CurrencyCode.FKP = 'FKP'                          # originally IsoCurrencyCode.FKP
-CurrencyCode.GBP = 'GBP'                          # originally IsoCurrencyCode.GBP
-CurrencyCode.GEL = 'GEL'                          # originally IsoCurrencyCode.GEL
-CurrencyCode.GHS = 'GHS'                          # originally IsoCurrencyCode.GHS
-CurrencyCode.GIP = 'GIP'                          # originally IsoCurrencyCode.GIP
-CurrencyCode.GMD = 'GMD'                          # originally IsoCurrencyCode.GMD
-CurrencyCode.GNF = 'GNF'                          # originally IsoCurrencyCode.GNF
-CurrencyCode.GTQ = 'GTQ'                          # originally IsoCurrencyCode.GTQ
-CurrencyCode.GYD = 'GYD'                          # originally IsoCurrencyCode.GYD
-CurrencyCode.HKD = 'HKD'                          # originally IsoCurrencyCode.HKD
-CurrencyCode.HNL = 'HNL'                          # originally IsoCurrencyCode.HNL
-CurrencyCode.HRK = 'HRK'                          # originally IsoCurrencyCode.HRK
-CurrencyCode.HTG = 'HTG'                          # originally IsoCurrencyCode.HTG
-CurrencyCode.HUF = 'HUF'                          # originally IsoCurrencyCode.HUF
-CurrencyCode.IDR = 'IDR'                          # originally IsoCurrencyCode.IDR
-CurrencyCode.ILS = 'ILS'                          # originally IsoCurrencyCode.ILS
-CurrencyCode.INR = 'INR'                          # originally IsoCurrencyCode.INR
-CurrencyCode.IQD = 'IQD'                          # originally IsoCurrencyCode.IQD
-CurrencyCode.IRR = 'IRR'                          # originally IsoCurrencyCode.IRR
-CurrencyCode.ISK = 'ISK'                          # originally IsoCurrencyCode.ISK
-CurrencyCode.JMD = 'JMD'                          # originally IsoCurrencyCode.JMD
-CurrencyCode.JOD = 'JOD'                          # originally IsoCurrencyCode.JOD
-CurrencyCode.JPY = 'JPY'                          # originally IsoCurrencyCode.JPY
-CurrencyCode.KES = 'KES'                          # originally IsoCurrencyCode.KES
-CurrencyCode.KGS = 'KGS'                          # originally IsoCurrencyCode.KGS
-CurrencyCode.KHR = 'KHR'                          # originally IsoCurrencyCode.KHR
-CurrencyCode.KMF = 'KMF'                          # originally IsoCurrencyCode.KMF
-CurrencyCode.KPW = 'KPW'                          # originally IsoCurrencyCode.KPW
-CurrencyCode.KRW = 'KRW'                          # originally IsoCurrencyCode.KRW
-CurrencyCode.KWD = 'KWD'                          # originally IsoCurrencyCode.KWD
-CurrencyCode.KYD = 'KYD'                          # originally IsoCurrencyCode.KYD
-CurrencyCode.KZT = 'KZT'                          # originally IsoCurrencyCode.KZT
-CurrencyCode.LAK = 'LAK'                          # originally IsoCurrencyCode.LAK
-CurrencyCode.LBP = 'LBP'                          # originally IsoCurrencyCode.LBP
-CurrencyCode.LKR = 'LKR'                          # originally IsoCurrencyCode.LKR
-CurrencyCode.LRD = 'LRD'                          # originally IsoCurrencyCode.LRD
-CurrencyCode.LSL = 'LSL'                          # originally IsoCurrencyCode.LSL
-CurrencyCode.LTL = 'LTL'                          # originally IsoCurrencyCode.LTL
-CurrencyCode.LVL = 'LVL'                          # originally IsoCurrencyCode.LVL
-CurrencyCode.LYD = 'LYD'                          # originally IsoCurrencyCode.LYD
-CurrencyCode.MAD = 'MAD'                          # originally IsoCurrencyCode.MAD
-CurrencyCode.MDL = 'MDL'                          # originally IsoCurrencyCode.MDL
-CurrencyCode.MGA = 'MGA'                          # originally IsoCurrencyCode.MGA
-CurrencyCode.MKD = 'MKD'                          # originally IsoCurrencyCode.MKD
-CurrencyCode.MMK = 'MMK'                          # originally IsoCurrencyCode.MMK
-CurrencyCode.MNT = 'MNT'                          # originally IsoCurrencyCode.MNT
-CurrencyCode.MOP = 'MOP'                          # originally IsoCurrencyCode.MOP
-CurrencyCode.MRO = 'MRO'                          # originally IsoCurrencyCode.MRO
-CurrencyCode.MUR = 'MUR'                          # originally IsoCurrencyCode.MUR
-CurrencyCode.MVR = 'MVR'                          # originally IsoCurrencyCode.MVR
-CurrencyCode.MWK = 'MWK'                          # originally IsoCurrencyCode.MWK
-CurrencyCode.MXN = 'MXN'                          # originally IsoCurrencyCode.MXN
-CurrencyCode.MXV = 'MXV'                          # originally IsoCurrencyCode.MXV
-CurrencyCode.MYR = 'MYR'                          # originally IsoCurrencyCode.MYR
-CurrencyCode.MZM = 'MZM'                          # originally IsoCurrencyCode.MZM
-CurrencyCode.NAD = 'NAD'                          # originally IsoCurrencyCode.NAD
-CurrencyCode.NGN = 'NGN'                          # originally IsoCurrencyCode.NGN
-CurrencyCode.NIO = 'NIO'                          # originally IsoCurrencyCode.NIO
-CurrencyCode.NOK = 'NOK'                          # originally IsoCurrencyCode.NOK
-CurrencyCode.NPR = 'NPR'                          # originally IsoCurrencyCode.NPR
-CurrencyCode.NZD = 'NZD'                          # originally IsoCurrencyCode.NZD
-CurrencyCode.OMR = 'OMR'                          # originally IsoCurrencyCode.OMR
-CurrencyCode.PAB = 'PAB'                          # originally IsoCurrencyCode.PAB
-CurrencyCode.PEN = 'PEN'                          # originally IsoCurrencyCode.PEN
-CurrencyCode.PGK = 'PGK'                          # originally IsoCurrencyCode.PGK
-CurrencyCode.PHP = 'PHP'                          # originally IsoCurrencyCode.PHP
-CurrencyCode.PKR = 'PKR'                          # originally IsoCurrencyCode.PKR
-CurrencyCode.PLN = 'PLN'                          # originally IsoCurrencyCode.PLN
-CurrencyCode.PYG = 'PYG'                          # originally IsoCurrencyCode.PYG
-CurrencyCode.QAR = 'QAR'                          # originally IsoCurrencyCode.QAR
-CurrencyCode.RON = 'RON'                          # originally IsoCurrencyCode.RON
-CurrencyCode.RSD = 'RSD'                          # originally IsoCurrencyCode.RSD
-CurrencyCode.RUB = 'RUB'                          # originally IsoCurrencyCode.RUB
-CurrencyCode.RWF = 'RWF'                          # originally IsoCurrencyCode.RWF
-CurrencyCode.SAR = 'SAR'                          # originally IsoCurrencyCode.SAR
-CurrencyCode.SBD = 'SBD'                          # originally IsoCurrencyCode.SBD
-CurrencyCode.SCR = 'SCR'                          # originally IsoCurrencyCode.SCR
-CurrencyCode.SDG = 'SDG'                          # originally IsoCurrencyCode.SDG
-CurrencyCode.SEK = 'SEK'                          # originally IsoCurrencyCode.SEK
-CurrencyCode.SGD = 'SGD'                          # originally IsoCurrencyCode.SGD
-CurrencyCode.SHP = 'SHP'                          # originally IsoCurrencyCode.SHP
-CurrencyCode.SLL = 'SLL'                          # originally IsoCurrencyCode.SLL
-CurrencyCode.SOS = 'SOS'                          # originally IsoCurrencyCode.SOS
-CurrencyCode.SRD = 'SRD'                          # originally IsoCurrencyCode.SRD
-CurrencyCode.STD = 'STD'                          # originally IsoCurrencyCode.STD
-CurrencyCode.SVC = 'SVC'                          # originally IsoCurrencyCode.SVC
-CurrencyCode.SYP = 'SYP'                          # originally IsoCurrencyCode.SYP
-CurrencyCode.SZL = 'SZL'                          # originally IsoCurrencyCode.SZL
-CurrencyCode.THB = 'THB'                          # originally IsoCurrencyCode.THB
-CurrencyCode.TJS = 'TJS'                          # originally IsoCurrencyCode.TJS
-CurrencyCode.TMT = 'TMT'                          # originally IsoCurrencyCode.TMT
-CurrencyCode.TND = 'TND'                          # originally IsoCurrencyCode.TND
-CurrencyCode.TOP = 'TOP'                          # originally IsoCurrencyCode.TOP
-CurrencyCode.TRY = 'TRY'                          # originally IsoCurrencyCode.TRY
-CurrencyCode.TTD = 'TTD'                          # originally IsoCurrencyCode.TTD
-CurrencyCode.TWD = 'TWD'                          # originally IsoCurrencyCode.TWD
-CurrencyCode.TZS = 'TZS'                          # originally IsoCurrencyCode.TZS
-CurrencyCode.UAH = 'UAH'                          # originally IsoCurrencyCode.UAH
-CurrencyCode.UGX = 'UGX'                          # originally IsoCurrencyCode.UGX
-CurrencyCode.USD = 'USD'                          # originally IsoCurrencyCode.USD
-CurrencyCode.UYI = 'UYI'                          # originally IsoCurrencyCode.UYI
-CurrencyCode.UYU = 'UYU'                          # originally IsoCurrencyCode.UYU
-CurrencyCode.UZS = 'UZS'                          # originally IsoCurrencyCode.UZS
-CurrencyCode.VEF = 'VEF'                          # originally IsoCurrencyCode.VEF
-CurrencyCode.VND = 'VND'                          # originally IsoCurrencyCode.VND
-CurrencyCode.VUV = 'VUV'                          # originally IsoCurrencyCode.VUV
-CurrencyCode.WST = 'WST'                          # originally IsoCurrencyCode.WST
-CurrencyCode.XAF = 'XAF'                          # originally IsoCurrencyCode.XAF
-CurrencyCode.XCD = 'XCD'                          # originally IsoCurrencyCode.XCD
-CurrencyCode.XOF = 'XOF'                          # originally IsoCurrencyCode.XOF
-CurrencyCode.XPF = 'XPF'                          # originally IsoCurrencyCode.XPF
-CurrencyCode.YER = 'YER'                          # originally IsoCurrencyCode.YER
-CurrencyCode.ZAR = 'ZAR'                          # originally IsoCurrencyCode.ZAR
-CurrencyCode.ZMK = 'ZMK'                          # originally IsoCurrencyCode.ZMK
-CurrencyCode.ZWL = 'ZWL'                          # originally IsoCurrencyCode.ZWL
-CurrencyCode.CYP = 'CYP'                          # originally DeprecatedCurrencyCode.CYP
-CurrencyCode.EEK = 'EEK'                          # originally DeprecatedCurrencyCode.EEK
-CurrencyCode.MTL = 'MTL'                          # originally DeprecatedCurrencyCode.MTL
-CurrencyCode.ROL = 'ROL'                          # originally DeprecatedCurrencyCode.ROL
-CurrencyCode.SIT = 'SIT'                          # originally DeprecatedCurrencyCode.SIT
-CurrencyCode.SKK = 'SKK'                          # originally DeprecatedCurrencyCode.SKK
-CurrencyCode._InitializeFacetMap(CurrencyCode._CF_enumeration,
-   CurrencyCode._CF_pattern)
-Namespace.addCategoryObject('typeBinding', 'CurrencyCode', CurrencyCode)
-
-# Union simple type: {http://ddex.net/xml/avs/avs}CurrentTerritoryCode
-# superclasses pyxb.binding.datatypes.anySimpleType
-class CurrentTerritoryCode (pyxb.binding.basis.STD_union):
-
-    """A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide."""
-
-    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CurrentTerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 1504, 3)
-    _Documentation = 'A code representing a Territory. This includes ISO 3166-1 two-letter codes, CISAC TIS codes, plus a code for Worldwide.'
-
-    _MemberTypes = ( IsoTerritoryCode, TisTerritoryCode, DdexTerritoryCode, )
-CurrentTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CurrentTerritoryCode)
-CurrentTerritoryCode._CF_pattern = pyxb.binding.facets.CF_pattern()
-CurrentTerritoryCode.AD = 'AD'                    # originally IsoTerritoryCode.AD
-CurrentTerritoryCode.AE = 'AE'                    # originally IsoTerritoryCode.AE
-CurrentTerritoryCode.AF = 'AF'                    # originally IsoTerritoryCode.AF
-CurrentTerritoryCode.AG = 'AG'                    # originally IsoTerritoryCode.AG
-CurrentTerritoryCode.AI = 'AI'                    # originally IsoTerritoryCode.AI
-CurrentTerritoryCode.AL = 'AL'                    # originally IsoTerritoryCode.AL
-CurrentTerritoryCode.AM = 'AM'                    # originally IsoTerritoryCode.AM
-CurrentTerritoryCode.AN = 'AN'                    # originally IsoTerritoryCode.AN
-CurrentTerritoryCode.AO = 'AO'                    # originally IsoTerritoryCode.AO
-CurrentTerritoryCode.AQ = 'AQ'                    # originally IsoTerritoryCode.AQ
-CurrentTerritoryCode.AR = 'AR'                    # originally IsoTerritoryCode.AR
-CurrentTerritoryCode.AS = 'AS'                    # originally IsoTerritoryCode.AS
-CurrentTerritoryCode.AT = 'AT'                    # originally IsoTerritoryCode.AT
-CurrentTerritoryCode.AU = 'AU'                    # originally IsoTerritoryCode.AU
-CurrentTerritoryCode.AW = 'AW'                    # originally IsoTerritoryCode.AW
-CurrentTerritoryCode.AX = 'AX'                    # originally IsoTerritoryCode.AX
-CurrentTerritoryCode.AZ = 'AZ'                    # originally IsoTerritoryCode.AZ
-CurrentTerritoryCode.BA = 'BA'                    # originally IsoTerritoryCode.BA
-CurrentTerritoryCode.BB = 'BB'                    # originally IsoTerritoryCode.BB
-CurrentTerritoryCode.BD = 'BD'                    # originally IsoTerritoryCode.BD
-CurrentTerritoryCode.BE = 'BE'                    # originally IsoTerritoryCode.BE
-CurrentTerritoryCode.BF = 'BF'                    # originally IsoTerritoryCode.BF
-CurrentTerritoryCode.BG = 'BG'                    # originally IsoTerritoryCode.BG
-CurrentTerritoryCode.BH = 'BH'                    # originally IsoTerritoryCode.BH
-CurrentTerritoryCode.BI = 'BI'                    # originally IsoTerritoryCode.BI
-CurrentTerritoryCode.BJ = 'BJ'                    # originally IsoTerritoryCode.BJ
-CurrentTerritoryCode.BL = 'BL'                    # originally IsoTerritoryCode.BL
-CurrentTerritoryCode.BM = 'BM'                    # originally IsoTerritoryCode.BM
-CurrentTerritoryCode.BN = 'BN'                    # originally IsoTerritoryCode.BN
-CurrentTerritoryCode.BO = 'BO'                    # originally IsoTerritoryCode.BO
-CurrentTerritoryCode.BQ = 'BQ'                    # originally IsoTerritoryCode.BQ
-CurrentTerritoryCode.BR = 'BR'                    # originally IsoTerritoryCode.BR
-CurrentTerritoryCode.BS = 'BS'                    # originally IsoTerritoryCode.BS
-CurrentTerritoryCode.BT = 'BT'                    # originally IsoTerritoryCode.BT
-CurrentTerritoryCode.BV = 'BV'                    # originally IsoTerritoryCode.BV
-CurrentTerritoryCode.BW = 'BW'                    # originally IsoTerritoryCode.BW
-CurrentTerritoryCode.BY = 'BY'                    # originally IsoTerritoryCode.BY
-CurrentTerritoryCode.BZ = 'BZ'                    # originally IsoTerritoryCode.BZ
-CurrentTerritoryCode.CA = 'CA'                    # originally IsoTerritoryCode.CA
-CurrentTerritoryCode.CC = 'CC'                    # originally IsoTerritoryCode.CC
-CurrentTerritoryCode.CD = 'CD'                    # originally IsoTerritoryCode.CD
-CurrentTerritoryCode.CF = 'CF'                    # originally IsoTerritoryCode.CF
-CurrentTerritoryCode.CG = 'CG'                    # originally IsoTerritoryCode.CG
-CurrentTerritoryCode.CH = 'CH'                    # originally IsoTerritoryCode.CH
-CurrentTerritoryCode.CI = 'CI'                    # originally IsoTerritoryCode.CI
-CurrentTerritoryCode.CK = 'CK'                    # originally IsoTerritoryCode.CK
-CurrentTerritoryCode.CL = 'CL'                    # originally IsoTerritoryCode.CL
-CurrentTerritoryCode.CM = 'CM'                    # originally IsoTerritoryCode.CM
-CurrentTerritoryCode.CN = 'CN'                    # originally IsoTerritoryCode.CN
-CurrentTerritoryCode.CO = 'CO'                    # originally IsoTerritoryCode.CO
-CurrentTerritoryCode.CR = 'CR'                    # originally IsoTerritoryCode.CR
-CurrentTerritoryCode.CS = 'CS'                    # originally IsoTerritoryCode.CS
-CurrentTerritoryCode.CU = 'CU'                    # originally IsoTerritoryCode.CU
-CurrentTerritoryCode.CV = 'CV'                    # originally IsoTerritoryCode.CV
-CurrentTerritoryCode.CW = 'CW'                    # originally IsoTerritoryCode.CW
-CurrentTerritoryCode.CX = 'CX'                    # originally IsoTerritoryCode.CX
-CurrentTerritoryCode.CY = 'CY'                    # originally IsoTerritoryCode.CY
-CurrentTerritoryCode.CZ = 'CZ'                    # originally IsoTerritoryCode.CZ
-CurrentTerritoryCode.DE = 'DE'                    # originally IsoTerritoryCode.DE
-CurrentTerritoryCode.DJ = 'DJ'                    # originally IsoTerritoryCode.DJ
-CurrentTerritoryCode.DK = 'DK'                    # originally IsoTerritoryCode.DK
-CurrentTerritoryCode.DM = 'DM'                    # originally IsoTerritoryCode.DM
-CurrentTerritoryCode.DO = 'DO'                    # originally IsoTerritoryCode.DO
-CurrentTerritoryCode.DZ = 'DZ'                    # originally IsoTerritoryCode.DZ
-CurrentTerritoryCode.EC = 'EC'                    # originally IsoTerritoryCode.EC
-CurrentTerritoryCode.EE = 'EE'                    # originally IsoTerritoryCode.EE
-CurrentTerritoryCode.EG = 'EG'                    # originally IsoTerritoryCode.EG
-CurrentTerritoryCode.EH = 'EH'                    # originally IsoTerritoryCode.EH
-CurrentTerritoryCode.ER = 'ER'                    # originally IsoTerritoryCode.ER
-CurrentTerritoryCode.ES = 'ES'                    # originally IsoTerritoryCode.ES
-CurrentTerritoryCode.ET = 'ET'                    # originally IsoTerritoryCode.ET
-CurrentTerritoryCode.FI = 'FI'                    # originally IsoTerritoryCode.FI
-CurrentTerritoryCode.FJ = 'FJ'                    # originally IsoTerritoryCode.FJ
-CurrentTerritoryCode.FK = 'FK'                    # originally IsoTerritoryCode.FK
-CurrentTerritoryCode.FM = 'FM'                    # originally IsoTerritoryCode.FM
-CurrentTerritoryCode.FO = 'FO'                    # originally IsoTerritoryCode.FO
-CurrentTerritoryCode.FR = 'FR'                    # originally IsoTerritoryCode.FR
-CurrentTerritoryCode.GA = 'GA'                    # originally IsoTerritoryCode.GA
-CurrentTerritoryCode.GB = 'GB'                    # originally IsoTerritoryCode.GB
-CurrentTerritoryCode.GD = 'GD'                    # originally IsoTerritoryCode.GD
-CurrentTerritoryCode.GE = 'GE'                    # originally IsoTerritoryCode.GE
-CurrentTerritoryCode.GF = 'GF'                    # originally IsoTerritoryCode.GF
-CurrentTerritoryCode.GG = 'GG'                    # originally IsoTerritoryCode.GG
-CurrentTerritoryCode.GH = 'GH'                    # originally IsoTerritoryCode.GH
-CurrentTerritoryCode.GI = 'GI'                    # originally IsoTerritoryCode.GI
-CurrentTerritoryCode.GL = 'GL'                    # originally IsoTerritoryCode.GL
-CurrentTerritoryCode.GM = 'GM'                    # originally IsoTerritoryCode.GM
-CurrentTerritoryCode.GN = 'GN'                    # originally IsoTerritoryCode.GN
-CurrentTerritoryCode.GP = 'GP'                    # originally IsoTerritoryCode.GP
-CurrentTerritoryCode.GQ = 'GQ'                    # originally IsoTerritoryCode.GQ
-CurrentTerritoryCode.GR = 'GR'                    # originally IsoTerritoryCode.GR
-CurrentTerritoryCode.GS = 'GS'                    # originally IsoTerritoryCode.GS
-CurrentTerritoryCode.GT = 'GT'                    # originally IsoTerritoryCode.GT
-CurrentTerritoryCode.GU = 'GU'                    # originally IsoTerritoryCode.GU
-CurrentTerritoryCode.GW = 'GW'                    # originally IsoTerritoryCode.GW
-CurrentTerritoryCode.GY = 'GY'                    # originally IsoTerritoryCode.GY
-CurrentTerritoryCode.HK = 'HK'                    # originally IsoTerritoryCode.HK
-CurrentTerritoryCode.HM = 'HM'                    # originally IsoTerritoryCode.HM
-CurrentTerritoryCode.HN = 'HN'                    # originally IsoTerritoryCode.HN
-CurrentTerritoryCode.HR = 'HR'                    # originally IsoTerritoryCode.HR
-CurrentTerritoryCode.HT = 'HT'                    # originally IsoTerritoryCode.HT
-CurrentTerritoryCode.HU = 'HU'                    # originally IsoTerritoryCode.HU
-CurrentTerritoryCode.ID = 'ID'                    # originally IsoTerritoryCode.ID
-CurrentTerritoryCode.IE = 'IE'                    # originally IsoTerritoryCode.IE
-CurrentTerritoryCode.IL = 'IL'                    # originally IsoTerritoryCode.IL
-CurrentTerritoryCode.IM = 'IM'                    # originally IsoTerritoryCode.IM
-CurrentTerritoryCode.IN = 'IN'                    # originally IsoTerritoryCode.IN
-CurrentTerritoryCode.IO = 'IO'                    # originally IsoTerritoryCode.IO
-CurrentTerritoryCode.IQ = 'IQ'                    # originally IsoTerritoryCode.IQ
-CurrentTerritoryCode.IR = 'IR'                    # originally IsoTerritoryCode.IR
-CurrentTerritoryCode.IS = 'IS'                    # originally IsoTerritoryCode.IS
-CurrentTerritoryCode.IT = 'IT'                    # originally IsoTerritoryCode.IT
-CurrentTerritoryCode.JE = 'JE'                    # originally IsoTerritoryCode.JE
-CurrentTerritoryCode.JM = 'JM'                    # originally IsoTerritoryCode.JM
-CurrentTerritoryCode.JO = 'JO'                    # originally IsoTerritoryCode.JO
-CurrentTerritoryCode.JP = 'JP'                    # originally IsoTerritoryCode.JP
-CurrentTerritoryCode.KE = 'KE'                    # originally IsoTerritoryCode.KE
-CurrentTerritoryCode.KG = 'KG'                    # originally IsoTerritoryCode.KG
-CurrentTerritoryCode.KH = 'KH'                    # originally IsoTerritoryCode.KH
-CurrentTerritoryCode.KI = 'KI'                    # originally IsoTerritoryCode.KI
-CurrentTerritoryCode.KM = 'KM'                    # originally IsoTerritoryCode.KM
-CurrentTerritoryCode.KN = 'KN'                    # originally IsoTerritoryCode.KN
-CurrentTerritoryCode.KP = 'KP'                    # originally IsoTerritoryCode.KP
-CurrentTerritoryCode.KR = 'KR'                    # originally IsoTerritoryCode.KR
-CurrentTerritoryCode.KW = 'KW'                    # originally IsoTerritoryCode.KW
-CurrentTerritoryCode.KY = 'KY'                    # originally IsoTerritoryCode.KY
-CurrentTerritoryCode.KZ = 'KZ'                    # originally IsoTerritoryCode.KZ
-CurrentTerritoryCode.LA = 'LA'                    # originally IsoTerritoryCode.LA
-CurrentTerritoryCode.LB = 'LB'                    # originally IsoTerritoryCode.LB
-CurrentTerritoryCode.LC = 'LC'                    # originally IsoTerritoryCode.LC
-CurrentTerritoryCode.LI = 'LI'                    # originally IsoTerritoryCode.LI
-CurrentTerritoryCode.LK = 'LK'                    # originally IsoTerritoryCode.LK
-CurrentTerritoryCode.LR = 'LR'                    # originally IsoTerritoryCode.LR
-CurrentTerritoryCode.LS = 'LS'                    # originally IsoTerritoryCode.LS
-CurrentTerritoryCode.LT = 'LT'                    # originally IsoTerritoryCode.LT
-CurrentTerritoryCode.LU = 'LU'                    # originally IsoTerritoryCode.LU
-CurrentTerritoryCode.LV = 'LV'                    # originally IsoTerritoryCode.LV
-CurrentTerritoryCode.LY = 'LY'                    # originally IsoTerritoryCode.LY
-CurrentTerritoryCode.MA = 'MA'                    # originally IsoTerritoryCode.MA
-CurrentTerritoryCode.MC = 'MC'                    # originally IsoTerritoryCode.MC
-CurrentTerritoryCode.MD = 'MD'                    # originally IsoTerritoryCode.MD
-CurrentTerritoryCode.ME = 'ME'                    # originally IsoTerritoryCode.ME
-CurrentTerritoryCode.MF = 'MF'                    # originally IsoTerritoryCode.MF
-CurrentTerritoryCode.MG = 'MG'                    # originally IsoTerritoryCode.MG
-CurrentTerritoryCode.MH = 'MH'                    # originally IsoTerritoryCode.MH
-CurrentTerritoryCode.MK = 'MK'                    # originally IsoTerritoryCode.MK
-CurrentTerritoryCode.ML = 'ML'                    # originally IsoTerritoryCode.ML
-CurrentTerritoryCode.MM = 'MM'                    # originally IsoTerritoryCode.MM
-CurrentTerritoryCode.MN = 'MN'                    # originally IsoTerritoryCode.MN
-CurrentTerritoryCode.MO = 'MO'                    # originally IsoTerritoryCode.MO
-CurrentTerritoryCode.MP = 'MP'                    # originally IsoTerritoryCode.MP
-CurrentTerritoryCode.MQ = 'MQ'                    # originally IsoTerritoryCode.MQ
-CurrentTerritoryCode.MR = 'MR'                    # originally IsoTerritoryCode.MR
-CurrentTerritoryCode.MS = 'MS'                    # originally IsoTerritoryCode.MS
-CurrentTerritoryCode.MT = 'MT'                    # originally IsoTerritoryCode.MT
-CurrentTerritoryCode.MU = 'MU'                    # originally IsoTerritoryCode.MU
-CurrentTerritoryCode.MV = 'MV'                    # originally IsoTerritoryCode.MV
-CurrentTerritoryCode.MW = 'MW'                    # originally IsoTerritoryCode.MW
-CurrentTerritoryCode.MX = 'MX'                    # originally IsoTerritoryCode.MX
-CurrentTerritoryCode.MY = 'MY'                    # originally IsoTerritoryCode.MY
-CurrentTerritoryCode.MZ = 'MZ'                    # originally IsoTerritoryCode.MZ
-CurrentTerritoryCode.NA = 'NA'                    # originally IsoTerritoryCode.NA
-CurrentTerritoryCode.NC = 'NC'                    # originally IsoTerritoryCode.NC
-CurrentTerritoryCode.NE = 'NE'                    # originally IsoTerritoryCode.NE
-CurrentTerritoryCode.NF = 'NF'                    # originally IsoTerritoryCode.NF
-CurrentTerritoryCode.NG = 'NG'                    # originally IsoTerritoryCode.NG
-CurrentTerritoryCode.NI = 'NI'                    # originally IsoTerritoryCode.NI
-CurrentTerritoryCode.NL = 'NL'                    # originally IsoTerritoryCode.NL
-CurrentTerritoryCode.NO = 'NO'                    # originally IsoTerritoryCode.NO
-CurrentTerritoryCode.NP = 'NP'                    # originally IsoTerritoryCode.NP
-CurrentTerritoryCode.NR = 'NR'                    # originally IsoTerritoryCode.NR
-CurrentTerritoryCode.NU = 'NU'                    # originally IsoTerritoryCode.NU
-CurrentTerritoryCode.NZ = 'NZ'                    # originally IsoTerritoryCode.NZ
-CurrentTerritoryCode.OM = 'OM'                    # originally IsoTerritoryCode.OM
-CurrentTerritoryCode.PA = 'PA'                    # originally IsoTerritoryCode.PA
-CurrentTerritoryCode.PE = 'PE'                    # originally IsoTerritoryCode.PE
-CurrentTerritoryCode.PF = 'PF'                    # originally IsoTerritoryCode.PF
-CurrentTerritoryCode.PG = 'PG'                    # originally IsoTerritoryCode.PG
-CurrentTerritoryCode.PH = 'PH'                    # originally IsoTerritoryCode.PH
-CurrentTerritoryCode.PK = 'PK'                    # originally IsoTerritoryCode.PK
-CurrentTerritoryCode.PL = 'PL'                    # originally IsoTerritoryCode.PL
-CurrentTerritoryCode.PM = 'PM'                    # originally IsoTerritoryCode.PM
-CurrentTerritoryCode.PN = 'PN'                    # originally IsoTerritoryCode.PN
-CurrentTerritoryCode.PR = 'PR'                    # originally IsoTerritoryCode.PR
-CurrentTerritoryCode.PS = 'PS'                    # originally IsoTerritoryCode.PS
-CurrentTerritoryCode.PT = 'PT'                    # originally IsoTerritoryCode.PT
-CurrentTerritoryCode.PW = 'PW'                    # originally IsoTerritoryCode.PW
-CurrentTerritoryCode.PY = 'PY'                    # originally IsoTerritoryCode.PY
-CurrentTerritoryCode.QA = 'QA'                    # originally IsoTerritoryCode.QA
-CurrentTerritoryCode.RE = 'RE'                    # originally IsoTerritoryCode.RE
-CurrentTerritoryCode.RO = 'RO'                    # originally IsoTerritoryCode.RO
-CurrentTerritoryCode.RS = 'RS'                    # originally IsoTerritoryCode.RS
-CurrentTerritoryCode.RU = 'RU'                    # originally IsoTerritoryCode.RU
-CurrentTerritoryCode.RW = 'RW'                    # originally IsoTerritoryCode.RW
-CurrentTerritoryCode.SA = 'SA'                    # originally IsoTerritoryCode.SA
-CurrentTerritoryCode.SB = 'SB'                    # originally IsoTerritoryCode.SB
-CurrentTerritoryCode.SC = 'SC'                    # originally IsoTerritoryCode.SC
-CurrentTerritoryCode.SD = 'SD'                    # originally IsoTerritoryCode.SD
-CurrentTerritoryCode.SE = 'SE'                    # originally IsoTerritoryCode.SE
-CurrentTerritoryCode.SG = 'SG'                    # originally IsoTerritoryCode.SG
-CurrentTerritoryCode.SH = 'SH'                    # originally IsoTerritoryCode.SH
-CurrentTerritoryCode.SI = 'SI'                    # originally IsoTerritoryCode.SI
-CurrentTerritoryCode.SJ = 'SJ'                    # originally IsoTerritoryCode.SJ
-CurrentTerritoryCode.SK = 'SK'                    # originally IsoTerritoryCode.SK
-CurrentTerritoryCode.SL = 'SL'                    # originally IsoTerritoryCode.SL
-CurrentTerritoryCode.SM = 'SM'                    # originally IsoTerritoryCode.SM
-CurrentTerritoryCode.SN = 'SN'                    # originally IsoTerritoryCode.SN
-CurrentTerritoryCode.SO = 'SO'                    # originally IsoTerritoryCode.SO
-CurrentTerritoryCode.SR = 'SR'                    # originally IsoTerritoryCode.SR
-CurrentTerritoryCode.SS = 'SS'                    # originally IsoTerritoryCode.SS
-CurrentTerritoryCode.ST = 'ST'                    # originally IsoTerritoryCode.ST
-CurrentTerritoryCode.SV = 'SV'                    # originally IsoTerritoryCode.SV
-CurrentTerritoryCode.SX = 'SX'                    # originally IsoTerritoryCode.SX
-CurrentTerritoryCode.SY = 'SY'                    # originally IsoTerritoryCode.SY
-CurrentTerritoryCode.SZ = 'SZ'                    # originally IsoTerritoryCode.SZ
-CurrentTerritoryCode.TC = 'TC'                    # originally IsoTerritoryCode.TC
-CurrentTerritoryCode.TD = 'TD'                    # originally IsoTerritoryCode.TD
-CurrentTerritoryCode.TF = 'TF'                    # originally IsoTerritoryCode.TF
-CurrentTerritoryCode.TG = 'TG'                    # originally IsoTerritoryCode.TG
-CurrentTerritoryCode.TH = 'TH'                    # originally IsoTerritoryCode.TH
-CurrentTerritoryCode.TJ = 'TJ'                    # originally IsoTerritoryCode.TJ
-CurrentTerritoryCode.TK = 'TK'                    # originally IsoTerritoryCode.TK
-CurrentTerritoryCode.TL = 'TL'                    # originally IsoTerritoryCode.TL
-CurrentTerritoryCode.TM = 'TM'                    # originally IsoTerritoryCode.TM
-CurrentTerritoryCode.TN = 'TN'                    # originally IsoTerritoryCode.TN
-CurrentTerritoryCode.TO = 'TO'                    # originally IsoTerritoryCode.TO
-CurrentTerritoryCode.TR = 'TR'                    # originally IsoTerritoryCode.TR
-CurrentTerritoryCode.TT = 'TT'                    # originally IsoTerritoryCode.TT
-CurrentTerritoryCode.TV = 'TV'                    # originally IsoTerritoryCode.TV
-CurrentTerritoryCode.TW = 'TW'                    # originally IsoTerritoryCode.TW
-CurrentTerritoryCode.TZ = 'TZ'                    # originally IsoTerritoryCode.TZ
-CurrentTerritoryCode.UA = 'UA'                    # originally IsoTerritoryCode.UA
-CurrentTerritoryCode.UG = 'UG'                    # originally IsoTerritoryCode.UG
-CurrentTerritoryCode.UM = 'UM'                    # originally IsoTerritoryCode.UM
-CurrentTerritoryCode.US = 'US'                    # originally IsoTerritoryCode.US
-CurrentTerritoryCode.UY = 'UY'                    # originally IsoTerritoryCode.UY
-CurrentTerritoryCode.UZ = 'UZ'                    # originally IsoTerritoryCode.UZ
-CurrentTerritoryCode.VA = 'VA'                    # originally IsoTerritoryCode.VA
-CurrentTerritoryCode.VC = 'VC'                    # originally IsoTerritoryCode.VC
-CurrentTerritoryCode.VE = 'VE'                    # originally IsoTerritoryCode.VE
-CurrentTerritoryCode.VG = 'VG'                    # originally IsoTerritoryCode.VG
-CurrentTerritoryCode.VI = 'VI'                    # originally IsoTerritoryCode.VI
-CurrentTerritoryCode.VN = 'VN'                    # originally IsoTerritoryCode.VN
-CurrentTerritoryCode.VU = 'VU'                    # originally IsoTerritoryCode.VU
-CurrentTerritoryCode.WF = 'WF'                    # originally IsoTerritoryCode.WF
-CurrentTerritoryCode.WS = 'WS'                    # originally IsoTerritoryCode.WS
-CurrentTerritoryCode.YE = 'YE'                    # originally IsoTerritoryCode.YE
-CurrentTerritoryCode.YT = 'YT'                    # originally IsoTerritoryCode.YT
-CurrentTerritoryCode.ZA = 'ZA'                    # originally IsoTerritoryCode.ZA
-CurrentTerritoryCode.ZM = 'ZM'                    # originally IsoTerritoryCode.ZM
-CurrentTerritoryCode.ZW = 'ZW'                    # originally IsoTerritoryCode.ZW
-CurrentTerritoryCode.n4 = '4'                     # originally TisTerritoryCode.n4
-CurrentTerritoryCode.n8 = '8'                     # originally TisTerritoryCode.n8
-CurrentTerritoryCode.n12 = '12'                   # originally TisTerritoryCode.n12
-CurrentTerritoryCode.n20 = '20'                   # originally TisTerritoryCode.n20
-CurrentTerritoryCode.n24 = '24'                   # originally TisTerritoryCode.n24
-CurrentTerritoryCode.n28 = '28'                   # originally TisTerritoryCode.n28
-CurrentTerritoryCode.n31 = '31'                   # originally TisTerritoryCode.n31
-CurrentTerritoryCode.n32 = '32'                   # originally TisTerritoryCode.n32
-CurrentTerritoryCode.n36 = '36'                   # originally TisTerritoryCode.n36
-CurrentTerritoryCode.n40 = '40'                   # originally TisTerritoryCode.n40
-CurrentTerritoryCode.n44 = '44'                   # originally TisTerritoryCode.n44
-CurrentTerritoryCode.n48 = '48'                   # originally TisTerritoryCode.n48
-CurrentTerritoryCode.n50 = '50'                   # originally TisTerritoryCode.n50
-CurrentTerritoryCode.n51 = '51'                   # originally TisTerritoryCode.n51
-CurrentTerritoryCode.n52 = '52'                   # originally TisTerritoryCode.n52
-CurrentTerritoryCode.n56 = '56'                   # originally TisTerritoryCode.n56
-CurrentTerritoryCode.n64 = '64'                   # originally TisTerritoryCode.n64
-CurrentTerritoryCode.n68 = '68'                   # originally TisTerritoryCode.n68
-CurrentTerritoryCode.n70 = '70'                   # originally TisTerritoryCode.n70
-CurrentTerritoryCode.n72 = '72'                   # originally TisTerritoryCode.n72
-CurrentTerritoryCode.n76 = '76'                   # originally TisTerritoryCode.n76
-CurrentTerritoryCode.n84 = '84'                   # originally TisTerritoryCode.n84
-CurrentTerritoryCode.n90 = '90'                   # originally TisTerritoryCode.n90
-CurrentTerritoryCode.n96 = '96'                   # originally TisTerritoryCode.n96
-CurrentTerritoryCode.n100 = '100'                 # originally TisTerritoryCode.n100
-CurrentTerritoryCode.n104 = '104'                 # originally TisTerritoryCode.n104
-CurrentTerritoryCode.n108 = '108'                 # originally TisTerritoryCode.n108
-CurrentTerritoryCode.n112 = '112'                 # originally TisTerritoryCode.n112
-CurrentTerritoryCode.n116 = '116'                 # originally TisTerritoryCode.n116
-CurrentTerritoryCode.n120 = '120'                 # originally TisTerritoryCode.n120
-CurrentTerritoryCode.n124 = '124'                 # originally TisTerritoryCode.n124
-CurrentTerritoryCode.n132 = '132'                 # originally TisTerritoryCode.n132
-CurrentTerritoryCode.n140 = '140'                 # originally TisTerritoryCode.n140
-CurrentTerritoryCode.n144 = '144'                 # originally TisTerritoryCode.n144
-CurrentTerritoryCode.n148 = '148'                 # originally TisTerritoryCode.n148
-CurrentTerritoryCode.n152 = '152'                 # originally TisTerritoryCode.n152
-CurrentTerritoryCode.n156 = '156'                 # originally TisTerritoryCode.n156
-CurrentTerritoryCode.n158 = '158'                 # originally TisTerritoryCode.n158
-CurrentTerritoryCode.n170 = '170'                 # originally TisTerritoryCode.n170
-CurrentTerritoryCode.n174 = '174'                 # originally TisTerritoryCode.n174
-CurrentTerritoryCode.n178 = '178'                 # originally TisTerritoryCode.n178
-CurrentTerritoryCode.n180 = '180'                 # originally TisTerritoryCode.n180
-CurrentTerritoryCode.n188 = '188'                 # originally TisTerritoryCode.n188
-CurrentTerritoryCode.n191 = '191'                 # originally TisTerritoryCode.n191
-CurrentTerritoryCode.n192 = '192'                 # originally TisTerritoryCode.n192
-CurrentTerritoryCode.n196 = '196'                 # originally TisTerritoryCode.n196
-CurrentTerritoryCode.n200 = '200'                 # originally TisTerritoryCode.n200
-CurrentTerritoryCode.n203 = '203'                 # originally TisTerritoryCode.n203
-CurrentTerritoryCode.n204 = '204'                 # originally TisTerritoryCode.n204
-CurrentTerritoryCode.n208 = '208'                 # originally TisTerritoryCode.n208
-CurrentTerritoryCode.n212 = '212'                 # originally TisTerritoryCode.n212
-CurrentTerritoryCode.n214 = '214'                 # originally TisTerritoryCode.n214
-CurrentTerritoryCode.n218 = '218'                 # originally TisTerritoryCode.n218
-CurrentTerritoryCode.n222 = '222'                 # originally TisTerritoryCode.n222
-CurrentTerritoryCode.n226 = '226'                 # originally TisTerritoryCode.n226
-CurrentTerritoryCode.n230 = '230'                 # originally TisTerritoryCode.n230
-CurrentTerritoryCode.n231 = '231'                 # originally TisTerritoryCode.n231
-CurrentTerritoryCode.n232 = '232'                 # originally TisTerritoryCode.n232
-CurrentTerritoryCode.n233 = '233'                 # originally TisTerritoryCode.n233
-CurrentTerritoryCode.n242 = '242'                 # originally TisTerritoryCode.n242
-CurrentTerritoryCode.n246 = '246'                 # originally TisTerritoryCode.n246
-CurrentTerritoryCode.n250 = '250'                 # originally TisTerritoryCode.n250
-CurrentTerritoryCode.n258 = '258'                 # originally TisTerritoryCode.n258
-CurrentTerritoryCode.n262 = '262'                 # originally TisTerritoryCode.n262
-CurrentTerritoryCode.n266 = '266'                 # originally TisTerritoryCode.n266
-CurrentTerritoryCode.n268 = '268'                 # originally TisTerritoryCode.n268
-CurrentTerritoryCode.n270 = '270'                 # originally TisTerritoryCode.n270
-CurrentTerritoryCode.n276 = '276'                 # originally TisTerritoryCode.n276
-CurrentTerritoryCode.n278 = '278'                 # originally TisTerritoryCode.n278
-CurrentTerritoryCode.n280 = '280'                 # originally TisTerritoryCode.n280
-CurrentTerritoryCode.n288 = '288'                 # originally TisTerritoryCode.n288
-CurrentTerritoryCode.n296 = '296'                 # originally TisTerritoryCode.n296
-CurrentTerritoryCode.n300 = '300'                 # originally TisTerritoryCode.n300
-CurrentTerritoryCode.n308 = '308'                 # originally TisTerritoryCode.n308
-CurrentTerritoryCode.n320 = '320'                 # originally TisTerritoryCode.n320
-CurrentTerritoryCode.n324 = '324'                 # originally TisTerritoryCode.n324
-CurrentTerritoryCode.n328 = '328'                 # originally TisTerritoryCode.n328
-CurrentTerritoryCode.n332 = '332'                 # originally TisTerritoryCode.n332
-CurrentTerritoryCode.n336 = '336'                 # originally TisTerritoryCode.n336
-CurrentTerritoryCode.n340 = '340'                 # originally TisTerritoryCode.n340
-CurrentTerritoryCode.n344 = '344'                 # originally TisTerritoryCode.n344
-CurrentTerritoryCode.n348 = '348'                 # originally TisTerritoryCode.n348
-CurrentTerritoryCode.n352 = '352'                 # originally TisTerritoryCode.n352
-CurrentTerritoryCode.n356 = '356'                 # originally TisTerritoryCode.n356
-CurrentTerritoryCode.n360 = '360'                 # originally TisTerritoryCode.n360
-CurrentTerritoryCode.n364 = '364'                 # originally TisTerritoryCode.n364
-CurrentTerritoryCode.n368 = '368'                 # originally TisTerritoryCode.n368
-CurrentTerritoryCode.n372 = '372'                 # originally TisTerritoryCode.n372
-CurrentTerritoryCode.n376 = '376'                 # originally TisTerritoryCode.n376
-CurrentTerritoryCode.n380 = '380'                 # originally TisTerritoryCode.n380
-CurrentTerritoryCode.n384 = '384'                 # originally TisTerritoryCode.n384
-CurrentTerritoryCode.n388 = '388'                 # originally TisTerritoryCode.n388
-CurrentTerritoryCode.n392 = '392'                 # originally TisTerritoryCode.n392
-CurrentTerritoryCode.n398 = '398'                 # originally TisTerritoryCode.n398
-CurrentTerritoryCode.n400 = '400'                 # originally TisTerritoryCode.n400
-CurrentTerritoryCode.n404 = '404'                 # originally TisTerritoryCode.n404
-CurrentTerritoryCode.n408 = '408'                 # originally TisTerritoryCode.n408
-CurrentTerritoryCode.n410 = '410'                 # originally TisTerritoryCode.n410
-CurrentTerritoryCode.n414 = '414'                 # originally TisTerritoryCode.n414
-CurrentTerritoryCode.n417 = '417'                 # originally TisTerritoryCode.n417
-CurrentTerritoryCode.n418 = '418'                 # originally TisTerritoryCode.n418
-CurrentTerritoryCode.n422 = '422'                 # originally TisTerritoryCode.n422
-CurrentTerritoryCode.n426 = '426'                 # originally TisTerritoryCode.n426
-CurrentTerritoryCode.n428 = '428'                 # originally TisTerritoryCode.n428
-CurrentTerritoryCode.n430 = '430'                 # originally TisTerritoryCode.n430
-CurrentTerritoryCode.n434 = '434'                 # originally TisTerritoryCode.n434
-CurrentTerritoryCode.n438 = '438'                 # originally TisTerritoryCode.n438
-CurrentTerritoryCode.n440 = '440'                 # originally TisTerritoryCode.n440
-CurrentTerritoryCode.n442 = '442'                 # originally TisTerritoryCode.n442
-CurrentTerritoryCode.n450 = '450'                 # originally TisTerritoryCode.n450
-CurrentTerritoryCode.n454 = '454'                 # originally TisTerritoryCode.n454
-CurrentTerritoryCode.n458 = '458'                 # originally TisTerritoryCode.n458
-CurrentTerritoryCode.n462 = '462'                 # originally TisTerritoryCode.n462
-CurrentTerritoryCode.n466 = '466'                 # originally TisTerritoryCode.n466
-CurrentTerritoryCode.n470 = '470'                 # originally TisTerritoryCode.n470
-CurrentTerritoryCode.n478 = '478'                 # originally TisTerritoryCode.n478
-CurrentTerritoryCode.n480 = '480'                 # originally TisTerritoryCode.n480
-CurrentTerritoryCode.n484 = '484'                 # originally TisTerritoryCode.n484
-CurrentTerritoryCode.n492 = '492'                 # originally TisTerritoryCode.n492
-CurrentTerritoryCode.n496 = '496'                 # originally TisTerritoryCode.n496
-CurrentTerritoryCode.n498 = '498'                 # originally TisTerritoryCode.n498
-CurrentTerritoryCode.n499 = '499'                 # originally TisTerritoryCode.n499
-CurrentTerritoryCode.n504 = '504'                 # originally TisTerritoryCode.n504
-CurrentTerritoryCode.n508 = '508'                 # originally TisTerritoryCode.n508
-CurrentTerritoryCode.n512 = '512'                 # originally TisTerritoryCode.n512
-CurrentTerritoryCode.n516 = '516'                 # originally TisTerritoryCode.n516
-CurrentTerritoryCode.n520 = '520'                 # originally TisTerritoryCode.n520
-CurrentTerritoryCode.n524 = '524'                 # originally TisTerritoryCode.n524
-CurrentTerritoryCode.n528 = '528'                 # originally TisTerritoryCode.n528
-CurrentTerritoryCode.n540 = '540'                 # originally TisTerritoryCode.n540
-CurrentTerritoryCode.n548 = '548'                 # originally TisTerritoryCode.n548
-CurrentTerritoryCode.n554 = '554'                 # originally TisTerritoryCode.n554
-CurrentTerritoryCode.n558 = '558'                 # originally TisTerritoryCode.n558
-CurrentTerritoryCode.n562 = '562'                 # originally TisTerritoryCode.n562
-CurrentTerritoryCode.n566 = '566'                 # originally TisTerritoryCode.n566
-CurrentTerritoryCode.n578 = '578'                 # originally TisTerritoryCode.n578
-CurrentTerritoryCode.n583 = '583'                 # originally TisTerritoryCode.n583
-CurrentTerritoryCode.n584 = '584'                 # originally TisTerritoryCode.n584
-CurrentTerritoryCode.n585 = '585'                 # originally TisTerritoryCode.n585
-CurrentTerritoryCode.n586 = '586'                 # originally TisTerritoryCode.n586
-CurrentTerritoryCode.n591 = '591'                 # originally TisTerritoryCode.n591
-CurrentTerritoryCode.n598 = '598'                 # originally TisTerritoryCode.n598
-CurrentTerritoryCode.n600 = '600'                 # originally TisTerritoryCode.n600
-CurrentTerritoryCode.n604 = '604'                 # originally TisTerritoryCode.n604
-CurrentTerritoryCode.n608 = '608'                 # originally TisTerritoryCode.n608
-CurrentTerritoryCode.n616 = '616'                 # originally TisTerritoryCode.n616
-CurrentTerritoryCode.n620 = '620'                 # originally TisTerritoryCode.n620
-CurrentTerritoryCode.n624 = '624'                 # originally TisTerritoryCode.n624
-CurrentTerritoryCode.n626 = '626'                 # originally TisTerritoryCode.n626
-CurrentTerritoryCode.n630 = '630'                 # originally TisTerritoryCode.n630
-CurrentTerritoryCode.n634 = '634'                 # originally TisTerritoryCode.n634
-CurrentTerritoryCode.n642 = '642'                 # originally TisTerritoryCode.n642
-CurrentTerritoryCode.n643 = '643'                 # originally TisTerritoryCode.n643
-CurrentTerritoryCode.n646 = '646'                 # originally TisTerritoryCode.n646
-CurrentTerritoryCode.n659 = '659'                 # originally TisTerritoryCode.n659
-CurrentTerritoryCode.n662 = '662'                 # originally TisTerritoryCode.n662
-CurrentTerritoryCode.n670 = '670'                 # originally TisTerritoryCode.n670
-CurrentTerritoryCode.n674 = '674'                 # originally TisTerritoryCode.n674
-CurrentTerritoryCode.n678 = '678'                 # originally TisTerritoryCode.n678
-CurrentTerritoryCode.n682 = '682'                 # originally TisTerritoryCode.n682
-CurrentTerritoryCode.n686 = '686'                 # originally TisTerritoryCode.n686
-CurrentTerritoryCode.n688 = '688'                 # originally TisTerritoryCode.n688
-CurrentTerritoryCode.n690 = '690'                 # originally TisTerritoryCode.n690
-CurrentTerritoryCode.n694 = '694'                 # originally TisTerritoryCode.n694
-CurrentTerritoryCode.n702 = '702'                 # originally TisTerritoryCode.n702
-CurrentTerritoryCode.n703 = '703'                 # originally TisTerritoryCode.n703
-CurrentTerritoryCode.n704 = '704'                 # originally TisTerritoryCode.n704
-CurrentTerritoryCode.n705 = '705'                 # originally TisTerritoryCode.n705
-CurrentTerritoryCode.n706 = '706'                 # originally TisTerritoryCode.n706
-CurrentTerritoryCode.n710 = '710'                 # originally TisTerritoryCode.n710
-CurrentTerritoryCode.n716 = '716'                 # originally TisTerritoryCode.n716
-CurrentTerritoryCode.n720 = '720'                 # originally TisTerritoryCode.n720
-CurrentTerritoryCode.n724 = '724'                 # originally TisTerritoryCode.n724
-CurrentTerritoryCode.n728 = '728'                 # originally TisTerritoryCode.n728
-CurrentTerritoryCode.n729 = '729'                 # originally TisTerritoryCode.n729
-CurrentTerritoryCode.n732 = '732'                 # originally TisTerritoryCode.n732
-CurrentTerritoryCode.n736 = '736'                 # originally TisTerritoryCode.n736
-CurrentTerritoryCode.n740 = '740'                 # originally TisTerritoryCode.n740
-CurrentTerritoryCode.n748 = '748'                 # originally TisTerritoryCode.n748
-CurrentTerritoryCode.n752 = '752'                 # originally TisTerritoryCode.n752
-CurrentTerritoryCode.n756 = '756'                 # originally TisTerritoryCode.n756
-CurrentTerritoryCode.n760 = '760'                 # originally TisTerritoryCode.n760
-CurrentTerritoryCode.n762 = '762'                 # originally TisTerritoryCode.n762
-CurrentTerritoryCode.n764 = '764'                 # originally TisTerritoryCode.n764
-CurrentTerritoryCode.n768 = '768'                 # originally TisTerritoryCode.n768
-CurrentTerritoryCode.n776 = '776'                 # originally TisTerritoryCode.n776
-CurrentTerritoryCode.n780 = '780'                 # originally TisTerritoryCode.n780
-CurrentTerritoryCode.n784 = '784'                 # originally TisTerritoryCode.n784
-CurrentTerritoryCode.n788 = '788'                 # originally TisTerritoryCode.n788
-CurrentTerritoryCode.n792 = '792'                 # originally TisTerritoryCode.n792
-CurrentTerritoryCode.n795 = '795'                 # originally TisTerritoryCode.n795
-CurrentTerritoryCode.n798 = '798'                 # originally TisTerritoryCode.n798
-CurrentTerritoryCode.n800 = '800'                 # originally TisTerritoryCode.n800
-CurrentTerritoryCode.n804 = '804'                 # originally TisTerritoryCode.n804
-CurrentTerritoryCode.n807 = '807'                 # originally TisTerritoryCode.n807
-CurrentTerritoryCode.n810 = '810'                 # originally TisTerritoryCode.n810
-CurrentTerritoryCode.n818 = '818'                 # originally TisTerritoryCode.n818
-CurrentTerritoryCode.n826 = '826'                 # originally TisTerritoryCode.n826
-CurrentTerritoryCode.n834 = '834'                 # originally TisTerritoryCode.n834
-CurrentTerritoryCode.n840 = '840'                 # originally TisTerritoryCode.n840
-CurrentTerritoryCode.n854 = '854'                 # originally TisTerritoryCode.n854
-CurrentTerritoryCode.n858 = '858'                 # originally TisTerritoryCode.n858
-CurrentTerritoryCode.n860 = '860'                 # originally TisTerritoryCode.n860
-CurrentTerritoryCode.n862 = '862'                 # originally TisTerritoryCode.n862
-CurrentTerritoryCode.n882 = '882'                 # originally TisTerritoryCode.n882
-CurrentTerritoryCode.n886 = '886'                 # originally TisTerritoryCode.n886
-CurrentTerritoryCode.n887 = '887'                 # originally TisTerritoryCode.n887
-CurrentTerritoryCode.n890 = '890'                 # originally TisTerritoryCode.n890
-CurrentTerritoryCode.n891 = '891'                 # originally TisTerritoryCode.n891
-CurrentTerritoryCode.n894 = '894'                 # originally TisTerritoryCode.n894
-CurrentTerritoryCode.n2100 = '2100'               # originally TisTerritoryCode.n2100
-CurrentTerritoryCode.n2101 = '2101'               # originally TisTerritoryCode.n2101
-CurrentTerritoryCode.n2102 = '2102'               # originally TisTerritoryCode.n2102
-CurrentTerritoryCode.n2103 = '2103'               # originally TisTerritoryCode.n2103
-CurrentTerritoryCode.n2104 = '2104'               # originally TisTerritoryCode.n2104
-CurrentTerritoryCode.n2105 = '2105'               # originally TisTerritoryCode.n2105
-CurrentTerritoryCode.n2106 = '2106'               # originally TisTerritoryCode.n2106
-CurrentTerritoryCode.n2107 = '2107'               # originally TisTerritoryCode.n2107
-CurrentTerritoryCode.n2108 = '2108'               # originally TisTerritoryCode.n2108
-CurrentTerritoryCode.n2109 = '2109'               # originally TisTerritoryCode.n2109
-CurrentTerritoryCode.n2110 = '2110'               # originally TisTerritoryCode.n2110
-CurrentTerritoryCode.n2111 = '2111'               # originally TisTerritoryCode.n2111
-CurrentTerritoryCode.n2112 = '2112'               # originally TisTerritoryCode.n2112
-CurrentTerritoryCode.n2113 = '2113'               # originally TisTerritoryCode.n2113
-CurrentTerritoryCode.n2114 = '2114'               # originally TisTerritoryCode.n2114
-CurrentTerritoryCode.n2115 = '2115'               # originally TisTerritoryCode.n2115
-CurrentTerritoryCode.n2116 = '2116'               # originally TisTerritoryCode.n2116
-CurrentTerritoryCode.n2117 = '2117'               # originally TisTerritoryCode.n2117
-CurrentTerritoryCode.n2118 = '2118'               # originally TisTerritoryCode.n2118
-CurrentTerritoryCode.n2119 = '2119'               # originally TisTerritoryCode.n2119
-CurrentTerritoryCode.n2120 = '2120'               # originally TisTerritoryCode.n2120
-CurrentTerritoryCode.n2121 = '2121'               # originally TisTerritoryCode.n2121
-CurrentTerritoryCode.n2122 = '2122'               # originally TisTerritoryCode.n2122
-CurrentTerritoryCode.n2123 = '2123'               # originally TisTerritoryCode.n2123
-CurrentTerritoryCode.n2124 = '2124'               # originally TisTerritoryCode.n2124
-CurrentTerritoryCode.n2125 = '2125'               # originally TisTerritoryCode.n2125
-CurrentTerritoryCode.n2126 = '2126'               # originally TisTerritoryCode.n2126
-CurrentTerritoryCode.n2127 = '2127'               # originally TisTerritoryCode.n2127
-CurrentTerritoryCode.n2128 = '2128'               # originally TisTerritoryCode.n2128
-CurrentTerritoryCode.n2129 = '2129'               # originally TisTerritoryCode.n2129
-CurrentTerritoryCode.n2130 = '2130'               # originally TisTerritoryCode.n2130
-CurrentTerritoryCode.n2131 = '2131'               # originally TisTerritoryCode.n2131
-CurrentTerritoryCode.n2132 = '2132'               # originally TisTerritoryCode.n2132
-CurrentTerritoryCode.n2133 = '2133'               # originally TisTerritoryCode.n2133
-CurrentTerritoryCode.n2134 = '2134'               # originally TisTerritoryCode.n2134
-CurrentTerritoryCode.n2136 = '2136'               # originally TisTerritoryCode.n2136
-CurrentTerritoryCode.Worldwide = 'Worldwide'      # originally DdexTerritoryCode.Worldwide
-CurrentTerritoryCode._InitializeFacetMap(CurrentTerritoryCode._CF_enumeration,
-   CurrentTerritoryCode._CF_pattern)
-Namespace.addCategoryObject('typeBinding', 'CurrentTerritoryCode', CurrentTerritoryCode)
-
-# Union simple type: {http://ddex.net/xml/avs/avs}MusicalWorkContributorRole
-# superclasses pyxb.binding.datatypes.anySimpleType
-class MusicalWorkContributorRole (pyxb.binding.basis.STD_union):
-
-    """A role played by a Contributor in relation to a MusicalWork."""
-
-    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MusicalWorkContributorRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 6271, 3)
-    _Documentation = 'A role played by a Contributor in relation to a MusicalWork.'
-
-    _MemberTypes = ( CreativeContributorRole, BusinessContributorRole, )
-MusicalWorkContributorRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MusicalWorkContributorRole)
-MusicalWorkContributorRole._CF_pattern = pyxb.binding.facets.CF_pattern()
-MusicalWorkContributorRole.Adapter = 'Adapter'    # originally CreativeContributorRole.Adapter
-MusicalWorkContributorRole.Arranger = 'Arranger'  # originally CreativeContributorRole.Arranger
-MusicalWorkContributorRole.AssociatedPerformer = 'AssociatedPerformer'# originally CreativeContributorRole.AssociatedPerformer
-MusicalWorkContributorRole.Author = 'Author'      # originally CreativeContributorRole.Author
-MusicalWorkContributorRole.Composer = 'Composer'  # originally CreativeContributorRole.Composer
-MusicalWorkContributorRole.ComposerLyricist = 'ComposerLyricist'# originally CreativeContributorRole.ComposerLyricist
-MusicalWorkContributorRole.Librettist = 'Librettist'# originally CreativeContributorRole.Librettist
-MusicalWorkContributorRole.Lyricist = 'Lyricist'  # originally CreativeContributorRole.Lyricist
-MusicalWorkContributorRole.NonLyricAuthor = 'NonLyricAuthor'# originally CreativeContributorRole.NonLyricAuthor
-MusicalWorkContributorRole.SubArranger = 'SubArranger'# originally CreativeContributorRole.SubArranger
-MusicalWorkContributorRole.SubLyricist = 'SubLyricist'# originally CreativeContributorRole.SubLyricist
-MusicalWorkContributorRole.Translator = 'Translator'# originally CreativeContributorRole.Translator
-MusicalWorkContributorRole.Contributor = 'Contributor'# originally BusinessContributorRole.Contributor
-MusicalWorkContributorRole.MusicPublisher = 'MusicPublisher'# originally BusinessContributorRole.MusicPublisher
-MusicalWorkContributorRole.OriginalPublisher = 'OriginalPublisher'# originally BusinessContributorRole.OriginalPublisher
-MusicalWorkContributorRole.SubPublisher = 'SubPublisher'# originally BusinessContributorRole.SubPublisher
-MusicalWorkContributorRole.SubstitutedPublisher = 'SubstitutedPublisher'# originally BusinessContributorRole.SubstitutedPublisher
-MusicalWorkContributorRole.Unknown = 'Unknown'    # originally BusinessContributorRole.Unknown
-MusicalWorkContributorRole.UserDefined = 'UserDefined'# originally BusinessContributorRole.UserDefined
-MusicalWorkContributorRole._InitializeFacetMap(MusicalWorkContributorRole._CF_enumeration,
-   MusicalWorkContributorRole._CF_pattern)
-Namespace.addCategoryObject('typeBinding', 'MusicalWorkContributorRole', MusicalWorkContributorRole)
-
-# Union simple type: {http://ddex.net/xml/avs/avs}TerritoryCode
-# superclasses pyxb.binding.datatypes.anySimpleType
-class TerritoryCode (pyxb.binding.basis.STD_union):
+# Atomic simple type: {http://ddex.net/xml/avs/avs}TerritoryCode
+class TerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A code representing a Territory. This includes ISO 3166-1 two-letter codes plus a code for Worldwide (This list is included here for compatibility reasons. Current standards use other TerritoryCode lists)."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs.xsd', 11251, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 22116, 3)
     _Documentation = 'A code representing a Territory. This includes ISO 3166-1 two-letter codes plus a code for Worldwide (This list is included here for compatibility reasons. Current standards use other TerritoryCode lists).'
-
-    _MemberTypes = ( IsoTerritoryCode, DdexTerritoryCode, )
-TerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TerritoryCode)
-TerritoryCode._CF_pattern = pyxb.binding.facets.CF_pattern()
-TerritoryCode.AD = 'AD'                           # originally IsoTerritoryCode.AD
-TerritoryCode.AE = 'AE'                           # originally IsoTerritoryCode.AE
-TerritoryCode.AF = 'AF'                           # originally IsoTerritoryCode.AF
-TerritoryCode.AG = 'AG'                           # originally IsoTerritoryCode.AG
-TerritoryCode.AI = 'AI'                           # originally IsoTerritoryCode.AI
-TerritoryCode.AL = 'AL'                           # originally IsoTerritoryCode.AL
-TerritoryCode.AM = 'AM'                           # originally IsoTerritoryCode.AM
-TerritoryCode.AN = 'AN'                           # originally IsoTerritoryCode.AN
-TerritoryCode.AO = 'AO'                           # originally IsoTerritoryCode.AO
-TerritoryCode.AQ = 'AQ'                           # originally IsoTerritoryCode.AQ
-TerritoryCode.AR = 'AR'                           # originally IsoTerritoryCode.AR
-TerritoryCode.AS = 'AS'                           # originally IsoTerritoryCode.AS
-TerritoryCode.AT = 'AT'                           # originally IsoTerritoryCode.AT
-TerritoryCode.AU = 'AU'                           # originally IsoTerritoryCode.AU
-TerritoryCode.AW = 'AW'                           # originally IsoTerritoryCode.AW
-TerritoryCode.AX = 'AX'                           # originally IsoTerritoryCode.AX
-TerritoryCode.AZ = 'AZ'                           # originally IsoTerritoryCode.AZ
-TerritoryCode.BA = 'BA'                           # originally IsoTerritoryCode.BA
-TerritoryCode.BB = 'BB'                           # originally IsoTerritoryCode.BB
-TerritoryCode.BD = 'BD'                           # originally IsoTerritoryCode.BD
-TerritoryCode.BE = 'BE'                           # originally IsoTerritoryCode.BE
-TerritoryCode.BF = 'BF'                           # originally IsoTerritoryCode.BF
-TerritoryCode.BG = 'BG'                           # originally IsoTerritoryCode.BG
-TerritoryCode.BH = 'BH'                           # originally IsoTerritoryCode.BH
-TerritoryCode.BI = 'BI'                           # originally IsoTerritoryCode.BI
-TerritoryCode.BJ = 'BJ'                           # originally IsoTerritoryCode.BJ
-TerritoryCode.BL = 'BL'                           # originally IsoTerritoryCode.BL
-TerritoryCode.BM = 'BM'                           # originally IsoTerritoryCode.BM
-TerritoryCode.BN = 'BN'                           # originally IsoTerritoryCode.BN
-TerritoryCode.BO = 'BO'                           # originally IsoTerritoryCode.BO
-TerritoryCode.BQ = 'BQ'                           # originally IsoTerritoryCode.BQ
-TerritoryCode.BR = 'BR'                           # originally IsoTerritoryCode.BR
-TerritoryCode.BS = 'BS'                           # originally IsoTerritoryCode.BS
-TerritoryCode.BT = 'BT'                           # originally IsoTerritoryCode.BT
-TerritoryCode.BV = 'BV'                           # originally IsoTerritoryCode.BV
-TerritoryCode.BW = 'BW'                           # originally IsoTerritoryCode.BW
-TerritoryCode.BY = 'BY'                           # originally IsoTerritoryCode.BY
-TerritoryCode.BZ = 'BZ'                           # originally IsoTerritoryCode.BZ
-TerritoryCode.CA = 'CA'                           # originally IsoTerritoryCode.CA
-TerritoryCode.CC = 'CC'                           # originally IsoTerritoryCode.CC
-TerritoryCode.CD = 'CD'                           # originally IsoTerritoryCode.CD
-TerritoryCode.CF = 'CF'                           # originally IsoTerritoryCode.CF
-TerritoryCode.CG = 'CG'                           # originally IsoTerritoryCode.CG
-TerritoryCode.CH = 'CH'                           # originally IsoTerritoryCode.CH
-TerritoryCode.CI = 'CI'                           # originally IsoTerritoryCode.CI
-TerritoryCode.CK = 'CK'                           # originally IsoTerritoryCode.CK
-TerritoryCode.CL = 'CL'                           # originally IsoTerritoryCode.CL
-TerritoryCode.CM = 'CM'                           # originally IsoTerritoryCode.CM
-TerritoryCode.CN = 'CN'                           # originally IsoTerritoryCode.CN
-TerritoryCode.CO = 'CO'                           # originally IsoTerritoryCode.CO
-TerritoryCode.CR = 'CR'                           # originally IsoTerritoryCode.CR
-TerritoryCode.CS = 'CS'                           # originally IsoTerritoryCode.CS
-TerritoryCode.CU = 'CU'                           # originally IsoTerritoryCode.CU
-TerritoryCode.CV = 'CV'                           # originally IsoTerritoryCode.CV
-TerritoryCode.CW = 'CW'                           # originally IsoTerritoryCode.CW
-TerritoryCode.CX = 'CX'                           # originally IsoTerritoryCode.CX
-TerritoryCode.CY = 'CY'                           # originally IsoTerritoryCode.CY
-TerritoryCode.CZ = 'CZ'                           # originally IsoTerritoryCode.CZ
-TerritoryCode.DE = 'DE'                           # originally IsoTerritoryCode.DE
-TerritoryCode.DJ = 'DJ'                           # originally IsoTerritoryCode.DJ
-TerritoryCode.DK = 'DK'                           # originally IsoTerritoryCode.DK
-TerritoryCode.DM = 'DM'                           # originally IsoTerritoryCode.DM
-TerritoryCode.DO = 'DO'                           # originally IsoTerritoryCode.DO
-TerritoryCode.DZ = 'DZ'                           # originally IsoTerritoryCode.DZ
-TerritoryCode.EC = 'EC'                           # originally IsoTerritoryCode.EC
-TerritoryCode.EE = 'EE'                           # originally IsoTerritoryCode.EE
-TerritoryCode.EG = 'EG'                           # originally IsoTerritoryCode.EG
-TerritoryCode.EH = 'EH'                           # originally IsoTerritoryCode.EH
-TerritoryCode.ER = 'ER'                           # originally IsoTerritoryCode.ER
-TerritoryCode.ES = 'ES'                           # originally IsoTerritoryCode.ES
-TerritoryCode.ET = 'ET'                           # originally IsoTerritoryCode.ET
-TerritoryCode.FI = 'FI'                           # originally IsoTerritoryCode.FI
-TerritoryCode.FJ = 'FJ'                           # originally IsoTerritoryCode.FJ
-TerritoryCode.FK = 'FK'                           # originally IsoTerritoryCode.FK
-TerritoryCode.FM = 'FM'                           # originally IsoTerritoryCode.FM
-TerritoryCode.FO = 'FO'                           # originally IsoTerritoryCode.FO
-TerritoryCode.FR = 'FR'                           # originally IsoTerritoryCode.FR
-TerritoryCode.GA = 'GA'                           # originally IsoTerritoryCode.GA
-TerritoryCode.GB = 'GB'                           # originally IsoTerritoryCode.GB
-TerritoryCode.GD = 'GD'                           # originally IsoTerritoryCode.GD
-TerritoryCode.GE = 'GE'                           # originally IsoTerritoryCode.GE
-TerritoryCode.GF = 'GF'                           # originally IsoTerritoryCode.GF
-TerritoryCode.GG = 'GG'                           # originally IsoTerritoryCode.GG
-TerritoryCode.GH = 'GH'                           # originally IsoTerritoryCode.GH
-TerritoryCode.GI = 'GI'                           # originally IsoTerritoryCode.GI
-TerritoryCode.GL = 'GL'                           # originally IsoTerritoryCode.GL
-TerritoryCode.GM = 'GM'                           # originally IsoTerritoryCode.GM
-TerritoryCode.GN = 'GN'                           # originally IsoTerritoryCode.GN
-TerritoryCode.GP = 'GP'                           # originally IsoTerritoryCode.GP
-TerritoryCode.GQ = 'GQ'                           # originally IsoTerritoryCode.GQ
-TerritoryCode.GR = 'GR'                           # originally IsoTerritoryCode.GR
-TerritoryCode.GS = 'GS'                           # originally IsoTerritoryCode.GS
-TerritoryCode.GT = 'GT'                           # originally IsoTerritoryCode.GT
-TerritoryCode.GU = 'GU'                           # originally IsoTerritoryCode.GU
-TerritoryCode.GW = 'GW'                           # originally IsoTerritoryCode.GW
-TerritoryCode.GY = 'GY'                           # originally IsoTerritoryCode.GY
-TerritoryCode.HK = 'HK'                           # originally IsoTerritoryCode.HK
-TerritoryCode.HM = 'HM'                           # originally IsoTerritoryCode.HM
-TerritoryCode.HN = 'HN'                           # originally IsoTerritoryCode.HN
-TerritoryCode.HR = 'HR'                           # originally IsoTerritoryCode.HR
-TerritoryCode.HT = 'HT'                           # originally IsoTerritoryCode.HT
-TerritoryCode.HU = 'HU'                           # originally IsoTerritoryCode.HU
-TerritoryCode.ID = 'ID'                           # originally IsoTerritoryCode.ID
-TerritoryCode.IE = 'IE'                           # originally IsoTerritoryCode.IE
-TerritoryCode.IL = 'IL'                           # originally IsoTerritoryCode.IL
-TerritoryCode.IM = 'IM'                           # originally IsoTerritoryCode.IM
-TerritoryCode.IN = 'IN'                           # originally IsoTerritoryCode.IN
-TerritoryCode.IO = 'IO'                           # originally IsoTerritoryCode.IO
-TerritoryCode.IQ = 'IQ'                           # originally IsoTerritoryCode.IQ
-TerritoryCode.IR = 'IR'                           # originally IsoTerritoryCode.IR
-TerritoryCode.IS = 'IS'                           # originally IsoTerritoryCode.IS
-TerritoryCode.IT = 'IT'                           # originally IsoTerritoryCode.IT
-TerritoryCode.JE = 'JE'                           # originally IsoTerritoryCode.JE
-TerritoryCode.JM = 'JM'                           # originally IsoTerritoryCode.JM
-TerritoryCode.JO = 'JO'                           # originally IsoTerritoryCode.JO
-TerritoryCode.JP = 'JP'                           # originally IsoTerritoryCode.JP
-TerritoryCode.KE = 'KE'                           # originally IsoTerritoryCode.KE
-TerritoryCode.KG = 'KG'                           # originally IsoTerritoryCode.KG
-TerritoryCode.KH = 'KH'                           # originally IsoTerritoryCode.KH
-TerritoryCode.KI = 'KI'                           # originally IsoTerritoryCode.KI
-TerritoryCode.KM = 'KM'                           # originally IsoTerritoryCode.KM
-TerritoryCode.KN = 'KN'                           # originally IsoTerritoryCode.KN
-TerritoryCode.KP = 'KP'                           # originally IsoTerritoryCode.KP
-TerritoryCode.KR = 'KR'                           # originally IsoTerritoryCode.KR
-TerritoryCode.KW = 'KW'                           # originally IsoTerritoryCode.KW
-TerritoryCode.KY = 'KY'                           # originally IsoTerritoryCode.KY
-TerritoryCode.KZ = 'KZ'                           # originally IsoTerritoryCode.KZ
-TerritoryCode.LA = 'LA'                           # originally IsoTerritoryCode.LA
-TerritoryCode.LB = 'LB'                           # originally IsoTerritoryCode.LB
-TerritoryCode.LC = 'LC'                           # originally IsoTerritoryCode.LC
-TerritoryCode.LI = 'LI'                           # originally IsoTerritoryCode.LI
-TerritoryCode.LK = 'LK'                           # originally IsoTerritoryCode.LK
-TerritoryCode.LR = 'LR'                           # originally IsoTerritoryCode.LR
-TerritoryCode.LS = 'LS'                           # originally IsoTerritoryCode.LS
-TerritoryCode.LT = 'LT'                           # originally IsoTerritoryCode.LT
-TerritoryCode.LU = 'LU'                           # originally IsoTerritoryCode.LU
-TerritoryCode.LV = 'LV'                           # originally IsoTerritoryCode.LV
-TerritoryCode.LY = 'LY'                           # originally IsoTerritoryCode.LY
-TerritoryCode.MA = 'MA'                           # originally IsoTerritoryCode.MA
-TerritoryCode.MC = 'MC'                           # originally IsoTerritoryCode.MC
-TerritoryCode.MD = 'MD'                           # originally IsoTerritoryCode.MD
-TerritoryCode.ME = 'ME'                           # originally IsoTerritoryCode.ME
-TerritoryCode.MF = 'MF'                           # originally IsoTerritoryCode.MF
-TerritoryCode.MG = 'MG'                           # originally IsoTerritoryCode.MG
-TerritoryCode.MH = 'MH'                           # originally IsoTerritoryCode.MH
-TerritoryCode.MK = 'MK'                           # originally IsoTerritoryCode.MK
-TerritoryCode.ML = 'ML'                           # originally IsoTerritoryCode.ML
-TerritoryCode.MM = 'MM'                           # originally IsoTerritoryCode.MM
-TerritoryCode.MN = 'MN'                           # originally IsoTerritoryCode.MN
-TerritoryCode.MO = 'MO'                           # originally IsoTerritoryCode.MO
-TerritoryCode.MP = 'MP'                           # originally IsoTerritoryCode.MP
-TerritoryCode.MQ = 'MQ'                           # originally IsoTerritoryCode.MQ
-TerritoryCode.MR = 'MR'                           # originally IsoTerritoryCode.MR
-TerritoryCode.MS = 'MS'                           # originally IsoTerritoryCode.MS
-TerritoryCode.MT = 'MT'                           # originally IsoTerritoryCode.MT
-TerritoryCode.MU = 'MU'                           # originally IsoTerritoryCode.MU
-TerritoryCode.MV = 'MV'                           # originally IsoTerritoryCode.MV
-TerritoryCode.MW = 'MW'                           # originally IsoTerritoryCode.MW
-TerritoryCode.MX = 'MX'                           # originally IsoTerritoryCode.MX
-TerritoryCode.MY = 'MY'                           # originally IsoTerritoryCode.MY
-TerritoryCode.MZ = 'MZ'                           # originally IsoTerritoryCode.MZ
-TerritoryCode.NA = 'NA'                           # originally IsoTerritoryCode.NA
-TerritoryCode.NC = 'NC'                           # originally IsoTerritoryCode.NC
-TerritoryCode.NE = 'NE'                           # originally IsoTerritoryCode.NE
-TerritoryCode.NF = 'NF'                           # originally IsoTerritoryCode.NF
-TerritoryCode.NG = 'NG'                           # originally IsoTerritoryCode.NG
-TerritoryCode.NI = 'NI'                           # originally IsoTerritoryCode.NI
-TerritoryCode.NL = 'NL'                           # originally IsoTerritoryCode.NL
-TerritoryCode.NO = 'NO'                           # originally IsoTerritoryCode.NO
-TerritoryCode.NP = 'NP'                           # originally IsoTerritoryCode.NP
-TerritoryCode.NR = 'NR'                           # originally IsoTerritoryCode.NR
-TerritoryCode.NU = 'NU'                           # originally IsoTerritoryCode.NU
-TerritoryCode.NZ = 'NZ'                           # originally IsoTerritoryCode.NZ
-TerritoryCode.OM = 'OM'                           # originally IsoTerritoryCode.OM
-TerritoryCode.PA = 'PA'                           # originally IsoTerritoryCode.PA
-TerritoryCode.PE = 'PE'                           # originally IsoTerritoryCode.PE
-TerritoryCode.PF = 'PF'                           # originally IsoTerritoryCode.PF
-TerritoryCode.PG = 'PG'                           # originally IsoTerritoryCode.PG
-TerritoryCode.PH = 'PH'                           # originally IsoTerritoryCode.PH
-TerritoryCode.PK = 'PK'                           # originally IsoTerritoryCode.PK
-TerritoryCode.PL = 'PL'                           # originally IsoTerritoryCode.PL
-TerritoryCode.PM = 'PM'                           # originally IsoTerritoryCode.PM
-TerritoryCode.PN = 'PN'                           # originally IsoTerritoryCode.PN
-TerritoryCode.PR = 'PR'                           # originally IsoTerritoryCode.PR
-TerritoryCode.PS = 'PS'                           # originally IsoTerritoryCode.PS
-TerritoryCode.PT = 'PT'                           # originally IsoTerritoryCode.PT
-TerritoryCode.PW = 'PW'                           # originally IsoTerritoryCode.PW
-TerritoryCode.PY = 'PY'                           # originally IsoTerritoryCode.PY
-TerritoryCode.QA = 'QA'                           # originally IsoTerritoryCode.QA
-TerritoryCode.RE = 'RE'                           # originally IsoTerritoryCode.RE
-TerritoryCode.RO = 'RO'                           # originally IsoTerritoryCode.RO
-TerritoryCode.RS = 'RS'                           # originally IsoTerritoryCode.RS
-TerritoryCode.RU = 'RU'                           # originally IsoTerritoryCode.RU
-TerritoryCode.RW = 'RW'                           # originally IsoTerritoryCode.RW
-TerritoryCode.SA = 'SA'                           # originally IsoTerritoryCode.SA
-TerritoryCode.SB = 'SB'                           # originally IsoTerritoryCode.SB
-TerritoryCode.SC = 'SC'                           # originally IsoTerritoryCode.SC
-TerritoryCode.SD = 'SD'                           # originally IsoTerritoryCode.SD
-TerritoryCode.SE = 'SE'                           # originally IsoTerritoryCode.SE
-TerritoryCode.SG = 'SG'                           # originally IsoTerritoryCode.SG
-TerritoryCode.SH = 'SH'                           # originally IsoTerritoryCode.SH
-TerritoryCode.SI = 'SI'                           # originally IsoTerritoryCode.SI
-TerritoryCode.SJ = 'SJ'                           # originally IsoTerritoryCode.SJ
-TerritoryCode.SK = 'SK'                           # originally IsoTerritoryCode.SK
-TerritoryCode.SL = 'SL'                           # originally IsoTerritoryCode.SL
-TerritoryCode.SM = 'SM'                           # originally IsoTerritoryCode.SM
-TerritoryCode.SN = 'SN'                           # originally IsoTerritoryCode.SN
-TerritoryCode.SO = 'SO'                           # originally IsoTerritoryCode.SO
-TerritoryCode.SR = 'SR'                           # originally IsoTerritoryCode.SR
-TerritoryCode.SS = 'SS'                           # originally IsoTerritoryCode.SS
-TerritoryCode.ST = 'ST'                           # originally IsoTerritoryCode.ST
-TerritoryCode.SV = 'SV'                           # originally IsoTerritoryCode.SV
-TerritoryCode.SX = 'SX'                           # originally IsoTerritoryCode.SX
-TerritoryCode.SY = 'SY'                           # originally IsoTerritoryCode.SY
-TerritoryCode.SZ = 'SZ'                           # originally IsoTerritoryCode.SZ
-TerritoryCode.TC = 'TC'                           # originally IsoTerritoryCode.TC
-TerritoryCode.TD = 'TD'                           # originally IsoTerritoryCode.TD
-TerritoryCode.TF = 'TF'                           # originally IsoTerritoryCode.TF
-TerritoryCode.TG = 'TG'                           # originally IsoTerritoryCode.TG
-TerritoryCode.TH = 'TH'                           # originally IsoTerritoryCode.TH
-TerritoryCode.TJ = 'TJ'                           # originally IsoTerritoryCode.TJ
-TerritoryCode.TK = 'TK'                           # originally IsoTerritoryCode.TK
-TerritoryCode.TL = 'TL'                           # originally IsoTerritoryCode.TL
-TerritoryCode.TM = 'TM'                           # originally IsoTerritoryCode.TM
-TerritoryCode.TN = 'TN'                           # originally IsoTerritoryCode.TN
-TerritoryCode.TO = 'TO'                           # originally IsoTerritoryCode.TO
-TerritoryCode.TR = 'TR'                           # originally IsoTerritoryCode.TR
-TerritoryCode.TT = 'TT'                           # originally IsoTerritoryCode.TT
-TerritoryCode.TV = 'TV'                           # originally IsoTerritoryCode.TV
-TerritoryCode.TW = 'TW'                           # originally IsoTerritoryCode.TW
-TerritoryCode.TZ = 'TZ'                           # originally IsoTerritoryCode.TZ
-TerritoryCode.UA = 'UA'                           # originally IsoTerritoryCode.UA
-TerritoryCode.UG = 'UG'                           # originally IsoTerritoryCode.UG
-TerritoryCode.UM = 'UM'                           # originally IsoTerritoryCode.UM
-TerritoryCode.US = 'US'                           # originally IsoTerritoryCode.US
-TerritoryCode.UY = 'UY'                           # originally IsoTerritoryCode.UY
-TerritoryCode.UZ = 'UZ'                           # originally IsoTerritoryCode.UZ
-TerritoryCode.VA = 'VA'                           # originally IsoTerritoryCode.VA
-TerritoryCode.VC = 'VC'                           # originally IsoTerritoryCode.VC
-TerritoryCode.VE = 'VE'                           # originally IsoTerritoryCode.VE
-TerritoryCode.VG = 'VG'                           # originally IsoTerritoryCode.VG
-TerritoryCode.VI = 'VI'                           # originally IsoTerritoryCode.VI
-TerritoryCode.VN = 'VN'                           # originally IsoTerritoryCode.VN
-TerritoryCode.VU = 'VU'                           # originally IsoTerritoryCode.VU
-TerritoryCode.WF = 'WF'                           # originally IsoTerritoryCode.WF
-TerritoryCode.WS = 'WS'                           # originally IsoTerritoryCode.WS
-TerritoryCode.YE = 'YE'                           # originally IsoTerritoryCode.YE
-TerritoryCode.YT = 'YT'                           # originally IsoTerritoryCode.YT
-TerritoryCode.ZA = 'ZA'                           # originally IsoTerritoryCode.ZA
-TerritoryCode.ZM = 'ZM'                           # originally IsoTerritoryCode.ZM
-TerritoryCode.ZW = 'ZW'                           # originally IsoTerritoryCode.ZW
-TerritoryCode.Worldwide = 'Worldwide'             # originally DdexTerritoryCode.Worldwide
-TerritoryCode._InitializeFacetMap(TerritoryCode._CF_enumeration,
-   TerritoryCode._CF_pattern)
+TerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TerritoryCode, enum_prefix=None)
+TerritoryCode.AD = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AD', tag='AD')
+TerritoryCode.AE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AE', tag='AE')
+TerritoryCode.AF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AF', tag='AF')
+TerritoryCode.AG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AG', tag='AG')
+TerritoryCode.AI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AI', tag='AI')
+TerritoryCode.AL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AL', tag='AL')
+TerritoryCode.AM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AM', tag='AM')
+TerritoryCode.AN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AN', tag='AN')
+TerritoryCode.AO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AO', tag='AO')
+TerritoryCode.AQ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AQ', tag='AQ')
+TerritoryCode.AR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AR', tag='AR')
+TerritoryCode.AS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AS', tag='AS')
+TerritoryCode.AT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AT', tag='AT')
+TerritoryCode.AU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AU', tag='AU')
+TerritoryCode.AW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AW', tag='AW')
+TerritoryCode.AX = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AX', tag='AX')
+TerritoryCode.AZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='AZ', tag='AZ')
+TerritoryCode.BA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BA', tag='BA')
+TerritoryCode.BB = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BB', tag='BB')
+TerritoryCode.BD = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BD', tag='BD')
+TerritoryCode.BE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BE', tag='BE')
+TerritoryCode.BF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BF', tag='BF')
+TerritoryCode.BG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BG', tag='BG')
+TerritoryCode.BH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BH', tag='BH')
+TerritoryCode.BI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BI', tag='BI')
+TerritoryCode.BJ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BJ', tag='BJ')
+TerritoryCode.BL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BL', tag='BL')
+TerritoryCode.BM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BM', tag='BM')
+TerritoryCode.BN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BN', tag='BN')
+TerritoryCode.BO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BO', tag='BO')
+TerritoryCode.BQ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BQ', tag='BQ')
+TerritoryCode.BR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BR', tag='BR')
+TerritoryCode.BS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BS', tag='BS')
+TerritoryCode.BT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BT', tag='BT')
+TerritoryCode.BV = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BV', tag='BV')
+TerritoryCode.BW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BW', tag='BW')
+TerritoryCode.BY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BY', tag='BY')
+TerritoryCode.BZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='BZ', tag='BZ')
+TerritoryCode.CA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CA', tag='CA')
+TerritoryCode.CC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CC', tag='CC')
+TerritoryCode.CD = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CD', tag='CD')
+TerritoryCode.CF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CF', tag='CF')
+TerritoryCode.CG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CG', tag='CG')
+TerritoryCode.CH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CH', tag='CH')
+TerritoryCode.CI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CI', tag='CI')
+TerritoryCode.CK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CK', tag='CK')
+TerritoryCode.CL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CL', tag='CL')
+TerritoryCode.CM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CM', tag='CM')
+TerritoryCode.CN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CN', tag='CN')
+TerritoryCode.CO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CO', tag='CO')
+TerritoryCode.CR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CR', tag='CR')
+TerritoryCode.CS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CS', tag='CS')
+TerritoryCode.CU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CU', tag='CU')
+TerritoryCode.CV = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CV', tag='CV')
+TerritoryCode.CW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CW', tag='CW')
+TerritoryCode.CX = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CX', tag='CX')
+TerritoryCode.CY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CY', tag='CY')
+TerritoryCode.CZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='CZ', tag='CZ')
+TerritoryCode.DE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='DE', tag='DE')
+TerritoryCode.DJ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='DJ', tag='DJ')
+TerritoryCode.DK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='DK', tag='DK')
+TerritoryCode.DM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='DM', tag='DM')
+TerritoryCode.DO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='DO', tag='DO')
+TerritoryCode.DZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='DZ', tag='DZ')
+TerritoryCode.EC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='EC', tag='EC')
+TerritoryCode.EE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='EE', tag='EE')
+TerritoryCode.EG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='EG', tag='EG')
+TerritoryCode.EH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='EH', tag='EH')
+TerritoryCode.ER = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ER', tag='ER')
+TerritoryCode.ES = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES', tag='ES')
+TerritoryCode.ES_CE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CE', tag='ES_CE')
+TerritoryCode.ES_CN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-CN', tag='ES_CN')
+TerritoryCode.ES_ML = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ES-ML', tag='ES_ML')
+TerritoryCode.ET = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ET', tag='ET')
+TerritoryCode.FI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='FI', tag='FI')
+TerritoryCode.FJ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='FJ', tag='FJ')
+TerritoryCode.FK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='FK', tag='FK')
+TerritoryCode.FM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='FM', tag='FM')
+TerritoryCode.FO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='FO', tag='FO')
+TerritoryCode.FR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='FR', tag='FR')
+TerritoryCode.GA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GA', tag='GA')
+TerritoryCode.GB = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GB', tag='GB')
+TerritoryCode.GD = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GD', tag='GD')
+TerritoryCode.GE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GE', tag='GE')
+TerritoryCode.GF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GF', tag='GF')
+TerritoryCode.GG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GG', tag='GG')
+TerritoryCode.GH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GH', tag='GH')
+TerritoryCode.GI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GI', tag='GI')
+TerritoryCode.GL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GL', tag='GL')
+TerritoryCode.GM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GM', tag='GM')
+TerritoryCode.GN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GN', tag='GN')
+TerritoryCode.GP = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GP', tag='GP')
+TerritoryCode.GQ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GQ', tag='GQ')
+TerritoryCode.GR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GR', tag='GR')
+TerritoryCode.GS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GS', tag='GS')
+TerritoryCode.GT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GT', tag='GT')
+TerritoryCode.GU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GU', tag='GU')
+TerritoryCode.GW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GW', tag='GW')
+TerritoryCode.GY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='GY', tag='GY')
+TerritoryCode.HK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='HK', tag='HK')
+TerritoryCode.HM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='HM', tag='HM')
+TerritoryCode.HN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='HN', tag='HN')
+TerritoryCode.HR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='HR', tag='HR')
+TerritoryCode.HT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='HT', tag='HT')
+TerritoryCode.HU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='HU', tag='HU')
+TerritoryCode.ID = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ID', tag='ID')
+TerritoryCode.IE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IE', tag='IE')
+TerritoryCode.IL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IL', tag='IL')
+TerritoryCode.IM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IM', tag='IM')
+TerritoryCode.IN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IN', tag='IN')
+TerritoryCode.IO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IO', tag='IO')
+TerritoryCode.IQ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IQ', tag='IQ')
+TerritoryCode.IR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IR', tag='IR')
+TerritoryCode.IS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IS', tag='IS')
+TerritoryCode.IT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='IT', tag='IT')
+TerritoryCode.JE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='JE', tag='JE')
+TerritoryCode.JM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='JM', tag='JM')
+TerritoryCode.JO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='JO', tag='JO')
+TerritoryCode.JP = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='JP', tag='JP')
+TerritoryCode.KE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KE', tag='KE')
+TerritoryCode.KG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KG', tag='KG')
+TerritoryCode.KH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KH', tag='KH')
+TerritoryCode.KI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KI', tag='KI')
+TerritoryCode.KM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KM', tag='KM')
+TerritoryCode.KN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KN', tag='KN')
+TerritoryCode.KP = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KP', tag='KP')
+TerritoryCode.KR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KR', tag='KR')
+TerritoryCode.KW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KW', tag='KW')
+TerritoryCode.KY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KY', tag='KY')
+TerritoryCode.KZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='KZ', tag='KZ')
+TerritoryCode.LA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LA', tag='LA')
+TerritoryCode.LB = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LB', tag='LB')
+TerritoryCode.LC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LC', tag='LC')
+TerritoryCode.LI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LI', tag='LI')
+TerritoryCode.LK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LK', tag='LK')
+TerritoryCode.LR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LR', tag='LR')
+TerritoryCode.LS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LS', tag='LS')
+TerritoryCode.LT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LT', tag='LT')
+TerritoryCode.LU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LU', tag='LU')
+TerritoryCode.LV = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LV', tag='LV')
+TerritoryCode.LY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='LY', tag='LY')
+TerritoryCode.MA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MA', tag='MA')
+TerritoryCode.MC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MC', tag='MC')
+TerritoryCode.MD = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MD', tag='MD')
+TerritoryCode.ME = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ME', tag='ME')
+TerritoryCode.MF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MF', tag='MF')
+TerritoryCode.MG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MG', tag='MG')
+TerritoryCode.MH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MH', tag='MH')
+TerritoryCode.MK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MK', tag='MK')
+TerritoryCode.ML = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ML', tag='ML')
+TerritoryCode.MM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MM', tag='MM')
+TerritoryCode.MN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MN', tag='MN')
+TerritoryCode.MO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MO', tag='MO')
+TerritoryCode.MP = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MP', tag='MP')
+TerritoryCode.MQ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MQ', tag='MQ')
+TerritoryCode.MR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MR', tag='MR')
+TerritoryCode.MS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MS', tag='MS')
+TerritoryCode.MT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MT', tag='MT')
+TerritoryCode.MU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MU', tag='MU')
+TerritoryCode.MV = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MV', tag='MV')
+TerritoryCode.MW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MW', tag='MW')
+TerritoryCode.MX = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MX', tag='MX')
+TerritoryCode.MY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MY', tag='MY')
+TerritoryCode.MZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='MZ', tag='MZ')
+TerritoryCode.NA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NA', tag='NA')
+TerritoryCode.NC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NC', tag='NC')
+TerritoryCode.NE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NE', tag='NE')
+TerritoryCode.NF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NF', tag='NF')
+TerritoryCode.NG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NG', tag='NG')
+TerritoryCode.NI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NI', tag='NI')
+TerritoryCode.NL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NL', tag='NL')
+TerritoryCode.NO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NO', tag='NO')
+TerritoryCode.NP = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NP', tag='NP')
+TerritoryCode.NR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NR', tag='NR')
+TerritoryCode.NU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NU', tag='NU')
+TerritoryCode.NZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='NZ', tag='NZ')
+TerritoryCode.OM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='OM', tag='OM')
+TerritoryCode.PA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PA', tag='PA')
+TerritoryCode.PE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PE', tag='PE')
+TerritoryCode.PF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PF', tag='PF')
+TerritoryCode.PG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PG', tag='PG')
+TerritoryCode.PH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PH', tag='PH')
+TerritoryCode.PK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PK', tag='PK')
+TerritoryCode.PL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PL', tag='PL')
+TerritoryCode.PM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PM', tag='PM')
+TerritoryCode.PN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PN', tag='PN')
+TerritoryCode.PR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PR', tag='PR')
+TerritoryCode.PS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PS', tag='PS')
+TerritoryCode.PT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PT', tag='PT')
+TerritoryCode.PW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PW', tag='PW')
+TerritoryCode.PY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='PY', tag='PY')
+TerritoryCode.QA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='QA', tag='QA')
+TerritoryCode.RE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='RE', tag='RE')
+TerritoryCode.RO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='RO', tag='RO')
+TerritoryCode.RS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='RS', tag='RS')
+TerritoryCode.RU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='RU', tag='RU')
+TerritoryCode.RW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='RW', tag='RW')
+TerritoryCode.SA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SA', tag='SA')
+TerritoryCode.SB = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SB', tag='SB')
+TerritoryCode.SC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SC', tag='SC')
+TerritoryCode.SD = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SD', tag='SD')
+TerritoryCode.SE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SE', tag='SE')
+TerritoryCode.SG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SG', tag='SG')
+TerritoryCode.SH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SH', tag='SH')
+TerritoryCode.SI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SI', tag='SI')
+TerritoryCode.SJ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SJ', tag='SJ')
+TerritoryCode.SK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SK', tag='SK')
+TerritoryCode.SL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SL', tag='SL')
+TerritoryCode.SM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SM', tag='SM')
+TerritoryCode.SN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SN', tag='SN')
+TerritoryCode.SO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SO', tag='SO')
+TerritoryCode.SR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SR', tag='SR')
+TerritoryCode.SS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SS', tag='SS')
+TerritoryCode.ST = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ST', tag='ST')
+TerritoryCode.SV = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SV', tag='SV')
+TerritoryCode.SX = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SX', tag='SX')
+TerritoryCode.SY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SY', tag='SY')
+TerritoryCode.SZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='SZ', tag='SZ')
+TerritoryCode.TC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TC', tag='TC')
+TerritoryCode.TD = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TD', tag='TD')
+TerritoryCode.TF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TF', tag='TF')
+TerritoryCode.TG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TG', tag='TG')
+TerritoryCode.TH = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TH', tag='TH')
+TerritoryCode.TJ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TJ', tag='TJ')
+TerritoryCode.TK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TK', tag='TK')
+TerritoryCode.TL = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TL', tag='TL')
+TerritoryCode.TM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TM', tag='TM')
+TerritoryCode.TN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TN', tag='TN')
+TerritoryCode.TO = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TO', tag='TO')
+TerritoryCode.TR = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TR', tag='TR')
+TerritoryCode.TT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TT', tag='TT')
+TerritoryCode.TV = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TV', tag='TV')
+TerritoryCode.TW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TW', tag='TW')
+TerritoryCode.TZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='TZ', tag='TZ')
+TerritoryCode.UA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='UA', tag='UA')
+TerritoryCode.UG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='UG', tag='UG')
+TerritoryCode.UM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='UM', tag='UM')
+TerritoryCode.US = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='US', tag='US')
+TerritoryCode.UY = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='UY', tag='UY')
+TerritoryCode.UZ = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='UZ', tag='UZ')
+TerritoryCode.VA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='VA', tag='VA')
+TerritoryCode.VC = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='VC', tag='VC')
+TerritoryCode.VE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='VE', tag='VE')
+TerritoryCode.VG = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='VG', tag='VG')
+TerritoryCode.VI = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='VI', tag='VI')
+TerritoryCode.VN = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='VN', tag='VN')
+TerritoryCode.VU = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='VU', tag='VU')
+TerritoryCode.WF = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='WF', tag='WF')
+TerritoryCode.WS = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='WS', tag='WS')
+TerritoryCode.YE = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='YE', tag='YE')
+TerritoryCode.YT = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='YT', tag='YT')
+TerritoryCode.ZA = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZA', tag='ZA')
+TerritoryCode.ZM = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZM', tag='ZM')
+TerritoryCode.ZW = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='ZW', tag='ZW')
+TerritoryCode.XK = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='XK', tag='XK')
+TerritoryCode.Worldwide = TerritoryCode._CF_enumeration.addEnumeration(unicode_value='Worldwide', tag='Worldwide')
+TerritoryCode._InitializeFacetMap(TerritoryCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TerritoryCode', TerritoryCode)
+_module_typeBindings.TerritoryCode = TerritoryCode
+
+# Atomic simple type: {http://ddex.net/xml/avs/avs}ReferenceCreation
+class ReferenceCreation (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
+
+    """A Creation that is used as a reference."""
+
+    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReferenceCreation')
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/avs/avs_20161006.xsd', 23403, 3)
+    _Documentation = 'A Creation that is used as a reference.'
+ReferenceCreation._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReferenceCreation, enum_prefix=None)
+ReferenceCreation.ReferenceResource = ReferenceCreation._CF_enumeration.addEnumeration(unicode_value='ReferenceResource', tag='ReferenceResource')
+ReferenceCreation.ConsumerResource = ReferenceCreation._CF_enumeration.addEnumeration(unicode_value='ConsumerResource', tag='ConsumerResource')
+ReferenceCreation._InitializeFacetMap(ReferenceCreation._CF_enumeration)
+Namespace.addCategoryObject('typeBinding', 'ReferenceCreation', ReferenceCreation)
+_module_typeBindings.ReferenceCreation = ReferenceCreation

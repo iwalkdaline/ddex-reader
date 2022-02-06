@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ern382:NewReleaseMessage [
+        <!ELEMENT ern382:NewReleaseMessage (MessageHeader|UpdateIndicator|ResourceList|ReleaseList|DealList)*>
+        <!ATTLIST ern382:NewReleaseMessage
+                xmlns:ern382 CDATA #REQUIRED
+                xmlns:xsi CDATA #REQUIRED
+                xsi:schemaLocation CDATA #REQUIRED
+                MessageSchemaVersionId CDATA #REQUIRED
+                BusinessProfileVersionId CDATA #REQUIRED
+                ReleaseProfileVersionId CDATA #REQUIRED
+                LanguageAndScriptCode CDATA #REQUIRED>
+        <!ELEMENT MessageHeader (MessageThreadId|MessageId|MessageSender|MessageRecipient|MessageCreatedDateTime|MessageControlType)*>
+        <!ELEMENT MessageThreadId (#PCDATA)>
+        <!ELEMENT MessageId (#PCDATA)>
+        <!ELEMENT MessageSender (PartyId|PartyName)*>
+        <!ELEMENT PartyId (#PCDATA)>
+        <!ATTLIST PartyId
+                Namespace CDATA #IMPLIED>
+        <!ELEMENT PartyName (FullName)*>
+        <!ELEMENT FullName (#PCDATA)>
+        <!ELEMENT MessageRecipient (PartyId|PartyName)*>
+        <!ELEMENT MessageCreatedDateTime (#PCDATA)>
+        <!ELEMENT MessageControlType (#PCDATA)>
+        <!ELEMENT UpdateIndicator (#PCDATA)>
+        <!ELEMENT ResourceList (SoundRecording|Image)*>
+        <!ELEMENT SoundRecording (SoundRecordingType|SoundRecordingId|ResourceReference|ReferenceTitle|LanguageOfPerformance|Duration|SoundRecordingDetailsByTerritory)*>
+        <!ELEMENT SoundRecordingType (#PCDATA)>
+        <!ELEMENT SoundRecordingId (ISRC)*>
+        <!ELEMENT ISRC (#PCDATA)>
+        <!ELEMENT ResourceReference (#PCDATA)>
+        <!ELEMENT ReferenceTitle (TitleText|SubTitle)*>
+        <!ELEMENT TitleText (#PCDATA)>
+        <!ELEMENT SubTitle (#PCDATA)>
+        <!ELEMENT LanguageOfPerformance (#PCDATA)>
+        <!ELEMENT Duration (#PCDATA)>
+        <!ELEMENT SoundRecordingDetailsByTerritory (TerritoryCode|Title|DisplayArtist|ResourceContributor|IndirectResourceContributor|LabelName|PLine|Genre|ParentalWarningType)*>
+        <!ELEMENT TerritoryCode (#PCDATA)>
+        <!ELEMENT Title (TitleText|SubTitle)*>
+        <!ATTLIST Title
+                TitleType CDATA #REQUIRED>
+        <!ELEMENT DisplayArtist (PartyName|PartyId|ArtistRole)*>
+        <!ELEMENT ArtistRole (#PCDATA)>
+        <!ELEMENT ResourceContributor (PartyName|PartyId|ResourceContributorRole)*>
+        <!ELEMENT ResourceContributorRole (#PCDATA)>
+        <!ELEMENT IndirectResourceContributor (PartyName|PartyId|IndirectResourceContributorRole)*>
+        <!ELEMENT IndirectResourceContributorRole (#PCDATA)>
+        <!ELEMENT LabelName (#PCDATA)>
+        <!ELEMENT PLine (Year|PLineText)*>
+        <!ELEMENT Year (#PCDATA)>
+        <!ELEMENT PLineText (#PCDATA)>
+        <!ELEMENT Genre (GenreText|SubGenre)*>
+        <!ELEMENT GenreText (#PCDATA)>
+        <!ELEMENT SubGenre (#PCDATA)>
+        <!ELEMENT ParentalWarningType (#PCDATA)>
+        <!ELEMENT Image (ImageType|ImageId|ResourceReference|ImageDetailsByTerritory)*>
+        <!ATTLIST Image
+                IsUpdated CDATA #REQUIRED>
+        <!ELEMENT ImageType (#PCDATA)>
+        <!ELEMENT ImageId (ProprietaryId)*>
+        <!ELEMENT ProprietaryId (#PCDATA)>
+        <!ATTLIST ProprietaryId
+                Namespace CDATA #REQUIRED>
+        <!ELEMENT ImageDetailsByTerritory (TerritoryCode)*>
+        <!ELEMENT ReleaseList (Release)*>
+        <!ELEMENT Release (ReleaseId|ReleaseReference|ReferenceTitle|ReleaseResourceReferenceList|ReleaseType|ReleaseDetailsByTerritory|PLine|CLine)*>
+        <!ELEMENT ReleaseId (ICPN|CatalogNumber|ISRC|ProprietaryId)*>
+        <!ELEMENT ICPN (#PCDATA)>
+        <!ATTLIST ICPN
+                IsEan CDATA #REQUIRED>
+        <!ELEMENT CatalogNumber (#PCDATA)>
+        <!ATTLIST CatalogNumber
+                Namespace CDATA #REQUIRED>
+        <!ELEMENT ReleaseReference (#PCDATA)>
+        <!ELEMENT ReleaseResourceReferenceList (ReleaseResourceReference)*>
+        <!ELEMENT ReleaseResourceReference (#PCDATA)>
+        <!ATTLIST ReleaseResourceReference
+                ReleaseResourceType CDATA #REQUIRED>
+        <!ELEMENT ReleaseType (#PCDATA)>
+        <!ELEMENT ReleaseDetailsByTerritory (TerritoryCode|DisplayArtistName|LabelName|Title|DisplayArtist|ParentalWarningType|ResourceGroup|Genre|OriginalReleaseDate)*>
+        <!ELEMENT DisplayArtistName (#PCDATA)>
+        <!ELEMENT ResourceGroup (ResourceGroup|ResourceGroupContentItem|SequenceNumber)*>
+        <!ELEMENT ResourceGroupContentItem (SequenceNumber|ResourceType|ReleaseResourceReference)*>
+        <!ELEMENT SequenceNumber (#PCDATA)>
+        <!ELEMENT ResourceType (#PCDATA)>
+        <!ELEMENT OriginalReleaseDate (#PCDATA)>
+        <!ELEMENT CLine (Year|CLineText)*>
+        <!ELEMENT CLineText (#PCDATA)>
+        <!ELEMENT DealList (ReleaseDeal)*>
+        <!ELEMENT ReleaseDeal (DealReleaseReference|Deal|EffectiveDate)*>
+        <!ELEMENT DealReleaseReference (#PCDATA)>
+        <!ELEMENT Deal (DealTerms)*>
+        <!ELEMENT DealTerms (CommercialModelType|Usage|TerritoryCode|ValidityPeriod)*>
+        <!ELEMENT CommercialModelType (#PCDATA)>
+        <!ELEMENT Usage (UseType)*>
+        <!ELEMENT UseType (#PCDATA)>
+        <!ELEMENT ValidityPeriod (StartDate)*>
+        <!ELEMENT StartDate (#PCDATA)>
+        <!ELEMENT EffectiveDate (#PCDATA)>
+        ]>
+<ern382:NewReleaseMessage xmlns:ern382="http://ddex.net/xml/ern/382"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xsi:schemaLocation="http://ddex.net/xml/ern/382 http://service.ddex.net/xml/ern/382/release-notification.xsd"
+                          MessageSchemaVersionId="ern/382"
+                          BusinessProfileVersionId="Dummy Value"
+                          ReleaseProfileVersionId="Dummy Value"
+                          LanguageAndScriptCode="en">
+    <MessageHeader>
+        <MessageThreadId>123456789012</MessageThreadId>
+        <MessageId>2022012111111111</MessageId>
+        <MessageSender>
+            <PartyId>PADPIDA3333333333R</PartyId>
+            <PartyName>
+                <FullName>Dummy Value</FullName>
+            </PartyName>
+        </MessageSender>
+        <MessageRecipient>
+            <PartyId>PADPIDA3333333333R</PartyId>
+            <PartyName>
+                <FullName>Dummy Value</FullName>
+            </PartyName>
+        </MessageRecipient>
+        <MessageCreatedDateTime>2022-01-21T07:39:16Z</MessageCreatedDateTime>
+        <MessageControlType>LiveMessage</MessageControlType>
+    </MessageHeader>
+    <UpdateIndicator>UpdateMessage</UpdateIndicator>
+    <ResourceList>
+        <SoundRecording>
+            <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+            <SoundRecordingId>
+                <ISRC>DUM5T3434342</ISRC>
+            </SoundRecordingId>
+            <ResourceReference>A1</ResourceReference>
+            <ReferenceTitle>
+                <TitleText>Jesus Christ</TitleText>
+                <SubTitle>Of Nazareth</SubTitle>
+            </ReferenceTitle>
+            <LanguageOfPerformance>hi</LanguageOfPerformance>
+            <Duration>PT00H03M02S</Duration>
+            <SoundRecordingDetailsByTerritory>
+                <TerritoryCode>Worldwide</TerritoryCode>
+                <Title TitleType="DisplayTitle">
+                    <TitleText>Jesus Christ</TitleText>
+                    <SubTitle>Of Nazareth</SubTitle>
+                </Title>
+                <DisplayArtist>
+                    <PartyName>
+                        <FullName>Dummy Value</FullName>
+                    </PartyName>
+                    <PartyId Namespace="DPID:PADPIDA3333333333R">16185
+                    </PartyId> <!--  This is an artist internal id (custom id) generated by a partner -->
+                    <ArtistRole>MainArtist</ArtistRole>
+                </DisplayArtist>
+                <ResourceContributor>
+                    <PartyName>
+                        <FullName>Dummy Value</FullName>
+                    </PartyName>
+                    <PartyId Namespace="DPID:PADPIDA3333333333R">37</PartyId>
+                    <ResourceContributorRole>Producer</ResourceContributorRole>
+                </ResourceContributor>
+                <IndirectResourceContributor>
+                    <PartyName>
+                        <FullName>Dummy Value</FullName>
+                    </PartyName>
+                    <PartyId Namespace="DPID:PADPIDA3333333333R">95</PartyId>
+                    <IndirectResourceContributorRole>Composer</IndirectResourceContributorRole>
+                </IndirectResourceContributor>
+                <IndirectResourceContributor>
+                    <PartyName>
+                        <FullName>Traditional</FullName>
+                    </PartyName>
+                    <PartyId Namespace="DPID:PADPIDA3333333333R">1268</PartyId>
+                    <IndirectResourceContributorRole>Lyricist</IndirectResourceContributorRole>
+                </IndirectResourceContributor>
+                <IndirectResourceContributor>
+                    <PartyName>
+                        <FullName>Dummy Value</FullName>
+                    </PartyName>
+                    <IndirectResourceContributorRole>MusicPublisher</IndirectResourceContributorRole>
+                </IndirectResourceContributor>
+                <LabelName>Dummy Value Music</LabelName>
+                <PLine>
+                    <Year>2021</Year>
+                    <PLineText>℗ Dummy Value Music | ST</PLineText>
+                </PLine>
+                <Genre>
+                    <GenreText>World</GenreText>
+                    <SubGenre>World- Devotional &amp; Spiritual</SubGenre>
+                </Genre>
+                <ParentalWarningType>NotExplicit</ParentalWarningType>
+            </SoundRecordingDetailsByTerritory>
+        </SoundRecording>
+        <Image IsUpdated="true">
+            <ImageType>FrontCoverImage</ImageType>
+            <ImageId>
+                <ProprietaryId Namespace="DPID:PADPIDA3333333333R">555555555555</ProprietaryId>
+            </ImageId>
+            <ResourceReference>A2</ResourceReference>
+            <ImageDetailsByTerritory>
+                <TerritoryCode>Worldwide</TerritoryCode>
+            </ImageDetailsByTerritory>
+        </Image>
+    </ResourceList>
+    <ReleaseList>
+        <Release>
+            <ReleaseId>
+                <ICPN IsEan="false">555555555555</ICPN>
+                <CatalogNumber Namespace="DPID:PADPIDA3333333333R">ST-101732</CatalogNumber>
+            </ReleaseId>
+            <ReleaseReference>R0</ReleaseReference>
+            <ReferenceTitle>
+                <TitleText>Jesus Christ</TitleText>
+            </ReferenceTitle>
+            <ReleaseResourceReferenceList>
+                <ReleaseResourceReference ReleaseResourceType="PrimaryResource">A1</ReleaseResourceReference>
+                <ReleaseResourceReference ReleaseResourceType="SecondaryResource">A2</ReleaseResourceReference>
+            </ReleaseResourceReferenceList>
+            <ReleaseType>Single</ReleaseType>
+            <ReleaseDetailsByTerritory>
+                <TerritoryCode>Worldwide</TerritoryCode>
+                <DisplayArtistName>Jesus Christ</DisplayArtistName>
+                <LabelName>Dummy Value Music</LabelName>
+                <Title TitleType="FormalTitle">
+                    <TitleText>Jesus Christ</TitleText>
+                </Title>
+                <Title TitleType="DisplayTitle">
+                    <TitleText>Jesus Christ</TitleText>
+                </Title>
+                <DisplayArtist>
+                    <PartyName>
+                        <FullName>Jesus Christ</FullName>
+                    </PartyName>
+                    <PartyId Namespace="DPID:PADPIDA3333333333R">16185</PartyId>
+                    <ArtistRole>MainArtist</ArtistRole>
+                </DisplayArtist>
+                <ParentalWarningType>NotExplicit</ParentalWarningType>
+                <ResourceGroup>
+                    <ResourceGroup>
+                        <ResourceGroupContentItem>
+                            <SequenceNumber>1</SequenceNumber>
+                            <ResourceType>SoundRecording</ResourceType>
+                            <ReleaseResourceReference ReleaseResourceType="PrimaryResource">A1
+                            </ReleaseResourceReference>
+                        </ResourceGroupContentItem>
+                    </ResourceGroup>
+                    <ResourceGroupContentItem>
+                        <ResourceType>Image</ResourceType>
+                        <ReleaseResourceReference ReleaseResourceType="SecondaryResource">A2</ReleaseResourceReference>
+                    </ResourceGroupContentItem>
+                </ResourceGroup>
+                <Genre>
+                    <GenreText>World</GenreText>
+                    <SubGenre>World- Devotional &amp; Spiritual</SubGenre>
+                </Genre>
+                <OriginalReleaseDate>2021-11-28</OriginalReleaseDate>
+            </ReleaseDetailsByTerritory>
+            <PLine>
+                <Year>2021</Year>
+                <PLineText>℗ Dummy Value Music | ST</PLineText>
+            </PLine>
+            <CLine>
+                <Year>2021</Year>
+                <CLineText>© Dummy Value Music</CLineText>
+            </CLine>
+        </Release>
+        <Release>
+            <ReleaseId>
+                <ISRC>DUM5T3434342</ISRC>
+                <ProprietaryId Namespace="DPID:PADPIDA3333333333R">181549</ProprietaryId>
+            </ReleaseId>
+            <ReleaseReference>R1</ReleaseReference>
+            <ReferenceTitle>
+                <TitleText>Dummy Value</TitleText>
+            </ReferenceTitle>
+            <ReleaseResourceReferenceList>
+                <ReleaseResourceReference ReleaseResourceType="PrimaryResource">A1</ReleaseResourceReference>
+            </ReleaseResourceReferenceList>
+            <ReleaseType>TrackRelease</ReleaseType>
+            <ReleaseDetailsByTerritory>
+                <TerritoryCode>Worldwide</TerritoryCode>
+                <DisplayArtistName>Jesus Christ</DisplayArtistName>
+                <LabelName></LabelName>
+                <Title TitleType="FormalTitle">
+                    <TitleText>Dummy Value</TitleText>
+                    <SubTitle>Of Nazareth</SubTitle>
+                </Title>
+                <Title TitleType="DisplayTitle">
+                    <TitleText>Dummy Value</TitleText>
+                </Title>
+                <DisplayArtist>
+                    <PartyName>
+                        <FullName>Jesus Christ</FullName>
+                    </PartyName>
+                    <PartyId Namespace="DPID:PADPIDA3333333333R">16185</PartyId>
+                    <ArtistRole>MainArtist</ArtistRole>
+                </DisplayArtist>
+                <ParentalWarningType>NotExplicit</ParentalWarningType>
+                <ResourceGroup>
+                    <SequenceNumber>1</SequenceNumber>
+                    <ResourceGroupContentItem>
+                        <SequenceNumber>1</SequenceNumber>
+                        <ResourceType>SoundRecording</ResourceType>
+                        <ReleaseResourceReference ReleaseResourceType="PrimaryResource">A1</ReleaseResourceReference>
+                    </ResourceGroupContentItem>
+                </ResourceGroup>
+                <Genre>
+                    <GenreText>World</GenreText>
+                    <SubGenre>World- Devotional &amp; Spiritual</SubGenre>
+                </Genre>
+                <OriginalReleaseDate>2021-11-28</OriginalReleaseDate>
+            </ReleaseDetailsByTerritory>
+            <PLine>
+                <Year>2021</Year>
+                <PLineText>℗ Dummy Value Music | ST</PLineText>
+            </PLine>
+        </Release>
+    </ReleaseList>
+    <DealList>
+        <ReleaseDeal>
+            <DealReleaseReference>R0</DealReleaseReference>
+            <Deal>
+                <DealTerms>
+                    <CommercialModelType>AsPerContract</CommercialModelType>
+                    <Usage>
+                        <UseType>UserMakeAvailableLabelProvided</UseType>
+                    </Usage>
+                    <TerritoryCode>Worldwide</TerritoryCode>
+                    <ValidityPeriod>
+                        <StartDate>2022-01-21</StartDate>
+                    </ValidityPeriod>
+                </DealTerms>
+            </Deal>
+            <EffectiveDate>2022-01-21</EffectiveDate>
+        </ReleaseDeal>
+        <ReleaseDeal>
+            <DealReleaseReference>R1</DealReleaseReference>
+            <Deal>
+                <DealTerms>
+                    <CommercialModelType>AsPerContract</CommercialModelType>
+                    <Usage>
+                        <UseType>UserMakeAvailableLabelProvided</UseType>
+                    </Usage>
+                    <TerritoryCode>Worldwide</TerritoryCode>
+                    <ValidityPeriod>
+                        <StartDate>2022-01-21</StartDate>
+                    </ValidityPeriod>
+                </DealTerms>
+            </Deal>
+            <EffectiveDate>2022-01-21</EffectiveDate>
+        </ReleaseDeal>
+    </DealList>
+</ern382:NewReleaseMessage>

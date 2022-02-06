@@ -38,7 +38,7 @@ lint:
 	flake8 ddexreader tests
 
 test:
-	python setup.py test
+	python3.9 setup.py test
 
 test-all:
 	tox
@@ -62,8 +62,8 @@ release: clean
 	python setup.py bdist_wheel upload
 
 dist: clean
-	python setup.py sdist
-	python setup.py bdist_wheel
+	python3.9 setup.py sdist
+	python3.9 setup.py bdist_wheel
 	ls -l dist
 
 install: clean

@@ -1,8 +1,8 @@
-# ./_ddex.py
+# ./binding_.py
 # -*- coding: utf-8 -*-
-# PyXB bindings for NM:026f7d568c1590141389be9e99c5b60f1592c47a
-# Generated 2015-07-06 15:44:16.561709 by PyXB version 1.2.4 using Python 2.7.6.final.0
-# Namespace http://ddex.net/xml/20120214/ddex [xmlns:ddex]
+# PyXB bindings for NM:ebd2c00dbf07839865238a625fa00bab5e7c8c74
+# Generated 2022-02-05 12:56:42.375864 by PyXB version 1.2.6 using Python 3.9.6.final.0
+# Namespace http://ddex.net/xml/20120404/ddex
 
 from __future__ import unicode_literals
 import pyxb
@@ -13,21 +13,24 @@ import pyxb.utils.utility
 import pyxb.utils.domutils
 import sys
 import pyxb.utils.six as _six
-
 # Unique identifier for bindings created at the same time
-_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:cb6895cc-23f5-11e5-aa57-080027960975')
+_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:f55e9d1a-86ac-11ec-b13b-acde48001122')
 
 # Version of PyXB used to generate the bindings
-_PyXBVersion = '1.2.4'
+_PyXBVersion = '1.2.6'
 # Generated bindings are not compatible across PyXB versions
 if pyxb.__version__ != _PyXBVersion:
     raise pyxb.PyXBVersionError(_PyXBVersion)
+
+# A holder for module-level binding classes so we can access them from
+# inside class definitions where property names may conflict.
+_module_typeBindings = pyxb.utils.utility.Object()
 
 # Import bindings for namespaces imported into schema
 import pyxb.binding.datatypes
 
 # NOTE: All namespace declarations are reserved within the binding
-Namespace = pyxb.namespace.NamespaceForURI('http://ddex.net/xml/20120214/ddex', create_if_missing=True)
+Namespace = pyxb.namespace.NamespaceForURI('http://ddex.net/xml/20120404/ddex', create_if_missing=True)
 Namespace.configureCategories(['typeBinding', 'elementBinding'])
 
 def CreateFromDocument (xml_text, default_namespace=None, location_base=None):
@@ -73,27 +76,28 @@ def CreateFromDOM (node, default_namespace=None):
     return pyxb.binding.basis.element.AnyCreateFromDOM(node, default_namespace)
 
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}AccessLimitation
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}AccessLimitation
 class AccessLimitation (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of limitation on the access of a site."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AccessLimitation')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 16, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 16, 3)
     _Documentation = 'A ddex:Type of limitation on the access of a site.'
 AccessLimitation._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AccessLimitation, enum_prefix=None)
 AccessLimitation.NoLimitation = AccessLimitation._CF_enumeration.addEnumeration(unicode_value='NoLimitation', tag='NoLimitation')
 AccessLimitation.PrivateAccessOnly = AccessLimitation._CF_enumeration.addEnumeration(unicode_value='PrivateAccessOnly', tag='PrivateAccessOnly')
 AccessLimitation._InitializeFacetMap(AccessLimitation._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'AccessLimitation', AccessLimitation)
+_module_typeBindings.AccessLimitation = AccessLimitation
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}AdministratingRecordCompanyRole
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}AdministratingRecordCompanyRole
 class AdministratingRecordCompanyRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A role played by a ddex:Party responsible for administering Rights in a ddex:Resource or a ddex:Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AdministratingRecordCompanyRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 33, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 33, 3)
     _Documentation = 'A role played by a ddex:Party responsible for administering Rights in a ddex:Resource or a ddex:Release.'
 AdministratingRecordCompanyRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AdministratingRecordCompanyRole, enum_prefix=None)
 AdministratingRecordCompanyRole.DesignatedDsrMessageRecipient = AdministratingRecordCompanyRole._CF_enumeration.addEnumeration(unicode_value='DesignatedDsrMessageRecipient', tag='DesignatedDsrMessageRecipient')
@@ -103,14 +107,15 @@ AdministratingRecordCompanyRole.Unknown = AdministratingRecordCompanyRole._CF_en
 AdministratingRecordCompanyRole.UserDefined = AdministratingRecordCompanyRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 AdministratingRecordCompanyRole._InitializeFacetMap(AdministratingRecordCompanyRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'AdministratingRecordCompanyRole', AdministratingRecordCompanyRole)
+_module_typeBindings.AdministratingRecordCompanyRole = AdministratingRecordCompanyRole
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ArtistRole
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ArtistRole
 class ArtistRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A role of a principal ddex:Contributor in relation to a ddex:Performance or a ddex:Fixation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ArtistRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 65, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 65, 3)
     _Documentation = 'A role of a principal ddex:Contributor in relation to a ddex:Performance or a ddex:Fixation.'
 ArtistRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ArtistRole, enum_prefix=None)
 ArtistRole.Actor = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Actor', tag='Actor')
@@ -164,14 +169,15 @@ ArtistRole.Unknown = ArtistRole._CF_enumeration.addEnumeration(unicode_value='Un
 ArtistRole.UserDefined = ArtistRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ArtistRole._InitializeFacetMap(ArtistRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ArtistRole', ArtistRole)
+_module_typeBindings.ArtistRole = ArtistRole
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}AudioCodecType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}AudioCodecType
 class AudioCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:AudioCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AudioCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 317, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 317, 3)
     _Documentation = 'A ddex:Type of ddex:AudioCodec.'
 AudioCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=AudioCodecType, enum_prefix=None)
 AudioCodecType.AAC = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='AAC', tag='AAC')
@@ -194,25 +200,27 @@ AudioCodecType.Vorbis = AudioCodecType._CF_enumeration.addEnumeration(unicode_va
 AudioCodecType.WMA = AudioCodecType._CF_enumeration.addEnumeration(unicode_value='WMA', tag='WMA')
 AudioCodecType._InitializeFacetMap(AudioCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'AudioCodecType', AudioCodecType)
+_module_typeBindings.AudioCodecType = AudioCodecType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CalculationType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CalculationType
 class CalculationType (pyxb.binding.datatypes.string):
 
     """A ddex:Type of ddex:Calculation used to determine an actual ddex:Amount paid."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CalculationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 414, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 414, 3)
     _Documentation = 'A ddex:Type of ddex:Calculation used to determine an actual ddex:Amount paid.'
 CalculationType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'CalculationType', CalculationType)
+_module_typeBindings.CalculationType = CalculationType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CarrierType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CarrierType
 class CarrierType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Carrier used for a ddex:Fixation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CarrierType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 420, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 420, 3)
     _Documentation = 'A ddex:Type of ddex:Carrier used for a ddex:Fixation.'
 CarrierType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CarrierType, enum_prefix=None)
 CarrierType.n12InchDiscoSingleRemix = CarrierType._CF_enumeration.addEnumeration(unicode_value='12InchDiscoSingleRemix', tag='n12InchDiscoSingleRemix')
@@ -325,14 +333,15 @@ CarrierType.VhsPlusCdLp = CarrierType._CF_enumeration.addEnumeration(unicode_val
 CarrierType.VhsSECAM = CarrierType._CF_enumeration.addEnumeration(unicode_value='VhsSECAM', tag='VhsSECAM')
 CarrierType._InitializeFacetMap(CarrierType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CarrierType', CarrierType)
+_module_typeBindings.CarrierType = CarrierType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CdProtectionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CdProtectionType
 class CdProtectionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:CD protection."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CdProtectionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 967, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 967, 3)
     _Documentation = 'A ddex:Type of ddex:CD protection.'
 CdProtectionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CdProtectionType, enum_prefix=None)
 CdProtectionType.CDS100 = CdProtectionType._CF_enumeration.addEnumeration(unicode_value='CDS100', tag='CDS100')
@@ -345,28 +354,30 @@ CdProtectionType.Unknown = CdProtectionType._CF_enumeration.addEnumeration(unico
 CdProtectionType.UserDefined = CdProtectionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CdProtectionType._InitializeFacetMap(CdProtectionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CdProtectionType', CdProtectionType)
+_module_typeBindings.CdProtectionType = CdProtectionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CodingType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CodingType
 class CodingType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of coding used to encode a ddex:Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CodingType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1014, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1014, 3)
     _Documentation = 'A ddex:Type of coding used to encode a ddex:Resource.'
 CodingType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CodingType, enum_prefix=None)
 CodingType.Lossless = CodingType._CF_enumeration.addEnumeration(unicode_value='Lossless', tag='Lossless')
 CodingType.Lossy = CodingType._CF_enumeration.addEnumeration(unicode_value='Lossy', tag='Lossy')
 CodingType._InitializeFacetMap(CodingType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CodingType', CodingType)
+_module_typeBindings.CodingType = CodingType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CollectionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CollectionType
 class CollectionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Collection."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CollectionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1031, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1031, 3)
     _Documentation = 'A ddex:Type of ddex:Collection.'
 CollectionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CollectionType, enum_prefix=None)
 CollectionType.AudioChapter = CollectionType._CF_enumeration.addEnumeration(unicode_value='AudioChapter', tag='AudioChapter')
@@ -378,14 +389,15 @@ CollectionType.Series = CollectionType._CF_enumeration.addEnumeration(unicode_va
 CollectionType.VideoChapter = CollectionType._CF_enumeration.addEnumeration(unicode_value='VideoChapter', tag='VideoChapter')
 CollectionType._InitializeFacetMap(CollectionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CollectionType', CollectionType)
+_module_typeBindings.CollectionType = CollectionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CommercialModelType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CommercialModelType
 class CommercialModelType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:CommercialModel (e.g. ddex:SubscriptionModel and ddex:PayAsYouGoModel). The ddex:CommercialModelType indicates how a ddex:Consumer pays for a ddex:Service or ddex:Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CommercialModelType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1073, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1073, 3)
     _Documentation = 'A ddex:Type of ddex:CommercialModel (e.g. ddex:SubscriptionModel and ddex:PayAsYouGoModel). The ddex:CommercialModelType indicates how a ddex:Consumer pays for a ddex:Service or ddex:Release.'
 CommercialModelType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CommercialModelType, enum_prefix=None)
 CommercialModelType.AdvertisementSupportedModel = CommercialModelType._CF_enumeration.addEnumeration(unicode_value='AdvertisementSupportedModel', tag='AdvertisementSupportedModel')
@@ -399,14 +411,15 @@ CommercialModelType.Unknown = CommercialModelType._CF_enumeration.addEnumeration
 CommercialModelType.UserDefined = CommercialModelType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CommercialModelType._InitializeFacetMap(CommercialModelType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CommercialModelType', CommercialModelType)
+_module_typeBindings.CommercialModelType = CommercialModelType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CompilationType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CompilationType
 class CompilationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Compilation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CompilationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1125, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1125, 3)
     _Documentation = 'A ddex:Type of ddex:Compilation.'
 CompilationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CompilationType, enum_prefix=None)
 CompilationType.InternalCompilation = CompilationType._CF_enumeration.addEnumeration(unicode_value='InternalCompilation', tag='InternalCompilation')
@@ -414,14 +427,15 @@ CompilationType.NonInternalCompilation = CompilationType._CF_enumeration.addEnum
 CompilationType.NotCompiled = CompilationType._CF_enumeration.addEnumeration(unicode_value='NotCompiled', tag='NotCompiled')
 CompilationType._InitializeFacetMap(CompilationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CompilationType', CompilationType)
+_module_typeBindings.CompilationType = CompilationType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ContainerFormat
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ContainerFormat
 class ContainerFormat (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of container according to its ddex:FileFormat."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ContainerFormat')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1147, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1147, 3)
     _Documentation = 'A ddex:Type of container according to its ddex:FileFormat.'
 ContainerFormat._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ContainerFormat, enum_prefix=None)
 ContainerFormat.AIFF = ContainerFormat._CF_enumeration.addEnumeration(unicode_value='AIFF', tag='AIFF')
@@ -435,14 +449,15 @@ ContainerFormat.UserDefined = ContainerFormat._CF_enumeration.addEnumeration(uni
 ContainerFormat.WAV = ContainerFormat._CF_enumeration.addEnumeration(unicode_value='WAV', tag='WAV')
 ContainerFormat._InitializeFacetMap(ContainerFormat._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ContainerFormat', ContainerFormat)
+_module_typeBindings.ContainerFormat = ContainerFormat
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CreationType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CreationType
 class CreationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Creation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CreationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1199, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1199, 3)
     _Documentation = 'A ddex:Type of ddex:Creation.'
 CreationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CreationType, enum_prefix=None)
 CreationType.MusicalWork = CreationType._CF_enumeration.addEnumeration(unicode_value='MusicalWork', tag='MusicalWork')
@@ -450,14 +465,15 @@ CreationType.Release = CreationType._CF_enumeration.addEnumeration(unicode_value
 CreationType.Resource = CreationType._CF_enumeration.addEnumeration(unicode_value='Resource', tag='Resource')
 CreationType._InitializeFacetMap(CreationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CreationType', CreationType)
+_module_typeBindings.CreationType = CreationType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CueOrigin
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CueOrigin
 class CueOrigin (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Cue according to its origin."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CueOrigin')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1221, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1221, 3)
     _Documentation = 'A ddex:Type of ddex:Cue according to its origin.'
 CueOrigin._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CueOrigin, enum_prefix=None)
 CueOrigin.LibraryMusic = CueOrigin._CF_enumeration.addEnumeration(unicode_value='LibraryMusic', tag='LibraryMusic')
@@ -467,14 +483,15 @@ CueOrigin.Unknown = CueOrigin._CF_enumeration.addEnumeration(unicode_value='Unkn
 CueOrigin.UserDefined = CueOrigin._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CueOrigin._InitializeFacetMap(CueOrigin._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CueOrigin', CueOrigin)
+_module_typeBindings.CueOrigin = CueOrigin
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CueSheetType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CueSheetType
 class CueSheetType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:CueSheet."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CueSheetType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1253, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1253, 3)
     _Documentation = 'A ddex:Type of ddex:CueSheet.'
 CueSheetType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CueSheetType, enum_prefix=None)
 CueSheetType.AverageCueSheet = CueSheetType._CF_enumeration.addEnumeration(unicode_value='AverageCueSheet', tag='AverageCueSheet')
@@ -484,14 +501,15 @@ CueSheetType.SummarisedCueSheet = CueSheetType._CF_enumeration.addEnumeration(un
 CueSheetType.SurrogateCueSheet = CueSheetType._CF_enumeration.addEnumeration(unicode_value='SurrogateCueSheet', tag='SurrogateCueSheet')
 CueSheetType._InitializeFacetMap(CueSheetType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CueSheetType', CueSheetType)
+_module_typeBindings.CueSheetType = CueSheetType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}CueUseType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}CueUseType
 class CueUseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of use of a ddex:Cue."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'CueUseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1285, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1285, 3)
     _Documentation = 'A ddex:Type of use of a ddex:Cue.'
 CueUseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=CueUseType, enum_prefix=None)
 CueUseType.AudioLogo = CueUseType._CF_enumeration.addEnumeration(unicode_value='AudioLogo', tag='AudioLogo')
@@ -506,14 +524,15 @@ CueUseType.Theme = CueUseType._CF_enumeration.addEnumeration(unicode_value='Them
 CueUseType.UserDefined = CueUseType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 CueUseType._InitializeFacetMap(CueUseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'CueUseType', CueUseType)
+_module_typeBindings.CueUseType = CueUseType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DataMismatchResponseType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DataMismatchResponseType
 class DataMismatchResponseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of action that is a response to a ddex:DataMismatch."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DataMismatchResponseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1342, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1342, 3)
     _Documentation = 'A ddex:Type of action that is a response to a ddex:DataMismatch.'
 DataMismatchResponseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DataMismatchResponseType, enum_prefix=None)
 DataMismatchResponseType.AdditionalInformationOnly = DataMismatchResponseType._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -524,14 +543,15 @@ DataMismatchResponseType.NoReaction = DataMismatchResponseType._CF_enumeration.a
 DataMismatchResponseType.UserDefined = DataMismatchResponseType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 DataMismatchResponseType._InitializeFacetMap(DataMismatchResponseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DataMismatchResponseType', DataMismatchResponseType)
+_module_typeBindings.DataMismatchResponseType = DataMismatchResponseType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DataMismatchStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DataMismatchStatus
 class DataMismatchStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of a ddex:DataMismatch."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DataMismatchStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1379, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1379, 3)
     _Documentation = 'A status of a ddex:DataMismatch.'
 DataMismatchStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DataMismatchStatus, enum_prefix=None)
 DataMismatchStatus.AdditionalInformationOnly = DataMismatchStatus._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -541,14 +561,15 @@ DataMismatchStatus.NotCorrected = DataMismatchStatus._CF_enumeration.addEnumerat
 DataMismatchStatus.UserDefined = DataMismatchStatus._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 DataMismatchStatus._InitializeFacetMap(DataMismatchStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DataMismatchStatus', DataMismatchStatus)
+_module_typeBindings.DataMismatchStatus = DataMismatchStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DataMismatchType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DataMismatchType
 class DataMismatchType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:DataMismatch."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DataMismatchType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1411, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1411, 3)
     _Documentation = 'A ddex:Type of ddex:DataMismatch.'
 DataMismatchType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DataMismatchType, enum_prefix=None)
 DataMismatchType.AdditionalInformationOnly = DataMismatchType._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -574,14 +595,15 @@ DataMismatchType.XmlFormatError = DataMismatchType._CF_enumeration.addEnumeratio
 DataMismatchType.XmlRangeError = DataMismatchType._CF_enumeration.addEnumeration(unicode_value='XmlRangeError', tag='XmlRangeError')
 DataMismatchType._InitializeFacetMap(DataMismatchType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DataMismatchType', DataMismatchType)
+_module_typeBindings.DataMismatchType = DataMismatchType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DeductionRateType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DeductionRateType
 class DeductionRateType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:DeductionRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeductionRateType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1523, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1523, 3)
     _Documentation = 'A ddex:Type of ddex:DeductionRate.'
 DeductionRateType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeductionRateType, enum_prefix=None)
 DeductionRateType.PennyRate = DeductionRateType._CF_enumeration.addEnumeration(unicode_value='PennyRate', tag='PennyRate')
@@ -589,14 +611,15 @@ DeductionRateType.PercentageRate = DeductionRateType._CF_enumeration.addEnumerat
 DeductionRateType.UserDefined = DeductionRateType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 DeductionRateType._InitializeFacetMap(DeductionRateType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeductionRateType', DeductionRateType)
+_module_typeBindings.DeductionRateType = DeductionRateType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DeliveryActionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DeliveryActionType
 class DeliveryActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of action requested for deliveries."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeliveryActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1545, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1545, 3)
     _Documentation = 'A ddex:Type of action requested for deliveries.'
 DeliveryActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeliveryActionType, enum_prefix=None)
 DeliveryActionType.ChangeDeliveryLimits = DeliveryActionType._CF_enumeration.addEnumeration(unicode_value='ChangeDeliveryLimits', tag='ChangeDeliveryLimits')
@@ -605,14 +628,15 @@ DeliveryActionType.RestartDeliveryWithPreviousLimits = DeliveryActionType._CF_en
 DeliveryActionType.StopDelivery = DeliveryActionType._CF_enumeration.addEnumeration(unicode_value='StopDelivery', tag='StopDelivery')
 DeliveryActionType._InitializeFacetMap(DeliveryActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeliveryActionType', DeliveryActionType)
+_module_typeBindings.DeliveryActionType = DeliveryActionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DeliveryMessageType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DeliveryMessageType
 class DeliveryMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of delivery ddex:Message."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeliveryMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1572, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1572, 3)
     _Documentation = 'A ddex:Type of delivery ddex:Message.'
 DeliveryMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeliveryMessageType, enum_prefix=None)
 DeliveryMessageType.NewReleaseMessage = DeliveryMessageType._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessage', tag='NewReleaseMessage')
@@ -620,14 +644,15 @@ DeliveryMessageType.NonDdexMessage = DeliveryMessageType._CF_enumeration.addEnum
 DeliveryMessageType.Unknown = DeliveryMessageType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 DeliveryMessageType._InitializeFacetMap(DeliveryMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeliveryMessageType', DeliveryMessageType)
+_module_typeBindings.DeliveryMessageType = DeliveryMessageType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DeprecatedCurrencyCode
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DeprecatedCurrencyCode
 class DeprecatedCurrencyCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A CurrencyCode which is not valid anymore."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DeprecatedCurrencyCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1594, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1594, 3)
     _Documentation = 'A CurrencyCode which is not valid anymore.'
 DeprecatedCurrencyCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DeprecatedCurrencyCode, enum_prefix=None)
 DeprecatedCurrencyCode.CYP = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='CYP', tag='CYP')
@@ -637,14 +662,15 @@ DeprecatedCurrencyCode.SIT = DeprecatedCurrencyCode._CF_enumeration.addEnumerati
 DeprecatedCurrencyCode.SKK = DeprecatedCurrencyCode._CF_enumeration.addEnumeration(unicode_value='SKK', tag='SKK')
 DeprecatedCurrencyCode._InitializeFacetMap(DeprecatedCurrencyCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DeprecatedCurrencyCode', DeprecatedCurrencyCode)
+_module_typeBindings.DeprecatedCurrencyCode = DeprecatedCurrencyCode
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DigitizationMode
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DigitizationMode
 class DigitizationMode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Digitization mode of a ddex:Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DigitizationMode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1626, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1626, 3)
     _Documentation = 'A ddex:Digitization mode of a ddex:Resource.'
 DigitizationMode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DigitizationMode, enum_prefix=None)
 DigitizationMode.AAD = DigitizationMode._CF_enumeration.addEnumeration(unicode_value='AAD', tag='AAD')
@@ -653,14 +679,15 @@ DigitizationMode.DDD = DigitizationMode._CF_enumeration.addEnumeration(unicode_v
 DigitizationMode.Unknown = DigitizationMode._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 DigitizationMode._InitializeFacetMap(DigitizationMode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DigitizationMode', DigitizationMode)
+_module_typeBindings.DigitizationMode = DigitizationMode
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DistributionChannelType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DistributionChannelType
 class DistributionChannelType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:DistributionChannel used to disseminate a ddex:Service or ddex:Release to a ddex:Consumer."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DistributionChannelType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1653, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1653, 3)
     _Documentation = 'A ddex:Type of ddex:DistributionChannel used to disseminate a ddex:Service or ddex:Release to a ddex:Consumer.'
 DistributionChannelType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DistributionChannelType, enum_prefix=None)
 DistributionChannelType.AsPerContract = DistributionChannelType._CF_enumeration.addEnumeration(unicode_value='AsPerContract', tag='AsPerContract')
@@ -681,28 +708,30 @@ DistributionChannelType.UserDefined = DistributionChannelType._CF_enumeration.ad
 DistributionChannelType.Webcast = DistributionChannelType._CF_enumeration.addEnumeration(unicode_value='Webcast', tag='Webcast')
 DistributionChannelType._InitializeFacetMap(DistributionChannelType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DistributionChannelType', DistributionChannelType)
+_module_typeBindings.DistributionChannelType = DistributionChannelType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DrmEnforcementType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DrmEnforcementType
 class DrmEnforcementType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of DRM enforcement."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DrmEnforcementType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1740, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1740, 3)
     _Documentation = 'A ddex:Type of DRM enforcement.'
 DrmEnforcementType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DrmEnforcementType, enum_prefix=None)
 DrmEnforcementType.DrmEnforced = DrmEnforcementType._CF_enumeration.addEnumeration(unicode_value='DrmEnforced', tag='DrmEnforced')
 DrmEnforcementType.NotDrmEnforced = DrmEnforcementType._CF_enumeration.addEnumeration(unicode_value='NotDrmEnforced', tag='NotDrmEnforced')
 DrmEnforcementType._InitializeFacetMap(DrmEnforcementType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DrmEnforcementType', DrmEnforcementType)
+_module_typeBindings.DrmEnforcementType = DrmEnforcementType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DrmPlatformType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DrmPlatformType
 class DrmPlatformType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:DrmPlatform."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DrmPlatformType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1757, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1757, 3)
     _Documentation = 'A ddex:Type of ddex:DrmPlatform.'
 DrmPlatformType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DrmPlatformType, enum_prefix=None)
 DrmPlatformType.n3Day = DrmPlatformType._CF_enumeration.addEnumeration(unicode_value='3Day', tag='n3Day')
@@ -713,55 +742,59 @@ DrmPlatformType.UserDefined = DrmPlatformType._CF_enumeration.addEnumeration(uni
 DrmPlatformType.WindowsMediaDRM = DrmPlatformType._CF_enumeration.addEnumeration(unicode_value='WindowsMediaDRM', tag='WindowsMediaDRM')
 DrmPlatformType._InitializeFacetMap(DrmPlatformType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DrmPlatformType', DrmPlatformType)
+_module_typeBindings.DrmPlatformType = DrmPlatformType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}DsrMessageType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}DsrMessageType
 class DsrMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Message in the Sales Reporting Message Suite Standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'DsrMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1794, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1794, 3)
     _Documentation = 'A ddex:Type of ddex:Message in the Sales Reporting Message Suite Standard.'
 DsrMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=DsrMessageType, enum_prefix=None)
 DsrMessageType.SalesReportToRecordCompanyMessage = DsrMessageType._CF_enumeration.addEnumeration(unicode_value='SalesReportToRecordCompanyMessage', tag='SalesReportToRecordCompanyMessage')
 DsrMessageType.SalesReportToSocietyMessage = DsrMessageType._CF_enumeration.addEnumeration(unicode_value='SalesReportToSocietyMessage', tag='SalesReportToSocietyMessage')
 DsrMessageType._InitializeFacetMap(DsrMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'DsrMessageType', DsrMessageType)
+_module_typeBindings.DsrMessageType = DsrMessageType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ErnMessageType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ErnMessageType
 class ErnMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Message in the Release Notification Message Suite Standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ErnMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1811, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1811, 3)
     _Documentation = 'A ddex:Type of ddex:Message in the Release Notification Message Suite Standard.'
 ErnMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ErnMessageType, enum_prefix=None)
 ErnMessageType.NewReleaseMessage = ErnMessageType._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessage', tag='NewReleaseMessage')
 ErnMessageType._InitializeFacetMap(ErnMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ErnMessageType', ErnMessageType)
+_module_typeBindings.ErnMessageType = ErnMessageType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ExpressionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ExpressionType
 class ExpressionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of expression indicating how it should be perceived."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ExpressionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1823, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1823, 3)
     _Documentation = 'A ddex:Type of expression indicating how it should be perceived.'
 ExpressionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ExpressionType, enum_prefix=None)
 ExpressionType.Informative = ExpressionType._CF_enumeration.addEnumeration(unicode_value='Informative', tag='Informative')
 ExpressionType.Instructive = ExpressionType._CF_enumeration.addEnumeration(unicode_value='Instructive', tag='Instructive')
 ExpressionType._InitializeFacetMap(ExpressionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ExpressionType', ExpressionType)
+_module_typeBindings.ExpressionType = ExpressionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ExternallyLinkedResourceType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ExternallyLinkedResourceType
 class ExternallyLinkedResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Resource pointed to by an ddex:ExternalLink."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ExternallyLinkedResourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1840, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1840, 3)
     _Documentation = 'A ddex:Type of ddex:Resource pointed to by an ddex:ExternalLink.'
 ExternallyLinkedResourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ExternallyLinkedResourceType, enum_prefix=None)
 ExternallyLinkedResourceType.AdditionalMetadata = ExternallyLinkedResourceType._CF_enumeration.addEnumeration(unicode_value='AdditionalMetadata', tag='AdditionalMetadata')
@@ -773,14 +806,15 @@ ExternallyLinkedResourceType.Unknown = ExternallyLinkedResourceType._CF_enumerat
 ExternallyLinkedResourceType.UserDefined = ExternallyLinkedResourceType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ExternallyLinkedResourceType._InitializeFacetMap(ExternallyLinkedResourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ExternallyLinkedResourceType', ExternallyLinkedResourceType)
+_module_typeBindings.ExternallyLinkedResourceType = ExternallyLinkedResourceType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}FileStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}FileStatus
 class FileStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of a ddex:File in terms of its validity."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'FileStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1882, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1882, 3)
     _Documentation = 'A status of a ddex:File in terms of its validity.'
 FileStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=FileStatus, enum_prefix=None)
 FileStatus.FileMissing = FileStatus._CF_enumeration.addEnumeration(unicode_value='FileMissing', tag='FileMissing')
@@ -789,40 +823,43 @@ FileStatus.HashSumWrong = FileStatus._CF_enumeration.addEnumeration(unicode_valu
 FileStatus.SignatureWrong = FileStatus._CF_enumeration.addEnumeration(unicode_value='SignatureWrong', tag='SignatureWrong')
 FileStatus._InitializeFacetMap(FileStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'FileStatus', FileStatus)
+_module_typeBindings.FileStatus = FileStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}FingerprintAlgorithmType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}FingerprintAlgorithmType
 class FingerprintAlgorithmType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of FingerprintAlgorithm."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'FingerprintAlgorithmType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1909, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1909, 3)
     _Documentation = 'A ddex:Type of FingerprintAlgorithm.'
 FingerprintAlgorithmType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=FingerprintAlgorithmType, enum_prefix=None)
 FingerprintAlgorithmType.UserDefined = FingerprintAlgorithmType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 FingerprintAlgorithmType._InitializeFacetMap(FingerprintAlgorithmType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'FingerprintAlgorithmType', FingerprintAlgorithmType)
+_module_typeBindings.FingerprintAlgorithmType = FingerprintAlgorithmType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}GoverningAgreementType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}GoverningAgreementType
 class GoverningAgreementType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of governing agreement."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'GoverningAgreementType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1921, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1921, 3)
     _Documentation = 'A ddex:Type of governing agreement.'
 GoverningAgreementType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=GoverningAgreementType, enum_prefix=None)
 GoverningAgreementType.UserDefined = GoverningAgreementType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 GoverningAgreementType._InitializeFacetMap(GoverningAgreementType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'GoverningAgreementType', GoverningAgreementType)
+_module_typeBindings.GoverningAgreementType = GoverningAgreementType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}HashSumAlgorithmType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}HashSumAlgorithmType
 class HashSumAlgorithmType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:HashSumAlgorithm."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'HashSumAlgorithmType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1933, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1933, 3)
     _Documentation = 'A ddex:Type of ddex:HashSumAlgorithm.'
 HashSumAlgorithmType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=HashSumAlgorithmType, enum_prefix=None)
 HashSumAlgorithmType.MD4 = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='MD4', tag='MD4')
@@ -832,14 +869,15 @@ HashSumAlgorithmType.SHA1 = HashSumAlgorithmType._CF_enumeration.addEnumeration(
 HashSumAlgorithmType.UserDefined = HashSumAlgorithmType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 HashSumAlgorithmType._InitializeFacetMap(HashSumAlgorithmType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'HashSumAlgorithmType', HashSumAlgorithmType)
+_module_typeBindings.HashSumAlgorithmType = HashSumAlgorithmType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ImageCodecType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ImageCodecType
 class ImageCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:ImageCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ImageCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 1965, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 1965, 3)
     _Documentation = 'A ddex:Type of ddex:ImageCodec.'
 ImageCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ImageCodecType, enum_prefix=None)
 ImageCodecType.GIF = ImageCodecType._CF_enumeration.addEnumeration(unicode_value='GIF', tag='GIF')
@@ -851,14 +889,15 @@ ImageCodecType.Unknown = ImageCodecType._CF_enumeration.addEnumeration(unicode_v
 ImageCodecType.UserDefined = ImageCodecType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ImageCodecType._InitializeFacetMap(ImageCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ImageCodecType', ImageCodecType)
+_module_typeBindings.ImageCodecType = ImageCodecType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ImageType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ImageType
 class ImageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Image."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ImageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2007, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2007, 3)
     _Documentation = 'A ddex:Type of ddex:Image.'
 ImageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ImageType, enum_prefix=None)
 ImageType.BackCoverImage = ImageType._CF_enumeration.addEnumeration(unicode_value='BackCoverImage', tag='BackCoverImage')
@@ -877,28 +916,30 @@ ImageType.VideoScreenCapture = ImageType._CF_enumeration.addEnumeration(unicode_
 ImageType.Wallpaper = ImageType._CF_enumeration.addEnumeration(unicode_value='Wallpaper', tag='Wallpaper')
 ImageType._InitializeFacetMap(ImageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ImageType', ImageType)
+_module_typeBindings.ImageType = ImageType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}InvoiceAvailabilityStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}InvoiceAvailabilityStatus
 class InvoiceAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of the availability of a invoice."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'InvoiceAvailabilityStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2084, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2084, 3)
     _Documentation = 'A status of the availability of a invoice.'
 InvoiceAvailabilityStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=InvoiceAvailabilityStatus, enum_prefix=None)
 InvoiceAvailabilityStatus.InvoiceAvailable = InvoiceAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='InvoiceAvailable', tag='InvoiceAvailable')
 InvoiceAvailabilityStatus.InvoiceNotAvailable = InvoiceAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='InvoiceNotAvailable', tag='InvoiceNotAvailable')
 InvoiceAvailabilityStatus._InitializeFacetMap(InvoiceAvailabilityStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'InvoiceAvailabilityStatus', InvoiceAvailabilityStatus)
+_module_typeBindings.InvoiceAvailabilityStatus = InvoiceAvailabilityStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}LicenseOrClaimRefusalReason
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}LicenseOrClaimRefusalReason
 class LicenseOrClaimRefusalReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of reason for a refusing a ddex:License or ddex:Claim."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseOrClaimRefusalReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2101, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2101, 3)
     _Documentation = 'A ddex:Type of reason for a refusing a ddex:License or ddex:Claim.'
 LicenseOrClaimRefusalReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseOrClaimRefusalReason, enum_prefix=None)
 LicenseOrClaimRefusalReason.AgreementOfAdditionalProvisionsRequired = LicenseOrClaimRefusalReason._CF_enumeration.addEnumeration(unicode_value='AgreementOfAdditionalProvisionsRequired', tag='AgreementOfAdditionalProvisionsRequired')
@@ -941,14 +982,15 @@ LicenseOrClaimRefusalReason.WorkInPublicDomain = LicenseOrClaimRefusalReason._CF
 LicenseOrClaimRefusalReason.WorkNotUsed = LicenseOrClaimRefusalReason._CF_enumeration.addEnumeration(unicode_value='WorkNotUsed', tag='WorkNotUsed')
 LicenseOrClaimRefusalReason._InitializeFacetMap(LicenseOrClaimRefusalReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseOrClaimRefusalReason', LicenseOrClaimRefusalReason)
+_module_typeBindings.LicenseOrClaimRefusalReason = LicenseOrClaimRefusalReason
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}LicenseOrClaimRequestUpdateReason
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}LicenseOrClaimRequestUpdateReason
 class LicenseOrClaimRequestUpdateReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of reason for a updating a ddex:License request."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseOrClaimRequestUpdateReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2298, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2298, 3)
     _Documentation = 'A ddex:Type of reason for a updating a ddex:License request.'
 LicenseOrClaimRequestUpdateReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseOrClaimRequestUpdateReason, enum_prefix=None)
 LicenseOrClaimRequestUpdateReason.AdditionalInformationProvided = LicenseOrClaimRequestUpdateReason._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationProvided', tag='AdditionalInformationProvided')
@@ -956,14 +998,15 @@ LicenseOrClaimRequestUpdateReason.AdditionalInformationProvidedAsRequested = Lic
 LicenseOrClaimRequestUpdateReason.UserDefined = LicenseOrClaimRequestUpdateReason._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 LicenseOrClaimRequestUpdateReason._InitializeFacetMap(LicenseOrClaimRequestUpdateReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseOrClaimRequestUpdateReason', LicenseOrClaimRequestUpdateReason)
+_module_typeBindings.LicenseOrClaimRequestUpdateReason = LicenseOrClaimRequestUpdateReason
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}LicenseOrClaimUpdateReason
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}LicenseOrClaimUpdateReason
 class LicenseOrClaimUpdateReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of reason for a updating a ddex:License."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseOrClaimUpdateReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2320, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2320, 3)
     _Documentation = 'A ddex:Type of reason for a updating a ddex:License.'
 LicenseOrClaimUpdateReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseOrClaimUpdateReason, enum_prefix=None)
 LicenseOrClaimUpdateReason.NewLicenseIssued = LicenseOrClaimUpdateReason._CF_enumeration.addEnumeration(unicode_value='NewLicenseIssued', tag='NewLicenseIssued')
@@ -974,14 +1017,15 @@ LicenseOrClaimUpdateReason.Revoked = LicenseOrClaimUpdateReason._CF_enumeration.
 LicenseOrClaimUpdateReason.UserDefined = LicenseOrClaimUpdateReason._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 LicenseOrClaimUpdateReason._InitializeFacetMap(LicenseOrClaimUpdateReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseOrClaimUpdateReason', LicenseOrClaimUpdateReason)
+_module_typeBindings.LicenseOrClaimUpdateReason = LicenseOrClaimUpdateReason
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}LicenseStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}LicenseStatus
 class LicenseStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A legal status of a ddex:License for a ddex:Claim."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicenseStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2357, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2357, 3)
     _Documentation = 'A legal status of a ddex:License for a ddex:Claim.'
 LicenseStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicenseStatus, enum_prefix=None)
 LicenseStatus.Active = LicenseStatus._CF_enumeration.addEnumeration(unicode_value='Active', tag='Active')
@@ -989,14 +1033,15 @@ LicenseStatus.Pending = LicenseStatus._CF_enumeration.addEnumeration(unicode_val
 LicenseStatus.Revoked = LicenseStatus._CF_enumeration.addEnumeration(unicode_value='Revoked', tag='Revoked')
 LicenseStatus._InitializeFacetMap(LicenseStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicenseStatus', LicenseStatus)
+_module_typeBindings.LicenseStatus = LicenseStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}LicensingProcessStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}LicensingProcessStatus
 class LicensingProcessStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An operational status of a licensing process."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LicensingProcessStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2379, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2379, 3)
     _Documentation = 'An operational status of a licensing process.'
 LicensingProcessStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=LicensingProcessStatus, enum_prefix=None)
 LicensingProcessStatus.Pending = LicensingProcessStatus._CF_enumeration.addEnumeration(unicode_value='Pending', tag='Pending')
@@ -1004,14 +1049,15 @@ LicensingProcessStatus.Processed = LicensingProcessStatus._CF_enumeration.addEnu
 LicensingProcessStatus.ThirdPartyInformationRequested = LicensingProcessStatus._CF_enumeration.addEnumeration(unicode_value='ThirdPartyInformationRequested', tag='ThirdPartyInformationRequested')
 LicensingProcessStatus._InitializeFacetMap(LicensingProcessStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'LicensingProcessStatus', LicensingProcessStatus)
+_module_typeBindings.LicensingProcessStatus = LicensingProcessStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MembershipType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MembershipType
 class MembershipType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of membership."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MembershipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2401, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2401, 3)
     _Documentation = 'A ddex:Type of membership.'
 MembershipType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MembershipType, enum_prefix=None)
 MembershipType.NationalMember = MembershipType._CF_enumeration.addEnumeration(unicode_value='NationalMember', tag='NationalMember')
@@ -1019,14 +1065,15 @@ MembershipType.RegionalMember = MembershipType._CF_enumeration.addEnumeration(un
 MembershipType.WorldwideMember = MembershipType._CF_enumeration.addEnumeration(unicode_value='WorldwideMember', tag='WorldwideMember')
 MembershipType._InitializeFacetMap(MembershipType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MembershipType', MembershipType)
+_module_typeBindings.MembershipType = MembershipType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MessageActionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MessageActionType
 class MessageActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of action requested in a ddex:Message."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MessageActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2423, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2423, 3)
     _Documentation = 'A ddex:Type of action requested in a ddex:Message.'
 MessageActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MessageActionType, enum_prefix=None)
 MessageActionType.BackCatalogDelivery = MessageActionType._CF_enumeration.addEnumeration(unicode_value='BackCatalogDelivery', tag='BackCatalogDelivery')
@@ -1037,14 +1084,15 @@ MessageActionType.TakeDown = MessageActionType._CF_enumeration.addEnumeration(un
 MessageActionType.UserDefined = MessageActionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 MessageActionType._InitializeFacetMap(MessageActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MessageActionType', MessageActionType)
+_module_typeBindings.MessageActionType = MessageActionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MessageContentRevenueType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MessageContentRevenueType
 class MessageContentRevenueType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of revenue to which the content of the ddex:Message relates."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MessageContentRevenueType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2460, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2460, 3)
     _Documentation = 'A ddex:Type of revenue to which the content of the ddex:Message relates.'
 MessageContentRevenueType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MessageContentRevenueType, enum_prefix=None)
 MessageContentRevenueType.NonTransactionalRevenue = MessageContentRevenueType._CF_enumeration.addEnumeration(unicode_value='NonTransactionalRevenue', tag='NonTransactionalRevenue')
@@ -1052,28 +1100,30 @@ MessageContentRevenueType.TransactionalRevenue = MessageContentRevenueType._CF_e
 MessageContentRevenueType.UserDefined = MessageContentRevenueType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 MessageContentRevenueType._InitializeFacetMap(MessageContentRevenueType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MessageContentRevenueType', MessageContentRevenueType)
+_module_typeBindings.MessageContentRevenueType = MessageContentRevenueType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MessageControlType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MessageControlType
 class MessageControlType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Message according to its operational status."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MessageControlType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2482, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2482, 3)
     _Documentation = 'A ddex:Type of ddex:Message according to its operational status.'
 MessageControlType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MessageControlType, enum_prefix=None)
 MessageControlType.LiveMessage = MessageControlType._CF_enumeration.addEnumeration(unicode_value='LiveMessage', tag='LiveMessage')
 MessageControlType.TestMessage = MessageControlType._CF_enumeration.addEnumeration(unicode_value='TestMessage', tag='TestMessage')
 MessageControlType._InitializeFacetMap(MessageControlType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MessageControlType', MessageControlType)
+_module_typeBindings.MessageControlType = MessageControlType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MidiType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MidiType
 class MidiType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:MIDI."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MidiType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2499, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2499, 3)
     _Documentation = 'A ddex:Type of ddex:MIDI.'
 MidiType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MidiType, enum_prefix=None)
 MidiType.MonophonicMidi = MidiType._CF_enumeration.addEnumeration(unicode_value='MonophonicMidi', tag='MonophonicMidi')
@@ -1082,14 +1132,15 @@ MidiType.Unknown = MidiType._CF_enumeration.addEnumeration(unicode_value='Unknow
 MidiType.UserDefined = MidiType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 MidiType._InitializeFacetMap(MidiType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MidiType', MidiType)
+_module_typeBindings.MidiType = MidiType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MlcMessageType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MlcMessageType
 class MlcMessageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Message in the Music Licensing Company Message Suite."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MlcMessageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2526, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2526, 3)
     _Documentation = 'A ddex:Type of ddex:Message in the Music Licensing Company Message Suite.'
 MlcMessageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MlcMessageType, enum_prefix=None)
 MlcMessageType.DeclarationOfSoundRecordingRightsClaimMessage = MlcMessageType._CF_enumeration.addEnumeration(unicode_value='DeclarationOfSoundRecordingRightsClaimMessage', tag='DeclarationOfSoundRecordingRightsClaimMessage')
@@ -1099,14 +1150,15 @@ MlcMessageType.SalesReportMessage = MlcMessageType._CF_enumeration.addEnumeratio
 MlcMessageType.DeclarationOfRevenueMessage = MlcMessageType._CF_enumeration.addEnumeration(unicode_value='DeclarationOfRevenueMessage', tag='DeclarationOfRevenueMessage')
 MlcMessageType._InitializeFacetMap(MlcMessageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MlcMessageType', MlcMessageType)
+_module_typeBindings.MlcMessageType = MlcMessageType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MusicalWorkContributorRole
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MusicalWorkContributorRole
 class MusicalWorkContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A role played by a ddex:Contributor in relation to a ddex:MusicalWork."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MusicalWorkContributorRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2558, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2558, 3)
     _Documentation = 'A role played by a ddex:Contributor in relation to a ddex:MusicalWork.'
 MusicalWorkContributorRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MusicalWorkContributorRole, enum_prefix=None)
 MusicalWorkContributorRole.Adapter = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='Adapter', tag='Adapter')
@@ -1129,14 +1181,15 @@ MusicalWorkContributorRole.Unknown = MusicalWorkContributorRole._CF_enumeration.
 MusicalWorkContributorRole.UserDefined = MusicalWorkContributorRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 MusicalWorkContributorRole._InitializeFacetMap(MusicalWorkContributorRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MusicalWorkContributorRole', MusicalWorkContributorRole)
+_module_typeBindings.MusicalWorkContributorRole = MusicalWorkContributorRole
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MusicalWorkRightsClaimType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MusicalWorkRightsClaimType
 class MusicalWorkRightsClaimType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:RightsClaim related to a ddex:MusicalWork."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MusicalWorkRightsClaimType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2655, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2655, 3)
     _Documentation = 'A ddex:Type of ddex:RightsClaim related to a ddex:MusicalWork.'
 MusicalWorkRightsClaimType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MusicalWorkRightsClaimType, enum_prefix=None)
 MusicalWorkRightsClaimType.CopyrightControl = MusicalWorkRightsClaimType._CF_enumeration.addEnumeration(unicode_value='CopyrightControl', tag='CopyrightControl')
@@ -1146,14 +1199,15 @@ MusicalWorkRightsClaimType.SocietyClaim = MusicalWorkRightsClaimType._CF_enumera
 MusicalWorkRightsClaimType.Unknown = MusicalWorkRightsClaimType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 MusicalWorkRightsClaimType._InitializeFacetMap(MusicalWorkRightsClaimType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MusicalWorkRightsClaimType', MusicalWorkRightsClaimType)
+_module_typeBindings.MusicalWorkRightsClaimType = MusicalWorkRightsClaimType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MusicalWorkType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MusicalWorkType
 class MusicalWorkType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:MusicalWork."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MusicalWorkType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2687, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2687, 3)
     _Documentation = 'A ddex:Type of ddex:MusicalWork.'
 MusicalWorkType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MusicalWorkType, enum_prefix=None)
 MusicalWorkType.AdaptedInOriginalLanguage = MusicalWorkType._CF_enumeration.addEnumeration(unicode_value='AdaptedInOriginalLanguage', tag='AdaptedInOriginalLanguage')
@@ -1187,14 +1241,15 @@ MusicalWorkType.UserDefined = MusicalWorkType._CF_enumeration.addEnumeration(uni
 MusicalWorkType.VideoProductionWork = MusicalWorkType._CF_enumeration.addEnumeration(unicode_value='VideoProductionWork', tag='VideoProductionWork')
 MusicalWorkType._InitializeFacetMap(MusicalWorkType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MusicalWorkType', MusicalWorkType)
+_module_typeBindings.MusicalWorkType = MusicalWorkType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}MwlCaCMessageInBatchType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}MwlCaCMessageInBatchType
 class MwlCaCMessageInBatchType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Message in a batch in the Choreography for the Mechanical Licensing of Musical Works in Canada."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'MwlCaCMessageInBatchType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2839, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2839, 3)
     _Documentation = 'A ddex:Type of ddex:Message in a batch in the Choreography for the Mechanical Licensing of Musical Works in Canada.'
 MwlCaCMessageInBatchType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=MwlCaCMessageInBatchType, enum_prefix=None)
 MwlCaCMessageInBatchType.LicenseOrClaimRequestMessage = MwlCaCMessageInBatchType._CF_enumeration.addEnumeration(unicode_value='LicenseOrClaimRequestMessage', tag='LicenseOrClaimRequestMessage')
@@ -1206,41 +1261,45 @@ MwlCaCMessageInBatchType.ContractDeliveryMessage = MwlCaCMessageInBatchType._CF_
 MwlCaCMessageInBatchType.ProductDeletionMessage = MwlCaCMessageInBatchType._CF_enumeration.addEnumeration(unicode_value='ProductDeletionMessage', tag='ProductDeletionMessage')
 MwlCaCMessageInBatchType._InitializeFacetMap(MwlCaCMessageInBatchType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'MwlCaCMessageInBatchType', MwlCaCMessageInBatchType)
+_module_typeBindings.MwlCaCMessageInBatchType = MwlCaCMessageInBatchType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}NewReleaseMessageStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}NewReleaseMessageStatus
 class NewReleaseMessageStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of a ern:NewReleaseMessage."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'NewReleaseMessageStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2881, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2881, 3)
     _Documentation = 'A status of a ern:NewReleaseMessage.'
 NewReleaseMessageStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=NewReleaseMessageStatus, enum_prefix=None)
 NewReleaseMessageStatus.NewReleaseMessageNotProvided = NewReleaseMessageStatus._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessageNotProvided', tag='NewReleaseMessageNotProvided')
 NewReleaseMessageStatus.NewReleaseMessageProvided = NewReleaseMessageStatus._CF_enumeration.addEnumeration(unicode_value='NewReleaseMessageProvided', tag='NewReleaseMessageProvided')
 NewReleaseMessageStatus._InitializeFacetMap(NewReleaseMessageStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'NewReleaseMessageStatus', NewReleaseMessageStatus)
+_module_typeBindings.NewReleaseMessageStatus = NewReleaseMessageStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}NonIsoTerritoryCode
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}NonIsoTerritoryCode
 class NonIsoTerritoryCode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A TerritoryId which is not a TerritoryId according to the ISO 3166-1 standard."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'NonIsoTerritoryCode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2898, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2898, 3)
     _Documentation = 'A TerritoryId which is not a TerritoryId according to the ISO 3166-1 standard.'
 NonIsoTerritoryCode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=NonIsoTerritoryCode, enum_prefix=None)
 NonIsoTerritoryCode.Worldwide = NonIsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='Worldwide', tag='Worldwide')
+NonIsoTerritoryCode.XK = NonIsoTerritoryCode._CF_enumeration.addEnumeration(unicode_value='XK', tag='XK')
 NonIsoTerritoryCode._InitializeFacetMap(NonIsoTerritoryCode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'NonIsoTerritoryCode', NonIsoTerritoryCode)
+_module_typeBindings.NonIsoTerritoryCode = NonIsoTerritoryCode
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}OperatingSystemType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}OperatingSystemType
 class OperatingSystemType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:OperatingSystem."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'OperatingSystemType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2910, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2915, 3)
     _Documentation = 'A ddex:Type of ddex:OperatingSystem.'
 OperatingSystemType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=OperatingSystemType, enum_prefix=None)
 OperatingSystemType.MacOS = OperatingSystemType._CF_enumeration.addEnumeration(unicode_value='MacOS', tag='MacOS')
@@ -1249,14 +1308,15 @@ OperatingSystemType.Symbian = OperatingSystemType._CF_enumeration.addEnumeration
 OperatingSystemType.Unknown = OperatingSystemType._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 OperatingSystemType._InitializeFacetMap(OperatingSystemType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'OperatingSystemType', OperatingSystemType)
+_module_typeBindings.OperatingSystemType = OperatingSystemType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}OrderType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}OrderType
 class OrderType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of order."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'OrderType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2937, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2942, 3)
     _Documentation = 'A ddex:Type of order.'
 OrderType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=OrderType, enum_prefix=None)
 OrderType.BackCatalogOrder = OrderType._CF_enumeration.addEnumeration(unicode_value='BackCatalogOrder', tag='BackCatalogOrder')
@@ -1271,28 +1331,30 @@ OrderType.TakeDownOrder = OrderType._CF_enumeration.addEnumeration(unicode_value
 OrderType.UserDefined = OrderType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 OrderType._InitializeFacetMap(OrderType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'OrderType', OrderType)
+_module_typeBindings.OrderType = OrderType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}PLineType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}PLineType
 class PLineType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:PLine."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PLineType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 2994, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 2999, 3)
     _Documentation = 'A ddex:Type of ddex:PLine.'
 PLineType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=PLineType, enum_prefix=None)
 PLineType.OriginalPLine = PLineType._CF_enumeration.addEnumeration(unicode_value='OriginalPLine', tag='OriginalPLine')
 PLineType.RemasteringPLine = PLineType._CF_enumeration.addEnumeration(unicode_value='RemasteringPLine', tag='RemasteringPLine')
 PLineType._InitializeFacetMap(PLineType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'PLineType', PLineType)
+_module_typeBindings.PLineType = PLineType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ParentalWarningType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ParentalWarningType
 class ParentalWarningType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Creation according to advice which it carries about the level of explicitness or offensiveness of its content."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ParentalWarningType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3011, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3016, 3)
     _Documentation = 'A ddex:Type of ddex:Creation according to advice which it carries about the level of explicitness or offensiveness of its content.'
 ParentalWarningType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ParentalWarningType, enum_prefix=None)
 ParentalWarningType.Explicit = ParentalWarningType._CF_enumeration.addEnumeration(unicode_value='Explicit', tag='Explicit')
@@ -1303,14 +1365,15 @@ ParentalWarningType.Unknown = ParentalWarningType._CF_enumeration.addEnumeration
 ParentalWarningType.UserDefined = ParentalWarningType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ParentalWarningType._InitializeFacetMap(ParentalWarningType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ParentalWarningType', ParentalWarningType)
+_module_typeBindings.ParentalWarningType = ParentalWarningType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}PercentageType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}PercentageType
 class PercentageType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:PercentageRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PercentageType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3048, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3053, 3)
     _Documentation = 'A ddex:Type of ddex:PercentageRate.'
 PercentageType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=PercentageType, enum_prefix=None)
 PercentageType.PercentageOfFreeGoodsPermitted = PercentageType._CF_enumeration.addEnumeration(unicode_value='PercentageOfFreeGoodsPermitted', tag='PercentageOfFreeGoodsPermitted')
@@ -1321,36 +1384,39 @@ PercentageType.PercentageOfPriceConsumerPaid = PercentageType._CF_enumeration.ad
 PercentageType.PercentageOfStatutoryRoyaltyRate = PercentageType._CF_enumeration.addEnumeration(unicode_value='PercentageOfStatutoryRoyaltyRate', tag='PercentageOfStatutoryRoyaltyRate')
 PercentageType._InitializeFacetMap(PercentageType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'PercentageType', PercentageType)
+_module_typeBindings.PercentageType = PercentageType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}PriceRangeType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}PriceRangeType
 class PriceRangeType (pyxb.binding.datatypes.string):
 
     """A ddex:Type of ddex:Price according to its value range."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PriceRangeType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3085, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3090, 3)
     _Documentation = 'A ddex:Type of ddex:Price according to its value range.'
 PriceRangeType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'PriceRangeType', PriceRangeType)
+_module_typeBindings.PriceRangeType = PriceRangeType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}PriceType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}PriceType
 class PriceType (pyxb.binding.datatypes.string):
 
     """A ddex:Type of ddex:Price."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'PriceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3091, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3096, 3)
     _Documentation = 'A ddex:Type of ddex:Price.'
 PriceType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'PriceType', PriceType)
+_module_typeBindings.PriceType = PriceType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}Priority
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}Priority
 class Priority (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of priority."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'Priority')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3097, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3102, 3)
     _Documentation = 'A ddex:Type of priority.'
 Priority._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=Priority, enum_prefix=None)
 Priority.High = Priority._CF_enumeration.addEnumeration(unicode_value='High', tag='High')
@@ -1358,14 +1424,15 @@ Priority.Low = Priority._CF_enumeration.addEnumeration(unicode_value='Low', tag=
 Priority.Normal = Priority._CF_enumeration.addEnumeration(unicode_value='Normal', tag='Normal')
 Priority._InitializeFacetMap(Priority._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'Priority', Priority)
+_module_typeBindings.Priority = Priority
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ProductType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ProductType
 class ProductType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Product."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ProductType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3119, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3124, 3)
     _Documentation = 'A ddex:Type of ddex:Product.'
 ProductType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ProductType, enum_prefix=None)
 ProductType.AudioProduct = ProductType._CF_enumeration.addEnumeration(unicode_value='AudioProduct', tag='AudioProduct')
@@ -1376,14 +1443,15 @@ ProductType.UserDefined = ProductType._CF_enumeration.addEnumeration(unicode_val
 ProductType.VideoProduct = ProductType._CF_enumeration.addEnumeration(unicode_value='VideoProduct', tag='VideoProduct')
 ProductType._InitializeFacetMap(ProductType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ProductType', ProductType)
+_module_typeBindings.ProductType = ProductType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}Purpose
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}Purpose
 class Purpose (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of use that is the purpose of an action."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'Purpose')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3156, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3161, 3)
     _Documentation = 'A ddex:Type of use that is the purpose of an action.'
 Purpose._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=Purpose, enum_prefix=None)
 Purpose.BackgroundMusic = Purpose._CF_enumeration.addEnumeration(unicode_value='BackgroundMusic', tag='BackgroundMusic')
@@ -1395,14 +1463,15 @@ Purpose.TrailerMusic = Purpose._CF_enumeration.addEnumeration(unicode_value='Tra
 Purpose.UserDefined = Purpose._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 Purpose._InitializeFacetMap(Purpose._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'Purpose', Purpose)
+_module_typeBindings.Purpose = Purpose
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RateModificationType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RateModificationType
 class RateModificationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A type of a rate modification."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RateModificationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3198, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3203, 3)
     _Documentation = 'A type of a rate modification.'
 RateModificationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RateModificationType, enum_prefix=None)
 RateModificationType.MultipleDiscProvision = RateModificationType._CF_enumeration.addEnumeration(unicode_value='MultipleDiscProvision', tag='MultipleDiscProvision')
@@ -1411,14 +1480,15 @@ RateModificationType.SalesVolumeProvision = RateModificationType._CF_enumeration
 RateModificationType.VideoProvision = RateModificationType._CF_enumeration.addEnumeration(unicode_value='VideoProvision', tag='VideoProvision')
 RateModificationType._InitializeFacetMap(RateModificationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RateModificationType', RateModificationType)
+_module_typeBindings.RateModificationType = RateModificationType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RatingAgency
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RatingAgency
 class RatingAgency (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An ddex:Organization that issues ParentalWarnings."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RatingAgency')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3225, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3230, 3)
     _Documentation = 'An ddex:Organization that issues ParentalWarnings.'
 RatingAgency._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RatingAgency, enum_prefix=None)
 RatingAgency.AFR = RatingAgency._CF_enumeration.addEnumeration(unicode_value='AFR', tag='AFR')
@@ -1467,14 +1537,15 @@ RatingAgency.UserDefined = RatingAgency._CF_enumeration.addEnumeration(unicode_v
 RatingAgency.VET = RatingAgency._CF_enumeration.addEnumeration(unicode_value='VET', tag='VET')
 RatingAgency._InitializeFacetMap(RatingAgency._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RatingAgency', RatingAgency)
+_module_typeBindings.RatingAgency = RatingAgency
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReasonType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReasonType
 class ReasonType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of reason."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReasonType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3452, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3457, 3)
     _Documentation = 'A ddex:Type of reason.'
 ReasonType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReasonType, enum_prefix=None)
 ReasonType.ChartReporting = ReasonType._CF_enumeration.addEnumeration(unicode_value='ChartReporting', tag='ChartReporting')
@@ -1482,14 +1553,15 @@ ReasonType.RoyaltyReporting = ReasonType._CF_enumeration.addEnumeration(unicode_
 ReasonType.UserDefined = ReasonType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ReasonType._InitializeFacetMap(ReasonType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReasonType', ReasonType)
+_module_typeBindings.ReasonType = ReasonType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RecipientRevenueType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RecipientRevenueType
 class RecipientRevenueType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of revenue according to the recipient of the payment."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RecipientRevenueType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3474, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3479, 3)
     _Documentation = 'A ddex:Type of revenue according to the recipient of the payment.'
 RecipientRevenueType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RecipientRevenueType, enum_prefix=None)
 RecipientRevenueType.PerformerAndProducerRevenue = RecipientRevenueType._CF_enumeration.addEnumeration(unicode_value='PerformerAndProducerRevenue', tag='PerformerAndProducerRevenue')
@@ -1497,14 +1569,15 @@ RecipientRevenueType.PerformerRevenue = RecipientRevenueType._CF_enumeration.add
 RecipientRevenueType.ProducerRevenue = RecipientRevenueType._CF_enumeration.addEnumeration(unicode_value='ProducerRevenue', tag='ProducerRevenue')
 RecipientRevenueType._InitializeFacetMap(RecipientRevenueType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RecipientRevenueType', RecipientRevenueType)
+_module_typeBindings.RecipientRevenueType = RecipientRevenueType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RecordingMode
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RecordingMode
 class RecordingMode (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A mode of a ddex:Recording."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RecordingMode')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3496, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3501, 3)
     _Documentation = 'A mode of a ddex:Recording.'
 RecordingMode._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RecordingMode, enum_prefix=None)
 RecordingMode.Mono = RecordingMode._CF_enumeration.addEnumeration(unicode_value='Mono', tag='Mono')
@@ -1513,14 +1586,15 @@ RecordingMode.Stereo = RecordingMode._CF_enumeration.addEnumeration(unicode_valu
 RecordingMode.Unknown = RecordingMode._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 RecordingMode._InitializeFacetMap(RecordingMode._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RecordingMode', RecordingMode)
+_module_typeBindings.RecordingMode = RecordingMode
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RedeliveryReasonType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RedeliveryReasonType
 class RedeliveryReasonType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A reason for a redelivery."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RedeliveryReasonType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3523, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3528, 3)
     _Documentation = 'A reason for a redelivery.'
 RedeliveryReasonType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RedeliveryReasonType, enum_prefix=None)
 RedeliveryReasonType.BinaryCorrupted = RedeliveryReasonType._CF_enumeration.addEnumeration(unicode_value='BinaryCorrupted', tag='BinaryCorrupted')
@@ -1530,28 +1604,30 @@ RedeliveryReasonType.ProcessingErrorAtReleaseDistributor = RedeliveryReasonType.
 RedeliveryReasonType.UserDefined = RedeliveryReasonType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RedeliveryReasonType._InitializeFacetMap(RedeliveryReasonType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RedeliveryReasonType', RedeliveryReasonType)
+_module_typeBindings.RedeliveryReasonType = RedeliveryReasonType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReferenceUnit
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReferenceUnit
 class ReferenceUnit (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A unit to which a ddex:Quantity refers."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReferenceUnit')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3555, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3560, 3)
     _Documentation = 'A unit to which a ddex:Quantity refers.'
 ReferenceUnit._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReferenceUnit, enum_prefix=None)
 ReferenceUnit.PerLicense = ReferenceUnit._CF_enumeration.addEnumeration(unicode_value='PerLicense', tag='PerLicense')
 ReferenceUnit.PerUse = ReferenceUnit._CF_enumeration.addEnumeration(unicode_value='PerUse', tag='PerUse')
 ReferenceUnit._InitializeFacetMap(ReferenceUnit._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReferenceUnit', ReferenceUnit)
+_module_typeBindings.ReferenceUnit = ReferenceUnit
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RelationalRelator
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RelationalRelator
 class RelationalRelator (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Relator between two ddex:Entities expressing a measurable relationship."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RelationalRelator')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3572, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3577, 3)
     _Documentation = 'A ddex:Relator between two ddex:Entities expressing a measurable relationship.'
 RelationalRelator._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RelationalRelator, enum_prefix=None)
 RelationalRelator.EqualTo = RelationalRelator._CF_enumeration.addEnumeration(unicode_value='EqualTo', tag='EqualTo')
@@ -1562,14 +1638,15 @@ RelationalRelator.MoreThanOrEqualTo = RelationalRelator._CF_enumeration.addEnume
 RelationalRelator.NotEqualTo = RelationalRelator._CF_enumeration.addEnumeration(unicode_value='NotEqualTo', tag='NotEqualTo')
 RelationalRelator._InitializeFacetMap(RelationalRelator._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RelationalRelator', RelationalRelator)
+_module_typeBindings.RelationalRelator = RelationalRelator
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReleaseAvailabilityStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReleaseAvailabilityStatus
 class ReleaseAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of the availability of a ddex:Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseAvailabilityStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3609, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3614, 3)
     _Documentation = 'A status of the availability of a ddex:Release.'
 ReleaseAvailabilityStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseAvailabilityStatus, enum_prefix=None)
 ReleaseAvailabilityStatus.AvailableForDSP = ReleaseAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='AvailableForDSP', tag='AvailableForDSP')
@@ -1580,14 +1657,15 @@ ReleaseAvailabilityStatus.NotYetPrepared = ReleaseAvailabilityStatus._CF_enumera
 ReleaseAvailabilityStatus.UserDefined = ReleaseAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ReleaseAvailabilityStatus._InitializeFacetMap(ReleaseAvailabilityStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseAvailabilityStatus', ReleaseAvailabilityStatus)
+_module_typeBindings.ReleaseAvailabilityStatus = ReleaseAvailabilityStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReleaseRelationshipType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReleaseRelationshipType
 class ReleaseRelationshipType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of relationship between two ddex:Releases."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseRelationshipType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3646, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3651, 3)
     _Documentation = 'A ddex:Type of relationship between two ddex:Releases.'
 ReleaseRelationshipType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseRelationshipType, enum_prefix=None)
 ReleaseRelationshipType.HasArtistFromEnsemble = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='HasArtistFromEnsemble', tag='HasArtistFromEnsemble')
@@ -1610,28 +1688,30 @@ ReleaseRelationshipType.Unknown = ReleaseRelationshipType._CF_enumeration.addEnu
 ReleaseRelationshipType.UserDefined = ReleaseRelationshipType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ReleaseRelationshipType._InitializeFacetMap(ReleaseRelationshipType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseRelationshipType', ReleaseRelationshipType)
+_module_typeBindings.ReleaseRelationshipType = ReleaseRelationshipType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReleaseResourceType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReleaseResourceType
 class ReleaseResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Resource in the context of a ddex:Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseResourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3743, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3748, 3)
     _Documentation = 'A ddex:Type of ddex:Resource in the context of a ddex:Release.'
 ReleaseResourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseResourceType, enum_prefix=None)
 ReleaseResourceType.PrimaryResource = ReleaseResourceType._CF_enumeration.addEnumeration(unicode_value='PrimaryResource', tag='PrimaryResource')
 ReleaseResourceType.SecondaryResource = ReleaseResourceType._CF_enumeration.addEnumeration(unicode_value='SecondaryResource', tag='SecondaryResource')
 ReleaseResourceType._InitializeFacetMap(ReleaseResourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseResourceType', ReleaseResourceType)
+_module_typeBindings.ReleaseResourceType = ReleaseResourceType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReleaseType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReleaseType
 class ReleaseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Release according to its content, ddex:Duration and/or number of components. Note: a ddex:ReleaseType is the form in which a ddex:ReleaseCreator anticipates offering a ddex:Release to ddex:Consumers."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReleaseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 3760, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 3765, 3)
     _Documentation = 'A ddex:Type of ddex:Release according to its content, ddex:Duration and/or number of components. Note: a ddex:ReleaseType is the form in which a ddex:ReleaseCreator anticipates offering a ddex:Release to ddex:Consumers.'
 ReleaseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReleaseType, enum_prefix=None)
 ReleaseType.AdvertisementVideo = ReleaseType._CF_enumeration.addEnumeration(unicode_value='AdvertisementVideo', tag='AdvertisementVideo')
@@ -1646,6 +1726,7 @@ ReleaseType.BookletBackImageRelease = ReleaseType._CF_enumeration.addEnumeration
 ReleaseType.BookletFrontImageRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='BookletFrontImageRelease', tag='BookletFrontImageRelease')
 ReleaseType.BookletRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='BookletRelease', tag='BookletRelease')
 ReleaseType.Bundle = ReleaseType._CF_enumeration.addEnumeration(unicode_value='Bundle', tag='Bundle')
+ReleaseType.ClassicalAlbum = ReleaseType._CF_enumeration.addEnumeration(unicode_value='ClassicalAlbum', tag='ClassicalAlbum')
 ReleaseType.ConcertVideo = ReleaseType._CF_enumeration.addEnumeration(unicode_value='ConcertVideo', tag='ConcertVideo')
 ReleaseType.CorporateFilm = ReleaseType._CF_enumeration.addEnumeration(unicode_value='CorporateFilm', tag='CorporateFilm')
 ReleaseType.DigitalBoxSetRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='DigitalBoxSetRelease', tag='DigitalBoxSetRelease')
@@ -1701,14 +1782,15 @@ ReleaseType.VideoTrackRelease = ReleaseType._CF_enumeration.addEnumeration(unico
 ReleaseType.WallpaperRelease = ReleaseType._CF_enumeration.addEnumeration(unicode_value='WallpaperRelease', tag='WallpaperRelease')
 ReleaseType._InitializeFacetMap(ReleaseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReleaseType', ReleaseType)
+_module_typeBindings.ReleaseType = ReleaseType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReportFormat
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReportFormat
 class ReportFormat (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of report according to its ddex:FileFormat."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReportFormat')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4093, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4103, 3)
     _Documentation = 'A ddex:Type of report according to its ddex:FileFormat.'
 ReportFormat._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReportFormat, enum_prefix=None)
 ReportFormat.ASCII = ReportFormat._CF_enumeration.addEnumeration(unicode_value='ASCII', tag='ASCII')
@@ -1720,14 +1802,15 @@ ReportFormat.UserDefined = ReportFormat._CF_enumeration.addEnumeration(unicode_v
 ReportFormat.XML = ReportFormat._CF_enumeration.addEnumeration(unicode_value='XML', tag='XML')
 ReportFormat._InitializeFacetMap(ReportFormat._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReportFormat', ReportFormat)
+_module_typeBindings.ReportFormat = ReportFormat
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ReportType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ReportType
 class ReportType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of report."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ReportType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4135, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4145, 3)
     _Documentation = 'A ddex:Type of report.'
 ReportType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ReportType, enum_prefix=None)
 ReportType.DeliveryFrequencyRequestCall = ReportType._CF_enumeration.addEnumeration(unicode_value='DeliveryFrequencyRequestCall', tag='DeliveryFrequencyRequestCall')
@@ -1745,14 +1828,15 @@ ReportType.SupplyChainStatusCall = ReportType._CF_enumeration.addEnumeration(uni
 ReportType.UserDefined = ReportType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ReportType._InitializeFacetMap(ReportType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ReportType', ReportType)
+_module_typeBindings.ReportType = ReportType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RequestedActionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RequestedActionType
 class RequestedActionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of action requested."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RequestedActionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4207, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4217, 3)
     _Documentation = 'A ddex:Type of action requested.'
 RequestedActionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RequestedActionType, enum_prefix=None)
 RequestedActionType.AdditionalInformationOnly = RequestedActionType._CF_enumeration.addEnumeration(unicode_value='AdditionalInformationOnly', tag='AdditionalInformationOnly')
@@ -1762,14 +1846,15 @@ RequestedActionType.NoAction = RequestedActionType._CF_enumeration.addEnumeratio
 RequestedActionType.UserDefined = RequestedActionType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RequestedActionType._InitializeFacetMap(RequestedActionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RequestedActionType', RequestedActionType)
+_module_typeBindings.RequestedActionType = RequestedActionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ResourceContributorRole
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ResourceContributorRole
 class ResourceContributorRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A role played by a ddex:Contributor in relation to a ddex:Fixation of an abstract ddex:Creation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ResourceContributorRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4239, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4249, 3)
     _Documentation = 'A role played by a ddex:Contributor in relation to a ddex:Fixation of an abstract ddex:Creation.'
 ResourceContributorRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ResourceContributorRole, enum_prefix=None)
 ResourceContributorRole.Actor = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='Actor', tag='Actor')
@@ -1818,14 +1903,15 @@ ResourceContributorRole.Unknown = ResourceContributorRole._CF_enumeration.addEnu
 ResourceContributorRole.UserDefined = ResourceContributorRole._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ResourceContributorRole._InitializeFacetMap(ResourceContributorRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ResourceContributorRole', ResourceContributorRole)
+_module_typeBindings.ResourceContributorRole = ResourceContributorRole
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ResourceOmissionReason
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ResourceOmissionReason
 class ResourceOmissionReason (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of reason for a omitting a ddex:Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ResourceOmissionReason')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4466, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4476, 3)
     _Documentation = 'A ddex:Type of reason for a omitting a ddex:Resource.'
 ResourceOmissionReason._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ResourceOmissionReason, enum_prefix=None)
 ResourceOmissionReason.PassportServiceRelease = ResourceOmissionReason._CF_enumeration.addEnumeration(unicode_value='PassportServiceRelease', tag='PassportServiceRelease')
@@ -1834,14 +1920,15 @@ ResourceOmissionReason.UserDefined = ResourceOmissionReason._CF_enumeration.addE
 ResourceOmissionReason.VirtualRelease = ResourceOmissionReason._CF_enumeration.addEnumeration(unicode_value='VirtualRelease', tag='VirtualRelease')
 ResourceOmissionReason._InitializeFacetMap(ResourceOmissionReason._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ResourceOmissionReason', ResourceOmissionReason)
+_module_typeBindings.ResourceOmissionReason = ResourceOmissionReason
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ResourceType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ResourceType
 class ResourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Resource."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ResourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4493, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4503, 3)
     _Documentation = 'A ddex:Type of ddex:Resource.'
 ResourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ResourceType, enum_prefix=None)
 ResourceType.Image = ResourceType._CF_enumeration.addEnumeration(unicode_value='Image', tag='Image')
@@ -1854,14 +1941,15 @@ ResourceType.UserDefinedResource = ResourceType._CF_enumeration.addEnumeration(u
 ResourceType.Video = ResourceType._CF_enumeration.addEnumeration(unicode_value='Video', tag='Video')
 ResourceType._InitializeFacetMap(ResourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ResourceType', ResourceType)
+_module_typeBindings.ResourceType = ResourceType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RevenueSourceType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RevenueSourceType
 class RevenueSourceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of revenue earned by the ddex:SoundRecording, according to the way the revenue is generated."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RevenueSourceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4540, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4550, 3)
     _Documentation = 'A ddex:Type of revenue earned by the ddex:SoundRecording, according to the way the revenue is generated.'
 RevenueSourceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RevenueSourceType, enum_prefix=None)
 RevenueSourceType.FinancialRevenue = RevenueSourceType._CF_enumeration.addEnumeration(unicode_value='FinancialRevenue', tag='FinancialRevenue')
@@ -1869,28 +1957,30 @@ RevenueSourceType.IndemnityRevenue = RevenueSourceType._CF_enumeration.addEnumer
 RevenueSourceType.RoyaltyRevenue = RevenueSourceType._CF_enumeration.addEnumeration(unicode_value='RoyaltyRevenue', tag='RoyaltyRevenue')
 RevenueSourceType._InitializeFacetMap(RevenueSourceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RevenueSourceType', RevenueSourceType)
+_module_typeBindings.RevenueSourceType = RevenueSourceType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RightsClaimPolicyType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RightsClaimPolicyType
 class RightsClaimPolicyType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of rights claim policy."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightsClaimPolicyType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4562, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4572, 3)
     _Documentation = 'A ddex:Type of rights claim policy.'
 RightsClaimPolicyType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightsClaimPolicyType, enum_prefix=None)
 RightsClaimPolicyType.ReportUsage = RightsClaimPolicyType._CF_enumeration.addEnumeration(unicode_value='ReportUsage', tag='ReportUsage')
 RightsClaimPolicyType.BlockAccess = RightsClaimPolicyType._CF_enumeration.addEnumeration(unicode_value='BlockAccess', tag='BlockAccess')
 RightsClaimPolicyType._InitializeFacetMap(RightsClaimPolicyType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightsClaimPolicyType', RightsClaimPolicyType)
+_module_typeBindings.RightsClaimPolicyType = RightsClaimPolicyType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RightsControllerRole
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RightsControllerRole
 class RightsControllerRole (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A role of a ddex:RightsController."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightsControllerRole')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4579, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4589, 3)
     _Documentation = 'A role of a ddex:RightsController.'
 RightsControllerRole._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightsControllerRole, enum_prefix=None)
 RightsControllerRole.AdministratingRecordCompany = RightsControllerRole._CF_enumeration.addEnumeration(unicode_value='AdministratingRecordCompany', tag='AdministratingRecordCompany')
@@ -1900,14 +1990,15 @@ RightsControllerRole.RoyaltyAdministrator = RightsControllerRole._CF_enumeration
 RightsControllerRole.Unknown = RightsControllerRole._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 RightsControllerRole._InitializeFacetMap(RightsControllerRole._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightsControllerRole', RightsControllerRole)
+_module_typeBindings.RightsControllerRole = RightsControllerRole
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RightsCoverage
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RightsCoverage
 class RightsCoverage (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Right which is covered."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RightsCoverage')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4611, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4621, 3)
     _Documentation = 'A ddex:Type of ddex:Right which is covered.'
 RightsCoverage._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RightsCoverage, enum_prefix=None)
 RightsCoverage.MakeAvailableRight = RightsCoverage._CF_enumeration.addEnumeration(unicode_value='MakeAvailableRight', tag='MakeAvailableRight')
@@ -1917,14 +2008,15 @@ RightsCoverage.ReproductionRight = RightsCoverage._CF_enumeration.addEnumeration
 RightsCoverage.SynchronizationRight = RightsCoverage._CF_enumeration.addEnumeration(unicode_value='SynchronizationRight', tag='SynchronizationRight')
 RightsCoverage._InitializeFacetMap(RightsCoverage._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RightsCoverage', RightsCoverage)
+_module_typeBindings.RightsCoverage = RightsCoverage
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RoyaltyRateCalculationType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RoyaltyRateCalculationType
 class RoyaltyRateCalculationType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:RoyaltyRate according to the calculation method."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RoyaltyRateCalculationType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4643, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4653, 3)
     _Documentation = 'A ddex:Type of ddex:RoyaltyRate according to the calculation method.'
 RoyaltyRateCalculationType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RoyaltyRateCalculationType, enum_prefix=None)
 RoyaltyRateCalculationType.ControlledCompositionRoyaltyRate = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='ControlledCompositionRoyaltyRate', tag='ControlledCompositionRoyaltyRate')
@@ -1936,14 +2028,15 @@ RoyaltyRateCalculationType.ReducedStatutoryRoyaltyRate = RoyaltyRateCalculationT
 RoyaltyRateCalculationType.StatutoryRoyaltyRate = RoyaltyRateCalculationType._CF_enumeration.addEnumeration(unicode_value='StatutoryRoyaltyRate', tag='StatutoryRoyaltyRate')
 RoyaltyRateCalculationType._InitializeFacetMap(RoyaltyRateCalculationType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RoyaltyRateCalculationType', RoyaltyRateCalculationType)
+_module_typeBindings.RoyaltyRateCalculationType = RoyaltyRateCalculationType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}RoyaltyRateType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}RoyaltyRateType
 class RoyaltyRateType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:RoyaltyRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'RoyaltyRateType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4685, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4695, 3)
     _Documentation = 'A ddex:Type of ddex:RoyaltyRate.'
 RoyaltyRateType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=RoyaltyRateType, enum_prefix=None)
 RoyaltyRateType.PennyRate = RoyaltyRateType._CF_enumeration.addEnumeration(unicode_value='PennyRate', tag='PennyRate')
@@ -1951,28 +2044,30 @@ RoyaltyRateType.PercentageRoyaltyRate = RoyaltyRateType._CF_enumeration.addEnume
 RoyaltyRateType.UserDefined = RoyaltyRateType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 RoyaltyRateType._InitializeFacetMap(RoyaltyRateType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'RoyaltyRateType', RoyaltyRateType)
+_module_typeBindings.RoyaltyRateType = RoyaltyRateType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}SalesReportAvailabilityStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}SalesReportAvailabilityStatus
 class SalesReportAvailabilityStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of the availability of a sales report."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SalesReportAvailabilityStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4707, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4717, 3)
     _Documentation = 'A status of the availability of a sales report.'
 SalesReportAvailabilityStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SalesReportAvailabilityStatus, enum_prefix=None)
 SalesReportAvailabilityStatus.SalesReportAvailable = SalesReportAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='SalesReportAvailable', tag='SalesReportAvailable')
 SalesReportAvailabilityStatus.SalesReportNotAvailable = SalesReportAvailabilityStatus._CF_enumeration.addEnumeration(unicode_value='SalesReportNotAvailable', tag='SalesReportNotAvailable')
 SalesReportAvailabilityStatus._InitializeFacetMap(SalesReportAvailabilityStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SalesReportAvailabilityStatus', SalesReportAvailabilityStatus)
+_module_typeBindings.SalesReportAvailabilityStatus = SalesReportAvailabilityStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}Sex
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}Sex
 class Sex (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """The biological sex of a being."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'Sex')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4724, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4734, 3)
     _Documentation = 'The biological sex of a being.'
 Sex._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=Sex, enum_prefix=None)
 Sex.Female = Sex._CF_enumeration.addEnumeration(unicode_value='Female', tag='Female')
@@ -1980,36 +2075,39 @@ Sex.Male = Sex._CF_enumeration.addEnumeration(unicode_value='Male', tag='Male')
 Sex.Unknown = Sex._CF_enumeration.addEnumeration(unicode_value='Unknown', tag='Unknown')
 Sex._InitializeFacetMap(Sex._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'Sex', Sex)
+_module_typeBindings.Sex = Sex
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}SheetMusicCodecType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}SheetMusicCodecType
 class SheetMusicCodecType (pyxb.binding.datatypes.string):
 
     """A ddex:Type of SheetMusicCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SheetMusicCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4746, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4756, 3)
     _Documentation = 'A ddex:Type of SheetMusicCodec.'
 SheetMusicCodecType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'SheetMusicCodecType', SheetMusicCodecType)
+_module_typeBindings.SheetMusicCodecType = SheetMusicCodecType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}SheetMusicType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}SheetMusicType
 class SheetMusicType (pyxb.binding.datatypes.string):
 
     """A ddex:Type of ddex:SheetMusic."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SheetMusicType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4752, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4762, 3)
     _Documentation = 'A ddex:Type of ddex:SheetMusic.'
 SheetMusicType._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'SheetMusicType', SheetMusicType)
+_module_typeBindings.SheetMusicType = SheetMusicType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}SoftwareType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}SoftwareType
 class SoftwareType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Software."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SoftwareType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4758, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4768, 3)
     _Documentation = 'A ddex:Type of ddex:Software.'
 SoftwareType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SoftwareType, enum_prefix=None)
 SoftwareType.InteractiveBooklet = SoftwareType._CF_enumeration.addEnumeration(unicode_value='InteractiveBooklet', tag='InteractiveBooklet')
@@ -2020,14 +2118,15 @@ SoftwareType.Unknown = SoftwareType._CF_enumeration.addEnumeration(unicode_value
 SoftwareType.UserDefined = SoftwareType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 SoftwareType._InitializeFacetMap(SoftwareType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SoftwareType', SoftwareType)
+_module_typeBindings.SoftwareType = SoftwareType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}SoundProcessorType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}SoundProcessorType
 class SoundProcessorType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of sound processor."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SoundProcessorType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4795, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4805, 3)
     _Documentation = 'A ddex:Type of sound processor.'
 SoundProcessorType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SoundProcessorType, enum_prefix=None)
 SoundProcessorType.MidiProcessor = SoundProcessorType._CF_enumeration.addEnumeration(unicode_value='MidiProcessor', tag='MidiProcessor')
@@ -2037,14 +2136,15 @@ SoundProcessorType.Unknown = SoundProcessorType._CF_enumeration.addEnumeration(u
 SoundProcessorType.UserDefined = SoundProcessorType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 SoundProcessorType._InitializeFacetMap(SoundProcessorType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SoundProcessorType', SoundProcessorType)
+_module_typeBindings.SoundProcessorType = SoundProcessorType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}SoundRecordingType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}SoundRecordingType
 class SoundRecordingType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:SoundRecording."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SoundRecordingType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4827, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4837, 3)
     _Documentation = 'A ddex:Type of ddex:SoundRecording.'
 SoundRecordingType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SoundRecordingType, enum_prefix=None)
 SoundRecordingType.MusicalWorkReadalongSoundRecording = SoundRecordingType._CF_enumeration.addEnumeration(unicode_value='MusicalWorkReadalongSoundRecording', tag='MusicalWorkReadalongSoundRecording')
@@ -2055,14 +2155,15 @@ SoundRecordingType.Unknown = SoundRecordingType._CF_enumeration.addEnumeration(u
 SoundRecordingType.UserDefined = SoundRecordingType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 SoundRecordingType._InitializeFacetMap(SoundRecordingType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SoundRecordingType', SoundRecordingType)
+_module_typeBindings.SoundRecordingType = SoundRecordingType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}SupplyChainStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}SupplyChainStatus
 class SupplyChainStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of a ddex:Release in a supply chain."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'SupplyChainStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4864, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4874, 3)
     _Documentation = 'A status of a ddex:Release in a supply chain.'
 SupplyChainStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=SupplyChainStatus, enum_prefix=None)
 SupplyChainStatus.DeliveredToReleaseDistributor = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='DeliveredToReleaseDistributor', tag='DeliveredToReleaseDistributor')
@@ -2079,14 +2180,15 @@ SupplyChainStatus.SuccessfullyIngestedByReleaseDistributor = SupplyChainStatus._
 SupplyChainStatus.UserDefined = SupplyChainStatus._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 SupplyChainStatus._InitializeFacetMap(SupplyChainStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'SupplyChainStatus', SupplyChainStatus)
+_module_typeBindings.SupplyChainStatus = SupplyChainStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}TaxScope
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}TaxScope
 class TaxScope (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Tax according to its scope."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TaxScope')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4931, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4941, 3)
     _Documentation = 'A ddex:Type of ddex:Tax according to its scope.'
 TaxScope._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TaxScope, enum_prefix=None)
 TaxScope.CombinedTax = TaxScope._CF_enumeration.addEnumeration(unicode_value='CombinedTax', tag='CombinedTax')
@@ -2097,14 +2199,15 @@ TaxScope.StateTax = TaxScope._CF_enumeration.addEnumeration(unicode_value='State
 TaxScope.UserDefined = TaxScope._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TaxScope._InitializeFacetMap(TaxScope._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TaxScope', TaxScope)
+_module_typeBindings.TaxScope = TaxScope
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}TaxType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}TaxType
 class TaxType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Tax."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TaxType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 4968, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 4978, 3)
     _Documentation = 'A ddex:Type of ddex:Tax.'
 TaxType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TaxType, enum_prefix=None)
 TaxType.CombinedTax = TaxType._CF_enumeration.addEnumeration(unicode_value='CombinedTax', tag='CombinedTax')
@@ -2114,14 +2217,15 @@ TaxType.SourceTax = TaxType._CF_enumeration.addEnumeration(unicode_value='Source
 TaxType.UserDefined = TaxType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TaxType._InitializeFacetMap(TaxType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TaxType', TaxType)
+_module_typeBindings.TaxType = TaxType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}TextCodecType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}TextCodecType
 class TextCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:TextCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TextCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5000, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5010, 3)
     _Documentation = 'A ddex:Type of ddex:TextCodec.'
 TextCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TextCodecType, enum_prefix=None)
 TextCodecType.ASCII = TextCodecType._CF_enumeration.addEnumeration(unicode_value='ASCII', tag='ASCII')
@@ -2133,14 +2237,15 @@ TextCodecType.Unknown = TextCodecType._CF_enumeration.addEnumeration(unicode_val
 TextCodecType.UserDefined = TextCodecType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TextCodecType._InitializeFacetMap(TextCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TextCodecType', TextCodecType)
+_module_typeBindings.TextCodecType = TextCodecType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}TextType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}TextType
 class TextType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Text."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TextType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5042, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5052, 3)
     _Documentation = 'A ddex:Type of ddex:Text.'
 TextType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TextType, enum_prefix=None)
 TextType.EBook = TextType._CF_enumeration.addEnumeration(unicode_value='EBook', tag='EBook')
@@ -2152,14 +2257,15 @@ TextType.Unknown = TextType._CF_enumeration.addEnumeration(unicode_value='Unknow
 TextType.UserDefined = TextType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TextType._InitializeFacetMap(TextType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TextType', TextType)
+_module_typeBindings.TextType = TextType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ThemeType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ThemeType
 class ThemeType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Theme."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ThemeType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5084, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5094, 3)
     _Documentation = 'A ddex:Type of ddex:Theme.'
 ThemeType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ThemeType, enum_prefix=None)
 ThemeType.ClosingTheme = ThemeType._CF_enumeration.addEnumeration(unicode_value='ClosingTheme', tag='ClosingTheme')
@@ -2170,14 +2276,15 @@ ThemeType.TitleTheme = ThemeType._CF_enumeration.addEnumeration(unicode_value='T
 ThemeType.UserDefined = ThemeType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 ThemeType._InitializeFacetMap(ThemeType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ThemeType', ThemeType)
+_module_typeBindings.ThemeType = ThemeType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}TitleType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}TitleType
 class TitleType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Title which defines its origin, form or the function it fulfils in relation to a ddex:Creation. Note: A ddex:Title may fulfil more than one role. Example: 'Help' may be both the ddex:OriginalTitle and the ddex:DisplayTitle for the well-known Beatles song.  """
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'TitleType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5121, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5131, 3)
     _Documentation = "A ddex:Type of ddex:Title which defines its origin, form or the function it fulfils in relation to a ddex:Creation. Note: A ddex:Title may fulfil more than one role. Example: 'Help' may be both the ddex:OriginalTitle and the ddex:DisplayTitle for the well-known Beatles song.  "
 TitleType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=TitleType, enum_prefix=None)
 TitleType.AbbreviatedDisplayTitle = TitleType._CF_enumeration.addEnumeration(unicode_value='AbbreviatedDisplayTitle', tag='AbbreviatedDisplayTitle')
@@ -2198,14 +2305,15 @@ TitleType.Unknown = TitleType._CF_enumeration.addEnumeration(unicode_value='Unkn
 TitleType.UserDefined = TitleType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 TitleType._InitializeFacetMap(TitleType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'TitleType', TitleType)
+_module_typeBindings.TitleType = TitleType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UnitOfBitRate
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UnitOfBitRate
 class UnitOfBitRate (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:UnitOfMeasure for a ddex:BitRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfBitRate')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5208, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5218, 3)
     _Documentation = 'A ddex:UnitOfMeasure for a ddex:BitRate.'
 UnitOfBitRate._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfBitRate, enum_prefix=None)
 UnitOfBitRate.bps = UnitOfBitRate._CF_enumeration.addEnumeration(unicode_value='bps', tag='bps')
@@ -2214,14 +2322,15 @@ UnitOfBitRate.kbps = UnitOfBitRate._CF_enumeration.addEnumeration(unicode_value=
 UnitOfBitRate.Mbps = UnitOfBitRate._CF_enumeration.addEnumeration(unicode_value='Mbps', tag='Mbps')
 UnitOfBitRate._InitializeFacetMap(UnitOfBitRate._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfBitRate', UnitOfBitRate)
+_module_typeBindings.UnitOfBitRate = UnitOfBitRate
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UnitOfConditionValue
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UnitOfConditionValue
 class UnitOfConditionValue (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:UnitOfMeasure for a condition value."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfConditionValue')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5235, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5245, 3)
     _Documentation = 'A ddex:UnitOfMeasure for a condition value.'
 UnitOfConditionValue._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfConditionValue, enum_prefix=None)
 UnitOfConditionValue.Millisecond = UnitOfConditionValue._CF_enumeration.addEnumeration(unicode_value='Millisecond', tag='Millisecond')
@@ -2231,14 +2340,15 @@ UnitOfConditionValue.Pixel = UnitOfConditionValue._CF_enumeration.addEnumeration
 UnitOfConditionValue.Second = UnitOfConditionValue._CF_enumeration.addEnumeration(unicode_value='Second', tag='Second')
 UnitOfConditionValue._InitializeFacetMap(UnitOfConditionValue._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfConditionValue', UnitOfConditionValue)
+_module_typeBindings.UnitOfConditionValue = UnitOfConditionValue
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UnitOfExtent
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UnitOfExtent
 class UnitOfExtent (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:UnitOfMeasure for an ddex:Extent."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfExtent')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5267, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5277, 3)
     _Documentation = 'A ddex:UnitOfMeasure for an ddex:Extent.'
 UnitOfExtent._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfExtent, enum_prefix=None)
 UnitOfExtent.cm = UnitOfExtent._CF_enumeration.addEnumeration(unicode_value='cm', tag='cm')
@@ -2248,28 +2358,30 @@ UnitOfExtent.PercentOfScreen = UnitOfExtent._CF_enumeration.addEnumeration(unico
 UnitOfExtent.Pixel = UnitOfExtent._CF_enumeration.addEnumeration(unicode_value='Pixel', tag='Pixel')
 UnitOfExtent._InitializeFacetMap(UnitOfExtent._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfExtent', UnitOfExtent)
+_module_typeBindings.UnitOfExtent = UnitOfExtent
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UnitOfFrameRate
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UnitOfFrameRate
 class UnitOfFrameRate (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:UnitOfMeasure for a ddex:FrameRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfFrameRate')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5299, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5309, 3)
     _Documentation = 'A ddex:UnitOfMeasure for a ddex:FrameRate.'
 UnitOfFrameRate._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfFrameRate, enum_prefix=None)
 UnitOfFrameRate.Hzinterlaced = UnitOfFrameRate._CF_enumeration.addEnumeration(unicode_value='Hz(interlaced)', tag='Hzinterlaced')
 UnitOfFrameRate.Hznon_interlaced = UnitOfFrameRate._CF_enumeration.addEnumeration(unicode_value='Hz(non-interlaced)', tag='Hznon_interlaced')
 UnitOfFrameRate._InitializeFacetMap(UnitOfFrameRate._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfFrameRate', UnitOfFrameRate)
+_module_typeBindings.UnitOfFrameRate = UnitOfFrameRate
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UnitOfFrequency
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UnitOfFrequency
 class UnitOfFrequency (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:UnitOfMeasure for a frequency."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UnitOfFrequency')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5316, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5326, 3)
     _Documentation = 'A ddex:UnitOfMeasure for a frequency.'
 UnitOfFrequency._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UnitOfFrequency, enum_prefix=None)
 UnitOfFrequency.GHz = UnitOfFrequency._CF_enumeration.addEnumeration(unicode_value='GHz', tag='GHz')
@@ -2278,28 +2390,30 @@ UnitOfFrequency.kHz = UnitOfFrequency._CF_enumeration.addEnumeration(unicode_val
 UnitOfFrequency.MHz = UnitOfFrequency._CF_enumeration.addEnumeration(unicode_value='MHz', tag='MHz')
 UnitOfFrequency._InitializeFacetMap(UnitOfFrequency._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UnitOfFrequency', UnitOfFrequency)
+_module_typeBindings.UnitOfFrequency = UnitOfFrequency
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UpdateIndicator
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UpdateIndicator
 class UpdateIndicator (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Message according to whether the ddex:Message contains original data or updates to previously sent data."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UpdateIndicator')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5343, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5353, 3)
     _Documentation = 'A ddex:Type of ddex:Message according to whether the ddex:Message contains original data or updates to previously sent data.'
 UpdateIndicator._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UpdateIndicator, enum_prefix=None)
 UpdateIndicator.OriginalMessage = UpdateIndicator._CF_enumeration.addEnumeration(unicode_value='OriginalMessage', tag='OriginalMessage')
 UpdateIndicator.UpdateMessage = UpdateIndicator._CF_enumeration.addEnumeration(unicode_value='UpdateMessage', tag='UpdateMessage')
 UpdateIndicator._InitializeFacetMap(UpdateIndicator._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UpdateIndicator', UpdateIndicator)
+_module_typeBindings.UpdateIndicator = UpdateIndicator
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UseType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UseType
 class UseType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of a nature of a ddex:Service, or a ddex:Release, as used by a ddex:Consumer."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UseType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5360, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5370, 3)
     _Documentation = 'A ddex:Type of a nature of a ddex:Service, or a ddex:Release, as used by a ddex:Consumer.'
 UseType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UseType, enum_prefix=None)
 UseType.AsPerContract = UseType._CF_enumeration.addEnumeration(unicode_value='AsPerContract', tag='AsPerContract')
@@ -2340,14 +2454,15 @@ UseType.UserMakeAvailableUserProvided = UseType._CF_enumeration.addEnumeration(u
 UseType.Webcast = UseType._CF_enumeration.addEnumeration(unicode_value='Webcast', tag='Webcast')
 UseType._InitializeFacetMap(UseType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UseType', UseType)
+_module_typeBindings.UseType = UseType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}UserInterfaceType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}UserInterfaceType
 class UserInterfaceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of physical interface by which a ddex:Consumer uses a ddex:Service or ddex:Release."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'UserInterfaceType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5547, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5557, 3)
     _Documentation = 'A ddex:Type of physical interface by which a ddex:Consumer uses a ddex:Service or ddex:Release.'
 UserInterfaceType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=UserInterfaceType, enum_prefix=None)
 UserInterfaceType.AsPerContract = UserInterfaceType._CF_enumeration.addEnumeration(unicode_value='AsPerContract', tag='AsPerContract')
@@ -2365,14 +2480,15 @@ UserInterfaceType.Unknown = UserInterfaceType._CF_enumeration.addEnumeration(uni
 UserInterfaceType.UserDefined = UserInterfaceType._CF_enumeration.addEnumeration(unicode_value='UserDefined', tag='UserDefined')
 UserInterfaceType._InitializeFacetMap(UserInterfaceType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'UserInterfaceType', UserInterfaceType)
+_module_typeBindings.UserInterfaceType = UserInterfaceType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}ValueType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}ValueType
 class ValueType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:RoyaltyRate."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'ValueType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5619, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5629, 3)
     _Documentation = 'A ddex:Type of ddex:RoyaltyRate.'
 ValueType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueType, enum_prefix=None)
 ValueType.Calculated = ValueType._CF_enumeration.addEnumeration(unicode_value='Calculated', tag='Calculated')
@@ -2380,14 +2496,15 @@ ValueType.Maximum = ValueType._CF_enumeration.addEnumeration(unicode_value='Maxi
 ValueType.Minimum = ValueType._CF_enumeration.addEnumeration(unicode_value='Minimum', tag='Minimum')
 ValueType._InitializeFacetMap(ValueType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ValueType', ValueType)
+_module_typeBindings.ValueType = ValueType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}VideoCodecType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}VideoCodecType
 class VideoCodecType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:VideoCodec."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VideoCodecType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5641, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5651, 3)
     _Documentation = 'A ddex:Type of ddex:VideoCodec.'
 VideoCodecType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VideoCodecType, enum_prefix=None)
 VideoCodecType.AVC = VideoCodecType._CF_enumeration.addEnumeration(unicode_value='AVC', tag='AVC')
@@ -2404,28 +2521,30 @@ VideoCodecType.UserDefined = VideoCodecType._CF_enumeration.addEnumeration(unico
 VideoCodecType.WMV = VideoCodecType._CF_enumeration.addEnumeration(unicode_value='WMV', tag='WMV')
 VideoCodecType._InitializeFacetMap(VideoCodecType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VideoCodecType', VideoCodecType)
+_module_typeBindings.VideoCodecType = VideoCodecType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}VideoDefinitionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}VideoDefinitionType
 class VideoDefinitionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of resolution (or definition) in which a ddex:Video is provided."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VideoDefinitionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5708, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5718, 3)
     _Documentation = 'A ddex:Type of resolution (or definition) in which a ddex:Video is provided.'
 VideoDefinitionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VideoDefinitionType, enum_prefix=None)
 VideoDefinitionType.HighDefinition = VideoDefinitionType._CF_enumeration.addEnumeration(unicode_value='HighDefinition', tag='HighDefinition')
 VideoDefinitionType.StandardDefinition = VideoDefinitionType._CF_enumeration.addEnumeration(unicode_value='StandardDefinition', tag='StandardDefinition')
 VideoDefinitionType._InitializeFacetMap(VideoDefinitionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VideoDefinitionType', VideoDefinitionType)
+_module_typeBindings.VideoDefinitionType = VideoDefinitionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}VideoType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}VideoType
 class VideoType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:Video."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VideoType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5725, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5735, 3)
     _Documentation = 'A ddex:Type of ddex:Video.'
 VideoType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VideoType, enum_prefix=None)
 VideoType.AdvertisementVideo = VideoType._CF_enumeration.addEnumeration(unicode_value='AdvertisementVideo', tag='AdvertisementVideo')
@@ -2462,14 +2581,15 @@ VideoType.UserDefined = VideoType._CF_enumeration.addEnumeration(unicode_value='
 VideoType.VideoChapter = VideoType._CF_enumeration.addEnumeration(unicode_value='VideoChapter', tag='VideoChapter')
 VideoType._InitializeFacetMap(VideoType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VideoType', VideoType)
+_module_typeBindings.VideoType = VideoType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}VisualPerceptionType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}VisualPerceptionType
 class VisualPerceptionType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of ddex:MusicalCreation according to how it is experienced in an audio-visual Creation."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VisualPerceptionType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5892, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5902, 3)
     _Documentation = 'A ddex:Type of ddex:MusicalCreation according to how it is experienced in an audio-visual Creation.'
 VisualPerceptionType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VisualPerceptionType, enum_prefix=None)
 VisualPerceptionType.Background = VisualPerceptionType._CF_enumeration.addEnumeration(unicode_value='Background', tag='Background')
@@ -2477,14 +2597,15 @@ VisualPerceptionType.UserDefined = VisualPerceptionType._CF_enumeration.addEnume
 VisualPerceptionType.Visual = VisualPerceptionType._CF_enumeration.addEnumeration(unicode_value='Visual', tag='Visual')
 VisualPerceptionType._InitializeFacetMap(VisualPerceptionType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VisualPerceptionType', VisualPerceptionType)
+_module_typeBindings.VisualPerceptionType = VisualPerceptionType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}VocalType
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}VocalType
 class VocalType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A ddex:Type of a ddex:MusicalCreation according to the occurrence of vocals."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'VocalType')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5914, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5924, 3)
     _Documentation = 'A ddex:Type of a ddex:MusicalCreation according to the occurrence of vocals.'
 VocalType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=VocalType, enum_prefix=None)
 VocalType.Instrumental = VocalType._CF_enumeration.addEnumeration(unicode_value='Instrumental', tag='Instrumental')
@@ -2492,14 +2613,15 @@ VocalType.UserDefined = VocalType._CF_enumeration.addEnumeration(unicode_value='
 VocalType.Vocal = VocalType._CF_enumeration.addEnumeration(unicode_value='Vocal', tag='Vocal')
 VocalType._InitializeFacetMap(VocalType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'VocalType', VocalType)
+_module_typeBindings.VocalType = VocalType
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}WsMessageStatus
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}WsMessageStatus
 class WsMessageStatus (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """A status of a ddex:WsMessage."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'WsMessageStatus')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5936, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5946, 3)
     _Documentation = 'A status of a ddex:WsMessage.'
 WsMessageStatus._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=WsMessageStatus, enum_prefix=None)
 WsMessageStatus.BackendProcessingError = WsMessageStatus._CF_enumeration.addEnumeration(unicode_value='BackendProcessingError', tag='BackendProcessingError')
@@ -2508,29 +2630,32 @@ WsMessageStatus.ValidMessageQueuedForProcessing = WsMessageStatus._CF_enumeratio
 WsMessageStatus.ValidMessageReceived = WsMessageStatus._CF_enumeration.addEnumeration(unicode_value='ValidMessageReceived', tag='ValidMessageReceived')
 WsMessageStatus._InitializeFacetMap(WsMessageStatus._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'WsMessageStatus', WsMessageStatus)
+_module_typeBindings.WsMessageStatus = WsMessageStatus
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}LocalCollectionAnchorReference
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}LocalCollectionAnchorReference
 class LocalCollectionAnchorReference (pyxb.binding.datatypes.IDREF):
 
     """A ddex:LocalAnchorReference which acts as a reference to a local ddex:Identifier of a ddex:Collection. This ddex:LocalAnchorReference is a xs:string starting with the letter X."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LocalCollectionAnchorReference')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5963, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5973, 3)
     _Documentation = 'A ddex:LocalAnchorReference which acts as a reference to a local ddex:Identifier of a ddex:Collection. This ddex:LocalAnchorReference is a xs:string starting with the letter X.'
 LocalCollectionAnchorReference._CF_pattern = pyxb.binding.facets.CF_pattern()
 LocalCollectionAnchorReference._CF_pattern.addPattern(pattern='X[\\d\\-_a-zA-Z]+')
 LocalCollectionAnchorReference._InitializeFacetMap(LocalCollectionAnchorReference._CF_pattern)
 Namespace.addCategoryObject('typeBinding', 'LocalCollectionAnchorReference', LocalCollectionAnchorReference)
+_module_typeBindings.LocalCollectionAnchorReference = LocalCollectionAnchorReference
 
-# Atomic simple type: {http://ddex.net/xml/20120214/ddex}LocalResourceAnchorReference
+# Atomic simple type: {http://ddex.net/xml/20120404/ddex}LocalResourceAnchorReference
 class LocalResourceAnchorReference (pyxb.binding.datatypes.IDREF):
 
     """A ddex:LocalAnchorReference which acts as a reference to a local ddex:Identifier of a ddex:Resource. This ddex:LocalAnchorReference is a xs:string starting with the letter A."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'LocalResourceAnchorReference')
-    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120214/ddex.xsd', 5971, 3)
+    _XSDLocation = pyxb.utils.utility.Location('http://ddex.net/xml/20120404/ddex', 5981, 3)
     _Documentation = 'A ddex:LocalAnchorReference which acts as a reference to a local ddex:Identifier of a ddex:Resource. This ddex:LocalAnchorReference is a xs:string starting with the letter A.'
 LocalResourceAnchorReference._CF_pattern = pyxb.binding.facets.CF_pattern()
 LocalResourceAnchorReference._CF_pattern.addPattern(pattern='A[\\d\\-_a-zA-Z]+')
 LocalResourceAnchorReference._InitializeFacetMap(LocalResourceAnchorReference._CF_pattern)
 Namespace.addCategoryObject('typeBinding', 'LocalResourceAnchorReference', LocalResourceAnchorReference)
+_module_typeBindings.LocalResourceAnchorReference = LocalResourceAnchorReference
