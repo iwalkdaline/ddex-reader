@@ -19,7 +19,8 @@ Keep in mind that this is a fairly low level library that only aims at making DD
 
 * Free software: MIT license
 * Documentation: https://ddexreader.readthedocs.org.
-* Repository: https://github.com/Trax-air/ddexreader
+* Repository: https://github.com/iwalkdaline/ddex-reader
+* Forked Repository: https://github.com/Trax-air/ddexreader
 
 Features
 --------
@@ -30,16 +31,7 @@ Features
 Supported DDEX versions
 -----------------------
 
-* 3.1.2
-* 3.2 (untested)
-* 3.3
-* 3.4
-* 3.4.1
-* 3.5
-* 3.5.1
-* 3.6
-
-Version 3.7 is causing issues with PyXB.
+* 3.82
 
 Quickstart
 ----------
@@ -55,8 +47,6 @@ Quickstart
 How to add more DDEX definitions
 --------------------------------
 
-After installing pyxb on your (unix) system, enter:
-
-::
-
-  pyxbgen -u [the url to the definition file]
+1. Install pyxb on your system. (Currently using version 1.2.6 so should use it to avoid having compatibility issues with the current versions of ERN supported.)
+2. pyxbgen -u [the url to the definition file]
+3. Move these files to the correct ernXX folder under ddexreader
